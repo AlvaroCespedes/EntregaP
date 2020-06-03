@@ -63,7 +63,9 @@ namespace Entrega_3
 
         private void button3_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide();
+            PanelUsuario panelUsuario = new PanelUsuario();
+            panelUsuario.Show();
         }
 
         private void Form1_Load(object sender, EventArgs e)

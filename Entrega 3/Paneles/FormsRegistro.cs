@@ -69,6 +69,16 @@ namespace Entrega_3.Paneles
                 MessageBox.Show("sus contraseñas no coinciden");
                 errores++;
             }
+            else if (txtEmailR.ToString().Contains("@")==false )
+            {
+                MessageBox.Show("El correo es invalido");
+                
+            }
+            else if (txtEmailR.ToString().Contains(".") == false) 
+            {
+                MessageBox.Show("El correo es invalido");
+                
+            }
             else if (txtANombreUsuarioR.Text == "" || txtConfirmacionContraseñaR.Text == "" ||txtContraseñaR.Text=="" || fechaNacimiento.Value==DateTime.Now ||txtEmailR.Text=="" ||
                      txtGeneroR.SelectedItem == null|| txtNombreR.Text == " " || txtNumerocelularR.Text == "" || TxtApellidoR.Text == "" || txtOcupacionR.Text == "" || txtNacionalidadR.SelectedItem == null)
             {

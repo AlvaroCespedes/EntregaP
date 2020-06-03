@@ -74,7 +74,11 @@ namespace Entrega_3.Paneles
                 MessageBox.Show("El correo es invalido");
                 
             }
-            else if (txtEmailR.ToString().Contains(".") == false) 
+            else if (fechaNacimiento.Value>DateTime.Now)
+            {
+                MessageBox.Show("Fecha de nacimiento invalida ");
+            }
+            else if (txtEmailR.ToString().Contains(".com") == false && txtEmailR.ToString().Contains(".cl") == false) 
             {
                 MessageBox.Show("El correo es invalido");
                 

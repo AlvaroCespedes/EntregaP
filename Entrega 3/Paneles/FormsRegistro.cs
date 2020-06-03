@@ -72,16 +72,22 @@ namespace Entrega_3.Paneles
             else if (txtEmailR.ToString().Contains("@")==false )
             {
                 MessageBox.Show("El correo es invalido");
-                
+                errores ++;
             }
             else if (fechaNacimiento.Value>DateTime.Now)
             {
                 MessageBox.Show("Fecha de nacimiento invalida ");
+                errores ++;
+            }
+            else if (fechaNacimiento.Value.Year - (DateTime.Now.Year-1) < 14)
+            {
+                MessageBox.Show("Para registrarse debe ser mayor de 15 años ");
+                errores ++;
             }
             else if (txtEmailR.ToString().Contains(".com") == false && txtEmailR.ToString().Contains(".cl") == false) 
             {
                 MessageBox.Show("El correo es invalido");
-                
+                errores ++;
             }
             else if (txtANombreUsuarioR.Text == "" || txtConfirmacionContraseñaR.Text == "" ||txtContraseñaR.Text=="" || fechaNacimiento.Value==DateTime.Now ||txtEmailR.Text=="" ||
                      txtGeneroR.SelectedItem == null|| txtNombreR.Text == " " || txtNumerocelularR.Text == "" || TxtApellidoR.Text == "" || txtOcupacionR.Text == "" || txtNacionalidadR.SelectedItem == null)

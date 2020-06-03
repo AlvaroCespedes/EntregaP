@@ -29,7 +29,7 @@ namespace Entrega_3.Paneles
         double intervalo = 1000;
 
         //SongClass cancion = new SongClass(); Ya instancie este objeto.
-        //Video video = new Video(); // YA instancie
+        //Video video = new Video();  YA instancie
         List<Clases.User> usuarios = new List<Clases.User>();
 
         Clases.ProfileManagment profileManagment = new Clases.ProfileManagment();
@@ -50,31 +50,38 @@ namespace Entrega_3.Paneles
 
         }
 
-        private void btnContinuar_Click(object sender, EventArgs e)
-
-            
+        private void btnContinuar_Click(object sender, EventArgs e)      
         {
+            int errores = 0;
+            
+            try
+            {
+                Int32.Parse(txtNumerocelularR.Text);
+            }
+
+            catch (FormatException)
+            {
+                MessageBox.Show("El formato del celular no es valido");
+                errores++;
+            }
             if (txtContraseñaR.Text != txtConfirmacionContraseñaR.Text)
             {
                 MessageBox.Show("sus contraseñas no coinciden");
+                errores++;
             }
-            else if (txtANombreUsuarioR.Text == "" || txtConfirmacionContraseñaR.Text == "" ||txtContraseñaR.Text=="" ||txtEdadR.Text=="" ||txtEmailR.Text=="" )
-                
-                {
-                MessageBox.Show("RELLENE TODOS LOS DATOS");
-            }
-            else if (txtGeneroR.Text=="" ||txtEdadR.Text=="" ||txtNombreR.Text==" " ||txtNumerocelularR.Text=="" || TxtApellidoR.Text=="" ||txtOcupacionR.Text=="" )
-
+            else if (txtANombreUsuarioR.Text == "" || txtConfirmacionContraseñaR.Text == "" ||txtContraseñaR.Text=="" || fechaNacimiento.Value==DateTime.Now ||txtEmailR.Text=="" ||
+                     txtGeneroR.SelectedItem == null|| txtNombreR.Text == " " || txtNumerocelularR.Text == "" || TxtApellidoR.Text == "" || txtOcupacionR.Text == "" || txtNacionalidadR.SelectedItem == null)
             {
                 MessageBox.Show("RELLENE TODOS LOS DATOS");
             }
-            else if (txtNacionalidadR.Text=="")
+            
+            else if (errores >= 1)
             {
-                MessageBox.Show("RELLENE TODOS LOS DATOS");
+                MessageBox.Show("Error en la lectura de datos, vuelva a ingresarlos");
             }
-            else 
+            else if(errores==0) 
             { 
-            panel1.Visible = true;      //aca agregar verificar si no se equivoca en la confirmacion de contraseña, que el nombre de usuario no exista ....
+                 panel1.Visible = true;      //aca agregar verificar si no se equivoca en la confirmacion de contraseña, que el nombre de usuario no exista ....
             }
         }
 
@@ -95,31 +102,58 @@ namespace Entrega_3.Paneles
 
         private void btnContinuar2_Click(object sender, EventArgs e)
         {
+            Form1 forms1 = new Form1();
             string usr = txtANombreUsuarioR.Text;
-            string number = txtNumerocelularR.Text;
+            int number = Int32.Parse(txtNumerocelularR.Text);
+            
             string psswd = txtContraseñaR.Text;
             string name = txtNombreR.Text;
-            string Age = txtEdadR.Text;
-            int edad = Int32.Parse(Age);//convierto la edad que esta en texto a number
             string lastname = TxtApellidoR.Text;
-            string gender = txtGeneroR.Text;
-            string nationality = txtNacionalidadR.Text;
+            string gender = txtGeneroR.SelectedItem.ToString();
+            string nationality = txtNacionalidadR.SelectedItem.ToString();
             string ocuppation = txtOcupacionR.Text;
             string email = txtEmailR.Text;
-            DateTime dateRegister = new DateTime();
-
+            DateTime birthDate = fechaNacimiento.Value;
+        
+            DateTime dateRegister = DateTime.Now;
+            int edad;
+            if (birthDate.Month < dateRegister.Month)
+            {
+               
+                edad = (dateRegister.Year - 1) - birthDate.Year;
+            }
+            else if(birthDate.Month == dateRegister.Month)
+            {
+                if (birthDate.Day < dateRegister.Day)
+                {
+                    edad = (dateRegister.Year - 1) - birthDate.Year;
+                }
+                else
+                {
+                    edad = dateRegister.Year - birthDate.Year;
+                }
+            }
+            else
+            {
+                edad= dateRegister.Year - birthDate.Year; 
+            }
+            
+           
+           
             if (radioButton1.Checked == true)//plan basico
             {
-                MessageBox.Show("Plan basico seleccionado, no se realizaran cargos en su tarjeta");
+                MessageBox.Show("Registro con Existo! Plan basico seleccionado, no se realizaran cargos en su tarjeta");
 
-         
+
                 string planSeleccionado = "Basico";
-                string infopago = "0";
-                
+                int infopago = 0;
+
                 Clases.User usuario = new Clases.User(usr, number, psswd, name, edad, lastname, gender, nationality, ocuppation, email, infopago, planSeleccionado, dateRegister);
                 usuarios.Add(usuario);
-
-
+                    
+                forms1.Show();
+                this.Close();
+                    
                 /*
                 int res = usuario.GuardarUsuario(); // Variable Resultado
 
@@ -137,53 +171,21 @@ namespace Entrega_3.Paneles
                 }
                 */
             }
-            else if (radioButton4.Checked == true) //plan premiun
+            else if (radioButton4.Checked == true)
             {
-
-                MessageBox.Show("Para continuar complete su forma de pago");
                 panel2.Visible = true;
-                string planSeleccionado = "premiun";
-                string infopago = txtNumeroTarjeta.Text;
-
-
-                //Agregar el usario a una lista de usuarios
-                Clases.User usuario = new Clases.User(usr, number, psswd, name, edad, lastname, gender, nationality, ocuppation, email, infopago, planSeleccionado, dateRegister);
-                usuarios.Add(usuario);
-
-                int res = usuario.GuardarUsuario(); // Variable Resultado //TIENE QUE IR DONDE PONER LA TARJETA
-
-                switch (res)
-                {
-                    case 0:
-                        MessageBox.Show("todo correcto");
-                        break;
-                    case 1:
-                        MessageBox.Show("Se cancelo la operacion");
-                        break;
-                    case 2:
-                        MessageBox.Show("Error, no se pudo guardar el objeto.");
-                        break;
-                }
             }
-            else if (radioButton5.Checked==true)//plan familiar
+            else if(radioButton5.Checked == true)
             {
-                MessageBox.Show("Para continuar complete su forma de pago");
-                string planSeleccionado = "Familiar";
-                string infopago = txtNumeroTarjeta.Text;
-                MessageBox.Show("Para continuar complete su forma de pago");
                 panel2.Visible = true;
-
-
-                //Agregar el usario a una lista de usuarios
-                Clases.User usuario = new Clases.User(usr, number, psswd, name, edad, lastname, gender, nationality, ocuppation, email, infopago, planSeleccionado, dateRegister);
-                usuarios.Add(usuario);
-
-
             }
             else
             {
-                MessageBox.Show("ingrese una opccion para poder continuar");
+                MessageBox.Show("Debe seleccionar una opcion");
             }
+            
+            
+           
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -209,16 +211,124 @@ namespace Entrega_3.Paneles
 
         private void btnContinuarTarjeta_Click(object sender, EventArgs e)
         {
-            if (txtNumeroTarjeta.Text == ""  || txtFechaCaducacionTarjeta.Text=="" ||txtCodigoSeguridadTarjeta.Text=="")
+            if (txtNumeroTarjeta.Text == ""  || comboBox1.SelectedItem==null || comboBox2.SelectedItem == null || txtCodigoSeguridadTarjeta.Text=="")
             {
                 MessageBox.Show("PARA CONTINUAR RELLENE TODOS LOS DATOS");
             }
 
             else
             {
-                this.Hide();
-                Form1 form1 = new Form1();
-                form1.Show();
+                Form1 forms1 = new Form1();
+                string usr = txtANombreUsuarioR.Text;
+                int number = Int32.Parse(txtNumerocelularR.Text);
+
+                string psswd = txtContraseñaR.Text;
+                string name = txtNombreR.Text;
+                
+                string lastname = TxtApellidoR.Text;
+                string gender = txtGeneroR.SelectedItem.ToString();
+                string nationality = txtNacionalidadR.SelectedItem.ToString();
+                string ocuppation = txtOcupacionR.Text;
+                string email = txtEmailR.Text;
+                DateTime birthDate = fechaNacimiento.Value;
+
+                DateTime dateRegister = DateTime.Now;
+                int edad;
+                if (birthDate.Month < dateRegister.Month)
+                {
+
+                    edad = (dateRegister.Year - 1) - birthDate.Year;
+                }
+                else if (birthDate.Month == dateRegister.Month)
+                {
+                    if (birthDate.Day < dateRegister.Day)
+                    {
+                        edad = (dateRegister.Year - 1) - birthDate.Year;
+                    }
+                    else
+                    {
+                        edad = dateRegister.Year - birthDate.Year;
+                    }
+                }
+                else
+                {
+                    edad = dateRegister.Year - birthDate.Year;
+                }
+
+                if (radioButton4.Checked == true) //plan premiun
+                {
+
+            
+                    panel2.Visible = true;
+                    string planSeleccionado = "Premium";
+                    int infopago = 0;
+                    int cvv = 0;
+                    int error2 = 0;
+                    try
+                    {
+                        infopago += Int32.Parse(txtNumeroTarjeta.Text);
+                        cvv += Int32.Parse(txtCodigoSeguridadTarjeta.Text);
+                    }
+                    catch (FormatException)
+                    {
+                        
+                        error2 += 1;
+                    }
+
+
+
+                    //Agregar el usario a una lista de usuarios
+                    if (error2 == 0)
+                    {
+                        Clases.User usuario = new Clases.User(usr, number, psswd, name, edad, lastname, gender, nationality, ocuppation, email, infopago, planSeleccionado, dateRegister);
+                        usuarios.Add(usuario);
+                        MessageBox.Show("Registro Existoso");
+                        this.Hide();
+                        forms1.Show();
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error, ingrese nuevamente su forma de pago");
+
+                    }
+                }
+                else if (radioButton5.Checked == true)//plan familiar
+                {
+                   
+                    string planSeleccionado = "Familiar";
+                    int infopago = 0;
+                    int cvv = 0;
+                    int error3 = 0;
+                    try
+                    {
+                        infopago += Int32.Parse(txtNumeroTarjeta.Text);
+                        cvv += Int32.Parse(txtCodigoSeguridadTarjeta.Text);
+                    }
+                    catch (FormatException)
+                    {
+              
+                        error3 += 1;
+                    }
+
+                    if (error3 == 0)
+                    {
+                        //Agregar el usario a una lista de usuarios
+                        Clases.User usuario = new Clases.User(usr, number, psswd, name, edad, lastname, gender, nationality, ocuppation, email, infopago, planSeleccionado, dateRegister);
+                        usuarios.Add(usuario);
+                        this.Hide();
+                        forms1.Show();
+                        
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error, ingrese nuevamente su forma de pago");
+                    }
+
+
+
+                }
+
             }
           
         }
@@ -232,6 +342,26 @@ namespace Entrega_3.Paneles
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtFechaCaducacionTarjeta_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

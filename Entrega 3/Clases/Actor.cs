@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Threading;
 namespace Entrega_3.Clases
-//probando anto
+//pro
 {
     public class Actor : Person
     {

@@ -35,6 +35,9 @@ namespace Entrega_3
             
             try
             {
+
+
+                /*
                 OpenFileDialog dialog = new OpenFileDialog();
                 if (dialog.ShowDialog() == DialogResult.OK)//Si es que el usuario agrego un archivo para guardar.
                 {
@@ -48,6 +51,7 @@ namespace Entrega_3
                     MessageBox.Show("Se cancelo la operacion"); 
 
                 }
+                */
                 
             }
             catch
@@ -59,7 +63,7 @@ namespace Entrega_3
 
         private void button3_Click(object sender, EventArgs e)
         {
-            
+            this.Close();
         }
 
         private void Form1_Load(object sender, EventArgs e)

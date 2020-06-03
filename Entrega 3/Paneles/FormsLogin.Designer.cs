@@ -115,9 +115,9 @@
             // 
             // panelInicioSecionUsurarioBasico
             // 
-            this.panelInicioSecionUsurarioBasico.Location = new System.Drawing.Point(0, 0);
+            this.panelInicioSecionUsurarioBasico.Location = new System.Drawing.Point(2, 2);
             this.panelInicioSecionUsurarioBasico.Name = "panelInicioSecionUsurarioBasico";
-            this.panelInicioSecionUsurarioBasico.Size = new System.Drawing.Size(515, 246);
+            this.panelInicioSecionUsurarioBasico.Size = new System.Drawing.Size(516, 261);
             this.panelInicioSecionUsurarioBasico.TabIndex = 8;
             this.panelInicioSecionUsurarioBasico.Visible = false;
             // 

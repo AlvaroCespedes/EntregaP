@@ -103,6 +103,9 @@
     <EmbeddedResource Include="Paneles\FormsRegistro.resx">
       <DependentUpon>FormsRegistro.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Paneles\PanelUsuario.resx">
+      <DependentUpon>PanelUsuario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -124,6 +127,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Controllers\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,7 +18,7 @@ namespace Entrega_3.Paneles
             InitializeComponent();
         }
 
-
+        Clases.Serialization serializar = new Clases.Serialization();
         Clases.DataBase database = new Clases.DataBase();
 
         Clases.MailSender mailSender = new Clases.MailSender();
@@ -30,10 +31,10 @@ namespace Entrega_3.Paneles
 
         //SongClass cancion = new SongClass(); Ya instancie este objeto.
         //Video video = new Video();  YA instancie
-        List<Clases.User> usuarios = new List<Clases.User>();
+        List<Clases.User> todosUsuarios = new List<Clases.User>();
 
         Clases.ProfileManagment profileManagment = new Clases.ProfileManagment();
-        IDictionary<Clases.User, List<Clases.Profile>> diccUserProfiles = new Dictionary<Clases.User, List<Clases.Profile>>();
+        
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
@@ -52,8 +53,17 @@ namespace Entrega_3.Paneles
 
         private void btnContinuar_Click(object sender, EventArgs e)      
         {
+            List<Clases.User> deserializarUser = new List<Clases.User>();
             int errores = 0;
-            
+            try
+            {
+                deserializarUser = serializar.Deserialize<List<Clases.User>>(File.Open("data.bin", FileMode.Open));
+            }
+            catch
+            {
+
+
+            }
             try
             {
                 Int32.Parse(txtNumerocelularR.Text);
@@ -63,43 +73,67 @@ namespace Entrega_3.Paneles
             {
                 MessageBox.Show("El formato del celular no es valido");
                 errores++;
+                
+            }
+            if (txtANombreUsuarioR.Text != "" && deserializarUser.Count > 0)
+            {
+
+                for (int a = 0; a < deserializarUser.Count; a++)
+                {
+                    if (deserializarUser[a].NameUser == txtANombreUsuarioR.Text)
+                    {
+                        MessageBox.Show("Nombre de usuario ya existente");
+                        errores++;
+                    }
+
+                }
+            }
+            if (txtEmailR.Text != "" && deserializarUser.Count > 0)
+            {
+                for (int b = 0; b < deserializarUser.Count; b++)
+                {
+                    if ( true == txtANombreUsuarioR.Text.Contains(deserializarUser[b].Mail))
+                    {
+                        MessageBox.Show("Usuario ya registrado");
+                        errores++; 
+
+                    }
+                   
+                }
             }
             if (txtContraseñaR.Text != txtConfirmacionContraseñaR.Text)
             {
                 MessageBox.Show("sus contraseñas no coinciden");
-                errores++;
+              
             }
             else if (txtEmailR.ToString().Contains("@")==false )
             {
                 MessageBox.Show("El correo es invalido");
-                errores ++;
+              
             }
             else if (fechaNacimiento.Value>DateTime.Now)
             {
                 MessageBox.Show("Fecha de nacimiento invalida ");
-                errores ++;
+             
             }
-            else if (fechaNacimiento.Value.Year - (DateTime.Now.Year-1) < 14)
+            else if ((DateTime.Now.Year - 1)-fechaNacimiento.Value.Year < 14)
             {
                 MessageBox.Show("Para registrarse debe ser mayor de 15 años ");
-                errores ++;
+              
             }
             else if (txtEmailR.ToString().Contains(".com") == false && txtEmailR.ToString().Contains(".cl") == false) 
             {
                 MessageBox.Show("El correo es invalido");
-                errores ++;
+               
             }
+            
             else if (txtANombreUsuarioR.Text == "" || txtConfirmacionContraseñaR.Text == "" ||txtContraseñaR.Text=="" || fechaNacimiento.Value==DateTime.Now ||txtEmailR.Text=="" ||
                      txtGeneroR.SelectedItem == null|| txtNombreR.Text == " " || txtNumerocelularR.Text == "" || TxtApellidoR.Text == "" || txtOcupacionR.Text == "" || txtNacionalidadR.SelectedItem == null)
             {
                 MessageBox.Show("RELLENE TODOS LOS DATOS");
             }
             
-            else if (errores >= 1)
-            {
-                MessageBox.Show("Error en la lectura de datos, vuelva a ingresarlos");
-            }
-            else if(errores==0) 
+            else if(errores==0)
             { 
                  panel1.Visible = true;      //aca agregar verificar si no se equivoca en la confirmacion de contraseña, que el nombre de usuario no exista ....
             }
@@ -169,8 +203,16 @@ namespace Entrega_3.Paneles
                 int infopago = 0;
 
                 Clases.User usuario = new Clases.User(usr, number, psswd, name, edad, lastname, gender, nationality, ocuppation, email, infopago, planSeleccionado, dateRegister);
-                usuarios.Add(usuario);
-                    
+                List<Clases.User> deserializarUser = serializar.Deserialize<List<Clases.User>>(File.Open("data.bin", FileMode.Open));
+                if (deserializarUser.Count>0)
+                {
+                    for (int c = 0; c < deserializarUser.Count; c++){
+                        todosUsuarios.Add(deserializarUser[c]);
+                    }
+                }
+                todosUsuarios.Add(usuario);
+                serializar.Serialize(todosUsuarios, File.Open("data.bin", FileMode.Create));
+
                 forms1.Show();
                 this.Close();
                     
@@ -301,7 +343,17 @@ namespace Entrega_3.Paneles
                     if (error2 == 0)
                     {
                         Clases.User usuario = new Clases.User(usr, number, psswd, name, edad, lastname, gender, nationality, ocuppation, email, infopago, planSeleccionado, dateRegister);
-                        usuarios.Add(usuario);
+                        List<Clases.User> deserializarUser = serializar.Deserialize<List<Clases.User>>(File.Open("data.bin", FileMode.Open));
+                        if (deserializarUser.Count > 0)
+                        {
+                            for (int c = 0; c < deserializarUser.Count; c++)
+                            {
+                                todosUsuarios.Add(deserializarUser[c]);
+                            }
+                        }
+                        todosUsuarios.Add(usuario);
+                        serializar.Serialize(todosUsuarios, File.Open("data.bin", FileMode.Create));
+
                         MessageBox.Show("Registro Existoso");
                         this.Hide();
                         forms1.Show();
@@ -335,7 +387,16 @@ namespace Entrega_3.Paneles
                     {
                         //Agregar el usario a una lista de usuarios
                         Clases.User usuario = new Clases.User(usr, number, psswd, name, edad, lastname, gender, nationality, ocuppation, email, infopago, planSeleccionado, dateRegister);
-                        usuarios.Add(usuario);
+                        List<Clases.User> deserializarUser = serializar.Deserialize<List<Clases.User>>(File.Open("data.bin", FileMode.Open));
+                        if (deserializarUser.Count > 0)
+                        {
+                            for (int c = 0; c < deserializarUser.Count; c++)
+                            {
+                                todosUsuarios.Add(deserializarUser[c]);
+                            }
+                        }
+                        todosUsuarios.Add(usuario);
+                        serializar.Serialize(todosUsuarios, File.Open("data.bin", FileMode.Create));
                         this.Hide();
                         forms1.Show();
                         

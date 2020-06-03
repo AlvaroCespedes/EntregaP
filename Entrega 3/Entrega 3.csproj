@@ -63,6 +63,7 @@
     <Compile Include="Clases\ProfileUser.cs" />
     <Compile Include="Clases\RegisterEventArgs.cs" />
     <Compile Include="Clases\SearchClass.cs" />
+    <Compile Include="Clases\Serialization.cs" />
     <Compile Include="Clases\Server.cs" />
     <Compile Include="Clases\Singer.cs" />
     <Compile Include="Clases\SongClass.cs" />

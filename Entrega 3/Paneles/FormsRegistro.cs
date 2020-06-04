@@ -200,7 +200,7 @@ namespace Entrega_3.Paneles
 
 
                 string planSeleccionado = "Basico";
-                int infopago = 0;
+                string infopago = "";
 
                 Clases.User usuario = new Clases.User(usr, number, psswd, name, edad, lastname, gender, nationality, ocuppation, email, infopago, planSeleccionado, dateRegister);
                 List<Clases.User> deserializarUser = serializar.Deserialize<List<Clases.User>>(File.Open("data.bin", FileMode.Open));
@@ -323,12 +323,33 @@ namespace Entrega_3.Paneles
             
                     panel2.Visible = true;
                     string planSeleccionado = "Premium";
-                    int infopago = 0;
+                   
                     int cvv = 0;
                     int error2 = 0;
+                    List<int> numeros = new List<int>();
+                    for (int a = 0; a < 10; a++)
+                    {
+                        numeros.Add(a);
+                    }
+
+                    if (txtNumeroTarjeta.Text != "")
+                    {
+                        for (int b = 0; b < txtNumeroTarjeta.Text.Length; b++)
+                        {
+                            if (numeros.Contains((int)Char.GetNumericValue(txtNumeroTarjeta.Text[b])) == true)
+                            {
+
+                            }
+                            else
+                            {
+                                error2++;
+                            }
+                        }
+                    }
+                    
                     try
                     {
-                        infopago += Int32.Parse(txtNumeroTarjeta.Text);
+                        
                         cvv += Int32.Parse(txtCodigoSeguridadTarjeta.Text);
                     }
                     catch (FormatException)
@@ -342,8 +363,27 @@ namespace Entrega_3.Paneles
                     //Agregar el usario a una lista de usuarios
                     if (error2 == 0)
                     {
+                        string infopago = txtNumeroTarjeta.Text;
                         Clases.User usuario = new Clases.User(usr, number, psswd, name, edad, lastname, gender, nationality, ocuppation, email, infopago, planSeleccionado, dateRegister);
-                        List<Clases.User> deserializarUser = serializar.Deserialize<List<Clases.User>>(File.Open("data.bin", FileMode.Open));
+                        
+                        List<Clases.User> deserializarUser = new List<Clases.User>();
+                        
+                        try
+                        {
+                            deserializarUser = serializar.Deserialize<List<Clases.User>>(File.Open("data.bin", FileMode.Open));
+                            MessageBox.Show("Usuario Registrado con exito");
+                        }
+                        catch (System.Runtime.Serialization.SerializationException)
+                        {
+
+                        }
+                        if (deserializarUser.Count > 0)
+                        {
+                            for (int c = 0; c < deserializarUser.Count; c++)
+                            {
+                                todosUsuarios.Add(deserializarUser[c]);
+                            }
+                        }
                         if (deserializarUser.Count > 0)
                         {
                             for (int c = 0; c < deserializarUser.Count; c++)
@@ -367,14 +407,36 @@ namespace Entrega_3.Paneles
                 }
                 else if (radioButton5.Checked == true)//plan familiar
                 {
-                   
-                    string planSeleccionado = "Familiar";
-                    int infopago = 0;
+                    
                     int cvv = 0;
                     int error3 = 0;
+                    List <int> numeros= new List<int>();  
+                    for(int a = 0; a<10;a++)
+                    {
+                        numeros.Add(a);
+                    }
+                    
+                    string planSeleccionado = "Familiar";
+                    if (txtNumeroTarjeta.Text != "")
+                    {
+                        for (int b=0;b<txtNumeroTarjeta.Text.Length;b++)
+                        {
+                            if (numeros.Contains((int)Char.GetNumericValue(txtNumeroTarjeta.Text[b]))==true)
+                            {
+
+                            }
+                            else
+                            {
+                                error3++;
+                            }
+                        }
+                    }
+                    
+                    
+                    
                     try
                     {
-                        infopago += Int32.Parse(txtNumeroTarjeta.Text);
+                        
                         cvv += Int32.Parse(txtCodigoSeguridadTarjeta.Text);
                     }
                     catch (FormatException)
@@ -382,12 +444,22 @@ namespace Entrega_3.Paneles
               
                         error3 += 1;
                     }
-
+                    
                     if (error3 == 0)
                     {
+                        string infopago = txtNumeroTarjeta.Text;
                         //Agregar el usario a una lista de usuarios
+                        List<Clases.User> deserializarUser = new List<Clases.User>();
                         Clases.User usuario = new Clases.User(usr, number, psswd, name, edad, lastname, gender, nationality, ocuppation, email, infopago, planSeleccionado, dateRegister);
-                        List<Clases.User> deserializarUser = serializar.Deserialize<List<Clases.User>>(File.Open("data.bin", FileMode.Open));
+                        try
+                        {
+                            deserializarUser = serializar.Deserialize<List<Clases.User>>(File.Open("data.bin", FileMode.Open));
+                            MessageBox.Show("Usuario Registrado con exito");
+                        }
+                        catch(System.Runtime.Serialization.SerializationException)
+                        {
+                            
+                        }
                         if (deserializarUser.Count > 0)
                         {
                             for (int c = 0; c < deserializarUser.Count; c++)

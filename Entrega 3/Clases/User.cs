@@ -12,7 +12,7 @@ namespace Entrega_3.Clases
     public class User : Person
     {
         private string mail;
-        private int paymentInfo;
+        private string paymentInfo;
         private string plan;
         private DateTime registrationDate;
         private string nameUser;
@@ -20,7 +20,7 @@ namespace Entrega_3.Clases
         private int numPhone;
         private List<User> usuarios;
 
-        public User(string nameUser, int numPhone, string password, string name, int age, string lastname, string gender, string nationality, string occupation, string mail, int paymentInfo, string plan, DateTime registrationDate)
+        public User(string nameUser, int numPhone, string password, string name, int age, string lastname, string gender, string nationality, string occupation, string mail, string paymentInfo, string plan, DateTime registrationDate)
         {
             this.NumPhone = numPhone;
             this.Password = password;
@@ -48,7 +48,7 @@ namespace Entrega_3.Clases
 
         public int EmailVerified { get; internal set; }
         public string Mail { get => mail; set => mail = value; }
-        public int PaymentInfo { get => paymentInfo; set => paymentInfo = value; }
+        public string PaymentInfo { get => paymentInfo; set => paymentInfo = value; }
         public string Plan { get => plan; set => plan = value; }
         public DateTime RegistrationDate { get => registrationDate; set => registrationDate = value; }
         public string NameUser { get => nameUser; set => nameUser = value; }

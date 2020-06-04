@@ -21,6 +21,23 @@ namespace Entrega_3
             InitializeComponent();
         }
 
+        Clases.DataBase database = new Clases.DataBase();
+
+        Clases.MailSender mailSender = new Clases.MailSender();
+
+        Clases.User user = new Clases.User();
+        DateTime hora = new DateTime();
+
+        Clases.ProfilelUser perfi2 = new Clases.ProfilelUser();
+        double intervalo = 1000;
+
+        //SongClass cancion = new SongClass(); Ya instancie este objeto.
+        //Video video = new Video(); // YA instancie
+        Clases.ProfileManagment profileManagment = new Clases.ProfileManagment();
+        IDictionary<Clases.User, List<Clases.Profile>> diccUserProfiles = new Dictionary<Clases.User, List<Clases.Profile>>();
+        List<Clases.User> usuarios = new List<Clases.User>();
+        Clases.Serialization serializar = new Clases.Serialization();
+
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -30,36 +47,44 @@ namespace Entrega_3
 
         private void button2_Click(object sender, EventArgs e) //Login. Al momento de apretar Login se tienen que cargar todos los usuarios.
         {
-            this.Hide();
-            PanelLogin panel = new PanelLogin();
-            panel.Show();
-            
-            try
+            string a = "c";//suponemos es premiun
+            string b = "b";//suponemos es familiar
+            List<Clases.User> deserializarUser = serializar.Deserialize<List<Clases.User>>(File.Open("data.bin", FileMode.Open));
+            if (txtUsuario.Text == "" || txtContraseña.Text == "")
             {
-
-
-                /*
-                OpenFileDialog dialog = new OpenFileDialog();
-                if (dialog.ShowDialog() == DialogResult.OK)//Si es que el usuario agrego un archivo para guardar.
-                {
-                    Stream st = File.Open(dialog.FileName, FileMode.Open);
-                    var binfor = new BinaryFormatter();
-                    Clases.User persona = (Clases.User)binfor.Deserialize(st);
-                    //textNombre.Text = persona.Nombre; 
-                }
-                else
-                {
-                    MessageBox.Show("Se cancelo la operacion"); 
-
-                }
-                */
-                
+                MessageBox.Show("POR FAVOR RELLENE AMBOS DATOS");
             }
-            catch
+
+            else if (deserializarUser.Count > 0)//aca hay que poner que se verifique el inicio de secion
             {
-                MessageBox.Show("Error");
+                int error = 1;
+                for (int d = 0; d < deserializarUser.Count; d++)
+                {
+                    error--;
+                    if (deserializarUser[d].NameUser == txtUsuario.Text && deserializarUser[d].Password ==txtContraseña.Text)
+                    {
+                            this.Hide();
+                            PanelUsuario panelUser = new PanelUsuario();
+                            panelUser.Show();
+                            break;
+                       
+                        
+
+                    }
+                    else
+                    {
+                        error++;
+                    }
+
+                }
+                if (error > 0)
+                {
+                    MessageBox.Show("Usuario o contraseña invalida");
+                }
+
+
             }
-            
+
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -87,6 +112,43 @@ namespace Entrega_3
         private void label2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void pictureBox14_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            PanelUsuario panelUser = new PanelUsuario();
+            panelUser.Show();
+          
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnMaximizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
+            btnMaximizar.Visible = false;
+            btnVolverNormalidad.Visible = true;
+        }
+
+        private void btnMinimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void btnVolverNormalidad_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Normal;
+            btnVolverNormalidad.Visible = false;
+            btnMaximizar.Visible = true;
         }
     }
 }

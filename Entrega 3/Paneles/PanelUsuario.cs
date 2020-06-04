@@ -72,7 +72,7 @@ namespace Entrega_3
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void panel5_Paint(object sender, PaintEventArgs e)
@@ -95,7 +95,11 @@ namespace Entrega_3
 
         private void button7_Click(object sender, EventArgs e)
         {
-            SubMenuAjustes.Visible = false;
+            panel24.Visible = true;
+            panel2.Visible = false;
+            panel13.Visible = false;
+
+
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -236,6 +240,29 @@ namespace Entrega_3
         private void panel23_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void pictureBox25_Click(object sender, EventArgs e)
+        {
+            panel24.Visible = false;
+            panel2.Visible = true;
+            panel13.Visible = true;
+            SubMenuAjustes.Visible = false;
+        }
+
+        private void pictureBox22_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox22_Click_1(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void pictureBox21_Click(object sender, EventArgs e)
+        {
+          
         }
     }
 }

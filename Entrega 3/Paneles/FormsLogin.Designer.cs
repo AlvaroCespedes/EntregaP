@@ -37,6 +37,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.panelInicioSecionUsurarioBasico = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.panelInicioSecionUsurarioBasico.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
@@ -115,11 +117,21 @@
             // 
             // panelInicioSecionUsurarioBasico
             // 
+            this.panelInicioSecionUsurarioBasico.Controls.Add(this.label4);
             this.panelInicioSecionUsurarioBasico.Location = new System.Drawing.Point(2, 2);
             this.panelInicioSecionUsurarioBasico.Name = "panelInicioSecionUsurarioBasico";
-            this.panelInicioSecionUsurarioBasico.Size = new System.Drawing.Size(516, 222);
+            this.panelInicioSecionUsurarioBasico.Size = new System.Drawing.Size(352, 89);
             this.panelInicioSecionUsurarioBasico.TabIndex = 8;
             this.panelInicioSecionUsurarioBasico.Visible = false;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(358, 188);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(35, 13);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "label4";
             // 
             // PanelLogin
             // 
@@ -137,6 +149,8 @@
             this.Controls.Add(this.button1);
             this.Name = "PanelLogin";
             this.Text = "PanelLogin";
+            this.panelInicioSecionUsurarioBasico.ResumeLayout(false);
+            this.panelInicioSecionUsurarioBasico.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -153,5 +167,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Panel panelInicioSecionUsurarioBasico;
+        private System.Windows.Forms.Label label4;
     }
 }

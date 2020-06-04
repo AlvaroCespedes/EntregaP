@@ -76,40 +76,9 @@ namespace Entrega_3
                 
             }
            
-           
-            else
-
-            {
-               string usr1 = txtUser.Text;
-               string pswd = txtPassword.Text;
-               User user1=new User();
-
-                bool ver = true;
-                    
-                foreach(User u in usuarios)
-                {
-                    if (u.NameUser == usr1 && u.Password == pswd)//aca ver pq no estan tomando las credenciales correspondientes
-                    {
-                        user1 = u;
-                        ver = true;
-                        break;
-
-                    }
-                    else
-                    {
-                        ver = false;
-                    }
-                }
-
-                if (ver == true)
-                {
-                    MessageBox.Show("se pudo");
-                    panelInicioSecionUsurarioBasico.Visible = true;
-                    
-                }
 
 
-            }
+            
         }
 
         private void button2_Click(object sender, EventArgs e)

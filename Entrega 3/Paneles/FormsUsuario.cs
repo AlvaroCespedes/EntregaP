@@ -13,8 +13,55 @@ namespace Entrega_3.Paneles
 {
     public partial class FormsUsuario : Form
     {
-        public FormsUsuario()
+        public FormsUsuario(Clases.User user)
         {
+            if(user.Plan=="Basico")
+            {
+                if (user.Profiles.Count == 0)
+                {
+
+                }
+                else
+                {
+                    pic6.Visible = true;
+                }
+            }
+            else if(user.Plan == "Premium")
+            {
+                if (user.Profiles.Count == 0)
+                {
+
+                }
+                else
+                {
+                    pic6.Visible = true;
+                }
+            }
+            else if(user.Plan == "Familiar")
+            {
+                if (user.Profiles.Count == 0)
+                {
+
+                }
+                else if(user.Profiles.Count == 1)
+                {
+                    pic5.Visible = true;
+                }
+                else if (user.Profiles.Count == 2)
+                {
+                    pic6.Visible = true;
+                }
+                else if (user.Profiles.Count == 2)
+                {
+                    pic7.Visible = true;
+                }
+                else if (user.Profiles.Count == 2)
+                {
+                    pic8.Visible = true;
+                }
+            }    
+        
+            
             InitializeComponent();
         }
 
@@ -249,6 +296,30 @@ namespace Entrega_3.Paneles
         private void button3_Click(object sender, EventArgs e)
         {
             panelprincipal4.Visible = true;
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pic5_Click(object sender, EventArgs e)
+        {
+            if (pic5.Visible == true)
+            {
+
+            }
+               
+        }
+
+        private void pic6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pic7_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

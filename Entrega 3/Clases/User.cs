@@ -19,8 +19,9 @@ namespace Entrega_3.Clases
         private string password;
         private int numPhone;
         private List<User> usuarios;
+        private List<Profile> profiles;
 
-        public User(string nameUser, int numPhone, string password, string name, int age, string lastname, string gender, string nationality, string occupation, string mail, string paymentInfo, string plan, DateTime registrationDate)
+        public User(string nameUser, int numPhone, string password, string name, int age, string lastname, string gender, string nationality, string occupation, string mail, string paymentInfo, string plan, DateTime registrationDate, List<Profile> profiles)
         {
             this.NumPhone = numPhone;
             this.Password = password;
@@ -35,11 +36,12 @@ namespace Entrega_3.Clases
             this.PaymentInfo = paymentInfo;
             this.Plan = plan;
             this.RegistrationDate = registrationDate;
-
+            this.Profiles = profiles;
         }
 
         public User()
         {
+
         }
 
 
@@ -55,6 +57,7 @@ namespace Entrega_3.Clases
         public string Password { get => password; set => password = value; }
         public int NumPhone { get => numPhone; set => numPhone = value; }
         public List<User> Usuarios { get => usuarios; set => usuarios = value; }
+        public List<Profile> Profiles { get => profiles; set => profiles = value; }
 
         public delegate void EmailVerifiEventHandler(object source, EventArgs args);
 

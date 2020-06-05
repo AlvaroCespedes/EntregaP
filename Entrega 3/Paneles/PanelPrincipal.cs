@@ -18,6 +18,7 @@ namespace Entrega_3
     {
         public Form1()
         {
+
             InitializeComponent();
         }
 

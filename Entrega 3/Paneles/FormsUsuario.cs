@@ -15,16 +15,19 @@ namespace Entrega_3.Paneles
     {
         public FormsUsuario(Clases.User user)
         {
+            
 
-            if(user.Plan=="Basico")
+            if (user.Plan=="Basico")
             {
+                
+                 
                 if (user.Profiles.Count == 0)
                 {
 
                 }
                 else
                 {
-                    pic6.Visible = true;
+                    pic6.Visible = false;
                 }
             }
             else if(user.Plan == "Premium")
@@ -35,7 +38,7 @@ namespace Entrega_3.Paneles
                 }
                 else
                 {
-                    pic6.Visible = true;
+                    pic6.Visible = false;
                 }
             }
             else if(user.Plan == "Familiar")
@@ -46,19 +49,25 @@ namespace Entrega_3.Paneles
                 }
                 else if(user.Profiles.Count == 1)
                 {
-                    pic5.Visible = true;
+                    pic5.Visible = false;
                 }
                 else if (user.Profiles.Count == 2)
                 {
-                    pic6.Visible = true;
+                    pic5.Visible = false;
+                    pic6.Visible = false;
                 }
-                else if (user.Profiles.Count == 2)
+                else if (user.Profiles.Count == 3)
                 {
-                    pic7.Visible = true;
+                    pic5.Visible = false;
+                    pic6.Visible = false;
+                    pic7.Visible = false;
                 }
-                else if (user.Profiles.Count == 2)
+                else if (user.Profiles.Count == 4)
                 {
-                    pic8.Visible = true;
+                    pic5.Visible = false;
+                    pic6.Visible = false;
+                    pic7.Visible = false;
+                    pic8.Visible = false;
                 }
             }    
         
@@ -306,7 +315,7 @@ namespace Entrega_3.Paneles
 
         private void pic5_Click(object sender, EventArgs e)
         {
-            if (pic5.Visible == true)
+            if (pic5.Visible == false)
             {
 
             }
@@ -326,6 +335,16 @@ namespace Entrega_3.Paneles
         }
 
         private void FormsUsuario_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
         {
 
         }

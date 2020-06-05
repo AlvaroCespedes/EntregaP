@@ -63,12 +63,11 @@ namespace Entrega_3
                     error--;
                     if (deserializarUser[d].NameUser == txtUsuario.Text && deserializarUser[d].Password ==txtContraseña.Text)
                     {
-                            this.Hide();
-                            PanelUsuario panelUser = new PanelUsuario();
-                            panelUser.Show();
-                            break;
-                       
-                        
+                        this.Hide();
+                        FormsUsuario formsUsuario = new FormsUsuario();
+                        formsUsuario.Show();
+
+
 
                     }
                     else
@@ -90,8 +89,8 @@ namespace Entrega_3
         private void button3_Click(object sender, EventArgs e)
         {
             this.Hide();
-            PanelUsuario panelUsuario = new PanelUsuario();
-            panelUsuario.Show();
+            FormsUsuario formsUsuario = new FormsUsuario();
+            formsUsuario.Show();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -116,9 +115,7 @@ namespace Entrega_3
 
         private void pictureBox14_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            PanelUsuario panelUser = new PanelUsuario();
-            panelUser.Show();
+            
           
         }
 

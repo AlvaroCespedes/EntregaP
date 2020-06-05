@@ -62,38 +62,8 @@ namespace Entrega_3.Paneles
                 }
             }    
         
-
-            string a = "familiar";//usuario basico
-
             InitializeComponent();
-            if (a == "a")
-            {
-                panelPrincipal1.Visible = true;
-                panel16.Visible = false;
-                panel18.Visible = false;
-                panel21.Visible = false;
-                btnD1.Visible = false;
-                btnD2.Visible = false;
-                btnD3.Visible = false;
-                panel5.Visible = false;
-                panel7.Visible = false;
-
-                btnPlaylistVideo.Visible = false;
-                btnPlaylisMusica.Visible = false;
-                btnCambiarPerfil.Visible = false;
-                panel12.Visible = false;
-
-            }
-            else if (a == "premiun")
-            {
-
-            }
-            else if (a == "familiar")
-            {
-                panelMenuIzquierda.Visible = false;
-                panelPrincipal1.Visible = false;
-                panelReproducotorAbajo.Visible = false;
-            }
+            
         }
 
       
@@ -355,6 +325,10 @@ namespace Entrega_3.Paneles
 
         }
 
+        private void FormsUsuario_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

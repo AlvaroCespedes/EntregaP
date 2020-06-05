@@ -34,7 +34,7 @@ namespace Entrega_3.Paneles
         List<Clases.User> todosUsuarios = new List<Clases.User>();
 
         Clases.ProfileManagment profileManagment = new Clases.ProfileManagment();
-        
+        List<Clases.Profile> perfiles = new List<Clases.Profile>();
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
@@ -202,7 +202,7 @@ namespace Entrega_3.Paneles
                 string planSeleccionado = "Basico";
                 string infopago = "";
 
-                Clases.User usuario = new Clases.User(usr, number, psswd, name, edad, lastname, gender, nationality, ocuppation, email, infopago, planSeleccionado, dateRegister);
+                Clases.User usuario = new Clases.User(usr, number, psswd, name, edad, lastname, gender, nationality, ocuppation, email, infopago, planSeleccionado, dateRegister,perfiles);
                 List<Clases.User> deserializarUser = serializar.Deserialize<List<Clases.User>>(File.Open("data.bin", FileMode.Open));
                 if (deserializarUser.Count>0)
                 {
@@ -364,7 +364,7 @@ namespace Entrega_3.Paneles
                     if (error2 == 0)
                     {
                         string infopago = txtNumeroTarjeta.Text;
-                        Clases.User usuario = new Clases.User(usr, number, psswd, name, edad, lastname, gender, nationality, ocuppation, email, infopago, planSeleccionado, dateRegister);
+                        Clases.User usuario = new Clases.User(usr, number, psswd, name, edad, lastname, gender, nationality, ocuppation, email, infopago, planSeleccionado, dateRegister,perfiles);
                         
                         List<Clases.User> deserializarUser = new List<Clases.User>();
                         
@@ -450,7 +450,7 @@ namespace Entrega_3.Paneles
                         string infopago = txtNumeroTarjeta.Text;
                         //Agregar el usario a una lista de usuarios
                         List<Clases.User> deserializarUser = new List<Clases.User>();
-                        Clases.User usuario = new Clases.User(usr, number, psswd, name, edad, lastname, gender, nationality, ocuppation, email, infopago, planSeleccionado, dateRegister);
+                        Clases.User usuario = new Clases.User(usr, number, psswd, name, edad, lastname, gender, nationality, ocuppation, email, infopago, planSeleccionado, dateRegister,perfiles);
                         try
                         {
                             deserializarUser = serializar.Deserialize<List<Clases.User>>(File.Open("data.bin", FileMode.Open));

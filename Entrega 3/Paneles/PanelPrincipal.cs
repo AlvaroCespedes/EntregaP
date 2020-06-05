@@ -64,7 +64,7 @@ namespace Entrega_3
                     if (deserializarUser[d].NameUser == txtUsuario.Text && deserializarUser[d].Password ==txtContraseña.Text)
                     {
                         this.Hide();
-                        FormsUsuario formsUsuario = new FormsUsuario();
+                        FormsUsuario formsUsuario = new FormsUsuario(deserializarUser[d]);
                         formsUsuario.Show();
 
 
@@ -88,9 +88,7 @@ namespace Entrega_3
 
         private void button3_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            FormsUsuario formsUsuario = new FormsUsuario();
-            formsUsuario.Show();
+           
         }
 
         private void Form1_Load(object sender, EventArgs e)

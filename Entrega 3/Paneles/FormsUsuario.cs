@@ -15,6 +15,7 @@ namespace Entrega_3.Paneles
     {
         public FormsUsuario(Clases.User user)
         {
+
             if(user.Plan=="Basico")
             {
                 if (user.Profiles.Count == 0)
@@ -61,8 +62,38 @@ namespace Entrega_3.Paneles
                 }
             }    
         
-            
+
+            string a = "familiar";//usuario basico
+
             InitializeComponent();
+            if (a == "a")
+            {
+                panelPrincipal1.Visible = true;
+                panel16.Visible = false;
+                panel18.Visible = false;
+                panel21.Visible = false;
+                btnD1.Visible = false;
+                btnD2.Visible = false;
+                btnD3.Visible = false;
+                panel5.Visible = false;
+                panel7.Visible = false;
+
+                btnPlaylistVideo.Visible = false;
+                btnPlaylisMusica.Visible = false;
+                btnCambiarPerfil.Visible = false;
+                panel12.Visible = false;
+
+            }
+            else if (a == "premiun")
+            {
+
+            }
+            else if (a == "familiar")
+            {
+                panelMenuIzquierda.Visible = false;
+                panelPrincipal1.Visible = false;
+                panelReproducotorAbajo.Visible = false;
+            }
         }
 
       
@@ -312,15 +343,18 @@ namespace Entrega_3.Paneles
                
         }
 
+
         private void pic6_Click(object sender, EventArgs e)
         {
 
         }
 
+
         private void pic7_Click(object sender, EventArgs e)
         {
 
         }
+
     }
 }
 

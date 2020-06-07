@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.InteropServices;
 
 namespace Entrega_3.Paneles
 {
@@ -54,7 +55,7 @@ namespace Entrega_3.Paneles
         private void btnContinuar_Click(object sender, EventArgs e)      
         {
             List<Clases.User> deserializarUser = new List<Clases.User>();
-            label11.Visible = false;
+           
             int errores = 0;
             try
             {
@@ -135,8 +136,9 @@ namespace Entrega_3.Paneles
             }
             
             else if(errores==0)
-            { 
-                 panel1.Visible = true;      //aca agregar verificar si no se equivoca en la confirmacion de contraseña, que el nombre de usuario no exista ....
+            {
+                label11.Visible = false;
+                panel1.Visible = true;      //aca agregar verificar si no se equivoca en la confirmacion de contraseña, que el nombre de usuario no exista ....
             }
         }
 
@@ -529,6 +531,40 @@ namespace Entrega_3.Paneles
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnMaximizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
+            btnMaximizar.Visible = false;
+            btnVolverNormalidad.Visible = true;
+        }
+
+        private void btnVolverNormalidad_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Normal;
+            btnVolverNormalidad.Visible = false;
+            btnMaximizar.Visible = true;
+        }
+
+        private void btnMinimizar_Click(object sender, EventArgs e)
+        {
+
+            this.WindowState = FormWindowState.Minimized;
+        }
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+        private void panel3_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
     }
 }

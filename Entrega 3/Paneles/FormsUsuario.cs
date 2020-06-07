@@ -843,6 +843,14 @@ namespace Entrega_3.Paneles
             panelPrincipal1.Visible = true;
             panelMenuIzquierda.Visible = true;
         }
+
+        private void btnPlaylistVideo_Click(object sender, EventArgs e)
+        {
+            if (panelSubMenuAjustes.Visible == true)
+            {
+                panelSubMenuAjustes.Visible = false;
+            }
+        }
     }
 }
 

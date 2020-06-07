@@ -24,3 +24,4 @@ C:\Users\matistark\Desktop\EntregaP\Entrega 3\obj\Debug\Entrega 3.csproj.Generat
 C:\Users\matistark\Desktop\EntregaP\Entrega 3\obj\Debug\Entrega 3.csproj.CoreCompileInputs.cache
 C:\Users\matistark\Desktop\EntregaP\Entrega 3\obj\Debug\Entrega 3.exe
 C:\Users\matistark\Desktop\EntregaP\Entrega 3\obj\Debug\Entrega 3.pdb
+C:\Users\matistark\Desktop\EntregaP\Entrega 3\obj\Debug\Entrega_3.Paneles.FormAplicacion.resources

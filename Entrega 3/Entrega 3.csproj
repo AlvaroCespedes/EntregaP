@@ -69,6 +69,12 @@
     <Compile Include="Clases\SongClass.cs" />
     <Compile Include="Clases\User.cs" />
     <Compile Include="Clases\Video.cs" />
+    <Compile Include="Paneles\FormAplicacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Paneles\FormAplicacion.Designer.cs">
+      <DependentUpon>FormAplicacion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Paneles\FormsUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +101,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Paneles\FormAplicacion.resx">
+      <DependentUpon>FormAplicacion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Paneles\FormsUsuario.resx">
       <DependentUpon>FormsUsuario.cs</DependentUpon>
     </EmbeddedResource>

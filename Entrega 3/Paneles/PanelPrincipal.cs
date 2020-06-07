@@ -93,7 +93,9 @@ namespace Entrega_3
 
         private void button3_Click(object sender, EventArgs e)
         {
-           
+            this.Hide();
+            FormAplicacion formAplicacion = new FormAplicacion();
+            formAplicacion.Show();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -149,6 +151,15 @@ namespace Entrega_3
             this.WindowState = FormWindowState.Normal;
             btnVolverNormalidad.Visible = false;
             btnMaximizar.Visible = true;
+        }
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
     }
 }

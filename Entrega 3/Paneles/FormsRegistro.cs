@@ -273,6 +273,7 @@ namespace Entrega_3.Paneles
         {
             panel2.Visible = false;
             panel1.Visible = true;
+            radioButton5.Visible = true;
         }
 
         private void btnContinuarTarjeta_Click(object sender, EventArgs e)

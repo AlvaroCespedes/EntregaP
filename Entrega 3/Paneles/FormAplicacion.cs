@@ -22,7 +22,11 @@ namespace Entrega_3.Paneles
             if (user.Plan == "Basico")
             {
 
-
+                btnPlaylisMusica.Visible = false;
+                btnPlaylistVideo.Visible = false;
+                btnCambiarPerfil.Visible = false;
+                panel12.Visible = false;
+               
                 if (user.Profiles.Count == 0)
                 {
                     pic5.Visible = true;
@@ -58,6 +62,7 @@ namespace Entrega_3.Paneles
                     label8.Text = usuario.Profiles[0].NameProfile;
                     label8.Visible = true;
                     button1.Visible = true;
+                    
 
                 }
             }
@@ -362,6 +367,28 @@ namespace Entrega_3.Paneles
         {
             panelCrearUsuario.Visible = true;
             panelContenedorPincipal.Visible = true;
+            string h = ".jpg";
+
+           
+
+            Image image1 = Image.FromFile(usuario.Profiles[0].PleasuresMusic[0] + h);
+            pic12.Image = image1;
+            Image image2 = Image.FromFile(usuario.Profiles[0].PleasuresMusic[1] + h);
+            pic13.Image = image2;
+            Image image3 = Image.FromFile(usuario.Profiles[0].PleasuresMusic[2] + h);
+            pic14.Image = image3;
+
+
+
+
+
+
+
+
+
+
+
+
         }
 
         private void crear1_Click(object sender, EventArgs e)
@@ -473,7 +500,8 @@ namespace Entrega_3.Paneles
 
                 serializar.Serialize(todosUsuarios, File.Open("data.bin", FileMode.Create));
                 MessageBox.Show("Perfil Creado");
-                panel2.Visible = false;
+                panelContenedorPincipal.Visible = false;
+                panelCrearUsuario.Visible = false;
 
                 if (usuario.Plan == "Basico")
                 {
@@ -647,9 +675,20 @@ namespace Entrega_3.Paneles
                         button2.Visible = true;
                         button3.Visible = true;
                         button4.Visible = true;
+                        
                     }
                 }
             }
+        }
+
+        private void pic9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gustosMusicales_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

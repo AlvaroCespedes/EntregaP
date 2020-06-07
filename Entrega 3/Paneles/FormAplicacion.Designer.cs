@@ -715,6 +715,7 @@
             this.pic9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pic9.TabIndex = 33;
             this.pic9.TabStop = false;
+            this.pic9.Click += new System.EventHandler(this.pic9_Click);
             // 
             // label14
             // 
@@ -722,9 +723,9 @@
             this.label14.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.Location = new System.Drawing.Point(347, 262);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(356, 22);
+            this.label14.Size = new System.Drawing.Size(342, 22);
             this.label14.TabIndex = 32;
-            this.label14.Text = "Canciones mas escuchadas de SPOTFLIX";
+            this.label14.Text = "Porque pensamos que te podia gustar..";
             this.label14.UseWaitCursor = true;
             // 
             // pic14
@@ -821,7 +822,7 @@
             this.panelSubMenuAjustes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panelSubMenuAjustes.Location = new System.Drawing.Point(43, 359);
             this.panelSubMenuAjustes.Name = "panelSubMenuAjustes";
-            this.panelSubMenuAjustes.Size = new System.Drawing.Size(149, 170);
+            this.panelSubMenuAjustes.Size = new System.Drawing.Size(149, 212);
             this.panelSubMenuAjustes.TabIndex = 17;
             this.panelSubMenuAjustes.Visible = false;
             // 
@@ -871,7 +872,7 @@
             this.btnOtro.Name = "btnOtro";
             this.btnOtro.Size = new System.Drawing.Size(136, 30);
             this.btnOtro.TabIndex = 7;
-            this.btnOtro.Text = "Otro";
+            this.btnOtro.Text = "Administrar perfiles";
             this.btnOtro.UseVisualStyleBackColor = false;
             // 
             // panel10
@@ -1140,6 +1141,7 @@
             this.gustosMusicales.Name = "gustosMusicales";
             this.gustosMusicales.Size = new System.Drawing.Size(142, 139);
             this.gustosMusicales.TabIndex = 25;
+            this.gustosMusicales.SelectedIndexChanged += new System.EventHandler(this.gustosMusicales_SelectedIndexChanged);
             // 
             // privacidadPerfil
             // 

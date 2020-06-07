@@ -829,6 +829,7 @@ namespace Entrega_3.Paneles
         {
             panelPrincipal1.Visible = true;
             panelMenuIzquierda.Visible = true;
+            panelReproducotorAbajo.Visible = true;
         }
 
         private void button3_Click_1(object sender, EventArgs e)

@@ -54,6 +54,7 @@ namespace Entrega_3.Paneles
         private void btnContinuar_Click(object sender, EventArgs e)      
         {
             List<Clases.User> deserializarUser = new List<Clases.User>();
+            label11.Visible = false;
             int errores = 0;
             try
             {
@@ -157,6 +158,7 @@ namespace Entrega_3.Paneles
         private void btnContinuar2_Click(object sender, EventArgs e)
         {
             Form1 forms1 = new Form1();
+            radioButton5.Visible = false;
             string usr = txtANombreUsuarioR.Text;
             int number = Int32.Parse(txtNumerocelularR.Text);
             
@@ -515,6 +517,16 @@ namespace Entrega_3.Paneles
         }
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }

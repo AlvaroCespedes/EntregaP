@@ -455,9 +455,18 @@ namespace Entrega_3.Paneles
                 }
 
             }
-            if (nomPerfil.Text == "" || privacidadPerfil.SelectedItem == null || gustosMusicales.CheckedItems == null || gustosPeliculas.CheckedItems == null)
+            if (nomPerfil.Text == "" || privacidadPerfil.SelectedItem == null || gustosMusicales.CheckedItems.Count< 3 || gustosPeliculas.CheckedItems.Count<3)
             {
                 MessageBox.Show("RELLENE TODOS LOS DATOS");
+                if(gustosMusicales.CheckedItems.Count < 3)
+                {
+                    MessageBox.Show("Debe ingresar al menos 3 gustos musicales");
+                }
+                if (gustosMusicales.CheckedItems.Count < 3)
+                {
+                    MessageBox.Show("Debe ingresar al menos 3 categorias de peliculas favoritas");
+                }
+
             }
             else if (errores == 0)
             {
@@ -687,6 +696,11 @@ namespace Entrega_3.Paneles
         }
 
         private void gustosMusicales_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pic10_Click(object sender, EventArgs e)
         {
 
         }

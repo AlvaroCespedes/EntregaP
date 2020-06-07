@@ -704,6 +704,7 @@
             this.pic10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic10.TabIndex = 34;
             this.pic10.TabStop = false;
+            this.pic10.Click += new System.EventHandler(this.pic10_Click);
             // 
             // pic9
             // 

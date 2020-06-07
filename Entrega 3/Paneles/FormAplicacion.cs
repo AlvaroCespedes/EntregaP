@@ -250,8 +250,9 @@ namespace Entrega_3.Paneles
         }
 
         private void SubMenuAjustes_Click(object sender, EventArgs e)
-        {   
-            if(panelSubMenuAjustes.Visible==true)
+        {
+            panel4.Visible = false;
+            if (panelSubMenuAjustes.Visible==true)
             {
                 panelSubMenuAjustes.Visible = false;
             }
@@ -263,10 +264,16 @@ namespace Entrega_3.Paneles
 
         private void btnPlaylistVideo_Click(object sender, EventArgs e)
         {
+
             if (panelSubMenuAjustes.Visible == true)
             {
                 panelSubMenuAjustes.Visible = false;
             }
+            if (panel4.Visible == true)
+            {
+                panel4.Visible = false;
+            }
+
         }
 
         private void btnPlaylisMusica_Click(object sender, EventArgs e)
@@ -274,6 +281,10 @@ namespace Entrega_3.Paneles
             if (panelSubMenuAjustes.Visible == true)
             {
                 panelSubMenuAjustes.Visible = false;
+            }
+            if (panel4.Visible == true)
+            {
+                panel4.Visible = false;
             }
         }
 
@@ -283,6 +294,10 @@ namespace Entrega_3.Paneles
             {
                 panelSubMenuAjustes.Visible = false;
             }
+            if (panel4.Visible == true)
+            {
+                panel4.Visible = false;
+            }
         }
 
         private void btnInicio_Click(object sender, EventArgs e)
@@ -290,6 +305,10 @@ namespace Entrega_3.Paneles
             if (panelSubMenuAjustes.Visible == true)
             {
                 panelSubMenuAjustes.Visible = false;
+            }
+            if (panel4.Visible == true)
+            {
+                panel4.Visible = false;
             }
         }
 
@@ -368,8 +387,11 @@ namespace Entrega_3.Paneles
             panelCrearUsuario.Visible = true;
             panelContenedorPincipal.Visible = true;
             string h = ".jpg";
+            b1.Visible = false;
+            b2.Visible = false;
+            b3.Visible = false;
+            b4.Visible = false;
 
-           
 
             Image image1 = Image.FromFile(usuario.Profiles[0].PleasuresMusic[0] + h);
             pic12.Image = image1;
@@ -395,49 +417,107 @@ namespace Entrega_3.Paneles
         {
             panelContenedorPincipal.Visible = false;
             panelCrearUsuario.Visible = true;
-           
+            b1.Visible = false;
+            b2.Visible = false;
+            b3.Visible = false;
+            b4.Visible = false;
+
         }
 
         private void crear2_Click(object sender, EventArgs e)
         {
             panelContenedorPincipal.Visible = false;
             panelCrearUsuario.Visible = true;
+            b1.Visible = false;
+            b2.Visible = false;
+            b3.Visible = false;
+            b4.Visible = false;
         }
 
         private void crear3_Click(object sender, EventArgs e)
         {
             panelContenedorPincipal.Visible = false;
             panelCrearUsuario.Visible = true;
+            b1.Visible = false;
+            b2.Visible = false;
+            b3.Visible = false;
+            b4.Visible = false;
         }
 
         private void crear4_Click(object sender, EventArgs e)
         {
             panelContenedorPincipal.Visible = false;
             panelCrearUsuario.Visible = true;
+            b1.Visible = false;
+            b2.Visible = false;
+            b3.Visible = false;
+            b4.Visible = false;
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             panelCrearUsuario.Visible = true;
             panelContenedorPincipal.Visible = true;
+            string h = ".jpg";
+            b1.Visible = false;
+            b2.Visible = false;
+            b3.Visible = false;
+            b4.Visible = false;
+
+
+            Image image1 = Image.FromFile(usuario.Profiles[1].PleasuresMusic[0] + h);
+            pic12.Image = image1;
+            Image image2 = Image.FromFile(usuario.Profiles[1].PleasuresMusic[1] + h);
+            pic13.Image = image2;
+            Image image3 = Image.FromFile(usuario.Profiles[1].PleasuresMusic[2] + h);
+            pic14.Image = image3;
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             panelCrearUsuario.Visible = true;
             panelContenedorPincipal.Visible = true;
+            string h = ".jpg";
+            b1.Visible = false;
+            b2.Visible = false;
+            b3.Visible = false;
+            b4.Visible = false;
+
+
+
+            Image image1 = Image.FromFile(usuario.Profiles[2].PleasuresMusic[0] + h);
+            pic12.Image = image1;
+            Image image2 = Image.FromFile(usuario.Profiles[2].PleasuresMusic[1] + h);
+            pic13.Image = image2;
+            Image image3 = Image.FromFile(usuario.Profiles[2].PleasuresMusic[2] + h);
+            pic14.Image = image3;
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             panelCrearUsuario.Visible = true;
             panelContenedorPincipal.Visible = true;
+            string h = ".jpg";
+            b1.Visible = false;
+            b2.Visible = false;
+            b3.Visible = false;
+            b4.Visible = false;
+
+
+            Image image1 = Image.FromFile(usuario.Profiles[3].PleasuresMusic[0] + h);
+            pic12.Image = image1;
+            Image image2 = Image.FromFile(usuario.Profiles[3].PleasuresMusic[1] + h);
+            pic13.Image = image2;
+            Image image3 = Image.FromFile(usuario.Profiles[3].PleasuresMusic[2] + h);
+            pic14.Image = image3;
         }
 
         private void btnCambiarPerfil_Click(object sender, EventArgs e)
         {
             panelContenedorPincipal.Visible = false;
             panelCrearUsuario.Visible = false;
+            panel4.Visible = false;
+            
         }
 
         private void Crear_Click(object sender, EventArgs e)
@@ -689,6 +769,109 @@ namespace Entrega_3.Paneles
         private void gustosMusicales_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnCambiarContraseña_Click(object sender, EventArgs e)
+        {
+            label15.Text = "Cambio de Contraseña";
+            l1.Text = "Constraseña actual";
+            l2.Text = "Nueva constraseña";
+            l3.Text = "Confirme nueva";
+            l1.Visible = true;
+            l2.Visible = true;
+            l3.Visible = true;
+            l4.Visible = true;
+            l5.Visible = true;
+            l6.Visible = true;
+            radioButton1.Visible = false;
+            radioButton4.Visible = false;
+            radioButton5.Visible = false;
+            btnCambiarClave.Visible = true;
+            btncambiarp.Visible = false;
+
+
+            if (panel4.Visible == true)
+            {
+                panel4.Visible = false;
+            }
+            else
+            {
+                panel4.Visible = true;
+            }
+        }
+
+        private void btnCambiarPlan_Click(object sender, EventArgs e)
+        {
+            label15.Text = "Escoja Plan";
+            l1.Visible = false;
+            l2.Visible = false;
+            l3.Visible = true;
+            l3.Text = "Contraseña";
+            l4.Visible = false;
+            l5.Visible = false;
+            l6.Visible = true;
+            btnCambiarClave.Visible = false;
+            btncambiarp.Visible = true;
+            radioButton1.Visible = true;
+            radioButton4.Visible = true;
+            radioButton5.Visible = true;
+
+            if (panel4.Visible == true)
+            {
+                panel4.Visible = false;
+            }
+            else
+            {
+                panel4.Visible = true;
+            }
+        }
+
+        private void btnOtro_Click(object sender, EventArgs e)
+        {
+            panelContenedorPincipal.Visible = false;
+            panel4.Visible = false;
+            panelSubMenuAjustes.Visible = false;
+            panelCrearUsuario.Visible = false;
+            b1.Visible = true;
+            
+        }
+
+        private void panelSubMenuAjustes_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnCambiarClave_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void b1_Click(object sender, EventArgs e)
+        {
+            panelCrearUsuario.Visible = true;
+            panelContenedorPincipal.Visible = true;
+            panel5.Visible = true;
+        }
+
+        private void b2_Click(object sender, EventArgs e)
+        {
+            panelCrearUsuario.Visible = true;
+            panelContenedorPincipal.Visible = true;
+            panel5.Visible = true;
+        }
+
+        private void b3_Click(object sender, EventArgs e)
+        {
+            panelCrearUsuario.Visible = true;
+            panelContenedorPincipal.Visible = true;
+            panel5.Visible = true;
+        }
+
+        private void b4_Click(object sender, EventArgs e)
+        {
+            panelCrearUsuario.Visible = true;
+            panelContenedorPincipal.Visible = true;
+            panel5.Visible = true;
         }
     }
 }

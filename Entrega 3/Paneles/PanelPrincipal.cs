@@ -82,8 +82,8 @@ namespace Entrega_3
                 if(avanzar > 0)
                 {
                     this.Hide();
-                    FormsUsuario formsUsuario = new FormsUsuario(us);
-                    formsUsuario.Show();
+                    FormAplicacion formAplicacion = new FormAplicacion(us);
+                    formAplicacion.Show();
                 }
 
 
@@ -93,9 +93,8 @@ namespace Entrega_3
 
         private void button3_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            FormAplicacion formAplicacion = new FormAplicacion();
-            formAplicacion.Show();
+            
+            
         }
 
         private void Form1_Load(object sender, EventArgs e)

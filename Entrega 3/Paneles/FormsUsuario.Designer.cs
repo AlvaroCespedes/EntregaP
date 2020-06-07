@@ -377,9 +377,9 @@
             this.panelPrincipal1.Controls.Add(this.pictureBox1);
             this.panelPrincipal1.Controls.Add(this.textBox1);
             this.panelPrincipal1.Controls.Add(this.panelReproducotorAbajo);
-            this.panelPrincipal1.Location = new System.Drawing.Point(210, 18);
+            this.panelPrincipal1.Location = new System.Drawing.Point(210, 384);
             this.panelPrincipal1.Name = "panelPrincipal1";
-            this.panelPrincipal1.Size = new System.Drawing.Size(640, 514);
+            this.panelPrincipal1.Size = new System.Drawing.Size(378, 148);
             this.panelPrincipal1.TabIndex = 39;
             this.panelPrincipal1.Visible = false;
             // 
@@ -581,7 +581,7 @@
             // 
             this.pic11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.pic11.Image = ((System.Drawing.Image)(resources.GetObject("pic11.Image")));
-            this.pic11.Location = new System.Drawing.Point(417, 89);
+            this.pic11.Location = new System.Drawing.Point(155, -277);
             this.pic11.Name = "pic11";
             this.pic11.Size = new System.Drawing.Size(158, 117);
             this.pic11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -592,7 +592,7 @@
             // 
             this.pic10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.pic10.Image = ((System.Drawing.Image)(resources.GetObject("pic10.Image")));
-            this.pic10.Location = new System.Drawing.Point(223, 89);
+            this.pic10.Location = new System.Drawing.Point(-39, -277);
             this.pic10.Name = "pic10";
             this.pic10.Size = new System.Drawing.Size(158, 117);
             this.pic10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -603,7 +603,7 @@
             // 
             this.pic9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.pic9.Image = ((System.Drawing.Image)(resources.GetObject("pic9.Image")));
-            this.pic9.Location = new System.Drawing.Point(15, 89);
+            this.pic9.Location = new System.Drawing.Point(-247, -277);
             this.pic9.Name = "pic9";
             this.pic9.Size = new System.Drawing.Size(158, 117);
             this.pic9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -635,7 +635,7 @@
             // 
             this.pic13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.pic13.Image = ((System.Drawing.Image)(resources.GetObject("pic13.Image")));
-            this.pic13.Location = new System.Drawing.Point(223, 271);
+            this.pic13.Location = new System.Drawing.Point(-39, -95);
             this.pic13.Name = "pic13";
             this.pic13.Size = new System.Drawing.Size(158, 117);
             this.pic13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -646,7 +646,7 @@
             // 
             this.pic12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.pic12.Image = ((System.Drawing.Image)(resources.GetObject("pic12.Image")));
-            this.pic12.Location = new System.Drawing.Point(24, 271);
+            this.pic12.Location = new System.Drawing.Point(-238, -95);
             this.pic12.Name = "pic12";
             this.pic12.Size = new System.Drawing.Size(158, 117);
             this.pic12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -686,9 +686,9 @@
             this.panelReproducotorAbajo.Controls.Add(this.btnPlay);
             this.panelReproducotorAbajo.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelReproducotorAbajo.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.panelReproducotorAbajo.Location = new System.Drawing.Point(0, 450);
+            this.panelReproducotorAbajo.Location = new System.Drawing.Point(0, 84);
             this.panelReproducotorAbajo.Name = "panelReproducotorAbajo";
-            this.panelReproducotorAbajo.Size = new System.Drawing.Size(640, 64);
+            this.panelReproducotorAbajo.Size = new System.Drawing.Size(378, 64);
             this.panelReproducotorAbajo.TabIndex = 0;
             // 
             // btnDetener

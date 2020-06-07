@@ -57,34 +57,7 @@
             this.pic2 = new System.Windows.Forms.PictureBox();
             this.pic1 = new System.Windows.Forms.PictureBox();
             this.panelCrearUsuario = new System.Windows.Forms.Panel();
-            this.Crear = new System.Windows.Forms.Button();
-            this.gustosPeliculas = new System.Windows.Forms.CheckedListBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.gustosMusicales = new System.Windows.Forms.CheckedListBox();
-            this.privacidadPerfil = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.nomPerfil = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.panelContenedorPincipal = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panelSubMenuAjustes = new System.Windows.Forms.Panel();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.btnCambiarPerfil = new System.Windows.Forms.Button();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.btnOtro = new System.Windows.Forms.Button();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.btnCambiarContraseña = new System.Windows.Forms.Button();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.btnCambiarPlan = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.label12 = new System.Windows.Forms.Label();
-            this.SubMenuAjustes = new System.Windows.Forms.Button();
-            this.btnPlaylistVideo = new System.Windows.Forms.Button();
-            this.btnPlaylisMusica = new System.Windows.Forms.Button();
-            this.btnInicio = new System.Windows.Forms.Button();
             this.subpanel3 = new System.Windows.Forms.Panel();
             this.panel21 = new System.Windows.Forms.Panel();
             this.btnD3 = new System.Windows.Forms.Button();
@@ -110,6 +83,33 @@
             this.pic12 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panelSubMenuAjustes = new System.Windows.Forms.Panel();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.btnCambiarPerfil = new System.Windows.Forms.Button();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.btnOtro = new System.Windows.Forms.Button();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.btnCambiarContraseña = new System.Windows.Forms.Button();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.btnCambiarPlan = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.label12 = new System.Windows.Forms.Label();
+            this.SubMenuAjustes = new System.Windows.Forms.Button();
+            this.btnPlaylistVideo = new System.Windows.Forms.Button();
+            this.btnPlaylisMusica = new System.Windows.Forms.Button();
+            this.btnInicio = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.Crear = new System.Windows.Forms.Button();
+            this.gustosPeliculas = new System.Windows.Forms.CheckedListBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.gustosMusicales = new System.Windows.Forms.CheckedListBox();
+            this.privacidadPerfil = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.nomPerfil = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnVolverNormalidad)).BeginInit();
@@ -125,8 +125,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pic1)).BeginInit();
             this.panelCrearUsuario.SuspendLayout();
             this.panelContenedorPincipal.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panelSubMenuAjustes.SuspendLayout();
             this.subpanel3.SuspendLayout();
             this.subpanel2.SuspendLayout();
             this.subpanel1.SuspendLayout();
@@ -137,6 +135,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pic13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel2.SuspendLayout();
+            this.panelSubMenuAjustes.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -151,7 +151,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(900, 35);
             this.panel1.TabIndex = 0;
-            
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
             // btnMaximizar
@@ -212,6 +211,7 @@
             this.button4.Text = "Entrar";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Visible = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
@@ -222,6 +222,7 @@
             this.button3.Text = "Entrar";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Visible = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -232,6 +233,7 @@
             this.button2.Text = "Entrar";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Visible = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -242,6 +244,7 @@
             this.button1.Text = "Entrar";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Visible = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label11
             // 
@@ -331,6 +334,7 @@
             this.crear4.TabIndex = 59;
             this.crear4.Text = "Crear";
             this.crear4.UseVisualStyleBackColor = true;
+            this.crear4.Click += new System.EventHandler(this.crear4_Click);
             // 
             // crear3
             // 
@@ -340,6 +344,7 @@
             this.crear3.TabIndex = 58;
             this.crear3.Text = "Crear";
             this.crear3.UseVisualStyleBackColor = true;
+            this.crear3.Click += new System.EventHandler(this.crear3_Click);
             // 
             // crear2
             // 
@@ -349,6 +354,7 @@
             this.crear2.TabIndex = 57;
             this.crear2.Text = "Crear";
             this.crear2.UseVisualStyleBackColor = true;
+            this.crear2.Click += new System.EventHandler(this.crear2_Click);
             // 
             // crear1
             // 
@@ -358,6 +364,7 @@
             this.crear1.TabIndex = 56;
             this.crear1.Text = "Crear";
             this.crear1.UseVisualStyleBackColor = true;
+            this.crear1.Click += new System.EventHandler(this.crear1_Click);
             // 
             // pic4
             // 
@@ -454,158 +461,7 @@
             this.panelCrearUsuario.Name = "panelCrearUsuario";
             this.panelCrearUsuario.Size = new System.Drawing.Size(900, 583);
             this.panelCrearUsuario.TabIndex = 68;
-            // 
-            // Crear
-            // 
-            this.Crear.Location = new System.Drawing.Point(684, 433);
-            this.Crear.Name = "Crear";
-            this.Crear.Size = new System.Drawing.Size(75, 23);
-            this.Crear.TabIndex = 28;
-            this.Crear.Text = "Crear";
-            this.Crear.UseVisualStyleBackColor = true;
-            // 
-            // gustosPeliculas
-            // 
-            this.gustosPeliculas.FormattingEnabled = true;
-            this.gustosPeliculas.Items.AddRange(new object[] {
-            "Aventuras",
-            "Comedias",
-            "Dramáticas",
-            "Terror",
-            "Musicales",
-            "Ciencia Ficción",
-            "Guerra",
-            "Belicas",
-            "Culto",
-            "Clásicos",
-            "Mudas",
-            "Blanco y Negro",
-            "Acción",
-            "Oeste",
-            "Documentales",
-            "Anime",
-            "Independientes",
-            "Crimenes",
-            "Infantiles",
-            "Para Adultos",
-            "SuperHeroes",
-            "Gore",
-            "Cortos",
-            "Psicológicas",
-            "Suspenso",
-            "Romanticas"});
-            this.gustosPeliculas.Location = new System.Drawing.Point(467, 290);
-            this.gustosPeliculas.Name = "gustosPeliculas";
-            this.gustosPeliculas.Size = new System.Drawing.Size(142, 139);
-            this.gustosPeliculas.TabIndex = 27;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.SpringGreen;
-            this.label7.Location = new System.Drawing.Point(453, 254);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(144, 19);
-            this.label7.TabIndex = 26;
-            this.label7.Text = "Categorías favoritas:";
-            // 
-            // gustosMusicales
-            // 
-            this.gustosMusicales.FormattingEnabled = true;
-            this.gustosMusicales.Items.AddRange(new object[] {
-            "Pop",
-            "Latina",
-            "Hip Hop",
-            "Indie",
-            "Alternativa",
-            "Rock",
-            "Foll",
-            "Acústica",
-            "Cumbia",
-            "Chill",
-            "Reggae",
-            "Árabe",
-            "Desi",
-            "Infantil",
-            "Dance",
-            "Country",
-            "Romántica",
-            "Metal",
-            "Cristiana",
-            "Jazz",
-            "Soul",
-            "Punk",
-            "Blues",
-            "Clásica",
-            "K-Pop",
-            "Afro"});
-            this.gustosMusicales.Location = new System.Drawing.Point(141, 290);
-            this.gustosMusicales.Name = "gustosMusicales";
-            this.gustosMusicales.Size = new System.Drawing.Size(142, 139);
-            this.gustosMusicales.TabIndex = 25;
-            // 
-            // privacidadPerfil
-            // 
-            this.privacidadPerfil.FormattingEnabled = true;
-            this.privacidadPerfil.Items.AddRange(new object[] {
-            "Privado",
-            "Público"});
-            this.privacidadPerfil.Location = new System.Drawing.Point(467, 194);
-            this.privacidadPerfil.Name = "privacidadPerfil";
-            this.privacidadPerfil.Size = new System.Drawing.Size(100, 21);
-            this.privacidadPerfil.TabIndex = 24;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.SpringGreen;
-            this.label2.Location = new System.Drawing.Point(380, 194);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(81, 19);
-            this.label2.TabIndex = 23;
-            this.label2.Text = "Privacidad:";
-            // 
-            // nomPerfil
-            // 
-            this.nomPerfil.Location = new System.Drawing.Point(219, 197);
-            this.nomPerfil.Name = "nomPerfil";
-            this.nomPerfil.Size = new System.Drawing.Size(100, 20);
-            this.nomPerfil.TabIndex = 22;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial Black", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Green;
-            this.label1.Location = new System.Drawing.Point(277, 58);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(238, 38);
-            this.label1.TabIndex = 21;
-            this.label1.Text = "CREAR PERFIL";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.SpringGreen;
-            this.label3.Location = new System.Drawing.Point(94, 198);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(110, 19);
-            this.label3.TabIndex = 29;
-            this.label3.Text = "Nombre perfil: ";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.SpringGreen;
-            this.label4.Location = new System.Drawing.Point(122, 254);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(124, 19);
-            this.label4.TabIndex = 30;
-            this.label4.Text = "Gustos musicales:";
+            this.panelCrearUsuario.Visible = false;
             // 
             // panelContenedorPincipal
             // 
@@ -631,251 +487,7 @@
             this.panelContenedorPincipal.Name = "panelContenedorPincipal";
             this.panelContenedorPincipal.Size = new System.Drawing.Size(900, 583);
             this.panelContenedorPincipal.TabIndex = 31;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.panel2.Controls.Add(this.panelSubMenuAjustes);
-            this.panel2.Controls.Add(this.button8);
-            this.panel2.Controls.Add(this.label12);
-            this.panel2.Controls.Add(this.SubMenuAjustes);
-            this.panel2.Controls.Add(this.btnPlaylistVideo);
-            this.panel2.Controls.Add(this.btnPlaylisMusica);
-            this.panel2.Controls.Add(this.btnInicio);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(200, 583);
-            this.panel2.TabIndex = 0;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(200, 506);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(700, 77);
-            this.panel3.TabIndex = 1;
-            // 
-            // panelSubMenuAjustes
-            // 
-            this.panelSubMenuAjustes.Controls.Add(this.panel12);
-            this.panelSubMenuAjustes.Controls.Add(this.btnCambiarPerfil);
-            this.panelSubMenuAjustes.Controls.Add(this.panel11);
-            this.panelSubMenuAjustes.Controls.Add(this.btnOtro);
-            this.panelSubMenuAjustes.Controls.Add(this.panel10);
-            this.panelSubMenuAjustes.Controls.Add(this.btnCambiarContraseña);
-            this.panelSubMenuAjustes.Controls.Add(this.panel9);
-            this.panelSubMenuAjustes.Controls.Add(this.btnCambiarPlan);
-            this.panelSubMenuAjustes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panelSubMenuAjustes.Location = new System.Drawing.Point(43, 359);
-            this.panelSubMenuAjustes.Name = "panelSubMenuAjustes";
-            this.panelSubMenuAjustes.Size = new System.Drawing.Size(149, 170);
-            this.panelSubMenuAjustes.TabIndex = 17;
-            this.panelSubMenuAjustes.Visible = false;
-            // 
-            // panel12
-            // 
-            this.panel12.BackColor = System.Drawing.Color.Blue;
-            this.panel12.Location = new System.Drawing.Point(4, 137);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(10, 30);
-            this.panel12.TabIndex = 10;
-            // 
-            // btnCambiarPerfil
-            // 
-            this.btnCambiarPerfil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.btnCambiarPerfil.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.btnCambiarPerfil.FlatAppearance.BorderSize = 0;
-            this.btnCambiarPerfil.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
-            this.btnCambiarPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCambiarPerfil.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnCambiarPerfil.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCambiarPerfil.Location = new System.Drawing.Point(10, 134);
-            this.btnCambiarPerfil.Name = "btnCambiarPerfil";
-            this.btnCambiarPerfil.Size = new System.Drawing.Size(136, 30);
-            this.btnCambiarPerfil.TabIndex = 9;
-            this.btnCambiarPerfil.Text = "Cambiar perfil";
-            this.btnCambiarPerfil.UseVisualStyleBackColor = false;
-            // 
-            // panel11
-            // 
-            this.panel11.BackColor = System.Drawing.Color.Blue;
-            this.panel11.Location = new System.Drawing.Point(4, 93);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(10, 30);
-            this.panel11.TabIndex = 8;
-            // 
-            // btnOtro
-            // 
-            this.btnOtro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.btnOtro.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.btnOtro.FlatAppearance.BorderSize = 0;
-            this.btnOtro.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
-            this.btnOtro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOtro.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnOtro.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnOtro.Location = new System.Drawing.Point(13, 93);
-            this.btnOtro.Name = "btnOtro";
-            this.btnOtro.Size = new System.Drawing.Size(136, 30);
-            this.btnOtro.TabIndex = 7;
-            this.btnOtro.Text = "Otro";
-            this.btnOtro.UseVisualStyleBackColor = false;
-            // 
-            // panel10
-            // 
-            this.panel10.BackColor = System.Drawing.Color.Blue;
-            this.panel10.Location = new System.Drawing.Point(4, 48);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(10, 30);
-            this.panel10.TabIndex = 6;
-            // 
-            // btnCambiarContraseña
-            // 
-            this.btnCambiarContraseña.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.btnCambiarContraseña.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.btnCambiarContraseña.FlatAppearance.BorderSize = 0;
-            this.btnCambiarContraseña.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
-            this.btnCambiarContraseña.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCambiarContraseña.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnCambiarContraseña.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCambiarContraseña.Location = new System.Drawing.Point(13, 48);
-            this.btnCambiarContraseña.Name = "btnCambiarContraseña";
-            this.btnCambiarContraseña.Size = new System.Drawing.Size(136, 30);
-            this.btnCambiarContraseña.TabIndex = 5;
-            this.btnCambiarContraseña.Text = "Cambiar Clave";
-            this.btnCambiarContraseña.UseVisualStyleBackColor = false;
-            // 
-            // panel9
-            // 
-            this.panel9.BackColor = System.Drawing.Color.Blue;
-            this.panel9.Location = new System.Drawing.Point(4, 3);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(10, 30);
-            this.panel9.TabIndex = 4;
-            // 
-            // btnCambiarPlan
-            // 
-            this.btnCambiarPlan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.btnCambiarPlan.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.btnCambiarPlan.FlatAppearance.BorderSize = 0;
-            this.btnCambiarPlan.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
-            this.btnCambiarPlan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCambiarPlan.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnCambiarPlan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCambiarPlan.Location = new System.Drawing.Point(13, 3);
-            this.btnCambiarPlan.Name = "btnCambiarPlan";
-            this.btnCambiarPlan.Size = new System.Drawing.Size(136, 30);
-            this.btnCambiarPlan.TabIndex = 3;
-            this.btnCambiarPlan.Text = "Cambiar Plan";
-            this.btnCambiarPlan.UseVisualStyleBackColor = false;
-            // 
-            // button8
-            // 
-            this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.button8.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.button8.FlatAppearance.BorderSize = 0;
-            this.button8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button8.Image = ((System.Drawing.Image)(resources.GetObject("button8.Image")));
-            this.button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button8.Location = new System.Drawing.Point(10, 152);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(182, 40);
-            this.button8.TabIndex = 18;
-            this.button8.Text = "Explorar";
-            this.button8.UseVisualStyleBackColor = false;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Arial Black", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.Green;
-            this.label12.Location = new System.Drawing.Point(6, 54);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(166, 38);
-            this.label12.TabIndex = 16;
-            this.label12.Text = "SPOTFLIX";
-            // 
-            // SubMenuAjustes
-            // 
-            this.SubMenuAjustes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.SubMenuAjustes.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.SubMenuAjustes.FlatAppearance.BorderSize = 0;
-            this.SubMenuAjustes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
-            this.SubMenuAjustes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SubMenuAjustes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SubMenuAjustes.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.SubMenuAjustes.Image = ((System.Drawing.Image)(resources.GetObject("SubMenuAjustes.Image")));
-            this.SubMenuAjustes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.SubMenuAjustes.Location = new System.Drawing.Point(10, 313);
-            this.SubMenuAjustes.Name = "SubMenuAjustes";
-            this.SubMenuAjustes.Size = new System.Drawing.Size(182, 40);
-            this.SubMenuAjustes.TabIndex = 15;
-            this.SubMenuAjustes.Text = "Ajustes";
-            this.SubMenuAjustes.UseVisualStyleBackColor = false;
-            this.SubMenuAjustes.Click += new System.EventHandler(this.SubMenuAjustes_Click);
-            // 
-            // btnPlaylistVideo
-            // 
-            this.btnPlaylistVideo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.btnPlaylistVideo.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.btnPlaylistVideo.FlatAppearance.BorderSize = 0;
-            this.btnPlaylistVideo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
-            this.btnPlaylistVideo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPlaylistVideo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPlaylistVideo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnPlaylistVideo.Image = ((System.Drawing.Image)(resources.GetObject("btnPlaylistVideo.Image")));
-            this.btnPlaylistVideo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPlaylistVideo.Location = new System.Drawing.Point(10, 262);
-            this.btnPlaylistVideo.Name = "btnPlaylistVideo";
-            this.btnPlaylistVideo.Size = new System.Drawing.Size(182, 40);
-            this.btnPlaylistVideo.TabIndex = 14;
-            this.btnPlaylistVideo.Text = "Playlist video";
-            this.btnPlaylistVideo.UseVisualStyleBackColor = false;
-            this.btnPlaylistVideo.Click += new System.EventHandler(this.btnPlaylistVideo_Click);
-            // 
-            // btnPlaylisMusica
-            // 
-            this.btnPlaylisMusica.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.btnPlaylisMusica.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.btnPlaylisMusica.FlatAppearance.BorderSize = 0;
-            this.btnPlaylisMusica.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
-            this.btnPlaylisMusica.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPlaylisMusica.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPlaylisMusica.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnPlaylisMusica.Image = ((System.Drawing.Image)(resources.GetObject("btnPlaylisMusica.Image")));
-            this.btnPlaylisMusica.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPlaylisMusica.Location = new System.Drawing.Point(11, 207);
-            this.btnPlaylisMusica.Name = "btnPlaylisMusica";
-            this.btnPlaylisMusica.Size = new System.Drawing.Size(182, 40);
-            this.btnPlaylisMusica.TabIndex = 13;
-            this.btnPlaylisMusica.Text = "Playlist musica";
-            this.btnPlaylisMusica.UseVisualStyleBackColor = false;
-            this.btnPlaylisMusica.Click += new System.EventHandler(this.btnPlaylisMusica_Click);
-            // 
-            // btnInicio
-            // 
-            this.btnInicio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.btnInicio.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.btnInicio.FlatAppearance.BorderSize = 0;
-            this.btnInicio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
-            this.btnInicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInicio.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnInicio.Image = ((System.Drawing.Image)(resources.GetObject("btnInicio.Image")));
-            this.btnInicio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInicio.Location = new System.Drawing.Point(13, 95);
-            this.btnInicio.Name = "btnInicio";
-            this.btnInicio.Size = new System.Drawing.Size(182, 40);
-            this.btnInicio.TabIndex = 12;
-            this.btnInicio.Text = "Inicio";
-            this.btnInicio.UseVisualStyleBackColor = false;
-            this.btnInicio.Click += new System.EventHandler(this.btnInicio_Click);
+            this.panelContenedorPincipal.Paint += new System.Windows.Forms.PaintEventHandler(this.panelContenedorPincipal_Paint);
             // 
             // subpanel3
             // 
@@ -1170,6 +782,405 @@
             this.textBox1.TabIndex = 27;
             this.textBox1.Tag = "";
             // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel3.Location = new System.Drawing.Point(200, 506);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(700, 77);
+            this.panel3.TabIndex = 1;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.panel2.Controls.Add(this.panelSubMenuAjustes);
+            this.panel2.Controls.Add(this.button8);
+            this.panel2.Controls.Add(this.label12);
+            this.panel2.Controls.Add(this.SubMenuAjustes);
+            this.panel2.Controls.Add(this.btnPlaylistVideo);
+            this.panel2.Controls.Add(this.btnPlaylisMusica);
+            this.panel2.Controls.Add(this.btnInicio);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel2.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(200, 583);
+            this.panel2.TabIndex = 0;
+            // 
+            // panelSubMenuAjustes
+            // 
+            this.panelSubMenuAjustes.Controls.Add(this.panel12);
+            this.panelSubMenuAjustes.Controls.Add(this.btnCambiarPerfil);
+            this.panelSubMenuAjustes.Controls.Add(this.panel11);
+            this.panelSubMenuAjustes.Controls.Add(this.btnOtro);
+            this.panelSubMenuAjustes.Controls.Add(this.panel10);
+            this.panelSubMenuAjustes.Controls.Add(this.btnCambiarContraseña);
+            this.panelSubMenuAjustes.Controls.Add(this.panel9);
+            this.panelSubMenuAjustes.Controls.Add(this.btnCambiarPlan);
+            this.panelSubMenuAjustes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panelSubMenuAjustes.Location = new System.Drawing.Point(43, 359);
+            this.panelSubMenuAjustes.Name = "panelSubMenuAjustes";
+            this.panelSubMenuAjustes.Size = new System.Drawing.Size(149, 170);
+            this.panelSubMenuAjustes.TabIndex = 17;
+            this.panelSubMenuAjustes.Visible = false;
+            // 
+            // panel12
+            // 
+            this.panel12.BackColor = System.Drawing.Color.Blue;
+            this.panel12.Location = new System.Drawing.Point(4, 137);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(10, 30);
+            this.panel12.TabIndex = 10;
+            // 
+            // btnCambiarPerfil
+            // 
+            this.btnCambiarPerfil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnCambiarPerfil.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnCambiarPerfil.FlatAppearance.BorderSize = 0;
+            this.btnCambiarPerfil.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
+            this.btnCambiarPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCambiarPerfil.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnCambiarPerfil.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCambiarPerfil.Location = new System.Drawing.Point(10, 134);
+            this.btnCambiarPerfil.Name = "btnCambiarPerfil";
+            this.btnCambiarPerfil.Size = new System.Drawing.Size(136, 30);
+            this.btnCambiarPerfil.TabIndex = 9;
+            this.btnCambiarPerfil.Text = "Cambiar perfil";
+            this.btnCambiarPerfil.UseVisualStyleBackColor = false;
+            this.btnCambiarPerfil.Click += new System.EventHandler(this.btnCambiarPerfil_Click);
+            // 
+            // panel11
+            // 
+            this.panel11.BackColor = System.Drawing.Color.Blue;
+            this.panel11.Location = new System.Drawing.Point(4, 93);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(10, 30);
+            this.panel11.TabIndex = 8;
+            // 
+            // btnOtro
+            // 
+            this.btnOtro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnOtro.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnOtro.FlatAppearance.BorderSize = 0;
+            this.btnOtro.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
+            this.btnOtro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOtro.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnOtro.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnOtro.Location = new System.Drawing.Point(13, 93);
+            this.btnOtro.Name = "btnOtro";
+            this.btnOtro.Size = new System.Drawing.Size(136, 30);
+            this.btnOtro.TabIndex = 7;
+            this.btnOtro.Text = "Otro";
+            this.btnOtro.UseVisualStyleBackColor = false;
+            // 
+            // panel10
+            // 
+            this.panel10.BackColor = System.Drawing.Color.Blue;
+            this.panel10.Location = new System.Drawing.Point(4, 48);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(10, 30);
+            this.panel10.TabIndex = 6;
+            // 
+            // btnCambiarContraseña
+            // 
+            this.btnCambiarContraseña.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnCambiarContraseña.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnCambiarContraseña.FlatAppearance.BorderSize = 0;
+            this.btnCambiarContraseña.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
+            this.btnCambiarContraseña.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCambiarContraseña.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnCambiarContraseña.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCambiarContraseña.Location = new System.Drawing.Point(13, 48);
+            this.btnCambiarContraseña.Name = "btnCambiarContraseña";
+            this.btnCambiarContraseña.Size = new System.Drawing.Size(136, 30);
+            this.btnCambiarContraseña.TabIndex = 5;
+            this.btnCambiarContraseña.Text = "Cambiar Clave";
+            this.btnCambiarContraseña.UseVisualStyleBackColor = false;
+            // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.Color.Blue;
+            this.panel9.Location = new System.Drawing.Point(4, 3);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(10, 30);
+            this.panel9.TabIndex = 4;
+            // 
+            // btnCambiarPlan
+            // 
+            this.btnCambiarPlan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnCambiarPlan.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnCambiarPlan.FlatAppearance.BorderSize = 0;
+            this.btnCambiarPlan.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
+            this.btnCambiarPlan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCambiarPlan.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnCambiarPlan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCambiarPlan.Location = new System.Drawing.Point(13, 3);
+            this.btnCambiarPlan.Name = "btnCambiarPlan";
+            this.btnCambiarPlan.Size = new System.Drawing.Size(136, 30);
+            this.btnCambiarPlan.TabIndex = 3;
+            this.btnCambiarPlan.Text = "Cambiar Plan";
+            this.btnCambiarPlan.UseVisualStyleBackColor = false;
+            // 
+            // button8
+            // 
+            this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.button8.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.button8.FlatAppearance.BorderSize = 0;
+            this.button8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
+            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button8.Image = ((System.Drawing.Image)(resources.GetObject("button8.Image")));
+            this.button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button8.Location = new System.Drawing.Point(10, 152);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(182, 40);
+            this.button8.TabIndex = 18;
+            this.button8.Text = "Explorar";
+            this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Arial Black", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.Green;
+            this.label12.Location = new System.Drawing.Point(6, 54);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(166, 38);
+            this.label12.TabIndex = 16;
+            this.label12.Text = "SPOTFLIX";
+            // 
+            // SubMenuAjustes
+            // 
+            this.SubMenuAjustes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.SubMenuAjustes.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.SubMenuAjustes.FlatAppearance.BorderSize = 0;
+            this.SubMenuAjustes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
+            this.SubMenuAjustes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SubMenuAjustes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SubMenuAjustes.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.SubMenuAjustes.Image = ((System.Drawing.Image)(resources.GetObject("SubMenuAjustes.Image")));
+            this.SubMenuAjustes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.SubMenuAjustes.Location = new System.Drawing.Point(10, 313);
+            this.SubMenuAjustes.Name = "SubMenuAjustes";
+            this.SubMenuAjustes.Size = new System.Drawing.Size(182, 40);
+            this.SubMenuAjustes.TabIndex = 15;
+            this.SubMenuAjustes.Text = "Ajustes";
+            this.SubMenuAjustes.UseVisualStyleBackColor = false;
+            this.SubMenuAjustes.Click += new System.EventHandler(this.SubMenuAjustes_Click);
+            // 
+            // btnPlaylistVideo
+            // 
+            this.btnPlaylistVideo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnPlaylistVideo.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnPlaylistVideo.FlatAppearance.BorderSize = 0;
+            this.btnPlaylistVideo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
+            this.btnPlaylistVideo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPlaylistVideo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPlaylistVideo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnPlaylistVideo.Image = ((System.Drawing.Image)(resources.GetObject("btnPlaylistVideo.Image")));
+            this.btnPlaylistVideo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPlaylistVideo.Location = new System.Drawing.Point(10, 262);
+            this.btnPlaylistVideo.Name = "btnPlaylistVideo";
+            this.btnPlaylistVideo.Size = new System.Drawing.Size(182, 40);
+            this.btnPlaylistVideo.TabIndex = 14;
+            this.btnPlaylistVideo.Text = "Playlist video";
+            this.btnPlaylistVideo.UseVisualStyleBackColor = false;
+            this.btnPlaylistVideo.Click += new System.EventHandler(this.btnPlaylistVideo_Click);
+            // 
+            // btnPlaylisMusica
+            // 
+            this.btnPlaylisMusica.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnPlaylisMusica.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnPlaylisMusica.FlatAppearance.BorderSize = 0;
+            this.btnPlaylisMusica.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
+            this.btnPlaylisMusica.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPlaylisMusica.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPlaylisMusica.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnPlaylisMusica.Image = ((System.Drawing.Image)(resources.GetObject("btnPlaylisMusica.Image")));
+            this.btnPlaylisMusica.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPlaylisMusica.Location = new System.Drawing.Point(11, 207);
+            this.btnPlaylisMusica.Name = "btnPlaylisMusica";
+            this.btnPlaylisMusica.Size = new System.Drawing.Size(182, 40);
+            this.btnPlaylisMusica.TabIndex = 13;
+            this.btnPlaylisMusica.Text = "Playlist musica";
+            this.btnPlaylisMusica.UseVisualStyleBackColor = false;
+            this.btnPlaylisMusica.Click += new System.EventHandler(this.btnPlaylisMusica_Click);
+            // 
+            // btnInicio
+            // 
+            this.btnInicio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnInicio.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnInicio.FlatAppearance.BorderSize = 0;
+            this.btnInicio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
+            this.btnInicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInicio.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnInicio.Image = ((System.Drawing.Image)(resources.GetObject("btnInicio.Image")));
+            this.btnInicio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnInicio.Location = new System.Drawing.Point(13, 95);
+            this.btnInicio.Name = "btnInicio";
+            this.btnInicio.Size = new System.Drawing.Size(182, 40);
+            this.btnInicio.TabIndex = 12;
+            this.btnInicio.Text = "Inicio";
+            this.btnInicio.UseVisualStyleBackColor = false;
+            this.btnInicio.Click += new System.EventHandler(this.btnInicio_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.SpringGreen;
+            this.label4.Location = new System.Drawing.Point(122, 254);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(124, 19);
+            this.label4.TabIndex = 30;
+            this.label4.Text = "Gustos musicales:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.SpringGreen;
+            this.label3.Location = new System.Drawing.Point(94, 198);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(110, 19);
+            this.label3.TabIndex = 29;
+            this.label3.Text = "Nombre perfil: ";
+            // 
+            // Crear
+            // 
+            this.Crear.Location = new System.Drawing.Point(684, 433);
+            this.Crear.Name = "Crear";
+            this.Crear.Size = new System.Drawing.Size(75, 23);
+            this.Crear.TabIndex = 28;
+            this.Crear.Text = "Crear";
+            this.Crear.UseVisualStyleBackColor = true;
+            this.Crear.Click += new System.EventHandler(this.Crear_Click);
+            // 
+            // gustosPeliculas
+            // 
+            this.gustosPeliculas.FormattingEnabled = true;
+            this.gustosPeliculas.Items.AddRange(new object[] {
+            "Aventuras",
+            "Comedias",
+            "Dramáticas",
+            "Terror",
+            "Musicales",
+            "Ciencia Ficción",
+            "Guerra",
+            "Belicas",
+            "Culto",
+            "Clásicos",
+            "Mudas",
+            "Blanco y Negro",
+            "Acción",
+            "Oeste",
+            "Documentales",
+            "Anime",
+            "Independientes",
+            "Crimenes",
+            "Infantiles",
+            "Para Adultos",
+            "SuperHeroes",
+            "Gore",
+            "Cortos",
+            "Psicológicas",
+            "Suspenso",
+            "Romanticas"});
+            this.gustosPeliculas.Location = new System.Drawing.Point(467, 290);
+            this.gustosPeliculas.Name = "gustosPeliculas";
+            this.gustosPeliculas.Size = new System.Drawing.Size(142, 139);
+            this.gustosPeliculas.TabIndex = 27;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.SpringGreen;
+            this.label7.Location = new System.Drawing.Point(453, 254);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(144, 19);
+            this.label7.TabIndex = 26;
+            this.label7.Text = "Categorías favoritas:";
+            // 
+            // gustosMusicales
+            // 
+            this.gustosMusicales.FormattingEnabled = true;
+            this.gustosMusicales.Items.AddRange(new object[] {
+            "Pop",
+            "Latina",
+            "Hip Hop",
+            "Indie",
+            "Alternativa",
+            "Rock",
+            "Foll",
+            "Acústica",
+            "Cumbia",
+            "Chill",
+            "Reggae",
+            "Árabe",
+            "Desi",
+            "Infantil",
+            "Dance",
+            "Country",
+            "Romántica",
+            "Metal",
+            "Cristiana",
+            "Jazz",
+            "Soul",
+            "Punk",
+            "Blues",
+            "Clásica",
+            "K-Pop",
+            "Afro"});
+            this.gustosMusicales.Location = new System.Drawing.Point(141, 290);
+            this.gustosMusicales.Name = "gustosMusicales";
+            this.gustosMusicales.Size = new System.Drawing.Size(142, 139);
+            this.gustosMusicales.TabIndex = 25;
+            // 
+            // privacidadPerfil
+            // 
+            this.privacidadPerfil.FormattingEnabled = true;
+            this.privacidadPerfil.Items.AddRange(new object[] {
+            "Privado",
+            "Público"});
+            this.privacidadPerfil.Location = new System.Drawing.Point(467, 194);
+            this.privacidadPerfil.Name = "privacidadPerfil";
+            this.privacidadPerfil.Size = new System.Drawing.Size(100, 21);
+            this.privacidadPerfil.TabIndex = 24;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.SpringGreen;
+            this.label2.Location = new System.Drawing.Point(380, 194);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(81, 19);
+            this.label2.TabIndex = 23;
+            this.label2.Text = "Privacidad:";
+            // 
+            // nomPerfil
+            // 
+            this.nomPerfil.Location = new System.Drawing.Point(219, 197);
+            this.nomPerfil.Name = "nomPerfil";
+            this.nomPerfil.Size = new System.Drawing.Size(100, 20);
+            this.nomPerfil.TabIndex = 22;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial Black", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Green;
+            this.label1.Location = new System.Drawing.Point(277, 58);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(238, 38);
+            this.label1.TabIndex = 21;
+            this.label1.Text = "CREAR PERFIL";
+            // 
             // FormAplicacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1220,9 +1231,6 @@
             this.panelCrearUsuario.PerformLayout();
             this.panelContenedorPincipal.ResumeLayout(false);
             this.panelContenedorPincipal.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.panelSubMenuAjustes.ResumeLayout(false);
             this.subpanel3.ResumeLayout(false);
             this.subpanel2.ResumeLayout(false);
             this.subpanel1.ResumeLayout(false);
@@ -1233,6 +1241,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pic13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.panelSubMenuAjustes.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 

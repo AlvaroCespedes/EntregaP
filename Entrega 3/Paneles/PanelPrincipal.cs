@@ -59,17 +59,15 @@ namespace Entrega_3
             else if (deserializarUser.Count > 0)//aca hay que poner que se verifique el inicio de secion
             {
                 int error = 1;
+                int avanzar = 0;
+                Clases.User us = new Clases.User();
                 for (int d = 0; d < deserializarUser.Count; d++)
                 {
                     error--;
                     if (deserializarUser[d].NameUser == txtUsuario.Text && deserializarUser[d].Password ==txtContraseña.Text)
                     {
-                        this.Hide();
-                        FormsUsuario formsUsuario = new FormsUsuario(deserializarUser[d]);
-                        formsUsuario.Show();
-
-
-
+                        us = deserializarUser[d];
+                        avanzar++;
                     }
                     else
                     {
@@ -80,6 +78,12 @@ namespace Entrega_3
                 if (error > 0)
                 {
                     MessageBox.Show("Usuario o contraseña invalida");
+                }
+                if(avanzar > 0)
+                {
+                    this.Hide();
+                    FormsUsuario formsUsuario = new FormsUsuario(us);
+                    formsUsuario.Show();
                 }
 
 

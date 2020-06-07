@@ -16,14 +16,14 @@ namespace Entrega_3.Paneles
     {
         Clases.User usuario = new Clases.User();
         Clases.Serialization serializar = new Clases.Serialization();
-        List<Clases.User> todosUsuarios = new List<Clases.User>();
+        
         public FormsUsuario(Clases.User user)
         {
             
 
             InitializeComponent();
             usuario = user;
-
+    
             if (user.Plan == "Basico")
             {
 
@@ -46,23 +46,23 @@ namespace Entrega_3.Paneles
                 else
                 {
                     pic5.Visible = false;
-                    pic1.Visible = true;
-                    crear1.Visible = false;
-                    crear2.Visible = false;
-                    crear3.Visible = false;
-                    crear4.Visible = false;
-                    label8.Text = usuario.Profiles[0].NameProfile;
-                    label8.Visible = true;
-              
-                    button1.Visible = true;
                     pic6.Visible = false;
                     pic7.Visible = false;
                     pic8.Visible = false;
+                    
+                    pic1.Visible = true;
                     pic4.Visible = false;
                     pic3.Visible = false;
                     pic2.Visible = false;
 
+                    crear1.Visible = false;
+                    crear2.Visible = false; 
+                    crear3.Visible = false;
+                    crear4.Visible = false;
 
+                    label8.Text = usuario.Profiles[0].NameProfile;
+                    label8.Visible = true;           
+                    button1.Visible = true;
 
                 }
             }
@@ -210,8 +210,10 @@ namespace Entrega_3.Paneles
                     button3.Visible = true;
                     button4.Visible = true;
                 }
-            }
+                
 
+            }
+    
         }
 
 
@@ -612,9 +614,10 @@ namespace Entrega_3.Paneles
 
 
                 }
-                
+                List<Clases.User> todosUsuarios = new List<Clases.User>();
                 Clases.Profile perfil = new Clases.Profile(nomPerfil.Text,privacidadPerfil.SelectedItem.ToString(),gustosMusica,gustosPelis);
                 usuario.Profiles.Add(perfil);
+
                 List<Clases.User> deserializarUser = serializar.Deserialize<List<Clases.User>>(File.Open("data.bin", FileMode.Open));
                 if (deserializarUser.Count > 0)
                 {
@@ -624,6 +627,7 @@ namespace Entrega_3.Paneles
                     }
                 }
                 todosUsuarios.Add(usuario);
+               
                 serializar.Serialize(todosUsuarios, File.Open("data.bin", FileMode.Create));
                 MessageBox.Show("Perfil Creado");
                 panel2.Visible = false;
@@ -646,6 +650,7 @@ namespace Entrega_3.Paneles
                         crear2.Visible = false;
                         crear3.Visible = false;
                         crear4.Visible = false;
+                        
                     }
                     else
                     {
@@ -657,6 +662,7 @@ namespace Entrega_3.Paneles
                         crear4.Visible = false;
                         label8.Text = usuario.Profiles[0].NameProfile;
                         label8.Visible = true;
+                        button1.Visible = true;
 
 
                     }
@@ -688,6 +694,7 @@ namespace Entrega_3.Paneles
                         crear4.Visible = false;
                         label8.Text = usuario.Profiles[0].NameProfile;
                         label8.Visible = true;
+                        button1.Visible = true;
                     }
                 }
 
@@ -724,6 +731,7 @@ namespace Entrega_3.Paneles
                         crear4.Visible = true;
                         label8.Text = usuario.Profiles[0].NameProfile;
                         label8.Visible = true;
+                        button1.Visible = true;
                     }
                     else if (usuario.Profiles.Count == 2)
                     {
@@ -743,6 +751,8 @@ namespace Entrega_3.Paneles
                         label8.Visible = true;
                         label9.Text = usuario.Profiles[1].NameProfile;
                         label9.Visible = true;
+                        button1.Visible = true;
+                        button2.Visible = true;
                     }
                     else if (usuario.Profiles.Count == 3)
                     {
@@ -764,6 +774,9 @@ namespace Entrega_3.Paneles
                         label9.Visible = true;
                         label10.Text = usuario.Profiles[2].NameProfile;
                         label10.Visible = true;
+                        button1.Visible = true;
+                        button2.Visible = true;
+                        button3.Visible = true;
                     }
                     else if (usuario.Profiles.Count == 4)
                     {
@@ -787,6 +800,10 @@ namespace Entrega_3.Paneles
                         label10.Visible = true;
                         label11.Text = usuario.Profiles[3].NameProfile;
                         label11.Visible = true;
+                        button1.Visible = true;
+                        button2.Visible = true;
+                        button3.Visible = true;
+                        button4.Visible = true;
                     }
                 }
             }

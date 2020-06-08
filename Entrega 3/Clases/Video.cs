@@ -9,8 +9,8 @@ namespace Entrega_3.Clases
     {
         //private List<Actor> actors;
         private string description;
-        private string mainActor;//PONERLOS EN SUS CLASES
-        private string director; //
+        private Actor mainActor;//PONERLOS EN SUS CLASES
+        private Director director; //
         private string format;
         private List<Video> videos;
 
@@ -22,9 +22,12 @@ namespace Entrega_3.Clases
         private string study;
         private string keyword;
 
+        private int evaluation;
+        private int resolution;
+
         public Video(string gender, string publicationYear,
                      string title, int duration, int memory, string study, string keyword,
-                     string description, string mainActor, string director, string format)
+                     string description, Actor mainActor, Director director, string format, int evaluation, int resolution)
         {
             this.Gender = gender; // Listo
             this.PublicationYear = publicationYear; // Listo
@@ -38,16 +41,18 @@ namespace Entrega_3.Clases
             //this.Actors = actors; No se como poner aun
             this.Director = director;  //Listo
             this.format = format;
+            this.Evaluation = evaluation;
+            this.Resolution = resolution;
         }
         public Video()
         {
 
         }
-        public string Director { get => director; set => director = value; }
+        public Director Director { get => director; set => director = value; }
         public string Format { get => format; set => format = value; }
         //public List<Actor> Actors { get => actors; set => actors = value; }
         public string Description { get => description; set => description = value; }
-        public string MainActor { get => mainActor; set => mainActor = value; }
+        public Actor MainActor { get => mainActor; set => mainActor = value; }
         public List<Video> Videos1 { get => videos; set => videos = value; }
         public string Gender { get => gender; set => gender = value; }
         public string PublicationYear { get => publicationYear; set => publicationYear = value; }
@@ -56,6 +61,8 @@ namespace Entrega_3.Clases
         public int Memory { get => memory; set => memory = value; }
         public string Study { get => study; set => study = value; }
         public string Keyword { get => keyword; set => keyword = value; }
+        public int Evaluation { get => evaluation; set => evaluation = value; }
+        public int Resolution { get => resolution; set => resolution = value; }
 
         public void AddData() //Cambiar UML  void
         {
@@ -64,7 +71,7 @@ namespace Entrega_3.Clases
         public override string ToString()
         {
             Console.WriteLine("ACa puede ver el titulo del video, el director, el genero al que pertenece, año de publicacion, duracion, meoria, estudio de grabacion y su palabra clave. ");
-            return Title + " " + Director + ": " + Gender + ": " + PublicationYear + ": " + Duration + ": " + Memory + ": " + Study + ": " + Keyword;
+            return Title + ": " + Director.Name + ": " + Gender + ": " + PublicationYear + ": " + Duration + ": " + Memory + ": " + Study + ": " + Keyword;
         }
 
     }

@@ -13,7 +13,7 @@ namespace Entrega_3.Clases
         private int yearsActive;
         private List<string> discographic;
 
-        public Singer(List<Video> movies, List<SongClass> songs, List<Album> album, List<string> awards, string voiceType, string genders, int yearsActive, List<string> discographic, string name, int age, string lastname, string gender, string nationality, string occupation)
+        public Singer(List<SongClass> songs, List<Album> album, List<string> awards, string voiceType, string genders, int yearsActive, List<string> discographic, string name, int age, string lastname, string gender, string nationality, string occupation)
         {
             this.Name = name;
             this.Age = age;

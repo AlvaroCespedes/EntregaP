@@ -109,7 +109,7 @@ namespace Entrega_3.Clases
             writer.WriteLine(song.Memory);
             writer.WriteLine(song.Study);
             writer.WriteLine(song.Keyword);
-            writer.WriteLine(song.Lyrics);
+            //writer.WriteLine(song.Lyrics);
             writer.WriteLine(song.Format);
 
             Console.WriteLine("Cancion descargada con exito");

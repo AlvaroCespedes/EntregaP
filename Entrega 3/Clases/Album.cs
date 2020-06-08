@@ -20,6 +20,15 @@ namespace Entrega_3.Clases
         {
         }
 
+        public Album(string nameAlbum, string gender, string producer, Singer singer, DateTime publicationDate)
+        {
+            this.nameAlbum = nameAlbum;
+            this.gender = gender;
+            this.producer = producer;
+            this.singer = singer;
+            this.publicationDate = publicationDate;
+        }
+
         public string NameAlbum { get => nameAlbum; set => nameAlbum = value; }
         public string Gender { get => gender; set => gender = value; }
         public string Producer { get => producer; set => producer = value; }
@@ -27,6 +36,6 @@ namespace Entrega_3.Clases
         public Singer Singer { get => singer; set => singer = value; }
         public DateTime PublicationDate { get => publicationDate; set => publicationDate = value; }
 
-        
+
     }
 }

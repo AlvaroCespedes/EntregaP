@@ -8,25 +8,26 @@ namespace Entrega_3.Clases
     public class SongClass
     {
         private string composer;
-        private string singer;
-        private string album; //AGERGAR A SUS RESPECTIVAS CLASES
-        private string lyrics;
+        private Singer singer;
+        private Album album; //AGERGAR A SUS RESPECTIVAS CLASES
         private string format;
         private List<SongClass> canciones;
 
         //Atributos AbsMaster
         private string gender;
-        private string publicationYear;
+        private string publicationYear; //Tiene que ser DAte time
         private string title;
         private int duration;
         private int memory;
         private string study;
         private string keyword;
 
+        private int evaluation;
+        private int resolution;
+
         public string Composer { get => composer; set => composer = value; }
-        public string Singer { get => singer; set => singer = value; }
-        public string Album { get => album; set => album = value; }
-        public string Lyrics { get => lyrics; set => lyrics = value; }
+        public Singer Singer { get => singer; set => singer = value; }
+        public Album Album { get => album; set => album = value; }
         public string Format { get => format; set => format = value; }
         public string Gender { get => gender; set => gender = value; }
         public string PublicationYear { get => publicationYear; set => publicationYear = value; }
@@ -36,10 +37,12 @@ namespace Entrega_3.Clases
         public string Study { get => study; set => study = value; }
         public string Keyword { get => keyword; set => keyword = value; }
         public List<SongClass> Canciones { get => canciones; set => canciones = value; }
+        public int Evaluation { get => evaluation; set => evaluation = value; }
+        public int Resolution { get => resolution; set => resolution = value; }
 
         public SongClass(string gender, string publicationYear,
                      string title, int duration, int memory, string study, string keyword,
-                     string composer, string singer, string album, string lyrics, string format)
+                     string composer, Singer singer, Album album, string format, int evaluation, int resolution)
         {
             this.Gender = gender; // listo
             this.PublicationYear = publicationYear;//listo
@@ -52,24 +55,18 @@ namespace Entrega_3.Clases
             this.Composer = composer; //Listo
             this.Singer = singer; // Listo
             this.Album = album; // Listo
-            this.Lyrics = lyrics;//EN veremos.
             this.Format = format; // Listo
-
+            this.Evaluation = evaluation;
+            this.Resolution = resolution;
         }
         public SongClass()
         {
 
         }
-
-
         public override string ToString()
         {
             Console.WriteLine("Aca puede ver el titutlo de la cancion, el compositor, genero, año de publicacion, duracion, memoria de la misma, estudio donde se grabo, palabra clase, cantante, album y la letra que usted añadio.");
-            return Title + ": " + Composer + " " + Gender + " " + PublicationYear + " " + Duration + " " + Memory + " " + Study + " " + Keyword + " " + Singer + " " + Album + "" + Lyrics;
+            return Title + ": " + Composer + " " + Gender + " " + PublicationYear + " " + Duration + " " + Memory + " " + Study + " " + Keyword + " " + Singer.Name + " " + Album.NameAlbum;
         }
-
-
-
-
     }
 }

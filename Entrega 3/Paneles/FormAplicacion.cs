@@ -901,5 +901,10 @@ namespace Entrega_3.Paneles
         {
 
         }
+
+        private void panel5_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

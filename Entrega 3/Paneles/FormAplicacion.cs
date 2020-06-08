@@ -991,38 +991,31 @@ namespace Entrega_3.Paneles
         {
             try
             {
-                canciones123 = serializar.Deserialize<List<SongClass>>(File.Open("Canciones.bin", FileMode.Open));
+                canciones = serializar.Deserialize<List<SongClass>>(File.Open("Canciones.bin", FileMode.Open));
+                videos = serializar.Deserialize<List<Video>>(File.Open("Videos.bin", FileMode.Open));
                 foreach (SongClass x in canciones)
                 {
                     listCanciones.Items.Add(x);
                 }
-
-
-            }
-            catch (System.Runtime.Serialization.SerializationException)
-            {
-
-            }
-            try
-            {
-                videos123 = serializar.Deserialize<List<Video>>(File.Open("Videos.bin", FileMode.Open));
-                foreach(Video x in videos)
+                foreach (Video x in videos)
                 {
                     listCanciones.Items.Add(x);
                 }
 
+
             }
             catch (System.Runtime.Serialization.SerializationException)
             {
 
             }
+
+
 
 
             if (listCanciones.Visible == true)
             {
                 listCanciones.Visible = false;
                 listCanciones.Items.Clear();
-
             }
             else
             {
@@ -1258,7 +1251,20 @@ namespace Entrega_3.Paneles
 
         private void listCanciones_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            foreach (SongClass x in canciones)
+            {
+                int startIndex = x.Format.Length - 4;
+                int final = 4;
+                String substring = x.Format.Substring(startIndex, final);
+                if (substring == ".mp3")
+                {
+                    Reproductor.URL = canciones[listCanciones.SelectedIndex].Url;
+                }
+                else
+                {
+                    Reproductor.URL = videos[listCanciones.SelectedIndex].Url;
+                }
+            }
         }
 
         private void Adjuntar_Click(object sender, EventArgs e)
@@ -1272,23 +1278,7 @@ namespace Entrega_3.Paneles
                 ArchivoMP3 = CajaBusquedaDeARchivos.SafeFileName; // aqui se van almacenar todos los archivos
                 rutaArchivoMP3 = CajaBusquedaDeARchivos.FileName;
 
-                List<SongClass> listaAux = new List<SongClass>(); //SongClass
 
-                try
-                {
-                    //listaAux = obj.Deserialize<List<SongClass>>(File.Open("Canciones.bin", FileMode.Open));
-                }
-                catch (System.Runtime.Serialization.SerializationException)
-                {
-
-                }
-                if (listaAux.Count > 0)
-                {
-                    foreach (SongClass x in listaAux)
-                    {
-                        canciones.Add(x);
-                    }
-                }
 
                 // NECESITO FILTRO QUE SOLO SEA MP3 o MP4
                 int startIndex = ArchivoMP3.Length - 4;
@@ -1390,11 +1380,23 @@ namespace Entrega_3.Paneles
 
                     //Preguntarle al pefil si quiere rellenar los datos de Singer y Album
 
-                    SongClass ob = new SongClass(gender, publicationYear, title, 123, 123, study, keyWord, composer, singer123, album123, ".mp3", 123, 123, rutaArchivoMP3,0,0);
+                    SongClass ob = new SongClass(gender, publicationYear, title, 123, 123, study, keyWord, composer, singer123, album123, ArchivoMP3, 123, 123, rutaArchivoMP3,0,0);
                     //Deserializando
 
+                    List<SongClass> songAux = new List<SongClass>();
+                    try
+                    {
+                        songAux = serializar.Deserialize<List<SongClass>>(File.Open("Canciones.bin", FileMode.Open));
+                    }
+                    catch (System.Runtime.Serialization.SerializationException)
+                    {
+
+                    }
+                    foreach(SongClass x in songAux)
+                    {
+                        canciones123.Add(x);
+                    }
                     canciones123.Add(ob);
-                    
                 }
 
 
@@ -1426,9 +1428,22 @@ namespace Entrega_3.Paneles
                     Actor Mactor123 = new Actor("name4", 22, actor, "gender4", "nationality4", "Ocupacion4", videos, premios, 22);
                     Director d123 = new Director(director, 22, "LastD", "gender", "nationality", "ocupation", videos, premios, 22);
 
-                    Video ob2 = new Video(gender, publicationYear, title, 123, 123, study, keyWord, description, Mactor123, d123, "format", 123, 123, rutaArchivoMP3,0,0);
+                    Video ob2 = new Video(gender, publicationYear, title, 123, 123, study, keyWord, description, Mactor123, d123, ArchivoMP3, 123, 123, rutaArchivoMP3,0,0);
 
                     videos123.Add(ob2);
+                    List<Video> videoAux = new List<Video>();
+                    try
+                    {
+                        videoAux = serializar.Deserialize<List<Video>>(File.Open("Videos.bin", FileMode.Open));
+                    }
+                    catch (System.Runtime.Serialization.SerializationException)
+                    {
+
+                    }
+                    foreach(Video x in videoAux)
+                    {
+                        videos123.Add(x);
+                    }
                 }
             }
             catch
@@ -1458,13 +1473,13 @@ namespace Entrega_3.Paneles
         {
             try
             {
-                canciones = serializar.Deserialize<List<SongClass>>(File.Open("Canciones.bin", FileMode.Open));
-                videos = serializar.Deserialize<List<Video>>(File.Open("Videos.bin", FileMode.Open));
-                foreach (SongClass x in canciones)
+                canciones123 = serializar.Deserialize<List<SongClass>>(File.Open("Canciones.bin", FileMode.Open));
+                videos123 = serializar.Deserialize<List<Video>>(File.Open("Videos.bin", FileMode.Open));
+                foreach (SongClass x in canciones123)
                 {
                     listBox2.Items.Add(x);
                 }
-                foreach(Video x in videos)
+                foreach(Video x in videos123)
                 {
                     listBox2.Items.Add(x);
                 }
@@ -1475,6 +1490,11 @@ namespace Entrega_3.Paneles
             {
 
             }
+        }
+
+        private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

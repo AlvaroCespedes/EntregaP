@@ -44,15 +44,15 @@ namespace Entrega_3.Paneles
         static Director d3 = new Director("nDi3", 22, "Last3", "gender3", "nationality3", "ocupatio3", videos, premios, 22);
         static Director d4 = new Director("nDi4", 222, "LastD4", "gender4", "nationality4", "ocupation4", videos, premios, 222);
 
-        SongClass cancion = new SongClass("Cgender", "publicationYear", "title", 22, 22, "study", "keyword", "composer", singer, album, "format", 1, 2);
-        SongClass cancion2 = new SongClass("Cgender2", "publicationYear2", "title2", 22, 22, "study2", "keyword2", "composer2", singer2, album2, "format2", 11, 22);
-        SongClass cancion3 = new SongClass("Cgender3", "publicationYear3", "title3", 22, 22, "study3", "keyword3", "composer3", singer3, album3, "format3", 111, 222);
-        SongClass cancion4 = new SongClass("Cgender4", "publicationYear4", "title4", 22, 22, "study4", "keyword4", "composer4", singer4, album4, "format4", 1111, 2222);
+        SongClass cancion = new SongClass("Cgender", "publicationYear", "title", 22, 22, "study", "keyword", "composer", singer, album, "format", 1, 2,"url",0,0);
+        SongClass cancion2 = new SongClass("Cgender2", "publicationYear2", "title2", 22, 22, "study2", "keyword2", "composer2", singer2, album2, "format2", 11, 22, "url", 0, 0);
+        SongClass cancion3 = new SongClass("Cgender3", "publicationYear3", "title3", 22, 22, "study3", "keyword3", "composer3", singer3, album3, "format3", 111, 222, "url", 0, 0);
+        SongClass cancion4 = new SongClass("Cgender4", "publicationYear4", "title4", 22, 22, "study4", "keyword4", "composer4", singer4, album4, "format4", 1111, 2222, "url", 0, 0);
 
-        Video video = new Video("Vgender", "publicationYear", "title", 22, 22, "study", "keyword", "description", Mactor, d, "format", 1, 2);
-        Video video2 = new Video("Vgender2", "publicationYear2", "title2", 22, 22, "study2", "keyword2", "description2", Mactor2, d2, "format2", 11, 22);
-        Video video3 = new Video("Vgender3", "publicationYear3", "title3", 22, 22, "study3", "keyword3", "description3", Mactor3, d3, "format3", 111, 222);
-        Video video4 = new Video("Vgender4", "publicationYear4", "title4", 22, 22, "study4", "keyword4", "description4", Mactor4, d4, "format4", 1111, 2222);
+        Video video = new Video("Vgender", "publicationYear", "title", 22, 22, "study", "keyword", "description", Mactor, d, "format", 1, 2, "url", 0, 0);
+        Video video2 = new Video("Vgender2", "publicationYear2", "title2", 22, 22, "study2", "keyword2", "description2", Mactor2, d2, "format2", 11, 22, "url", 0, 0);
+        Video video3 = new Video("Vgender3", "publicationYear3", "title3", 22, 22, "study3", "keyword3", "description3", Mactor3, d3, "format3", 111, 222, "url", 0, 0);
+        Video video4 = new Video("Vgender4", "publicationYear4", "title4", 22, 22, "study4", "keyword4", "description4", Mactor4, d4, "format4", 1111, 2222, "url", 0, 0);
 
 
 
@@ -987,6 +987,35 @@ namespace Entrega_3.Paneles
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
+            try
+            {
+                canciones = serializar.Deserialize<List<SongClass>>(File.Open("Canciones.bin", FileMode.Open));
+                foreach (SongClass x in canciones)
+                {
+                    listCanciones.Items.Add(x);
+                }
+
+
+            }
+            catch (System.Runtime.Serialization.SerializationException)
+            {
+
+            }
+            try
+            {
+                videos = serializar.Deserialize<List<Video>>(File.Open("Videos.bin", FileMode.Open));
+                foreach(Video x in videos)
+                {
+                    listCanciones.Items.Add(x);
+                }
+
+            }
+            catch (System.Runtime.Serialization.SerializationException)
+            {
+
+            }
+
+
             if (listCanciones.Visible == true)
             {
                 listCanciones.Visible = false;
@@ -1317,13 +1346,134 @@ namespace Entrega_3.Paneles
 
         }
 
-        private void Subir_Click(object sender, EventArgs e)
+        private void Subir_Click(object sender, EventArgs e) //Btn Agregar
         {
             //if (txt=="");malo
             //subir los try de los int 
             //else{
             panel5.Visible = false;
             btnAgregarInfo.Visible = false;
+
+
+
+            int startIndex = ArchivoMP3.Length - 4;
+            int final = 4;
+            String substring = ArchivoMP3.Substring(startIndex, final);
+            try
+            {
+                //VER QUE SEAN MINUSCULAS Y MAYUSCULAS
+                if (substring == ".mp3" || substring == ".wav")
+                {
+                    string title = "";
+                    string singer12 = "";
+                    string composer = "";
+                    string album12 = "";
+                    string gender = "";
+                    string publicationYear = ""; //Tiene que ser en el formato de data time
+                    string study = "";
+                    string keyWord = "";
+
+                    title = txtTitle.Text;
+                    singer12 = txtSinger.Text;
+                    composer = txtComposer.Text;
+                    album12 = txtAlbum.Text;
+                    gender = txtGender.Text;
+                    publicationYear = txtPublicationYear.Text;
+                    study = txtStudy.Text;
+                    keyWord = txtKeyword.Text;
+
+                    Singer singer123 = new Singer(canciones, listaAlbum, premios, "voiceType", "genders", 22, discograpich, singer12, 12, "Lastname", "genero", "nationality", "ocupacion");
+                    Album album123 = new Album(album12, "gender", "producer", singer, date);
+
+                    //Preguntarle al pefil si quiere rellenar los datos de Singer y Album
+
+                    SongClass ob = new SongClass(gender, publicationYear, title, 123, 123, study, keyWord, composer, singer123, album123, ".mp3", 123, 123, rutaArchivoMP3,0,0);
+                    //Deserializando
+
+                    List<SongClass> cancionAux = new List<SongClass>();
+                    try
+                    {
+                        cancionAux = serializar.Deserialize<List<SongClass>>(File.Open("Videos.bin", FileMode.Open));
+                    }
+                    catch (System.Runtime.Serialization.SerializationException)
+                    {
+
+                    }
+                    foreach (SongClass x in cancionAux)
+                    {
+                        canciones.Add(x);
+                    }
+                    canciones.Add(ob);
+                    serializar.Serialize(canciones, File.Open("Canciones.bin", FileMode.Create));
+                }
+
+
+                else if (substring == ".mp4")
+                {
+
+                    string title = "";
+                    string actor = "";
+                    string composer = "";
+                    string director = "";
+                    string gender = "";
+                    string publicationYear = ""; //Tiene que ser en el formato de data time
+                    string study = "";
+                    string keyWord = "";
+                    string description = "";
+
+
+
+                    title = txtTitle.Text;
+                    director = txtSinger.Text;
+                    composer = txtComposer.Text;
+                    actor = txtAlbum.Text;
+                    gender = txtGender.Text;
+                    publicationYear = txtPublicationYear.Text;
+                    study = txtStudy.Text;
+                    keyWord = txtKeyword.Text;
+                    description = txtAlbum.Text;
+
+                    Actor Mactor123 = new Actor("name4", 22, actor, "gender4", "nationality4", "Ocupacion4", videos, premios, 22);
+                    Director d123 = new Director(director, 22, "LastD", "gender", "nationality", "ocupation", videos, premios, 22);
+
+                    Video ob2 = new Video(gender, publicationYear, title, 123, 123, study, keyWord, description, Mactor123, d123, "format", 123, 123, rutaArchivoMP3,0,0);
+
+                    List<Video> videoAux = new List<Video>();
+                    try
+                    {
+                        videoAux = serializar.Deserialize<List<Video>>(File.Open("Videos.bin", FileMode.Open));
+                    }
+                    catch (System.Runtime.Serialization.SerializationException)
+                    {
+
+                    }
+                    foreach(Video x in videoAux)
+                    {
+                        videos.Add(x);
+                    }
+                    videos.Add(ob2);
+                    serializar.Serialize(videos, File.Open("Videos.bin", FileMode.Create));
+                }
+            }
+            catch
+            {
+                MessageBox.Show("ERROR");
+            }
+
+            MessageBox.Show("Su ha archivo ha sido guardada.");
+
+            //Limpiando los txt.
+            txtTitle.Clear();
+            txtSinger.Clear();
+            txtComposer.Clear();
+            txtAlbum.Clear();
+            txtGender.Clear();
+            txtPublicationYear.Clear();
+            txtStudy.Clear();
+            txtKeyword.Clear();
+            txtAlbum.Clear();
+
+            listBox1.Items.Clear();
 
         }
     }

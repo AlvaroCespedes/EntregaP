@@ -45,3 +45,8 @@ C:\Users\matistark\Desktop\EntregaP\Entrega 3\bin\Debug\AxInterop.WMPLib.dll
 C:\Users\matistark\Desktop\EntregaP\Entrega 3\obj\Debug\Interop.WMPLib.dll
 C:\Users\matistark\Desktop\EntregaP\Entrega 3\obj\Debug\AxInterop.WMPLib.dll
 C:\Users\matistark\Desktop\EntregaP\Entrega 3\obj\Debug\Entrega 3.csproj.ResolveComReference.cache
+C:\Users\alvar\Desktop\EntregaP\Entrega 3\obj\Debug\Interop.WMPLib.dll
+C:\Users\alvar\Desktop\EntregaP\Entrega 3\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\alvar\Desktop\EntregaP\Entrega 3\obj\Debug\Entrega 3.csproj.ResolveComReference.cache
+C:\Users\alvar\Desktop\EntregaP\Entrega 3\bin\Debug\Interop.WMPLib.dll
+C:\Users\alvar\Desktop\EntregaP\Entrega 3\bin\Debug\AxInterop.WMPLib.dll

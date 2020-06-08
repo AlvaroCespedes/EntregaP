@@ -25,9 +25,13 @@ namespace Entrega_3.Clases
         private int evaluation;
         private int resolution;
 
+        private string url;
+        private int nReproduction;
+        private int likes;
+
         public Video(string gender, string publicationYear,
                      string title, int duration, int memory, string study, string keyword,
-                     string description, Actor mainActor, Director director, string format, int evaluation, int resolution)
+                     string description, Actor mainActor, Director director, string format, int evaluation, int resolution, string url, int nReproduction, int likes)
         {
             this.Gender = gender; // Listo
             this.PublicationYear = publicationYear; // Listo
@@ -43,6 +47,9 @@ namespace Entrega_3.Clases
             this.format = format;
             this.Evaluation = evaluation;
             this.Resolution = resolution;
+            this.Url = url;
+            this.NReproduction = nReproduction;
+            this.Likes = likes;
         }
         public Video()
         {
@@ -63,6 +70,9 @@ namespace Entrega_3.Clases
         public string Keyword { get => keyword; set => keyword = value; }
         public int Evaluation { get => evaluation; set => evaluation = value; }
         public int Resolution { get => resolution; set => resolution = value; }
+        public string Url { get => url; set => url = value; }
+        public int NReproduction { get => nReproduction; set => nReproduction = value; }
+        public int Likes { get => likes; set => likes = value; }
 
         public void AddData() //Cambiar UML  void
         {

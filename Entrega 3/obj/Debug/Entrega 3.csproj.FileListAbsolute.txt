@@ -25,3 +25,4 @@ C:\Users\matistark\Desktop\EntregaP\Entrega 3\obj\Debug\Entrega 3.csproj.CoreCom
 C:\Users\matistark\Desktop\EntregaP\Entrega 3\obj\Debug\Entrega 3.exe
 C:\Users\matistark\Desktop\EntregaP\Entrega 3\obj\Debug\Entrega 3.pdb
 C:\Users\matistark\Desktop\EntregaP\Entrega 3\obj\Debug\Entrega_3.Paneles.FormAplicacion.resources
+C:\Users\anton\Desktop\EntregaP\Entrega 3\obj\Debug\Entrega_3.Paneles.FormAplicacion.resources

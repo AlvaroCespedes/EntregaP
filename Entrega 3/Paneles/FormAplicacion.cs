@@ -15,12 +15,14 @@ namespace Entrega_3.Paneles
     {
         Clases.User usuario = new Clases.User();
         Clases.Serialization serializar = new Clases.Serialization();
+        string TipoCuenta;
         public FormAplicacion(Clases.User user)
         {
             InitializeComponent();
             usuario = user;
             if (user.Plan == "Basico")
             {
+                TipoCuenta = "Basico";
 
                 btnPlaylisMusica.Visible = false;
                 btnPlaylistVideo.Visible = false;
@@ -68,6 +70,7 @@ namespace Entrega_3.Paneles
             }
             else if (user.Plan == "Premium")
             {
+                TipoCuenta = "Premiun";
                 if (user.Profiles.Count == 0)
                 {
                     pic5.Visible = true;
@@ -105,6 +108,7 @@ namespace Entrega_3.Paneles
 
             else if (user.Plan == "Familiar")
             {
+                TipoCuenta = "Familiar";
                 if (user.Profiles.Count == 0)
                 {
                     pic5.Visible = true;
@@ -386,6 +390,8 @@ namespace Entrega_3.Paneles
         {
             panelCrearUsuario.Visible = true;
             panelContenedorPincipal.Visible = true;
+            panel5.Visible = false;
+            
             string h = ".jpg";
             b1.Visible = false;
             b2.Visible = false;
@@ -400,7 +406,7 @@ namespace Entrega_3.Paneles
             Image image3 = Image.FromFile(usuario.Profiles[0].PleasuresMusic[2] + h);
             pic14.Image = image3;
 
-
+            
 
 
 
@@ -458,6 +464,7 @@ namespace Entrega_3.Paneles
         {
             panelCrearUsuario.Visible = true;
             panelContenedorPincipal.Visible = true;
+            panel5.Visible = false;
             string h = ".jpg";
             b1.Visible = false;
             b2.Visible = false;
@@ -482,7 +489,7 @@ namespace Entrega_3.Paneles
             b2.Visible = false;
             b3.Visible = false;
             b4.Visible = false;
-
+            panel5.Visible = false;
 
 
             Image image1 = Image.FromFile(usuario.Profiles[2].PleasuresMusic[0] + h);
@@ -502,6 +509,7 @@ namespace Entrega_3.Paneles
             b2.Visible = false;
             b3.Visible = false;
             b4.Visible = false;
+            panel5.Visible = false;
 
 
             Image image1 = Image.FromFile(usuario.Profiles[3].PleasuresMusic[0] + h);
@@ -535,9 +543,18 @@ namespace Entrega_3.Paneles
                 }
 
             }
-            if (nomPerfil.Text == "" || privacidadPerfil.SelectedItem == null || gustosMusicales.CheckedItems == null || gustosPeliculas.CheckedItems == null)
+            if (nomPerfil.Text == "" || privacidadPerfil.SelectedItem == null || gustosMusicales.CheckedItems.Count< 3 || gustosPeliculas.CheckedItems.Count<3)
             {
                 MessageBox.Show("RELLENE TODOS LOS DATOS");
+                if(gustosMusicales.CheckedItems.Count < 3)
+                {
+                    MessageBox.Show("Debe ingresar al menos 3 gustos musicales");
+                }
+                if (gustosMusicales.CheckedItems.Count < 3)
+                {
+                    MessageBox.Show("Debe ingresar al menos 3 categorias de peliculas favoritas");
+                }
+
             }
             else if (errores == 0)
             {
@@ -833,6 +850,13 @@ namespace Entrega_3.Paneles
             panelSubMenuAjustes.Visible = false;
             panelCrearUsuario.Visible = false;
             b1.Visible = true;
+            if (TipoCuenta == "Familiar")
+            {
+                b2.Visible = true;
+                b3.Visible = true;
+                b4.Visible = true;
+            }
+            
             
         }
 
@@ -872,6 +896,10 @@ namespace Entrega_3.Paneles
             panelCrearUsuario.Visible = true;
             panelContenedorPincipal.Visible = true;
             panel5.Visible = true;
+        }
+        private void pic10_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

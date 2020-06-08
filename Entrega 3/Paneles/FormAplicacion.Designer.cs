@@ -57,6 +57,63 @@
             this.pic2 = new System.Windows.Forms.PictureBox();
             this.pic1 = new System.Windows.Forms.PictureBox();
             this.panelCrearUsuario = new System.Windows.Forms.Panel();
+            this.panelContenedorPincipal = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.btncambiarp = new System.Windows.Forms.Button();
+            this.btnCambiarClave = new System.Windows.Forms.Button();
+            this.radioButton5 = new System.Windows.Forms.RadioButton();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton4 = new System.Windows.Forms.RadioButton();
+            this.label15 = new System.Windows.Forms.Label();
+            this.l6 = new System.Windows.Forms.TextBox();
+            this.l5 = new System.Windows.Forms.TextBox();
+            this.l4 = new System.Windows.Forms.TextBox();
+            this.l1 = new System.Windows.Forms.Button();
+            this.l2 = new System.Windows.Forms.Button();
+            this.l3 = new System.Windows.Forms.Button();
+            this.subpanel3 = new System.Windows.Forms.Panel();
+            this.panel21 = new System.Windows.Forms.Panel();
+            this.btnD3 = new System.Windows.Forms.Button();
+            this.panel22 = new System.Windows.Forms.Panel();
+            this.button14 = new System.Windows.Forms.Button();
+            this.subpanel2 = new System.Windows.Forms.Panel();
+            this.panel18 = new System.Windows.Forms.Panel();
+            this.btnD2 = new System.Windows.Forms.Button();
+            this.panel19 = new System.Windows.Forms.Panel();
+            this.button12 = new System.Windows.Forms.Button();
+            this.subpanel1 = new System.Windows.Forms.Panel();
+            this.panel16 = new System.Windows.Forms.Panel();
+            this.btnD1 = new System.Windows.Forms.Button();
+            this.panel15 = new System.Windows.Forms.Panel();
+            this.button9 = new System.Windows.Forms.Button();
+            this.label13 = new System.Windows.Forms.Label();
+            this.pic11 = new System.Windows.Forms.PictureBox();
+            this.pic10 = new System.Windows.Forms.PictureBox();
+            this.pic9 = new System.Windows.Forms.PictureBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.pic14 = new System.Windows.Forms.PictureBox();
+            this.pic13 = new System.Windows.Forms.PictureBox();
+            this.pic12 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panelSubMenuAjustes = new System.Windows.Forms.Panel();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.btnCambiarPerfil = new System.Windows.Forms.Button();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.btnOtro = new System.Windows.Forms.Button();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.btnCambiarContraseña = new System.Windows.Forms.Button();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.btnCambiarPlan = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.label12 = new System.Windows.Forms.Label();
+            this.SubMenuAjustes = new System.Windows.Forms.Button();
+            this.btnPlaylistVideo = new System.Windows.Forms.Button();
+            this.btnPlaylisMusica = new System.Windows.Forms.Button();
+            this.btnInicio = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.Crear = new System.Windows.Forms.Button();
@@ -71,63 +128,6 @@
             this.b2 = new System.Windows.Forms.Button();
             this.b3 = new System.Windows.Forms.Button();
             this.b4 = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.btnInicio = new System.Windows.Forms.Button();
-            this.btnPlaylisMusica = new System.Windows.Forms.Button();
-            this.btnPlaylistVideo = new System.Windows.Forms.Button();
-            this.SubMenuAjustes = new System.Windows.Forms.Button();
-            this.label12 = new System.Windows.Forms.Label();
-            this.button8 = new System.Windows.Forms.Button();
-            this.panelSubMenuAjustes = new System.Windows.Forms.Panel();
-            this.btnCambiarPlan = new System.Windows.Forms.Button();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.btnCambiarContraseña = new System.Windows.Forms.Button();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.btnOtro = new System.Windows.Forms.Button();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.btnCambiarPerfil = new System.Windows.Forms.Button();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pic12 = new System.Windows.Forms.PictureBox();
-            this.pic13 = new System.Windows.Forms.PictureBox();
-            this.pic14 = new System.Windows.Forms.PictureBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.pic9 = new System.Windows.Forms.PictureBox();
-            this.pic10 = new System.Windows.Forms.PictureBox();
-            this.pic11 = new System.Windows.Forms.PictureBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.subpanel1 = new System.Windows.Forms.Panel();
-            this.button9 = new System.Windows.Forms.Button();
-            this.panel15 = new System.Windows.Forms.Panel();
-            this.btnD1 = new System.Windows.Forms.Button();
-            this.panel16 = new System.Windows.Forms.Panel();
-            this.subpanel2 = new System.Windows.Forms.Panel();
-            this.button12 = new System.Windows.Forms.Button();
-            this.panel19 = new System.Windows.Forms.Panel();
-            this.btnD2 = new System.Windows.Forms.Button();
-            this.panel18 = new System.Windows.Forms.Panel();
-            this.subpanel3 = new System.Windows.Forms.Panel();
-            this.button14 = new System.Windows.Forms.Button();
-            this.panel22 = new System.Windows.Forms.Panel();
-            this.btnD3 = new System.Windows.Forms.Button();
-            this.panel21 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.l3 = new System.Windows.Forms.Button();
-            this.l2 = new System.Windows.Forms.Button();
-            this.l1 = new System.Windows.Forms.Button();
-            this.l4 = new System.Windows.Forms.TextBox();
-            this.l5 = new System.Windows.Forms.TextBox();
-            this.l6 = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton5 = new System.Windows.Forms.RadioButton();
-            this.btnCambiarClave = new System.Windows.Forms.Button();
-            this.btncambiarp = new System.Windows.Forms.Button();
-            this.panelContenedorPincipal = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnVolverNormalidad)).BeginInit();
@@ -142,20 +142,20 @@
             ((System.ComponentModel.ISupportInitialize)(this.pic2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic1)).BeginInit();
             this.panelCrearUsuario.SuspendLayout();
+            this.panelContenedorPincipal.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.subpanel3.SuspendLayout();
+            this.subpanel2.SuspendLayout();
+            this.subpanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic14)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic13)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panelSubMenuAjustes.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic12)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic13)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic14)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic11)).BeginInit();
-            this.subpanel1.SuspendLayout();
-            this.subpanel2.SuspendLayout();
-            this.subpanel3.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.panelContenedorPincipal.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -482,6 +482,756 @@
             this.panelCrearUsuario.TabIndex = 68;
             this.panelCrearUsuario.Visible = false;
             // 
+            // panelContenedorPincipal
+            // 
+            this.panelContenedorPincipal.AutoSize = true;
+            this.panelContenedorPincipal.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.panelContenedorPincipal.Controls.Add(this.panel5);
+            this.panelContenedorPincipal.Controls.Add(this.panel4);
+            this.panelContenedorPincipal.Controls.Add(this.subpanel3);
+            this.panelContenedorPincipal.Controls.Add(this.subpanel2);
+            this.panelContenedorPincipal.Controls.Add(this.subpanel1);
+            this.panelContenedorPincipal.Controls.Add(this.label13);
+            this.panelContenedorPincipal.Controls.Add(this.pic11);
+            this.panelContenedorPincipal.Controls.Add(this.pic10);
+            this.panelContenedorPincipal.Controls.Add(this.pic9);
+            this.panelContenedorPincipal.Controls.Add(this.label14);
+            this.panelContenedorPincipal.Controls.Add(this.pic14);
+            this.panelContenedorPincipal.Controls.Add(this.pic13);
+            this.panelContenedorPincipal.Controls.Add(this.pic12);
+            this.panelContenedorPincipal.Controls.Add(this.pictureBox1);
+            this.panelContenedorPincipal.Controls.Add(this.textBox1);
+            this.panelContenedorPincipal.Controls.Add(this.panel3);
+            this.panelContenedorPincipal.Controls.Add(this.panel2);
+            this.panelContenedorPincipal.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelContenedorPincipal.Location = new System.Drawing.Point(0, 0);
+            this.panelContenedorPincipal.Name = "panelContenedorPincipal";
+            this.panelContenedorPincipal.Size = new System.Drawing.Size(900, 583);
+            this.panelContenedorPincipal.TabIndex = 31;
+            this.panelContenedorPincipal.Paint += new System.Windows.Forms.PaintEventHandler(this.panelContenedorPincipal_Paint);
+            // 
+            // panel5
+            // 
+            this.panel5.Location = new System.Drawing.Point(3, 4);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(894, 576);
+            this.panel5.TabIndex = 11;
+            this.panel5.Visible = false;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.panel4.Controls.Add(this.btncambiarp);
+            this.panel4.Controls.Add(this.btnCambiarClave);
+            this.panel4.Controls.Add(this.radioButton5);
+            this.panel4.Controls.Add(this.radioButton1);
+            this.panel4.Controls.Add(this.radioButton4);
+            this.panel4.Controls.Add(this.label15);
+            this.panel4.Controls.Add(this.l6);
+            this.panel4.Controls.Add(this.l5);
+            this.panel4.Controls.Add(this.l4);
+            this.panel4.Controls.Add(this.l1);
+            this.panel4.Controls.Add(this.l2);
+            this.panel4.Controls.Add(this.l3);
+            this.panel4.Location = new System.Drawing.Point(200, 197);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(372, 303);
+            this.panel4.TabIndex = 11;
+            this.panel4.Visible = false;
+            // 
+            // btncambiarp
+            // 
+            this.btncambiarp.Location = new System.Drawing.Point(134, 248);
+            this.btncambiarp.Name = "btncambiarp";
+            this.btncambiarp.Size = new System.Drawing.Size(75, 23);
+            this.btncambiarp.TabIndex = 22;
+            this.btncambiarp.Text = "Plan";
+            this.btncambiarp.UseVisualStyleBackColor = true;
+            this.btncambiarp.Visible = false;
+            // 
+            // btnCambiarClave
+            // 
+            this.btnCambiarClave.Location = new System.Drawing.Point(276, 248);
+            this.btnCambiarClave.Name = "btnCambiarClave";
+            this.btnCambiarClave.Size = new System.Drawing.Size(75, 23);
+            this.btnCambiarClave.TabIndex = 21;
+            this.btnCambiarClave.Text = "C. Clave";
+            this.btnCambiarClave.UseVisualStyleBackColor = true;
+            this.btnCambiarClave.Visible = false;
+            this.btnCambiarClave.Click += new System.EventHandler(this.btnCambiarClave_Click);
+            // 
+            // radioButton5
+            // 
+            this.radioButton5.AutoSize = true;
+            this.radioButton5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton5.ForeColor = System.Drawing.Color.DarkOrchid;
+            this.radioButton5.Location = new System.Drawing.Point(35, 165);
+            this.radioButton5.Name = "radioButton5";
+            this.radioButton5.Size = new System.Drawing.Size(267, 23);
+            this.radioButton5.TabIndex = 20;
+            this.radioButton5.Text = "plan familiar(4 personas) $7,990";
+            this.radioButton5.UseVisualStyleBackColor = true;
+            this.radioButton5.Visible = false;
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton1.ForeColor = System.Drawing.Color.DarkOrchid;
+            this.radioButton1.Location = new System.Drawing.Point(35, 71);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(117, 23);
+            this.radioButton1.TabIndex = 19;
+            this.radioButton1.Text = "plan Basico";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton1.Visible = false;
+            // 
+            // radioButton4
+            // 
+            this.radioButton4.AutoSize = true;
+            this.radioButton4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton4.ForeColor = System.Drawing.Color.DarkOrchid;
+            this.radioButton4.Location = new System.Drawing.Point(32, 123);
+            this.radioButton4.Name = "radioButton4";
+            this.radioButton4.Size = new System.Drawing.Size(261, 23);
+            this.radioButton4.TabIndex = 18;
+            this.radioButton4.Text = "plan premiun (personal) $3,990";
+            this.radioButton4.UseVisualStyleBackColor = true;
+            this.radioButton4.Visible = false;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Arial Black", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.Green;
+            this.label15.Location = new System.Drawing.Point(42, 11);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(304, 38);
+            this.label15.TabIndex = 17;
+            this.label15.Text = "Cambio contraseña";
+            // 
+            // l6
+            // 
+            this.l6.Location = new System.Drawing.Point(193, 212);
+            this.l6.Name = "l6";
+            this.l6.Size = new System.Drawing.Size(100, 20);
+            this.l6.TabIndex = 16;
+            this.l6.Visible = false;
+            // 
+            // l5
+            // 
+            this.l5.Location = new System.Drawing.Point(200, 167);
+            this.l5.Name = "l5";
+            this.l5.Size = new System.Drawing.Size(100, 20);
+            this.l5.TabIndex = 15;
+            this.l5.Visible = false;
+            // 
+            // l4
+            // 
+            this.l4.Location = new System.Drawing.Point(200, 122);
+            this.l4.Name = "l4";
+            this.l4.Size = new System.Drawing.Size(100, 20);
+            this.l4.TabIndex = 14;
+            this.l4.Visible = false;
+            // 
+            // l1
+            // 
+            this.l1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.l1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.l1.FlatAppearance.BorderSize = 0;
+            this.l1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
+            this.l1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.l1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.l1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.l1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.l1.Location = new System.Drawing.Point(35, 116);
+            this.l1.Name = "l1";
+            this.l1.Size = new System.Drawing.Size(136, 30);
+            this.l1.TabIndex = 11;
+            this.l1.Text = "Contraseña actual";
+            this.l1.UseVisualStyleBackColor = false;
+            this.l1.Visible = false;
+            // 
+            // l2
+            // 
+            this.l2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.l2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.l2.FlatAppearance.BorderSize = 0;
+            this.l2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
+            this.l2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.l2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.l2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.l2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.l2.Location = new System.Drawing.Point(35, 161);
+            this.l2.Name = "l2";
+            this.l2.Size = new System.Drawing.Size(136, 30);
+            this.l2.TabIndex = 12;
+            this.l2.Text = "Nueva contraseña";
+            this.l2.UseVisualStyleBackColor = false;
+            this.l2.Visible = false;
+            // 
+            // l3
+            // 
+            this.l3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.l3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.l3.FlatAppearance.BorderSize = 0;
+            this.l3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
+            this.l3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.l3.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.l3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.l3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.l3.Location = new System.Drawing.Point(35, 202);
+            this.l3.Name = "l3";
+            this.l3.Size = new System.Drawing.Size(136, 30);
+            this.l3.TabIndex = 13;
+            this.l3.Text = "Confirme Nueva";
+            this.l3.UseVisualStyleBackColor = false;
+            this.l3.Visible = false;
+            // 
+            // subpanel3
+            // 
+            this.subpanel3.Controls.Add(this.panel21);
+            this.subpanel3.Controls.Add(this.btnD3);
+            this.subpanel3.Controls.Add(this.panel22);
+            this.subpanel3.Controls.Add(this.button14);
+            this.subpanel3.Location = new System.Drawing.Point(725, 407);
+            this.subpanel3.Name = "subpanel3";
+            this.subpanel3.Size = new System.Drawing.Size(130, 50);
+            this.subpanel3.TabIndex = 39;
+            this.subpanel3.Visible = false;
+            // 
+            // panel21
+            // 
+            this.panel21.BackColor = System.Drawing.Color.Blue;
+            this.panel21.Location = new System.Drawing.Point(-3, 28);
+            this.panel21.Name = "panel21";
+            this.panel21.Size = new System.Drawing.Size(10, 22);
+            this.panel21.TabIndex = 8;
+            // 
+            // btnD3
+            // 
+            this.btnD3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnD3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnD3.FlatAppearance.BorderSize = 0;
+            this.btnD3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
+            this.btnD3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnD3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnD3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnD3.Location = new System.Drawing.Point(6, 28);
+            this.btnD3.Name = "btnD3";
+            this.btnD3.Size = new System.Drawing.Size(125, 22);
+            this.btnD3.TabIndex = 7;
+            this.btnD3.Text = "Descargar";
+            this.btnD3.UseVisualStyleBackColor = false;
+            // 
+            // panel22
+            // 
+            this.panel22.BackColor = System.Drawing.Color.Blue;
+            this.panel22.Location = new System.Drawing.Point(-3, 0);
+            this.panel22.Name = "panel22";
+            this.panel22.Size = new System.Drawing.Size(10, 22);
+            this.panel22.TabIndex = 6;
+            // 
+            // button14
+            // 
+            this.button14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.button14.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveBorder;
+            this.button14.FlatAppearance.BorderSize = 0;
+            this.button14.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.button14.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
+            this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button14.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button14.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button14.Location = new System.Drawing.Point(6, 0);
+            this.button14.Name = "button14";
+            this.button14.Size = new System.Drawing.Size(125, 22);
+            this.button14.TabIndex = 5;
+            this.button14.Text = "Reproducir";
+            this.button14.UseVisualStyleBackColor = false;
+            // 
+            // subpanel2
+            // 
+            this.subpanel2.Controls.Add(this.panel18);
+            this.subpanel2.Controls.Add(this.btnD2);
+            this.subpanel2.Controls.Add(this.panel19);
+            this.subpanel2.Controls.Add(this.button12);
+            this.subpanel2.Location = new System.Drawing.Point(513, 407);
+            this.subpanel2.Name = "subpanel2";
+            this.subpanel2.Size = new System.Drawing.Size(130, 50);
+            this.subpanel2.TabIndex = 38;
+            this.subpanel2.Visible = false;
+            // 
+            // panel18
+            // 
+            this.panel18.BackColor = System.Drawing.Color.Blue;
+            this.panel18.Location = new System.Drawing.Point(-3, 28);
+            this.panel18.Name = "panel18";
+            this.panel18.Size = new System.Drawing.Size(10, 22);
+            this.panel18.TabIndex = 8;
+            // 
+            // btnD2
+            // 
+            this.btnD2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnD2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnD2.FlatAppearance.BorderSize = 0;
+            this.btnD2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
+            this.btnD2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnD2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnD2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnD2.Location = new System.Drawing.Point(6, 28);
+            this.btnD2.Name = "btnD2";
+            this.btnD2.Size = new System.Drawing.Size(125, 22);
+            this.btnD2.TabIndex = 7;
+            this.btnD2.Text = "Descargar";
+            this.btnD2.UseVisualStyleBackColor = false;
+            // 
+            // panel19
+            // 
+            this.panel19.BackColor = System.Drawing.Color.Blue;
+            this.panel19.Location = new System.Drawing.Point(-3, 0);
+            this.panel19.Name = "panel19";
+            this.panel19.Size = new System.Drawing.Size(10, 22);
+            this.panel19.TabIndex = 6;
+            // 
+            // button12
+            // 
+            this.button12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.button12.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveBorder;
+            this.button12.FlatAppearance.BorderSize = 0;
+            this.button12.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.button12.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
+            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button12.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button12.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button12.Location = new System.Drawing.Point(5, 0);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(125, 22);
+            this.button12.TabIndex = 5;
+            this.button12.Text = "Reproducir";
+            this.button12.UseVisualStyleBackColor = false;
+            // 
+            // subpanel1
+            // 
+            this.subpanel1.Controls.Add(this.panel16);
+            this.subpanel1.Controls.Add(this.btnD1);
+            this.subpanel1.Controls.Add(this.panel15);
+            this.subpanel1.Controls.Add(this.button9);
+            this.subpanel1.Location = new System.Drawing.Point(321, 406);
+            this.subpanel1.Name = "subpanel1";
+            this.subpanel1.Size = new System.Drawing.Size(130, 50);
+            this.subpanel1.TabIndex = 37;
+            this.subpanel1.Visible = false;
+            // 
+            // panel16
+            // 
+            this.panel16.BackColor = System.Drawing.Color.Blue;
+            this.panel16.Location = new System.Drawing.Point(-3, 28);
+            this.panel16.Name = "panel16";
+            this.panel16.Size = new System.Drawing.Size(10, 22);
+            this.panel16.TabIndex = 8;
+            // 
+            // btnD1
+            // 
+            this.btnD1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnD1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnD1.FlatAppearance.BorderSize = 0;
+            this.btnD1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
+            this.btnD1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnD1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnD1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnD1.Location = new System.Drawing.Point(6, 28);
+            this.btnD1.Name = "btnD1";
+            this.btnD1.Size = new System.Drawing.Size(125, 22);
+            this.btnD1.TabIndex = 7;
+            this.btnD1.Text = "Descargar";
+            this.btnD1.UseVisualStyleBackColor = false;
+            // 
+            // panel15
+            // 
+            this.panel15.BackColor = System.Drawing.Color.Blue;
+            this.panel15.Location = new System.Drawing.Point(-3, 0);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(10, 22);
+            this.panel15.TabIndex = 6;
+            // 
+            // button9
+            // 
+            this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.button9.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveBorder;
+            this.button9.FlatAppearance.BorderSize = 0;
+            this.button9.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.button9.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
+            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button9.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button9.Location = new System.Drawing.Point(6, 0);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(125, 22);
+            this.button9.TabIndex = 5;
+            this.button9.Text = "Reproducir";
+            this.button9.UseVisualStyleBackColor = false;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(396, 74);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(273, 22);
+            this.label13.TabIndex = 36;
+            this.label13.Text = "Videos que quizas te interesen";
+            this.label13.UseWaitCursor = true;
+            // 
+            // pic11
+            // 
+            this.pic11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.pic11.Image = ((System.Drawing.Image)(resources.GetObject("pic11.Image")));
+            this.pic11.Location = new System.Drawing.Point(651, 113);
+            this.pic11.Name = "pic11";
+            this.pic11.Size = new System.Drawing.Size(158, 117);
+            this.pic11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pic11.TabIndex = 35;
+            this.pic11.TabStop = false;
+            // 
+            // pic10
+            // 
+            this.pic10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.pic10.Image = ((System.Drawing.Image)(resources.GetObject("pic10.Image")));
+            this.pic10.Location = new System.Drawing.Point(457, 113);
+            this.pic10.Name = "pic10";
+            this.pic10.Size = new System.Drawing.Size(158, 117);
+            this.pic10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pic10.TabIndex = 34;
+            this.pic10.TabStop = false;
+            // 
+            // pic9
+            // 
+            this.pic9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.pic9.Image = ((System.Drawing.Image)(resources.GetObject("pic9.Image")));
+            this.pic9.Location = new System.Drawing.Point(249, 113);
+            this.pic9.Name = "pic9";
+            this.pic9.Size = new System.Drawing.Size(158, 117);
+            this.pic9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pic9.TabIndex = 33;
+            this.pic9.TabStop = false;
+            this.pic9.Click += new System.EventHandler(this.pic9_Click);
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(347, 262);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(342, 22);
+            this.label14.TabIndex = 32;
+            this.label14.Text = "Porque pensamos que te podia gustar..";
+            this.label14.UseWaitCursor = true;
+            // 
+            // pic14
+            // 
+            this.pic14.Image = ((System.Drawing.Image)(resources.GetObject("pic14.Image")));
+            this.pic14.Location = new System.Drawing.Point(667, 293);
+            this.pic14.Name = "pic14";
+            this.pic14.Size = new System.Drawing.Size(158, 117);
+            this.pic14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pic14.TabIndex = 31;
+            this.pic14.TabStop = false;
+            this.pic14.Click += new System.EventHandler(this.pic14_Click);
+            // 
+            // pic13
+            // 
+            this.pic13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.pic13.Image = ((System.Drawing.Image)(resources.GetObject("pic13.Image")));
+            this.pic13.Location = new System.Drawing.Point(457, 295);
+            this.pic13.Name = "pic13";
+            this.pic13.Size = new System.Drawing.Size(158, 117);
+            this.pic13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pic13.TabIndex = 30;
+            this.pic13.TabStop = false;
+            this.pic13.Click += new System.EventHandler(this.pic13_Click);
+            // 
+            // pic12
+            // 
+            this.pic12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.pic12.Image = ((System.Drawing.Image)(resources.GetObject("pic12.Image")));
+            this.pic12.Location = new System.Drawing.Point(258, 295);
+            this.pic12.Name = "pic12";
+            this.pic12.Size = new System.Drawing.Size(158, 117);
+            this.pic12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pic12.TabIndex = 29;
+            this.pic12.TabStop = false;
+            this.pic12.Click += new System.EventHandler(this.pic12_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(573, 32);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(25, 23);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 28;
+            this.pictureBox1.TabStop = false;
+            // 
+            // textBox1
+            // 
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Location = new System.Drawing.Point(467, 32);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 23);
+            this.textBox1.TabIndex = 27;
+            this.textBox1.Tag = "";
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel3.Location = new System.Drawing.Point(200, 506);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(700, 77);
+            this.panel3.TabIndex = 1;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.panel2.Controls.Add(this.panelSubMenuAjustes);
+            this.panel2.Controls.Add(this.button8);
+            this.panel2.Controls.Add(this.label12);
+            this.panel2.Controls.Add(this.SubMenuAjustes);
+            this.panel2.Controls.Add(this.btnPlaylistVideo);
+            this.panel2.Controls.Add(this.btnPlaylisMusica);
+            this.panel2.Controls.Add(this.btnInicio);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel2.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(200, 583);
+            this.panel2.TabIndex = 0;
+            // 
+            // panelSubMenuAjustes
+            // 
+            this.panelSubMenuAjustes.Controls.Add(this.panel12);
+            this.panelSubMenuAjustes.Controls.Add(this.btnCambiarPerfil);
+            this.panelSubMenuAjustes.Controls.Add(this.panel11);
+            this.panelSubMenuAjustes.Controls.Add(this.btnOtro);
+            this.panelSubMenuAjustes.Controls.Add(this.panel10);
+            this.panelSubMenuAjustes.Controls.Add(this.btnCambiarContraseña);
+            this.panelSubMenuAjustes.Controls.Add(this.panel9);
+            this.panelSubMenuAjustes.Controls.Add(this.btnCambiarPlan);
+            this.panelSubMenuAjustes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panelSubMenuAjustes.Location = new System.Drawing.Point(43, 359);
+            this.panelSubMenuAjustes.Name = "panelSubMenuAjustes";
+            this.panelSubMenuAjustes.Size = new System.Drawing.Size(149, 212);
+            this.panelSubMenuAjustes.TabIndex = 17;
+            this.panelSubMenuAjustes.Visible = false;
+            this.panelSubMenuAjustes.Paint += new System.Windows.Forms.PaintEventHandler(this.panelSubMenuAjustes_Paint);
+            // 
+            // panel12
+            // 
+            this.panel12.BackColor = System.Drawing.Color.Blue;
+            this.panel12.Location = new System.Drawing.Point(4, 137);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(10, 30);
+            this.panel12.TabIndex = 10;
+            // 
+            // btnCambiarPerfil
+            // 
+            this.btnCambiarPerfil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnCambiarPerfil.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnCambiarPerfil.FlatAppearance.BorderSize = 0;
+            this.btnCambiarPerfil.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
+            this.btnCambiarPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCambiarPerfil.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnCambiarPerfil.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCambiarPerfil.Location = new System.Drawing.Point(10, 134);
+            this.btnCambiarPerfil.Name = "btnCambiarPerfil";
+            this.btnCambiarPerfil.Size = new System.Drawing.Size(136, 30);
+            this.btnCambiarPerfil.TabIndex = 9;
+            this.btnCambiarPerfil.Text = "Cambiar perfil";
+            this.btnCambiarPerfil.UseVisualStyleBackColor = false;
+            this.btnCambiarPerfil.Click += new System.EventHandler(this.btnCambiarPerfil_Click);
+            // 
+            // panel11
+            // 
+            this.panel11.BackColor = System.Drawing.Color.Blue;
+            this.panel11.Location = new System.Drawing.Point(4, 93);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(10, 30);
+            this.panel11.TabIndex = 8;
+            // 
+            // btnOtro
+            // 
+            this.btnOtro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnOtro.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnOtro.FlatAppearance.BorderSize = 0;
+            this.btnOtro.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
+            this.btnOtro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOtro.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnOtro.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnOtro.Location = new System.Drawing.Point(13, 93);
+            this.btnOtro.Name = "btnOtro";
+            this.btnOtro.Size = new System.Drawing.Size(136, 30);
+            this.btnOtro.TabIndex = 7;
+            this.btnOtro.Text = "Administrar perfiles";
+            this.btnOtro.UseVisualStyleBackColor = false;
+            this.btnOtro.Click += new System.EventHandler(this.btnOtro_Click);
+            // 
+            // panel10
+            // 
+            this.panel10.BackColor = System.Drawing.Color.Blue;
+            this.panel10.Location = new System.Drawing.Point(4, 48);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(10, 30);
+            this.panel10.TabIndex = 6;
+            // 
+            // btnCambiarContraseña
+            // 
+            this.btnCambiarContraseña.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnCambiarContraseña.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnCambiarContraseña.FlatAppearance.BorderSize = 0;
+            this.btnCambiarContraseña.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
+            this.btnCambiarContraseña.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCambiarContraseña.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnCambiarContraseña.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCambiarContraseña.Location = new System.Drawing.Point(13, 48);
+            this.btnCambiarContraseña.Name = "btnCambiarContraseña";
+            this.btnCambiarContraseña.Size = new System.Drawing.Size(136, 30);
+            this.btnCambiarContraseña.TabIndex = 5;
+            this.btnCambiarContraseña.Text = "Cambiar Clave";
+            this.btnCambiarContraseña.UseVisualStyleBackColor = false;
+            this.btnCambiarContraseña.Click += new System.EventHandler(this.btnCambiarContraseña_Click);
+            // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.Color.Blue;
+            this.panel9.Location = new System.Drawing.Point(4, 3);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(10, 30);
+            this.panel9.TabIndex = 4;
+            // 
+            // btnCambiarPlan
+            // 
+            this.btnCambiarPlan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnCambiarPlan.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnCambiarPlan.FlatAppearance.BorderSize = 0;
+            this.btnCambiarPlan.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
+            this.btnCambiarPlan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCambiarPlan.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnCambiarPlan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCambiarPlan.Location = new System.Drawing.Point(13, 3);
+            this.btnCambiarPlan.Name = "btnCambiarPlan";
+            this.btnCambiarPlan.Size = new System.Drawing.Size(136, 30);
+            this.btnCambiarPlan.TabIndex = 3;
+            this.btnCambiarPlan.Text = "Cambiar Plan";
+            this.btnCambiarPlan.UseVisualStyleBackColor = false;
+            this.btnCambiarPlan.Click += new System.EventHandler(this.btnCambiarPlan_Click);
+            // 
+            // button8
+            // 
+            this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.button8.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.button8.FlatAppearance.BorderSize = 0;
+            this.button8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
+            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button8.Image = ((System.Drawing.Image)(resources.GetObject("button8.Image")));
+            this.button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button8.Location = new System.Drawing.Point(10, 152);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(182, 40);
+            this.button8.TabIndex = 18;
+            this.button8.Text = "Explorar";
+            this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Arial Black", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.Green;
+            this.label12.Location = new System.Drawing.Point(6, 54);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(166, 38);
+            this.label12.TabIndex = 16;
+            this.label12.Text = "SPOTFLIX";
+            // 
+            // SubMenuAjustes
+            // 
+            this.SubMenuAjustes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.SubMenuAjustes.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.SubMenuAjustes.FlatAppearance.BorderSize = 0;
+            this.SubMenuAjustes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
+            this.SubMenuAjustes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SubMenuAjustes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SubMenuAjustes.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.SubMenuAjustes.Image = ((System.Drawing.Image)(resources.GetObject("SubMenuAjustes.Image")));
+            this.SubMenuAjustes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.SubMenuAjustes.Location = new System.Drawing.Point(10, 313);
+            this.SubMenuAjustes.Name = "SubMenuAjustes";
+            this.SubMenuAjustes.Size = new System.Drawing.Size(182, 40);
+            this.SubMenuAjustes.TabIndex = 15;
+            this.SubMenuAjustes.Text = "Ajustes";
+            this.SubMenuAjustes.UseVisualStyleBackColor = false;
+            this.SubMenuAjustes.Click += new System.EventHandler(this.SubMenuAjustes_Click);
+            // 
+            // btnPlaylistVideo
+            // 
+            this.btnPlaylistVideo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnPlaylistVideo.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnPlaylistVideo.FlatAppearance.BorderSize = 0;
+            this.btnPlaylistVideo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
+            this.btnPlaylistVideo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPlaylistVideo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPlaylistVideo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnPlaylistVideo.Image = ((System.Drawing.Image)(resources.GetObject("btnPlaylistVideo.Image")));
+            this.btnPlaylistVideo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPlaylistVideo.Location = new System.Drawing.Point(10, 262);
+            this.btnPlaylistVideo.Name = "btnPlaylistVideo";
+            this.btnPlaylistVideo.Size = new System.Drawing.Size(182, 40);
+            this.btnPlaylistVideo.TabIndex = 14;
+            this.btnPlaylistVideo.Text = "Playlist video";
+            this.btnPlaylistVideo.UseVisualStyleBackColor = false;
+            this.btnPlaylistVideo.Click += new System.EventHandler(this.btnPlaylistVideo_Click);
+            // 
+            // btnPlaylisMusica
+            // 
+            this.btnPlaylisMusica.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnPlaylisMusica.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnPlaylisMusica.FlatAppearance.BorderSize = 0;
+            this.btnPlaylisMusica.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
+            this.btnPlaylisMusica.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPlaylisMusica.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPlaylisMusica.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnPlaylisMusica.Image = ((System.Drawing.Image)(resources.GetObject("btnPlaylisMusica.Image")));
+            this.btnPlaylisMusica.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPlaylisMusica.Location = new System.Drawing.Point(11, 207);
+            this.btnPlaylisMusica.Name = "btnPlaylisMusica";
+            this.btnPlaylisMusica.Size = new System.Drawing.Size(182, 40);
+            this.btnPlaylisMusica.TabIndex = 13;
+            this.btnPlaylisMusica.Text = "Playlist musica";
+            this.btnPlaylisMusica.UseVisualStyleBackColor = false;
+            this.btnPlaylisMusica.Click += new System.EventHandler(this.btnPlaylisMusica_Click);
+            // 
+            // btnInicio
+            // 
+            this.btnInicio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnInicio.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnInicio.FlatAppearance.BorderSize = 0;
+            this.btnInicio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
+            this.btnInicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInicio.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnInicio.Image = ((System.Drawing.Image)(resources.GetObject("btnInicio.Image")));
+            this.btnInicio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnInicio.Location = new System.Drawing.Point(13, 95);
+            this.btnInicio.Name = "btnInicio";
+            this.btnInicio.Size = new System.Drawing.Size(182, 40);
+            this.btnInicio.TabIndex = 12;
+            this.btnInicio.Text = "Inicio";
+            this.btnInicio.UseVisualStyleBackColor = false;
+            this.btnInicio.Click += new System.EventHandler(this.btnInicio_Click);
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -680,756 +1430,6 @@
             this.b4.Visible = false;
             this.b4.Click += new System.EventHandler(this.b4_Click);
             // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.panel2.Controls.Add(this.panelSubMenuAjustes);
-            this.panel2.Controls.Add(this.button8);
-            this.panel2.Controls.Add(this.label12);
-            this.panel2.Controls.Add(this.SubMenuAjustes);
-            this.panel2.Controls.Add(this.btnPlaylistVideo);
-            this.panel2.Controls.Add(this.btnPlaylisMusica);
-            this.panel2.Controls.Add(this.btnInicio);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(200, 583);
-            this.panel2.TabIndex = 0;
-            // 
-            // btnInicio
-            // 
-            this.btnInicio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.btnInicio.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.btnInicio.FlatAppearance.BorderSize = 0;
-            this.btnInicio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
-            this.btnInicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInicio.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnInicio.Image = ((System.Drawing.Image)(resources.GetObject("btnInicio.Image")));
-            this.btnInicio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInicio.Location = new System.Drawing.Point(13, 95);
-            this.btnInicio.Name = "btnInicio";
-            this.btnInicio.Size = new System.Drawing.Size(182, 40);
-            this.btnInicio.TabIndex = 12;
-            this.btnInicio.Text = "Inicio";
-            this.btnInicio.UseVisualStyleBackColor = false;
-            this.btnInicio.Click += new System.EventHandler(this.btnInicio_Click);
-            // 
-            // btnPlaylisMusica
-            // 
-            this.btnPlaylisMusica.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.btnPlaylisMusica.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.btnPlaylisMusica.FlatAppearance.BorderSize = 0;
-            this.btnPlaylisMusica.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
-            this.btnPlaylisMusica.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPlaylisMusica.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPlaylisMusica.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnPlaylisMusica.Image = ((System.Drawing.Image)(resources.GetObject("btnPlaylisMusica.Image")));
-            this.btnPlaylisMusica.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPlaylisMusica.Location = new System.Drawing.Point(11, 207);
-            this.btnPlaylisMusica.Name = "btnPlaylisMusica";
-            this.btnPlaylisMusica.Size = new System.Drawing.Size(182, 40);
-            this.btnPlaylisMusica.TabIndex = 13;
-            this.btnPlaylisMusica.Text = "Playlist musica";
-            this.btnPlaylisMusica.UseVisualStyleBackColor = false;
-            this.btnPlaylisMusica.Click += new System.EventHandler(this.btnPlaylisMusica_Click);
-            // 
-            // btnPlaylistVideo
-            // 
-            this.btnPlaylistVideo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.btnPlaylistVideo.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.btnPlaylistVideo.FlatAppearance.BorderSize = 0;
-            this.btnPlaylistVideo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
-            this.btnPlaylistVideo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPlaylistVideo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPlaylistVideo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnPlaylistVideo.Image = ((System.Drawing.Image)(resources.GetObject("btnPlaylistVideo.Image")));
-            this.btnPlaylistVideo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPlaylistVideo.Location = new System.Drawing.Point(10, 262);
-            this.btnPlaylistVideo.Name = "btnPlaylistVideo";
-            this.btnPlaylistVideo.Size = new System.Drawing.Size(182, 40);
-            this.btnPlaylistVideo.TabIndex = 14;
-            this.btnPlaylistVideo.Text = "Playlist video";
-            this.btnPlaylistVideo.UseVisualStyleBackColor = false;
-            this.btnPlaylistVideo.Click += new System.EventHandler(this.btnPlaylistVideo_Click);
-            // 
-            // SubMenuAjustes
-            // 
-            this.SubMenuAjustes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.SubMenuAjustes.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.SubMenuAjustes.FlatAppearance.BorderSize = 0;
-            this.SubMenuAjustes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
-            this.SubMenuAjustes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SubMenuAjustes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SubMenuAjustes.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.SubMenuAjustes.Image = ((System.Drawing.Image)(resources.GetObject("SubMenuAjustes.Image")));
-            this.SubMenuAjustes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.SubMenuAjustes.Location = new System.Drawing.Point(10, 313);
-            this.SubMenuAjustes.Name = "SubMenuAjustes";
-            this.SubMenuAjustes.Size = new System.Drawing.Size(182, 40);
-            this.SubMenuAjustes.TabIndex = 15;
-            this.SubMenuAjustes.Text = "Ajustes";
-            this.SubMenuAjustes.UseVisualStyleBackColor = false;
-            this.SubMenuAjustes.Click += new System.EventHandler(this.SubMenuAjustes_Click);
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Arial Black", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.Green;
-            this.label12.Location = new System.Drawing.Point(6, 54);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(166, 38);
-            this.label12.TabIndex = 16;
-            this.label12.Text = "SPOTFLIX";
-            // 
-            // button8
-            // 
-            this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.button8.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.button8.FlatAppearance.BorderSize = 0;
-            this.button8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button8.Image = ((System.Drawing.Image)(resources.GetObject("button8.Image")));
-            this.button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button8.Location = new System.Drawing.Point(10, 152);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(182, 40);
-            this.button8.TabIndex = 18;
-            this.button8.Text = "Explorar";
-            this.button8.UseVisualStyleBackColor = false;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
-            // 
-            // panelSubMenuAjustes
-            // 
-            this.panelSubMenuAjustes.Controls.Add(this.panel12);
-            this.panelSubMenuAjustes.Controls.Add(this.btnCambiarPerfil);
-            this.panelSubMenuAjustes.Controls.Add(this.panel11);
-            this.panelSubMenuAjustes.Controls.Add(this.btnOtro);
-            this.panelSubMenuAjustes.Controls.Add(this.panel10);
-            this.panelSubMenuAjustes.Controls.Add(this.btnCambiarContraseña);
-            this.panelSubMenuAjustes.Controls.Add(this.panel9);
-            this.panelSubMenuAjustes.Controls.Add(this.btnCambiarPlan);
-            this.panelSubMenuAjustes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panelSubMenuAjustes.Location = new System.Drawing.Point(43, 359);
-            this.panelSubMenuAjustes.Name = "panelSubMenuAjustes";
-            this.panelSubMenuAjustes.Size = new System.Drawing.Size(149, 212);
-            this.panelSubMenuAjustes.TabIndex = 17;
-            this.panelSubMenuAjustes.Visible = false;
-            this.panelSubMenuAjustes.Paint += new System.Windows.Forms.PaintEventHandler(this.panelSubMenuAjustes_Paint);
-            // 
-            // btnCambiarPlan
-            // 
-            this.btnCambiarPlan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.btnCambiarPlan.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.btnCambiarPlan.FlatAppearance.BorderSize = 0;
-            this.btnCambiarPlan.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
-            this.btnCambiarPlan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCambiarPlan.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnCambiarPlan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCambiarPlan.Location = new System.Drawing.Point(13, 3);
-            this.btnCambiarPlan.Name = "btnCambiarPlan";
-            this.btnCambiarPlan.Size = new System.Drawing.Size(136, 30);
-            this.btnCambiarPlan.TabIndex = 3;
-            this.btnCambiarPlan.Text = "Cambiar Plan";
-            this.btnCambiarPlan.UseVisualStyleBackColor = false;
-            this.btnCambiarPlan.Click += new System.EventHandler(this.btnCambiarPlan_Click);
-            // 
-            // panel9
-            // 
-            this.panel9.BackColor = System.Drawing.Color.Blue;
-            this.panel9.Location = new System.Drawing.Point(4, 3);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(10, 30);
-            this.panel9.TabIndex = 4;
-            // 
-            // btnCambiarContraseña
-            // 
-            this.btnCambiarContraseña.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.btnCambiarContraseña.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.btnCambiarContraseña.FlatAppearance.BorderSize = 0;
-            this.btnCambiarContraseña.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
-            this.btnCambiarContraseña.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCambiarContraseña.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnCambiarContraseña.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCambiarContraseña.Location = new System.Drawing.Point(13, 48);
-            this.btnCambiarContraseña.Name = "btnCambiarContraseña";
-            this.btnCambiarContraseña.Size = new System.Drawing.Size(136, 30);
-            this.btnCambiarContraseña.TabIndex = 5;
-            this.btnCambiarContraseña.Text = "Cambiar Clave";
-            this.btnCambiarContraseña.UseVisualStyleBackColor = false;
-            this.btnCambiarContraseña.Click += new System.EventHandler(this.btnCambiarContraseña_Click);
-            // 
-            // panel10
-            // 
-            this.panel10.BackColor = System.Drawing.Color.Blue;
-            this.panel10.Location = new System.Drawing.Point(4, 48);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(10, 30);
-            this.panel10.TabIndex = 6;
-            // 
-            // btnOtro
-            // 
-            this.btnOtro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.btnOtro.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.btnOtro.FlatAppearance.BorderSize = 0;
-            this.btnOtro.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
-            this.btnOtro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOtro.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnOtro.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnOtro.Location = new System.Drawing.Point(13, 93);
-            this.btnOtro.Name = "btnOtro";
-            this.btnOtro.Size = new System.Drawing.Size(136, 30);
-            this.btnOtro.TabIndex = 7;
-            this.btnOtro.Text = "Administrar perfiles";
-            this.btnOtro.UseVisualStyleBackColor = false;
-            this.btnOtro.Click += new System.EventHandler(this.btnOtro_Click);
-            // 
-            // panel11
-            // 
-            this.panel11.BackColor = System.Drawing.Color.Blue;
-            this.panel11.Location = new System.Drawing.Point(4, 93);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(10, 30);
-            this.panel11.TabIndex = 8;
-            // 
-            // btnCambiarPerfil
-            // 
-            this.btnCambiarPerfil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.btnCambiarPerfil.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.btnCambiarPerfil.FlatAppearance.BorderSize = 0;
-            this.btnCambiarPerfil.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
-            this.btnCambiarPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCambiarPerfil.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnCambiarPerfil.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCambiarPerfil.Location = new System.Drawing.Point(10, 134);
-            this.btnCambiarPerfil.Name = "btnCambiarPerfil";
-            this.btnCambiarPerfil.Size = new System.Drawing.Size(136, 30);
-            this.btnCambiarPerfil.TabIndex = 9;
-            this.btnCambiarPerfil.Text = "Cambiar perfil";
-            this.btnCambiarPerfil.UseVisualStyleBackColor = false;
-            this.btnCambiarPerfil.Click += new System.EventHandler(this.btnCambiarPerfil_Click);
-            // 
-            // panel12
-            // 
-            this.panel12.BackColor = System.Drawing.Color.Blue;
-            this.panel12.Location = new System.Drawing.Point(4, 137);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(10, 30);
-            this.panel12.TabIndex = 10;
-            // 
-            // panel5
-            // 
-            this.panel5.Location = new System.Drawing.Point(3, 0);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(894, 580);
-            this.panel5.TabIndex = 11;
-            this.panel5.Visible = false;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(200, 506);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(700, 77);
-            this.panel3.TabIndex = 1;
-            // 
-            // textBox1
-            // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Location = new System.Drawing.Point(467, 32);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 23);
-            this.textBox1.TabIndex = 27;
-            this.textBox1.Tag = "";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(573, 32);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(25, 23);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 28;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pic12
-            // 
-            this.pic12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.pic12.Image = ((System.Drawing.Image)(resources.GetObject("pic12.Image")));
-            this.pic12.Location = new System.Drawing.Point(258, 295);
-            this.pic12.Name = "pic12";
-            this.pic12.Size = new System.Drawing.Size(158, 117);
-            this.pic12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pic12.TabIndex = 29;
-            this.pic12.TabStop = false;
-            this.pic12.Click += new System.EventHandler(this.pic12_Click);
-            // 
-            // pic13
-            // 
-            this.pic13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.pic13.Image = ((System.Drawing.Image)(resources.GetObject("pic13.Image")));
-            this.pic13.Location = new System.Drawing.Point(457, 295);
-            this.pic13.Name = "pic13";
-            this.pic13.Size = new System.Drawing.Size(158, 117);
-            this.pic13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pic13.TabIndex = 30;
-            this.pic13.TabStop = false;
-            this.pic13.Click += new System.EventHandler(this.pic13_Click);
-            // 
-            // pic14
-            // 
-            this.pic14.Image = ((System.Drawing.Image)(resources.GetObject("pic14.Image")));
-            this.pic14.Location = new System.Drawing.Point(667, 293);
-            this.pic14.Name = "pic14";
-            this.pic14.Size = new System.Drawing.Size(158, 117);
-            this.pic14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pic14.TabIndex = 31;
-            this.pic14.TabStop = false;
-            this.pic14.Click += new System.EventHandler(this.pic14_Click);
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(347, 262);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(342, 22);
-            this.label14.TabIndex = 32;
-            this.label14.Text = "Porque pensamos que te podia gustar..";
-            this.label14.UseWaitCursor = true;
-            // 
-            // pic9
-            // 
-            this.pic9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.pic9.Image = ((System.Drawing.Image)(resources.GetObject("pic9.Image")));
-            this.pic9.Location = new System.Drawing.Point(249, 113);
-            this.pic9.Name = "pic9";
-            this.pic9.Size = new System.Drawing.Size(158, 117);
-            this.pic9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pic9.TabIndex = 33;
-            this.pic9.TabStop = false;
-            this.pic9.Click += new System.EventHandler(this.pic9_Click);
-            // 
-            // pic10
-            // 
-            this.pic10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.pic10.Image = ((System.Drawing.Image)(resources.GetObject("pic10.Image")));
-            this.pic10.Location = new System.Drawing.Point(457, 113);
-            this.pic10.Name = "pic10";
-            this.pic10.Size = new System.Drawing.Size(158, 117);
-            this.pic10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pic10.TabIndex = 34;
-            this.pic10.TabStop = false;
-            // 
-            // pic11
-            // 
-            this.pic11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.pic11.Image = ((System.Drawing.Image)(resources.GetObject("pic11.Image")));
-            this.pic11.Location = new System.Drawing.Point(651, 113);
-            this.pic11.Name = "pic11";
-            this.pic11.Size = new System.Drawing.Size(158, 117);
-            this.pic11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pic11.TabIndex = 35;
-            this.pic11.TabStop = false;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(396, 74);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(273, 22);
-            this.label13.TabIndex = 36;
-            this.label13.Text = "Videos que quizas te interesen";
-            this.label13.UseWaitCursor = true;
-            // 
-            // subpanel1
-            // 
-            this.subpanel1.Controls.Add(this.panel16);
-            this.subpanel1.Controls.Add(this.btnD1);
-            this.subpanel1.Controls.Add(this.panel15);
-            this.subpanel1.Controls.Add(this.button9);
-            this.subpanel1.Location = new System.Drawing.Point(321, 406);
-            this.subpanel1.Name = "subpanel1";
-            this.subpanel1.Size = new System.Drawing.Size(130, 50);
-            this.subpanel1.TabIndex = 37;
-            this.subpanel1.Visible = false;
-            // 
-            // button9
-            // 
-            this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.button9.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveBorder;
-            this.button9.FlatAppearance.BorderSize = 0;
-            this.button9.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.button9.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button9.Location = new System.Drawing.Point(6, 0);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(125, 22);
-            this.button9.TabIndex = 5;
-            this.button9.Text = "Reproducir";
-            this.button9.UseVisualStyleBackColor = false;
-            // 
-            // panel15
-            // 
-            this.panel15.BackColor = System.Drawing.Color.Blue;
-            this.panel15.Location = new System.Drawing.Point(-3, 0);
-            this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(10, 22);
-            this.panel15.TabIndex = 6;
-            // 
-            // btnD1
-            // 
-            this.btnD1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.btnD1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.btnD1.FlatAppearance.BorderSize = 0;
-            this.btnD1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
-            this.btnD1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnD1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnD1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnD1.Location = new System.Drawing.Point(6, 28);
-            this.btnD1.Name = "btnD1";
-            this.btnD1.Size = new System.Drawing.Size(125, 22);
-            this.btnD1.TabIndex = 7;
-            this.btnD1.Text = "Descargar";
-            this.btnD1.UseVisualStyleBackColor = false;
-            // 
-            // panel16
-            // 
-            this.panel16.BackColor = System.Drawing.Color.Blue;
-            this.panel16.Location = new System.Drawing.Point(-3, 28);
-            this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(10, 22);
-            this.panel16.TabIndex = 8;
-            // 
-            // subpanel2
-            // 
-            this.subpanel2.Controls.Add(this.panel18);
-            this.subpanel2.Controls.Add(this.btnD2);
-            this.subpanel2.Controls.Add(this.panel19);
-            this.subpanel2.Controls.Add(this.button12);
-            this.subpanel2.Location = new System.Drawing.Point(513, 407);
-            this.subpanel2.Name = "subpanel2";
-            this.subpanel2.Size = new System.Drawing.Size(130, 50);
-            this.subpanel2.TabIndex = 38;
-            this.subpanel2.Visible = false;
-            // 
-            // button12
-            // 
-            this.button12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.button12.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveBorder;
-            this.button12.FlatAppearance.BorderSize = 0;
-            this.button12.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.button12.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
-            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button12.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button12.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button12.Location = new System.Drawing.Point(5, 0);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(125, 22);
-            this.button12.TabIndex = 5;
-            this.button12.Text = "Reproducir";
-            this.button12.UseVisualStyleBackColor = false;
-            // 
-            // panel19
-            // 
-            this.panel19.BackColor = System.Drawing.Color.Blue;
-            this.panel19.Location = new System.Drawing.Point(-3, 0);
-            this.panel19.Name = "panel19";
-            this.panel19.Size = new System.Drawing.Size(10, 22);
-            this.panel19.TabIndex = 6;
-            // 
-            // btnD2
-            // 
-            this.btnD2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.btnD2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.btnD2.FlatAppearance.BorderSize = 0;
-            this.btnD2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
-            this.btnD2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnD2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnD2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnD2.Location = new System.Drawing.Point(6, 28);
-            this.btnD2.Name = "btnD2";
-            this.btnD2.Size = new System.Drawing.Size(125, 22);
-            this.btnD2.TabIndex = 7;
-            this.btnD2.Text = "Descargar";
-            this.btnD2.UseVisualStyleBackColor = false;
-            // 
-            // panel18
-            // 
-            this.panel18.BackColor = System.Drawing.Color.Blue;
-            this.panel18.Location = new System.Drawing.Point(-3, 28);
-            this.panel18.Name = "panel18";
-            this.panel18.Size = new System.Drawing.Size(10, 22);
-            this.panel18.TabIndex = 8;
-            // 
-            // subpanel3
-            // 
-            this.subpanel3.Controls.Add(this.panel21);
-            this.subpanel3.Controls.Add(this.btnD3);
-            this.subpanel3.Controls.Add(this.panel22);
-            this.subpanel3.Controls.Add(this.button14);
-            this.subpanel3.Location = new System.Drawing.Point(725, 407);
-            this.subpanel3.Name = "subpanel3";
-            this.subpanel3.Size = new System.Drawing.Size(130, 50);
-            this.subpanel3.TabIndex = 39;
-            this.subpanel3.Visible = false;
-            // 
-            // button14
-            // 
-            this.button14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.button14.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveBorder;
-            this.button14.FlatAppearance.BorderSize = 0;
-            this.button14.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.button14.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
-            this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button14.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button14.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button14.Location = new System.Drawing.Point(6, 0);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(125, 22);
-            this.button14.TabIndex = 5;
-            this.button14.Text = "Reproducir";
-            this.button14.UseVisualStyleBackColor = false;
-            // 
-            // panel22
-            // 
-            this.panel22.BackColor = System.Drawing.Color.Blue;
-            this.panel22.Location = new System.Drawing.Point(-3, 0);
-            this.panel22.Name = "panel22";
-            this.panel22.Size = new System.Drawing.Size(10, 22);
-            this.panel22.TabIndex = 6;
-            // 
-            // btnD3
-            // 
-            this.btnD3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.btnD3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.btnD3.FlatAppearance.BorderSize = 0;
-            this.btnD3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
-            this.btnD3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnD3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnD3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnD3.Location = new System.Drawing.Point(6, 28);
-            this.btnD3.Name = "btnD3";
-            this.btnD3.Size = new System.Drawing.Size(125, 22);
-            this.btnD3.TabIndex = 7;
-            this.btnD3.Text = "Descargar";
-            this.btnD3.UseVisualStyleBackColor = false;
-            // 
-            // panel21
-            // 
-            this.panel21.BackColor = System.Drawing.Color.Blue;
-            this.panel21.Location = new System.Drawing.Point(-3, 28);
-            this.panel21.Name = "panel21";
-            this.panel21.Size = new System.Drawing.Size(10, 22);
-            this.panel21.TabIndex = 8;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.panel4.Controls.Add(this.btncambiarp);
-            this.panel4.Controls.Add(this.btnCambiarClave);
-            this.panel4.Controls.Add(this.radioButton5);
-            this.panel4.Controls.Add(this.radioButton1);
-            this.panel4.Controls.Add(this.radioButton4);
-            this.panel4.Controls.Add(this.label15);
-            this.panel4.Controls.Add(this.l6);
-            this.panel4.Controls.Add(this.l5);
-            this.panel4.Controls.Add(this.l4);
-            this.panel4.Controls.Add(this.l1);
-            this.panel4.Controls.Add(this.l2);
-            this.panel4.Controls.Add(this.l3);
-            this.panel4.Location = new System.Drawing.Point(200, 197);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(372, 303);
-            this.panel4.TabIndex = 11;
-            this.panel4.Visible = false;
-            // 
-            // l3
-            // 
-            this.l3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.l3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.l3.FlatAppearance.BorderSize = 0;
-            this.l3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
-            this.l3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.l3.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.l3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.l3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.l3.Location = new System.Drawing.Point(35, 202);
-            this.l3.Name = "l3";
-            this.l3.Size = new System.Drawing.Size(136, 30);
-            this.l3.TabIndex = 13;
-            this.l3.Text = "Confirme Nueva";
-            this.l3.UseVisualStyleBackColor = false;
-            this.l3.Visible = false;
-            // 
-            // l2
-            // 
-            this.l2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.l2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.l2.FlatAppearance.BorderSize = 0;
-            this.l2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
-            this.l2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.l2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.l2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.l2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.l2.Location = new System.Drawing.Point(35, 161);
-            this.l2.Name = "l2";
-            this.l2.Size = new System.Drawing.Size(136, 30);
-            this.l2.TabIndex = 12;
-            this.l2.Text = "Nueva contraseña";
-            this.l2.UseVisualStyleBackColor = false;
-            this.l2.Visible = false;
-            // 
-            // l1
-            // 
-            this.l1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.l1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.l1.FlatAppearance.BorderSize = 0;
-            this.l1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
-            this.l1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.l1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.l1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.l1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.l1.Location = new System.Drawing.Point(35, 116);
-            this.l1.Name = "l1";
-            this.l1.Size = new System.Drawing.Size(136, 30);
-            this.l1.TabIndex = 11;
-            this.l1.Text = "Contraseña actual";
-            this.l1.UseVisualStyleBackColor = false;
-            this.l1.Visible = false;
-            // 
-            // l4
-            // 
-            this.l4.Location = new System.Drawing.Point(200, 122);
-            this.l4.Name = "l4";
-            this.l4.Size = new System.Drawing.Size(100, 20);
-            this.l4.TabIndex = 14;
-            this.l4.Visible = false;
-            // 
-            // l5
-            // 
-            this.l5.Location = new System.Drawing.Point(200, 167);
-            this.l5.Name = "l5";
-            this.l5.Size = new System.Drawing.Size(100, 20);
-            this.l5.TabIndex = 15;
-            this.l5.Visible = false;
-            // 
-            // l6
-            // 
-            this.l6.Location = new System.Drawing.Point(193, 212);
-            this.l6.Name = "l6";
-            this.l6.Size = new System.Drawing.Size(100, 20);
-            this.l6.TabIndex = 16;
-            this.l6.Visible = false;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Arial Black", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.Green;
-            this.label15.Location = new System.Drawing.Point(42, 11);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(304, 38);
-            this.label15.TabIndex = 17;
-            this.label15.Text = "Cambio contraseña";
-            // 
-            // radioButton4
-            // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton4.ForeColor = System.Drawing.Color.DarkOrchid;
-            this.radioButton4.Location = new System.Drawing.Point(32, 123);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(261, 23);
-            this.radioButton4.TabIndex = 18;
-            this.radioButton4.Text = "plan premiun (personal) $3,990";
-            this.radioButton4.UseVisualStyleBackColor = true;
-            this.radioButton4.Visible = false;
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.ForeColor = System.Drawing.Color.DarkOrchid;
-            this.radioButton1.Location = new System.Drawing.Point(35, 71);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(117, 23);
-            this.radioButton1.TabIndex = 19;
-            this.radioButton1.Text = "plan Basico";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            this.radioButton1.Visible = false;
-            // 
-            // radioButton5
-            // 
-            this.radioButton5.AutoSize = true;
-            this.radioButton5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton5.ForeColor = System.Drawing.Color.DarkOrchid;
-            this.radioButton5.Location = new System.Drawing.Point(35, 165);
-            this.radioButton5.Name = "radioButton5";
-            this.radioButton5.Size = new System.Drawing.Size(267, 23);
-            this.radioButton5.TabIndex = 20;
-            this.radioButton5.Text = "plan familiar(4 personas) $7,990";
-            this.radioButton5.UseVisualStyleBackColor = true;
-            this.radioButton5.Visible = false;
-            // 
-            // btnCambiarClave
-            // 
-            this.btnCambiarClave.Location = new System.Drawing.Point(276, 248);
-            this.btnCambiarClave.Name = "btnCambiarClave";
-            this.btnCambiarClave.Size = new System.Drawing.Size(75, 23);
-            this.btnCambiarClave.TabIndex = 21;
-            this.btnCambiarClave.Text = "C. Clave";
-            this.btnCambiarClave.UseVisualStyleBackColor = true;
-            this.btnCambiarClave.Visible = false;
-            this.btnCambiarClave.Click += new System.EventHandler(this.btnCambiarClave_Click);
-            // 
-            // btncambiarp
-            // 
-            this.btncambiarp.Location = new System.Drawing.Point(134, 248);
-            this.btncambiarp.Name = "btncambiarp";
-            this.btncambiarp.Size = new System.Drawing.Size(75, 23);
-            this.btncambiarp.TabIndex = 22;
-            this.btncambiarp.Text = "Plan";
-            this.btncambiarp.UseVisualStyleBackColor = true;
-            this.btncambiarp.Visible = false;
-            // 
-            // panelContenedorPincipal
-            // 
-            this.panelContenedorPincipal.AutoSize = true;
-            this.panelContenedorPincipal.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.panelContenedorPincipal.Controls.Add(this.panel5);
-            this.panelContenedorPincipal.Controls.Add(this.panel4);
-            this.panelContenedorPincipal.Controls.Add(this.subpanel3);
-            this.panelContenedorPincipal.Controls.Add(this.subpanel2);
-            this.panelContenedorPincipal.Controls.Add(this.subpanel1);
-            this.panelContenedorPincipal.Controls.Add(this.label13);
-            this.panelContenedorPincipal.Controls.Add(this.pic11);
-            this.panelContenedorPincipal.Controls.Add(this.pic10);
-            this.panelContenedorPincipal.Controls.Add(this.pic9);
-            this.panelContenedorPincipal.Controls.Add(this.label14);
-            this.panelContenedorPincipal.Controls.Add(this.pic14);
-            this.panelContenedorPincipal.Controls.Add(this.pic13);
-            this.panelContenedorPincipal.Controls.Add(this.pic12);
-            this.panelContenedorPincipal.Controls.Add(this.pictureBox1);
-            this.panelContenedorPincipal.Controls.Add(this.textBox1);
-            this.panelContenedorPincipal.Controls.Add(this.panel3);
-            this.panelContenedorPincipal.Controls.Add(this.panel2);
-            this.panelContenedorPincipal.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelContenedorPincipal.Location = new System.Drawing.Point(0, 0);
-            this.panelContenedorPincipal.Name = "panelContenedorPincipal";
-            this.panelContenedorPincipal.Size = new System.Drawing.Size(900, 583);
-            this.panelContenedorPincipal.TabIndex = 31;
-            this.panelContenedorPincipal.Paint += new System.Windows.Forms.PaintEventHandler(this.panelContenedorPincipal_Paint);
-            // 
             // FormAplicacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1482,23 +1482,23 @@
             ((System.ComponentModel.ISupportInitialize)(this.pic1)).EndInit();
             this.panelCrearUsuario.ResumeLayout(false);
             this.panelCrearUsuario.PerformLayout();
+            this.panelContenedorPincipal.ResumeLayout(false);
+            this.panelContenedorPincipal.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            this.subpanel3.ResumeLayout(false);
+            this.subpanel2.ResumeLayout(false);
+            this.subpanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pic11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic14)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic13)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panelSubMenuAjustes.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic12)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic13)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic14)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic11)).EndInit();
-            this.subpanel1.ResumeLayout(false);
-            this.subpanel2.ResumeLayout(false);
-            this.subpanel3.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
-            this.panelContenedorPincipal.ResumeLayout(false);
-            this.panelContenedorPincipal.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -1035,10 +1035,10 @@ namespace Entrega_3.Paneles
                     }
 
                     var keyWord = from s in canciones //Filtro por palabra clave
-                                  where s.Keyword == answer
+                                  where s.Keyword.ToUpper() == answer2
                                   select s;
                     var keyword2 = from s in videos
-                                   where s.Keyword == answer
+                                   where s.Keyword.ToUpper() == answer2
                                    select s;
                     foreach (SongClass x in keyWord)
                     {
@@ -1050,10 +1050,10 @@ namespace Entrega_3.Paneles
                     }
                     //Busqueda por persona. Se buscara por director/Actor, Singer/Composer. Todo sera buscado por nombres.
                     var persona = from s in canciones
-                                  where s.Singer.Name == answer || s.Composer == answer
+                                  where s.Singer.Name.ToUpper() == answer2 || s.Composer == answer2
                                   select s;
                     var persona2 = from s in videos
-                                   where s.Director.Name == answer || s.MainActor.Name == answer
+                                   where s.Director.Name.ToUpper() == answer2 || s.MainActor.Name == answer2
                                    select s;
                     foreach (SongClass x in persona)
                     {
@@ -1067,10 +1067,10 @@ namespace Entrega_3.Paneles
                     //Busqueda por caracteristica de personas. Se buscara director en videos y singer en canciones.
                     // En Ambos se buscara por Gender o Nacionalidad
                     var person = from s in canciones
-                                 where s.Singer.Gender == answer || s.Singer.Nationality == answer
+                                 where s.Singer.Gender.ToUpper() == answer2 || s.Singer.Nationality.ToUpper() == answer2
                                  select s;
                     var person2 = from s in videos
-                                  where s.Director.Gender == answer || s.Director.Nationality == answer
+                                  where s.Director.Gender.ToUpper() == answer2 || s.Director.Nationality.ToUpper() == answer2
                                   select s;
                     foreach (SongClass x123 in person)
                     {
@@ -1082,10 +1082,10 @@ namespace Entrega_3.Paneles
                     }
 
                     var category = from s in canciones //Categoria = Genero de musica, en el caso de video a que tipo pertenece.
-                                   where s.Gender == answer
+                                   where s.Gender.ToUpper() == answer2
                                    select s;
                     var category2 = from s in videos
-                                    where s.Gender == answer
+                                    where s.Gender.ToUpper() == answer2
                                     select s;
 
                     foreach (SongClass y2 in category)
@@ -1101,10 +1101,10 @@ namespace Entrega_3.Paneles
                 if (listaStr.Count() >= 2)
                 {
                     var Multi1 = from s in canciones //Genero y palabra clave
-                                 where (s.Gender == listaStr[0] && s.Keyword == listaStr[1]) || (s.Gender == listaStr[1] && s.Keyword == listaStr[0])
+                                 where (s.Gender.ToUpper() == listaStr[0].ToUpper() && s.Keyword.ToUpper() == listaStr[1].ToUpper()) || (s.Gender.ToUpper() == listaStr[1].ToUpper() && s.Keyword.ToUpper() == listaStr[0].ToUpper())
                                  select s;
                     var multi2 = from s in videos
-                                 where (s.Gender == listaStr[0] && s.Keyword == listaStr[1]) || (s.Gender == listaStr[1] && s.Keyword == listaStr[0])
+                                 where (s.Gender.ToUpper() == listaStr[0].ToUpper() && s.Keyword.ToUpper() == listaStr[1].ToUpper()) || (s.Gender.ToUpper() == listaStr[1].ToUpper() && s.Keyword.ToUpper() == listaStr[0].ToUpper())
                                  select s;
                     foreach (SongClass j in Multi1)
                     {
@@ -1116,10 +1116,10 @@ namespace Entrega_3.Paneles
                     }
                     //Palabra clave y persona
                     var Mezcla = from s in canciones
-                                 where (s.Keyword == listaStr[0] && (s.Singer.Name == listaStr[1] || s.Composer == listaStr[1])) || (s.Keyword == listaStr[1] && (s.Singer.Name == listaStr[0] || s.Composer == listaStr[0]))
+                                 where (s.Keyword.ToUpper() == listaStr[0].ToUpper() && (s.Singer.Name.ToUpper() == listaStr[1].ToUpper() || s.Composer.ToUpper() == listaStr[1].ToUpper())) || (s.Keyword.ToUpper() == listaStr[1].ToUpper() && (s.Singer.Name.ToUpper() == listaStr[0].ToUpper() || s.Composer.ToUpper() == listaStr[0].ToUpper()))
                                  select s;
                     var Mezcla2 = from s in videos
-                                  where (s.Keyword == listaStr[0] && (s.Director.Name == listaStr[1] || s.MainActor.Name == listaStr[1])) || (s.Keyword == listaStr[1] && (s.Director.Name == listaStr[0] || s.MainActor.Name == listaStr[0]))
+                                  where (s.Keyword.ToUpper() == listaStr[0].ToUpper() && (s.Director.Name.ToUpper() == listaStr[1].ToUpper() || s.MainActor.Name.ToUpper() == listaStr[1].ToUpper())) || (s.Keyword.ToUpper() == listaStr[1].ToUpper() && (s.Director.Name.ToUpper() == listaStr[0].ToUpper() || s.MainActor.Name.ToUpper() == listaStr[0].ToUpper()))
                                   select s;
                     foreach (SongClass j in Mezcla)
                     {
@@ -1132,10 +1132,10 @@ namespace Entrega_3.Paneles
 
                     //Palabra clave y caracteristica de la persona.
                     var anakin = from s in canciones
-                                 where (s.Keyword == listaStr[0] && (s.Singer.Gender == listaStr[1] || s.Singer.Nationality == listaStr[1])) || (s.Keyword == listaStr[1] && (s.Singer.Gender == listaStr[0] || s.Singer.Nationality == listaStr[0]))
+                                 where (s.Keyword == listaStr[0] && (s.Singer.Gender.ToUpper() == listaStr[1].ToUpper() || s.Singer.Nationality.ToUpper() == listaStr[1].ToUpper())) || (s.Keyword.ToUpper() == listaStr[1].ToUpper() && (s.Singer.Gender.ToUpper() == listaStr[0].ToUpper() || s.Singer.Nationality.ToUpper() == listaStr[0].ToUpper()))
                                  select s;
                     var anakin2 = from s in videos
-                                  where (s.Keyword == listaStr[0] && (s.Director.Gender == listaStr[1] || s.Director.Nationality == listaStr[1])) || (s.Keyword == listaStr[1] && (s.Director.Gender == listaStr[0] || s.Director.Nationality == listaStr[0]))
+                                  where (s.Keyword == listaStr[0] && (s.Director.Gender.ToUpper() == listaStr[1].ToUpper() || s.Director.Nationality.ToUpper() == listaStr[1].ToUpper())) || (s.Keyword.ToUpper() == listaStr[1].ToUpper() && (s.Director.Gender.ToUpper() == listaStr[0].ToUpper() || s.Director.Nationality.ToUpper() == listaStr[0].ToUpper()))
                                   select s;
                     foreach (SongClass j in anakin)
                     {
@@ -1192,6 +1192,11 @@ namespace Entrega_3.Paneles
         private void txtBusqueda_TextChanged(object sender, EventArgs e)
         {
             listCanciones.Items.Clear();
+        }
+
+        private void listCanciones_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

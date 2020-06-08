@@ -57,6 +57,14 @@ namespace Entrega_3.Paneles
 
 
         //hasta aqui
+
+        //esto es lo del reproductor 
+        string ArchivoMP3;
+        string rutaArchivoMP3;
+        bool Play = false;
+
+
+        //hasta aqui
         Clases.User usuario = new Clases.User();
         Clases.Serialization serializar = new Clases.Serialization();
         string TipoCuenta;
@@ -67,7 +75,7 @@ namespace Entrega_3.Paneles
             if (user.Plan == "Basico")
             {
                 TipoCuenta = "Basico";
-
+                btnSubirArchivos.Visible = false;
                 btnPlaylisMusica.Visible = false;
                 btnPlaylistVideo.Visible = false;
                 btnCambiarPerfil.Visible = false;
@@ -307,7 +315,10 @@ namespace Entrega_3.Paneles
             else 
                     
             { panelSubMenuAjustes.Visible = true; }
-            
+            if (SubirArchivo.Visible == true)
+            {
+                SubirArchivo.Visible = false;
+            }
         }
 
         private void btnPlaylistVideo_Click(object sender, EventArgs e)
@@ -320,6 +331,10 @@ namespace Entrega_3.Paneles
             if (panel4.Visible == true)
             {
                 panel4.Visible = false;
+            }
+            if (SubirArchivo.Visible == true)
+            {
+                SubirArchivo.Visible = false;
             }
 
         }
@@ -334,6 +349,10 @@ namespace Entrega_3.Paneles
             {
                 panel4.Visible = false;
             }
+            if (SubirArchivo.Visible == true)
+            {
+                SubirArchivo.Visible = false;
+            }
         }
 
         private void button8_Click(object sender, EventArgs e)
@@ -346,6 +365,14 @@ namespace Entrega_3.Paneles
             {
                 panel4.Visible = false;
             }
+            if (SubirArchivo.Visible == true)
+            {
+                SubirArchivo.Visible = false;
+            }
+            else
+            {
+                SubirArchivo.Visible = true;
+            }
         }
 
         private void btnInicio_Click(object sender, EventArgs e)
@@ -357,6 +384,10 @@ namespace Entrega_3.Paneles
             if (panel4.Visible == true)
             {
                 panel4.Visible = false;
+            }
+            if (SubirArchivo.Visible == true)
+            {
+                SubirArchivo.Visible = false;
             }
         }
 
@@ -437,7 +468,7 @@ namespace Entrega_3.Paneles
         {
             panelCrearUsuario.Visible = true;
             panelContenedorPincipal.Visible = true;
-            panel5.Visible = false;
+            //panel5.Visible = false;
             
             string h = ".jpg";
             b1.Visible = false;
@@ -511,7 +542,7 @@ namespace Entrega_3.Paneles
         {
             panelCrearUsuario.Visible = true;
             panelContenedorPincipal.Visible = true;
-            panel5.Visible = false;
+           // panel5.Visible = false;
             string h = ".jpg";
             b1.Visible = false;
             b2.Visible = false;
@@ -536,7 +567,7 @@ namespace Entrega_3.Paneles
             b2.Visible = false;
             b3.Visible = false;
             b4.Visible = false;
-            panel5.Visible = false;
+           // panel5.Visible = false;
 
 
             Image image1 = Image.FromFile(usuario.Profiles[2].PleasuresMusic[0] + h);
@@ -556,7 +587,7 @@ namespace Entrega_3.Paneles
             b2.Visible = false;
             b3.Visible = false;
             b4.Visible = false;
-            panel5.Visible = false;
+            //panel5.Visible = false;
 
 
             Image image1 = Image.FromFile(usuario.Profiles[3].PleasuresMusic[0] + h);
@@ -921,28 +952,28 @@ namespace Entrega_3.Paneles
         {
             panelCrearUsuario.Visible = true;
             panelContenedorPincipal.Visible = true;
-            panel5.Visible = true;
+           // panel5.Visible = true;
         }
 
         private void b2_Click(object sender, EventArgs e)
         {
             panelCrearUsuario.Visible = true;
             panelContenedorPincipal.Visible = true;
-            panel5.Visible = true;
+         //   panel5.Visible = true;
         }
 
         private void b3_Click(object sender, EventArgs e)
         {
             panelCrearUsuario.Visible = true;
             panelContenedorPincipal.Visible = true;
-            panel5.Visible = true;
+           // panel5.Visible = true;
         }
 
         private void b4_Click(object sender, EventArgs e)
         {
             panelCrearUsuario.Visible = true;
             panelContenedorPincipal.Visible = true;
-            panel5.Visible = true;
+            //panel5.Visible = true;
         }
         private void pic10_Click(object sender, EventArgs e)
         {
@@ -1196,6 +1227,103 @@ namespace Entrega_3.Paneles
 
         private void listCanciones_SelectedIndexChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void Adjuntar_Click(object sender, EventArgs e)
+        {
+
+            OpenFileDialog CajaBusquedaDeARchivos = new OpenFileDialog();
+            // SOLO Puedo elegir un archivo
+            if (CajaBusquedaDeARchivos.ShowDialog() == DialogResult.OK) //Filtrando solo los archivos MP3
+            {
+
+                ArchivoMP3 = CajaBusquedaDeARchivos.SafeFileName; // aqui se van almacenar todos los archivos
+                rutaArchivoMP3 = CajaBusquedaDeARchivos.FileName;
+
+                List<SongClass> listaAux = new List<SongClass>(); //SongClass
+
+                try
+                {
+                    //listaAux = obj.Deserialize<List<SongClass>>(File.Open("Canciones.bin", FileMode.Open));
+                }
+                catch (System.Runtime.Serialization.SerializationException)
+                {
+
+                }
+                if (listaAux.Count > 0)
+                {
+                    foreach (SongClass x in listaAux)
+                    {
+                        canciones.Add(x);
+                    }
+                }
+
+                // NECESITO FILTRO QUE SOLO SEA MP3 o MP4
+                int startIndex = ArchivoMP3.Length - 4;
+                int final = 4;
+                String substring = ArchivoMP3.Substring(startIndex, final);
+                try
+                {
+                    //VER QUE SEAN MINUSCULAS Y MAYUSCULAS
+                    if (substring == ".mp3" || substring == ".mp4" || substring == ".wav")
+                    {
+                        listBox1.Items.Add(ArchivoMP3);
+                        btnAgregarInfo.Visible = true;
+                    }
+                }
+                catch
+                {
+                    MessageBox.Show("Solo formato .mp3 o .mp4");
+                }
+                //Vamos a agarrar el ultio elemtno que adjuntamos en nuestra app y lo vamos a reproducir
+                Reproductor.URL = rutaArchivoMP3;
+                listBox1.SelectedIndex = 0;
+            }
+        }
+
+        private void btnAgregarInfo_Click(object sender, EventArgs e)
+        {
+            panel5.Visible = true;
+            // NECESITO FILTRO QUE SOLO SEA MP3
+            int startIndex = ArchivoMP3.Length - 4;
+            int final = 4;
+            String substring = ArchivoMP3.Substring(startIndex, final);
+            try
+            {
+                //VER QUE SEAN MINUSCULAS Y MAYUSCULAS
+                if (substring == ".mp3" || substring == ".wav")
+                {
+                    label20.Text = "Cantante";
+                    label19.Text = "Compositor";
+                    label18.Text = "Album";
+                }
+                else if (substring == ".mp4")
+                {
+                    label20.Text = "Director";
+                    label19.Text = "Actor";
+                    label18.Text = "Descripcion";
+
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Solo formato .mp3 o .mp4o.wav");
+            }
+        }
+
+        private void panel5_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Subir_Click(object sender, EventArgs e)
+        {
+            //if (txt=="");malo
+            //subir los try de los int 
+            //else{
+            panel5.Visible = false;
+            btnAgregarInfo.Visible = false;
 
         }
     }

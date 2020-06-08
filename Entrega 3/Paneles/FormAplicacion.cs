@@ -9,10 +9,54 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using System.IO;
+using Entrega_3.Clases;
+
 namespace Entrega_3.Paneles
 {
+
     public partial class FormAplicacion : Form
     {
+        //est es solo para probar busqueda
+        static DateTime date = new DateTime();
+
+        static List<string> premios = new List<string>();
+
+        static List<string> discograpich = new List<string>();
+        static List<SongClass> canciones = new List<SongClass>();
+        static Album album = new Album("nameAlbum", "gender", "producer", singer, date);
+        static Album album2 = new Album("nameAlbum2", "gender2", "producer2", singer, date);
+        static Album album3 = new Album("nameAlbum3", "gender3", "producer3", singer, date);
+        static Album album4 = new Album("nameAlbum4", "gender4", "producer4", singer, date);
+
+        static List<Album> listaAlbum = new List<Album>();
+        static Singer singer = new Singer(canciones, listaAlbum, premios, "voiceType", "genders", 22, discograpich, "name", 12, "Lastname", "genero", "nationality", "ocupacion");
+        static Singer singer2 = new Singer(canciones, listaAlbum, premios, "voiceType2", "genders2", 22, discograpich, "name2", 12, "Lastname2", "genero2", "nationality2", "ocupacion2");
+        static Singer singer3 = new Singer(canciones, listaAlbum, premios, "voiceType3", "genders3", 22, discograpich, "name3", 12, "Lastname3", "genero3", "nationality3", "ocupacion3");
+        static Singer singer4 = new Singer(canciones, listaAlbum, premios, "voiceType4", "genders4", 22, discograpich, "name4", 12, "Lastname4", "genero4", "nationality4", "ocupacion4");
+
+        static List<Video> videos = new List<Video>();
+        static Actor Mactor = new Actor("name", 22, "lName", "gender", "nationality", "Ocupacion", videos, premios, 22);
+        static Actor Mactor2 = new Actor("name2", 22, "lName2", "gender2", "nationality2", "Ocupacion2", videos, premios, 22);
+        static Actor Mactor3 = new Actor("name3", 22, "lName3", "gender3", "nationality3", "Ocupacion3", videos, premios, 22);
+        static Actor Mactor4 = new Actor("name4", 22, "lName4", "gender4", "nationality4", "Ocupacion4", videos, premios, 22);
+        static Director d = new Director("nDi", 22, "LastD", "gender", "nationality", "ocupation", videos, premios, 22);
+        static Director d2 = new Director("nDi2", 222, "LastD2", "gender2", "nationality2", "ocupation2", videos, premios, 222);
+        static Director d3 = new Director("nDi3", 22, "Last3", "gender3", "nationality3", "ocupatio3", videos, premios, 22);
+        static Director d4 = new Director("nDi4", 222, "LastD4", "gender4", "nationality4", "ocupation4", videos, premios, 222);
+
+        SongClass cancion = new SongClass("Cgender", "publicationYear", "title", 22, 22, "study", "keyword", "composer", singer, album, "format", 1, 2);
+        SongClass cancion2 = new SongClass("Cgender2", "publicationYear2", "title2", 22, 22, "study2", "keyword2", "composer2", singer2, album2, "format2", 11, 22);
+        SongClass cancion3 = new SongClass("Cgender3", "publicationYear3", "title3", 22, 22, "study3", "keyword3", "composer3", singer3, album3, "format3", 111, 222);
+        SongClass cancion4 = new SongClass("Cgender4", "publicationYear4", "title4", 22, 22, "study4", "keyword4", "composer4", singer4, album4, "format4", 1111, 2222);
+
+        Video video = new Video("Vgender", "publicationYear", "title", 22, 22, "study", "keyword", "description", Mactor, d, "format", 1, 2);
+        Video video2 = new Video("Vgender2", "publicationYear2", "title2", 22, 22, "study2", "keyword2", "description2", Mactor2, d2, "format2", 11, 22);
+        Video video3 = new Video("Vgender3", "publicationYear3", "title3", 22, 22, "study3", "keyword3", "description3", Mactor3, d3, "format3", 111, 222);
+        Video video4 = new Video("Vgender4", "publicationYear4", "title4", 22, 22, "study4", "keyword4", "description4", Mactor4, d4, "format4", 1111, 2222);
+
+
+
+        //hasta aqui
         Clases.User usuario = new Clases.User();
         Clases.Serialization serializar = new Clases.Serialization();
         string TipoCuenta;
@@ -383,7 +427,10 @@ namespace Entrega_3.Paneles
 
         private void panelContenedorPincipal_Paint(object sender, PaintEventArgs e)
         {
-
+            if (listCanciones.Visible == true)
+            {
+                listCanciones.Visible = false;
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -905,6 +952,246 @@ namespace Entrega_3.Paneles
         private void panel5_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            if (listCanciones.Visible == true)
+            {
+                listCanciones.Visible = false;
+                listCanciones.Items.Clear();
+
+            }
+            else
+            {
+                listCanciones.Items.Clear();
+                listCanciones.Visible = true;
+            }
+            try
+            {
+                int entero = 0;
+                string answer = txtBusqueda.Text;
+                string[] listaStr = answer.Split(',');//TIENE QUE IR EN EL FORMS
+
+                try
+                {
+                    entero = Int32.Parse(answer);
+                }
+                catch (FormatException)
+                {
+
+                }
+                if (entero != 0)
+                {
+                    //Buscar por resolucion de video o cancion
+                    var resolution = from s in canciones
+                                     where s.Resolution == entero
+                                     select s;
+                    var resolution2 = from s in videos
+                                      where s.Resolution == entero
+                                      select s;
+                    foreach (SongClass x in resolution)
+                    {
+                        listCanciones.Items.Add(x);
+                    }
+                    foreach (Video z in resolution2)
+                    {
+                        listCanciones.Items.Add(z);
+                    }
+
+                    //Buscar por nota definida.
+                    var nota = from s in canciones
+                               where s.Evaluation == entero
+                               select s;
+                    var nota2 = from s in videos
+                                where s.Evaluation == entero
+                                select s;
+                    foreach (SongClass x in nota)
+                    {
+                        listCanciones.Items.Add(x);
+                    }
+                    foreach (Video z in nota2)
+                    {
+                        listCanciones.Items.Add(z);
+                    }
+
+                }
+                else //STRINGS
+                {
+                    string answer2 = answer.ToUpper(); //Ponerlo en el FORMS
+                    var title = from s in canciones //Filtro por Titutlo de la cancion. Y video.
+                                where s.Title.ToUpper() == answer2
+                                select s;
+                    var title2 = from s in videos
+                                 where s.Title.ToUpper() == answer2
+                                 select s;
+                    foreach (SongClass ojb2 in title)
+                    {
+                        listCanciones.Items.Add(ojb2);
+                    }
+                    foreach (Video ojb2 in title2)
+                    {
+                        listCanciones.Items.Add(ojb2);
+                    }
+
+                    var keyWord = from s in canciones //Filtro por palabra clave
+                                  where s.Keyword == answer
+                                  select s;
+                    var keyword2 = from s in videos
+                                   where s.Keyword == answer
+                                   select s;
+                    foreach (SongClass x in keyWord)
+                    {
+                        listCanciones.Items.Add(x);
+                    }
+                    foreach (Video z in keyword2)
+                    {
+                        listCanciones.Items.Add(z);
+                    }
+                    //Busqueda por persona. Se buscara por director/Actor, Singer/Composer. Todo sera buscado por nombres.
+                    var persona = from s in canciones
+                                  where s.Singer.Name == answer || s.Composer == answer
+                                  select s;
+                    var persona2 = from s in videos
+                                   where s.Director.Name == answer || s.MainActor.Name == answer
+                                   select s;
+                    foreach (SongClass x in persona)
+                    {
+                        listCanciones.Items.Add(x);
+                    }
+                    foreach (Video z in persona2)
+                    {
+                        listCanciones.Items.Add(z);
+                    }
+
+                    //Busqueda por caracteristica de personas. Se buscara director en videos y singer en canciones.
+                    // En Ambos se buscara por Gender o Nacionalidad
+                    var person = from s in canciones
+                                 where s.Singer.Gender == answer || s.Singer.Nationality == answer
+                                 select s;
+                    var person2 = from s in videos
+                                  where s.Director.Gender == answer || s.Director.Nationality == answer
+                                  select s;
+                    foreach (SongClass x123 in person)
+                    {
+                        listCanciones.Items.Add(x123);
+                    }
+                    foreach (Video z123 in person2)
+                    {
+                        listCanciones.Items.Add(z123);
+                    }
+
+                    var category = from s in canciones //Categoria = Genero de musica, en el caso de video a que tipo pertenece.
+                                   where s.Gender == answer
+                                   select s;
+                    var category2 = from s in videos
+                                    where s.Gender == answer
+                                    select s;
+
+                    foreach (SongClass y2 in category)
+                    {
+                        listCanciones.Items.Add(y2);
+                    }
+                    foreach (Video z1 in category2)
+                    {
+                        listCanciones.Items.Add(z1);
+                    }
+                }
+                //Multiples filtrosss ----------------------------------------------------- Por ahora con strings
+                if (listaStr.Count() >= 2)
+                {
+                    var Multi1 = from s in canciones //Genero y palabra clave
+                                 where (s.Gender == listaStr[0] && s.Keyword == listaStr[1]) || (s.Gender == listaStr[1] && s.Keyword == listaStr[0])
+                                 select s;
+                    var multi2 = from s in videos
+                                 where (s.Gender == listaStr[0] && s.Keyword == listaStr[1]) || (s.Gender == listaStr[1] && s.Keyword == listaStr[0])
+                                 select s;
+                    foreach (SongClass j in Multi1)
+                    {
+                        listCanciones.Items.Add(j);
+                    }
+                    foreach (Video j in multi2)
+                    {
+                        listCanciones.Items.Add(j);
+                    }
+                    //Palabra clave y persona
+                    var Mezcla = from s in canciones
+                                 where (s.Keyword == listaStr[0] && (s.Singer.Name == listaStr[1] || s.Composer == listaStr[1])) || (s.Keyword == listaStr[1] && (s.Singer.Name == listaStr[0] || s.Composer == listaStr[0]))
+                                 select s;
+                    var Mezcla2 = from s in videos
+                                  where (s.Keyword == listaStr[0] && (s.Director.Name == listaStr[1] || s.MainActor.Name == listaStr[1])) || (s.Keyword == listaStr[1] && (s.Director.Name == listaStr[0] || s.MainActor.Name == listaStr[0]))
+                                  select s;
+                    foreach (SongClass j in Mezcla)
+                    {
+                        listCanciones.Items.Add(j);
+                    }
+                    foreach (Video j in Mezcla2)
+                    {
+                        listCanciones.Items.Add(j);
+                    }
+
+                    //Palabra clave y caracteristica de la persona.
+                    var anakin = from s in canciones
+                                 where (s.Keyword == listaStr[0] && (s.Singer.Gender == listaStr[1] || s.Singer.Nationality == listaStr[1])) || (s.Keyword == listaStr[1] && (s.Singer.Gender == listaStr[0] || s.Singer.Nationality == listaStr[0]))
+                                 select s;
+                    var anakin2 = from s in videos
+                                  where (s.Keyword == listaStr[0] && (s.Director.Gender == listaStr[1] || s.Director.Nationality == listaStr[1])) || (s.Keyword == listaStr[1] && (s.Director.Gender == listaStr[0] || s.Director.Nationality == listaStr[0]))
+                                  select s;
+                    foreach (SongClass j in anakin)
+                    {
+                        listCanciones.Items.Add(j);
+                    }
+                    foreach (Video j in anakin2)
+                    {
+                        listCanciones.Items.Add(j);
+                    }
+                }
+                if (listCanciones.Items.Count == 0)// ESto es cuando no pudo encontrar nada relacionado con canciones y videos.
+                {
+                    MessageBox.Show("No se pudo encontrar nada relacionado. Intente de nuevo.");
+                }
+
+                //Multiples filtro a la vez.
+
+
+
+            }
+
+            catch (System.Runtime.Serialization.SerializationException) //VEr despues
+            {
+                MessageBox.Show("Terminos no validos.");
+            }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            canciones.Add(cancion);
+            canciones.Add(cancion2);
+            canciones.Add(cancion3);
+            canciones.Add(cancion4);
+            videos.Add(video);
+            videos.Add(video2);
+            videos.Add(video3);
+            videos.Add(video4);
+
+            listaAlbum.Add(album);
+            listaAlbum.Add(album2);
+            listaAlbum.Add(album3);
+            listaAlbum.Add(album4);
+
+            foreach (SongClass x in canciones)
+            {
+                listCanciones.Items.Add(x);
+            }
+            foreach (Video x in videos)
+            {
+                listCanciones.Items.Add(x);
+            }
+        }
+
+        private void txtBusqueda_TextChanged(object sender, EventArgs e)
+        {
+            listCanciones.Items.Clear();
         }
     }
 }

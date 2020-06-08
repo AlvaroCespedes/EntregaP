@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Threading;
 namespace Entrega_3.Clases
 {
+    [Serializable]
     public class Singer : Person
     {
         private List<SongClass> songs;

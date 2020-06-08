@@ -4,6 +4,7 @@ using System.Threading;
 namespace Entrega_3.Clases
 //pro
 {
+    [Serializable]
     public class Actor : Person
     {
         private List<Video> movies;

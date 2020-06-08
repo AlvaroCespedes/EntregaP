@@ -152,6 +152,8 @@
             this.b2 = new System.Windows.Forms.Button();
             this.b3 = new System.Windows.Forms.Button();
             this.b4 = new System.Windows.Forms.Button();
+            this.listBox2 = new System.Windows.Forms.ListBox();
+            this.button6 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnVolverNormalidad)).BeginInit();
@@ -572,6 +574,8 @@
             // 
             this.SubirArchivo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.SubirArchivo.Controls.Add(this.panel5);
+            this.SubirArchivo.Controls.Add(this.button6);
+            this.SubirArchivo.Controls.Add(this.listBox2);
             this.SubirArchivo.Controls.Add(this.Reproductor);
             this.SubirArchivo.Controls.Add(this.btnAgregarInfo);
             this.SubirArchivo.Controls.Add(this.Adjuntar);
@@ -1822,6 +1826,25 @@
             this.b4.Visible = false;
             this.b4.Click += new System.EventHandler(this.b4_Click);
             // 
+            // listBox2
+            // 
+            this.listBox2.FormattingEnabled = true;
+            this.listBox2.ItemHeight = 16;
+            this.listBox2.Location = new System.Drawing.Point(399, 80);
+            this.listBox2.Name = "listBox2";
+            this.listBox2.Size = new System.Drawing.Size(108, 180);
+            this.listBox2.TabIndex = 12;
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(408, 340);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(93, 27);
+            this.button6.TabIndex = 13;
+            this.button6.Text = "button6";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
             // FormAplicacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -2026,5 +2049,7 @@
         private System.Windows.Forms.TextBox txtGender;
         private System.Windows.Forms.TextBox txtTitle;
         private System.Windows.Forms.Button Agregar;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.ListBox listBox2;
     }
 }

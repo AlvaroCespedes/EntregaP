@@ -4,6 +4,7 @@ using System.Collections.Generic;
 namespace Entrega_3.Clases
 
 { //Probando probando
+    [Serializable]
     public class Album 
     {
 

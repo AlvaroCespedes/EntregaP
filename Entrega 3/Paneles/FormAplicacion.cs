@@ -62,6 +62,8 @@ namespace Entrega_3.Paneles
         string ArchivoMP3;
         string rutaArchivoMP3;
         bool Play = false;
+        List<SongClass> canciones123 = new List<SongClass>();
+        List<Video> videos123 = new List<Video>();
 
 
         //hasta aqui
@@ -989,7 +991,7 @@ namespace Entrega_3.Paneles
         {
             try
             {
-                canciones = serializar.Deserialize<List<SongClass>>(File.Open("Canciones.bin", FileMode.Open));
+                canciones123 = serializar.Deserialize<List<SongClass>>(File.Open("Canciones.bin", FileMode.Open));
                 foreach (SongClass x in canciones)
                 {
                     listCanciones.Items.Add(x);
@@ -1003,7 +1005,7 @@ namespace Entrega_3.Paneles
             }
             try
             {
-                videos = serializar.Deserialize<List<Video>>(File.Open("Videos.bin", FileMode.Open));
+                videos123 = serializar.Deserialize<List<Video>>(File.Open("Videos.bin", FileMode.Open));
                 foreach(Video x in videos)
                 {
                     listCanciones.Items.Add(x);
@@ -1356,13 +1358,14 @@ namespace Entrega_3.Paneles
 
 
 
+
             int startIndex = ArchivoMP3.Length - 4;
             int final = 4;
             String substring = ArchivoMP3.Substring(startIndex, final);
             try
             {
                 //VER QUE SEAN MINUSCULAS Y MAYUSCULAS
-                if (substring == ".mp3" || substring == ".wav")
+                if (substring == ".mp3")
                 {
                     string title = "";
                     string singer12 = "";
@@ -1390,21 +1393,8 @@ namespace Entrega_3.Paneles
                     SongClass ob = new SongClass(gender, publicationYear, title, 123, 123, study, keyWord, composer, singer123, album123, ".mp3", 123, 123, rutaArchivoMP3,0,0);
                     //Deserializando
 
-                    List<SongClass> cancionAux = new List<SongClass>();
-                    try
-                    {
-                        cancionAux = serializar.Deserialize<List<SongClass>>(File.Open("Videos.bin", FileMode.Open));
-                    }
-                    catch (System.Runtime.Serialization.SerializationException)
-                    {
-
-                    }
-                    foreach (SongClass x in cancionAux)
-                    {
-                        canciones.Add(x);
-                    }
-                    canciones.Add(ob);
-                    serializar.Serialize(canciones, File.Open("Canciones.bin", FileMode.Create));
+                    canciones123.Add(ob);
+                    
                 }
 
 
@@ -1438,21 +1428,7 @@ namespace Entrega_3.Paneles
 
                     Video ob2 = new Video(gender, publicationYear, title, 123, 123, study, keyWord, description, Mactor123, d123, "format", 123, 123, rutaArchivoMP3,0,0);
 
-                    List<Video> videoAux = new List<Video>();
-                    try
-                    {
-                        videoAux = serializar.Deserialize<List<Video>>(File.Open("Videos.bin", FileMode.Open));
-                    }
-                    catch (System.Runtime.Serialization.SerializationException)
-                    {
-
-                    }
-                    foreach(Video x in videoAux)
-                    {
-                        videos.Add(x);
-                    }
-                    videos.Add(ob2);
-                    serializar.Serialize(videos, File.Open("Videos.bin", FileMode.Create));
+                    videos123.Add(ob2);
                 }
             }
             catch
@@ -1461,7 +1437,8 @@ namespace Entrega_3.Paneles
             }
 
             MessageBox.Show("Su ha archivo ha sido guardada.");
-
+            serializar.Serialize(videos123, File.Open("Videos.bin", FileMode.Create));
+            serializar.Serialize(canciones123, File.Open("Canciones.bin", FileMode.Create));
             //Limpiando los txt.
             txtTitle.Clear();
             txtSinger.Clear();
@@ -1475,6 +1452,29 @@ namespace Entrega_3.Paneles
 
             listBox1.Items.Clear();
 
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                canciones = serializar.Deserialize<List<SongClass>>(File.Open("Canciones.bin", FileMode.Open));
+                videos = serializar.Deserialize<List<Video>>(File.Open("Videos.bin", FileMode.Open));
+                foreach (SongClass x in canciones)
+                {
+                    listBox2.Items.Add(x);
+                }
+                foreach(Video x in videos)
+                {
+                    listBox2.Items.Add(x);
+                }
+
+
+            }
+            catch (System.Runtime.Serialization.SerializationException)
+            {
+
+            }
         }
     }
 }

@@ -18,6 +18,7 @@ namespace Entrega_3.Paneles
     {
         Profile perfilCambiar;
         Profile perfilActual;
+        string algo;
         //est es solo para probar busqueda
         static DateTime date = new DateTime();
         int numlikes;
@@ -2510,6 +2511,7 @@ namespace Entrega_3.Paneles
         private void button11_Click(object sender, EventArgs e)
         {
             listBox3.Items.Clear();
+            algo = "musica";
             if (panel26.Visible == true)
             {
                 panel26.Visible = false;
@@ -2551,6 +2553,7 @@ namespace Entrega_3.Paneles
 
         private void button7_Click(object sender, EventArgs e)
         {
+            algo = "video";
             listBox3.Items.Clear();
             if (panel26.Visible == true)
             {
@@ -2779,7 +2782,83 @@ namespace Entrega_3.Paneles
 
         private void listBox3_SelectedIndexChanged(object sender, EventArgs e)
         {
+            
+            listBox4.Items.Clear();
             //Mostrar la informacion d ela playlist
+            if (algo == "musica")
+            {
+                int error = 0;
+                if (listBox3.SelectedItem != null)
+                {
+                    for (int a = 0; a < usuario.Profiles.Count(); a++)
+                    {
+                        if (usuario.Profiles[a].NameProfile == perfilActual.NameProfile)
+                        {
+                            for (int b = 0; b < usuario.Profiles[a].PlaylistCanciones.Count(); b++)
+                            {
+                                if (listBox3.SelectedItem.ToString() == usuario.Profiles[a].PlaylistCanciones[b].Nombre && usuario.Profiles[a].PlaylistCanciones[b].CancionesPlaylist.Count() > 0)
+                                {
+
+                                    for (int c = 0; c < usuario.Profiles[a].PlaylistCanciones[b].CancionesPlaylist.Count(); c++)
+                                    {
+                                        listBox4.Items.Add(usuario.Profiles[a].PlaylistCanciones[b].CancionesPlaylist[c]);
+                                        listBox4.Items.Add("jsldsa");
+                                    }
+                                }
+                                else
+                                {
+                                    error++;
+                                }
+                            }
+
+                        }
+                    }
+
+
+
+                }
+                if (error > 0)
+                {
+                    listBox4.Items.Add("NO HAY CANCIONES");
+                }
+            }
+            else if(algo == "video")
+            {
+                int error = 0;
+                if (listBox3.SelectedItem != null)
+                {
+                    for (int a = 0; a < usuario.Profiles.Count(); a++)
+                    {
+                        if (usuario.Profiles[a].NameProfile == perfilActual.NameProfile)
+                        {
+                            for (int b = 0; b < usuario.Profiles[a].PlaylistVideos.Count(); b++)
+                            {
+                                if (listBox3.SelectedItem.ToString() == usuario.Profiles[a].PlaylistVideos[b].Name && usuario.Profiles[a].PlaylistVideos[b].VideosPlaylist.Count() > 0)
+                                {
+
+                                    for (int c = 0; c < usuario.Profiles[a].PlaylistVideos[b].VideosPlaylist.Count(); c++)
+                                    {
+                                        listBox4.Items.Add(usuario.Profiles[a].PlaylistVideos[b].VideosPlaylist[c]);
+                                        listBox4.Items.Add("jsldsa");
+                                    }
+                                }
+                                else
+                                {
+                                    error++;
+                                }
+                            }
+
+                        }
+                    }
+
+
+
+                }
+                if (error > 0)
+                {
+                    listBox4.Items.Add("NO HAY VIDEOS");
+                }
+            }
         }
     }
 }

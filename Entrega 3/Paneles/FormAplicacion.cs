@@ -18,7 +18,11 @@ namespace Entrega_3.Paneles
     {
         //est es solo para probar busqueda
         static DateTime date = new DateTime();
-
+        int numlikes;
+        int numreproducciones;
+        int nota;
+        int notaActual;
+       
         static List<string> premios = new List<string>();
 
         static List<string> discograpich = new List<string>();
@@ -310,6 +314,10 @@ namespace Entrega_3.Paneles
         private void SubMenuAjustes_Click(object sender, EventArgs e)
         {
             panel4.Visible = false;
+            if (panel6.Visible == true)
+            {
+                panel6.Visible = false;
+            }
             if (panelSubMenuAjustes.Visible==true)
             {
                 panelSubMenuAjustes.Visible = false;
@@ -321,10 +329,16 @@ namespace Entrega_3.Paneles
             {
                 SubirArchivo.Visible = false;
             }
+
         }
 
         private void btnPlaylistVideo_Click(object sender, EventArgs e)
         {
+            if (panel6.Visible == true)
+            {
+                panel6.Visible = false;
+            }
+            
 
             if (panelSubMenuAjustes.Visible == true)
             {
@@ -354,11 +368,20 @@ namespace Entrega_3.Paneles
             if (SubirArchivo.Visible == true)
             {
                 SubirArchivo.Visible = false;
+
+            }
+            if (panel6.Visible == true)
+            {
+                panel6.Visible = false;
             }
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
+            if (panel6.Visible == true)
+            {
+                panel6.Visible = false;
+            }
             if (panelSubMenuAjustes.Visible == true)
             {
                 panelSubMenuAjustes.Visible = false;
@@ -379,6 +402,10 @@ namespace Entrega_3.Paneles
 
         private void btnInicio_Click(object sender, EventArgs e)
         {
+            if (panel6.Visible == true)
+            {
+                panel6.Visible = false;
+            }
             if (panelSubMenuAjustes.Visible == true)
             {
                 panelSubMenuAjustes.Visible = false;
@@ -605,6 +632,8 @@ namespace Entrega_3.Paneles
             panelContenedorPincipal.Visible = false;
             panelCrearUsuario.Visible = false;
             panel4.Visible = false;
+            Reproductor.Ctlcontrols.stop();
+
             
         }
 
@@ -1246,15 +1275,45 @@ namespace Entrega_3.Paneles
                     {
                         if (x.Title == listaStr[0])
                         {
-                            Reproductor.URL = x.Url;
+                            Reproductor2.URL = x.Url;
+                            txtBarraMusica.Text = x.Title + " autor;" + x.Singer.Name;
+                            btnPausa.Visible = true;
+                            btnPlay.Visible = false;
+                            panel6.Visible = true;
+                            numlikes = x.Likes;
+                            NumLike.Text = numlikes.ToString();
+                            NumLike.Visible = true;
+                            numreproducciones = x.NReproduction;
+                            numreproducciones += 1;
+                            NumReproducciones.Text = numreproducciones.ToString();
+                            e6.Visible = true;
+                            e7.Visible = true;
+                            e8.Visible = true;
+                            e9.Visible = true;
+                            e10.Visible = true;
                         }
                     }
                     foreach(Video x in videos)
                     {
                         if (x.Title == listaStr[0])
                         {
-                            Reproductor.URL = x.Url;
-                            //MATI AQUI TIENE SE TIENE QUE ABRIR UN PANEL
+                            Reproductor2.URL = x.Url;
+                            panel6.Visible = true;
+                            txtBarraMusica.Text = x.Title + " Director;" + x.Director.Name;
+                            btnPausa.Visible = true;
+                            btnPlay.Visible = false;
+                            numlikes = x.Likes;
+                            NumLike.Text = numlikes.ToString();
+                            NumLike.Visible = true;
+                            numreproducciones = x.NReproduction;
+                            numreproducciones += 1;
+                            NumReproducciones.Text = numreproducciones.ToString();
+                            e6.Visible = true;
+                            e7.Visible = true;
+                            e8.Visible = true;
+                            e9.Visible = true;
+                            e10.Visible = true;
+                            //MATI AQUI TIENE SE TIENE QUE ABRIR UN PANEL jajja buena
                         }
                     }
                 }
@@ -1510,6 +1569,104 @@ namespace Entrega_3.Paneles
         }
 
         private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnPausa_Click(object sender, EventArgs e)
+        {
+            Reproductor2.Ctlcontrols.pause();
+            btnPausa.Visible = false;
+            btnPlay.Visible = true;
+            btnDetener.Visible = true;
+        }
+
+        private void btnDetener_Click(object sender, EventArgs e)
+        {
+            btnDetener.Visible = false;
+            btnPausa.Visible = false;
+            btnPlay.Visible = true;
+            Reproductor2.Ctlcontrols.stop();
+        }
+
+        private void btnPlay_Click(object sender, EventArgs e)
+        {
+            btnPlay.Visible = false;
+            btnPausa.Visible = true;
+            Reproductor2.Ctlcontrols.play();
+        }
+        
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            numlikes+=1;
+            manito.Visible =false;
+            NumLike.Text = numlikes.ToString();
+
+        }
+
+        private void pictureBox2_Click_1(object sender, EventArgs e)
+        {
+            panel6.Visible = true;
+        }
+
+        private void NumLike_Click(object sender, EventArgs e)
+        {
+
+        }
+    
+        private void e6_Click_1(object sender, EventArgs e)
+        {
+            e6.Visible = false;
+            e1.Visible = true;
+        }
+
+        private void e7_Click_1(object sender, EventArgs e)
+        {
+            e6.Visible = false;
+            e7.Visible = false;
+            e1.Visible = true;
+            e2.Visible = true;
+        }
+
+        private void e8_Click_1(object sender, EventArgs e)
+        {
+            e6.Visible = false;
+            e7.Visible = false;
+            e8.Visible = false;
+            e1.Visible = true;
+            e2.Visible = true;
+            e3.Visible = true;
+
+        }
+
+        private void e9_Click_1(object sender, EventArgs e)
+        {
+            e6.Visible = false;
+            e7.Visible = false;
+            e8.Visible = false;
+            e9.Visible = false;
+            e1.Visible = true;
+            e2.Visible = true;
+            e3.Visible = true;
+            e4.Visible = true;
+        }
+
+        private void e10_Click_1(object sender, EventArgs e)
+        {
+            e6.Visible = false;
+            e7.Visible = false;
+            e8.Visible = false;
+            e9.Visible = false;
+            e10.Visible = false;
+
+            e1.Visible = true;
+            e2.Visible = true;
+            e3.Visible = true;
+            e4.Visible = true;
+            e5.Visible = true;
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
         {
 
         }

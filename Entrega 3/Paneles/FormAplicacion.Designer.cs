@@ -59,6 +59,31 @@
             this.panelCrearUsuario = new System.Windows.Forms.Panel();
             this.panelContenedorPincipal = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.panel23 = new System.Windows.Forms.Panel();
+            this.panel25 = new System.Windows.Forms.Panel();
+            this.mostrarCategorias = new System.Windows.Forms.TextBox();
+            this.mostrarGustos = new System.Windows.Forms.TextBox();
+            this.mostrarPrivacidad = new System.Windows.Forms.Label();
+            this.mostrarNombre = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.button20 = new System.Windows.Forms.Button();
+            this.label28 = new System.Windows.Forms.Label();
+            this.button19 = new System.Windows.Forms.Button();
+            this.button18 = new System.Windows.Forms.Button();
+            this.checkedListBox2 = new System.Windows.Forms.CheckedListBox();
+            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
+            this.label27 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label26 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button17 = new System.Windows.Forms.Button();
+            this.button16 = new System.Windows.Forms.Button();
+            this.button15 = new System.Windows.Forms.Button();
+            this.button13 = new System.Windows.Forms.Button();
+            this.label25 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.e6 = new System.Windows.Forms.PictureBox();
             this.e7 = new System.Windows.Forms.PictureBox();
@@ -162,6 +187,8 @@
             this.txtBusqueda = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panelSubMenuAjustes = new System.Windows.Forms.Panel();
+            this.panel24 = new System.Windows.Forms.Panel();
+            this.verPerfil = new System.Windows.Forms.Button();
             this.panel12 = new System.Windows.Forms.Panel();
             this.btnCambiarPerfil = new System.Windows.Forms.Button();
             this.panel11 = new System.Windows.Forms.Panel();
@@ -194,33 +221,6 @@
             this.b14 = new System.Windows.Forms.Button();
             this.b15 = new System.Windows.Forms.Button();
             this.b16 = new System.Windows.Forms.Button();
-            this.panel23 = new System.Windows.Forms.Panel();
-            this.label25 = new System.Windows.Forms.Label();
-            this.button13 = new System.Windows.Forms.Button();
-            this.button15 = new System.Windows.Forms.Button();
-            this.button16 = new System.Windows.Forms.Button();
-            this.button17 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label26 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label27 = new System.Windows.Forms.Label();
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
-            this.checkedListBox2 = new System.Windows.Forms.CheckedListBox();
-            this.button18 = new System.Windows.Forms.Button();
-            this.button19 = new System.Windows.Forms.Button();
-            this.verPerfil = new System.Windows.Forms.Button();
-            this.panel24 = new System.Windows.Forms.Panel();
-            this.panel25 = new System.Windows.Forms.Panel();
-            this.label28 = new System.Windows.Forms.Label();
-            this.button20 = new System.Windows.Forms.Button();
-            this.label29 = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
-            this.label31 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
-            this.mostrarNombre = new System.Windows.Forms.Label();
-            this.mostrarPrivacidad = new System.Windows.Forms.Label();
-            this.mostrarGustos = new System.Windows.Forms.TextBox();
-            this.mostrarCategorias = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnVolverNormalidad)).BeginInit();
@@ -237,6 +237,8 @@
             this.panelCrearUsuario.SuspendLayout();
             this.panelContenedorPincipal.SuspendLayout();
             this.panel6.SuspendLayout();
+            this.panel23.SuspendLayout();
+            this.panel25.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.e6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.e7)).BeginInit();
@@ -277,8 +279,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panelSubMenuAjustes.SuspendLayout();
-            this.panel23.SuspendLayout();
-            this.panel25.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -663,6 +663,342 @@
             this.panel6.Size = new System.Drawing.Size(700, 506);
             this.panel6.TabIndex = 36;
             this.panel6.Visible = false;
+            // 
+            // panel23
+            // 
+            this.panel23.Controls.Add(this.panel25);
+            this.panel23.Controls.Add(this.button19);
+            this.panel23.Controls.Add(this.button18);
+            this.panel23.Controls.Add(this.checkedListBox2);
+            this.panel23.Controls.Add(this.checkedListBox1);
+            this.panel23.Controls.Add(this.label27);
+            this.panel23.Controls.Add(this.comboBox1);
+            this.panel23.Controls.Add(this.label26);
+            this.panel23.Controls.Add(this.textBox1);
+            this.panel23.Controls.Add(this.button17);
+            this.panel23.Controls.Add(this.button16);
+            this.panel23.Controls.Add(this.button15);
+            this.panel23.Controls.Add(this.button13);
+            this.panel23.Controls.Add(this.label25);
+            this.panel23.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel23.Location = new System.Drawing.Point(0, 0);
+            this.panel23.Name = "panel23";
+            this.panel23.Size = new System.Drawing.Size(700, 506);
+            this.panel23.TabIndex = 11;
+            this.panel23.Visible = false;
+            // 
+            // panel25
+            // 
+            this.panel25.Controls.Add(this.mostrarCategorias);
+            this.panel25.Controls.Add(this.mostrarGustos);
+            this.panel25.Controls.Add(this.mostrarPrivacidad);
+            this.panel25.Controls.Add(this.mostrarNombre);
+            this.panel25.Controls.Add(this.label32);
+            this.panel25.Controls.Add(this.label31);
+            this.panel25.Controls.Add(this.label30);
+            this.panel25.Controls.Add(this.label29);
+            this.panel25.Controls.Add(this.button20);
+            this.panel25.Controls.Add(this.label28);
+            this.panel25.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel25.Location = new System.Drawing.Point(0, 0);
+            this.panel25.Name = "panel25";
+            this.panel25.Size = new System.Drawing.Size(700, 506);
+            this.panel25.TabIndex = 30;
+            this.panel25.Visible = false;
+            // 
+            // mostrarCategorias
+            // 
+            this.mostrarCategorias.Location = new System.Drawing.Point(97, 242);
+            this.mostrarCategorias.Multiline = true;
+            this.mostrarCategorias.Name = "mostrarCategorias";
+            this.mostrarCategorias.ReadOnly = true;
+            this.mostrarCategorias.Size = new System.Drawing.Size(176, 186);
+            this.mostrarCategorias.TabIndex = 26;
+            this.mostrarCategorias.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            // 
+            // mostrarGustos
+            // 
+            this.mostrarGustos.Location = new System.Drawing.Point(416, 239);
+            this.mostrarGustos.Multiline = true;
+            this.mostrarGustos.Name = "mostrarGustos";
+            this.mostrarGustos.ReadOnly = true;
+            this.mostrarGustos.Size = new System.Drawing.Size(176, 186);
+            this.mostrarGustos.TabIndex = 25;
+            // 
+            // mostrarPrivacidad
+            // 
+            this.mostrarPrivacidad.AutoSize = true;
+            this.mostrarPrivacidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mostrarPrivacidad.ForeColor = System.Drawing.Color.DeepPink;
+            this.mostrarPrivacidad.Location = new System.Drawing.Point(490, 144);
+            this.mostrarPrivacidad.Name = "mostrarPrivacidad";
+            this.mostrarPrivacidad.Size = new System.Drawing.Size(97, 24);
+            this.mostrarPrivacidad.TabIndex = 24;
+            this.mostrarPrivacidad.Text = "Nombre: ";
+            // 
+            // mostrarNombre
+            // 
+            this.mostrarNombre.AutoSize = true;
+            this.mostrarNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mostrarNombre.ForeColor = System.Drawing.Color.DeepPink;
+            this.mostrarNombre.Location = new System.Drawing.Point(160, 141);
+            this.mostrarNombre.Name = "mostrarNombre";
+            this.mostrarNombre.Size = new System.Drawing.Size(97, 24);
+            this.mostrarNombre.TabIndex = 23;
+            this.mostrarNombre.Text = "Nombre: ";
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label32.ForeColor = System.Drawing.Color.Purple;
+            this.label32.Location = new System.Drawing.Point(39, 209);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(322, 24);
+            this.label32.TabIndex = 22;
+            this.label32.Text = "Categorias de peliculas favoritas: ";
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label31.ForeColor = System.Drawing.Color.Purple;
+            this.label31.Location = new System.Drawing.Point(403, 207);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(179, 24);
+            this.label31.TabIndex = 21;
+            this.label31.Text = "Gustos musicales:";
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.ForeColor = System.Drawing.Color.Purple;
+            this.label30.Location = new System.Drawing.Point(364, 144);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(119, 24);
+            this.label30.TabIndex = 20;
+            this.label30.Text = "Privacidad: ";
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label29.ForeColor = System.Drawing.Color.Purple;
+            this.label29.Location = new System.Drawing.Point(44, 141);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(97, 24);
+            this.label29.TabIndex = 19;
+            this.label29.Text = "Nombre: ";
+            // 
+            // button20
+            // 
+            this.button20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button20.Location = new System.Drawing.Point(563, 446);
+            this.button20.Name = "button20";
+            this.button20.Size = new System.Drawing.Size(125, 46);
+            this.button20.TabIndex = 18;
+            this.button20.Text = "Listo";
+            this.button20.UseVisualStyleBackColor = true;
+            this.button20.Click += new System.EventHandler(this.button20_Click);
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Font = new System.Drawing.Font("Arial Black", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label28.ForeColor = System.Drawing.Color.Purple;
+            this.label28.Location = new System.Drawing.Point(126, 46);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(418, 38);
+            this.label28.TabIndex = 17;
+            this.label28.Text = "INFORMACIÓN DEL PERFIL";
+            // 
+            // button19
+            // 
+            this.button19.Location = new System.Drawing.Point(541, 466);
+            this.button19.Name = "button19";
+            this.button19.Size = new System.Drawing.Size(75, 23);
+            this.button19.TabIndex = 29;
+            this.button19.Text = "Atras";
+            this.button19.UseVisualStyleBackColor = true;
+            this.button19.Click += new System.EventHandler(this.button19_Click);
+            // 
+            // button18
+            // 
+            this.button18.Location = new System.Drawing.Point(622, 466);
+            this.button18.Name = "button18";
+            this.button18.Size = new System.Drawing.Size(75, 23);
+            this.button18.TabIndex = 28;
+            this.button18.Text = "Cambiar";
+            this.button18.UseVisualStyleBackColor = true;
+            this.button18.Click += new System.EventHandler(this.button18_Click);
+            // 
+            // checkedListBox2
+            // 
+            this.checkedListBox2.FormattingEnabled = true;
+            this.checkedListBox2.Items.AddRange(new object[] {
+            "Aventuras",
+            "Comedias",
+            "Dramáticas",
+            "Terror",
+            "Musicales",
+            "Ciencia Ficción",
+            "Guerra",
+            "Belicas",
+            "Culto",
+            "Clásicos",
+            "Mudas",
+            "Blanco y Negro",
+            "Acción",
+            "Oeste",
+            "Documentales",
+            "Anime",
+            "Independientes",
+            "Crimenes",
+            "Infantiles",
+            "Para Adultos",
+            "SuperHeroes",
+            "Gore",
+            "Cortos",
+            "Psicológicas",
+            "Suspenso",
+            "Romanticas"});
+            this.checkedListBox2.Location = new System.Drawing.Point(364, 319);
+            this.checkedListBox2.Name = "checkedListBox2";
+            this.checkedListBox2.Size = new System.Drawing.Size(142, 139);
+            this.checkedListBox2.TabIndex = 27;
+            this.checkedListBox2.Visible = false;
+            // 
+            // checkedListBox1
+            // 
+            this.checkedListBox1.FormattingEnabled = true;
+            this.checkedListBox1.Items.AddRange(new object[] {
+            "Pop",
+            "Latina",
+            "Hip Hop",
+            "Indie",
+            "Alternativa",
+            "Rock",
+            "Foll",
+            "Acústica",
+            "Cumbia",
+            "Chill",
+            "Reggae",
+            "Árabe",
+            "Desi",
+            "Infantil",
+            "Dance",
+            "Country",
+            "Romántica",
+            "Metal",
+            "Cristiana",
+            "Jazz",
+            "Soul",
+            "Punk",
+            "Blues",
+            "Clásica",
+            "K-Pop",
+            "Afro"});
+            this.checkedListBox1.Location = new System.Drawing.Point(61, 297);
+            this.checkedListBox1.Name = "checkedListBox1";
+            this.checkedListBox1.Size = new System.Drawing.Size(142, 139);
+            this.checkedListBox1.TabIndex = 26;
+            this.checkedListBox1.Visible = false;
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(344, 177);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(94, 13);
+            this.label27.TabIndex = 25;
+            this.label27.Text = "Nueva privacidad:";
+            this.label27.Visible = false;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Privado",
+            "Público"});
+            this.comboBox1.Location = new System.Drawing.Point(449, 171);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(100, 21);
+            this.comboBox1.TabIndex = 24;
+            this.comboBox1.Visible = false;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(48, 179);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(80, 13);
+            this.label26.TabIndex = 23;
+            this.label26.Text = "Nuevo nombre:";
+            this.label26.Visible = false;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(136, 174);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(110, 20);
+            this.textBox1.TabIndex = 22;
+            this.textBox1.Visible = false;
+            // 
+            // button17
+            // 
+            this.button17.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button17.Location = new System.Drawing.Point(347, 108);
+            this.button17.Name = "button17";
+            this.button17.Size = new System.Drawing.Size(162, 44);
+            this.button17.TabIndex = 21;
+            this.button17.Text = "Cambiar privacidad";
+            this.button17.UseVisualStyleBackColor = true;
+            this.button17.Click += new System.EventHandler(this.button17_Click);
+            // 
+            // button16
+            // 
+            this.button16.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button16.Location = new System.Drawing.Point(49, 240);
+            this.button16.Name = "button16";
+            this.button16.Size = new System.Drawing.Size(162, 44);
+            this.button16.TabIndex = 20;
+            this.button16.Text = "Cambiar gustos musicales";
+            this.button16.UseVisualStyleBackColor = true;
+            this.button16.Click += new System.EventHandler(this.button16_Click);
+            // 
+            // button15
+            // 
+            this.button15.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button15.Location = new System.Drawing.Point(359, 236);
+            this.button15.Name = "button15";
+            this.button15.Size = new System.Drawing.Size(162, 75);
+            this.button15.TabIndex = 19;
+            this.button15.Text = "Cambiar categorias de peliculas favoritas";
+            this.button15.UseVisualStyleBackColor = true;
+            this.button15.Click += new System.EventHandler(this.button15_Click);
+            // 
+            // button13
+            // 
+            this.button13.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button13.Location = new System.Drawing.Point(58, 108);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(162, 44);
+            this.button13.TabIndex = 18;
+            this.button13.Text = "Cambiar nombre";
+            this.button13.UseVisualStyleBackColor = true;
+            this.button13.Click += new System.EventHandler(this.button13_Click);
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Arial Black", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.ForeColor = System.Drawing.Color.Green;
+            this.label25.Location = new System.Drawing.Point(208, 43);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(275, 38);
+            this.label25.TabIndex = 17;
+            this.label25.Text = "CAMBIAR PERFIL";
             // 
             // pictureBox3
             // 
@@ -1874,6 +2210,31 @@
             this.panelSubMenuAjustes.Visible = false;
             this.panelSubMenuAjustes.Paint += new System.Windows.Forms.PaintEventHandler(this.panelSubMenuAjustes_Paint);
             // 
+            // panel24
+            // 
+            this.panel24.BackColor = System.Drawing.Color.Blue;
+            this.panel24.Location = new System.Drawing.Point(4, 177);
+            this.panel24.Name = "panel24";
+            this.panel24.Size = new System.Drawing.Size(10, 30);
+            this.panel24.TabIndex = 12;
+            // 
+            // verPerfil
+            // 
+            this.verPerfil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.verPerfil.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.verPerfil.FlatAppearance.BorderSize = 0;
+            this.verPerfil.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
+            this.verPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.verPerfil.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.verPerfil.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.verPerfil.Location = new System.Drawing.Point(10, 177);
+            this.verPerfil.Name = "verPerfil";
+            this.verPerfil.Size = new System.Drawing.Size(136, 27);
+            this.verPerfil.TabIndex = 11;
+            this.verPerfil.Text = "Ver información";
+            this.verPerfil.UseVisualStyleBackColor = false;
+            this.verPerfil.Click += new System.EventHandler(this.verPerfil_Click_1);
+            // 
             // panel12
             // 
             this.panel12.BackColor = System.Drawing.Color.Blue;
@@ -2322,367 +2683,6 @@
             this.b16.Visible = false;
             this.b16.Click += new System.EventHandler(this.b16_Click);
             // 
-            // panel23
-            // 
-            this.panel23.Controls.Add(this.panel25);
-            this.panel23.Controls.Add(this.button19);
-            this.panel23.Controls.Add(this.button18);
-            this.panel23.Controls.Add(this.checkedListBox2);
-            this.panel23.Controls.Add(this.checkedListBox1);
-            this.panel23.Controls.Add(this.label27);
-            this.panel23.Controls.Add(this.comboBox1);
-            this.panel23.Controls.Add(this.label26);
-            this.panel23.Controls.Add(this.textBox1);
-            this.panel23.Controls.Add(this.button17);
-            this.panel23.Controls.Add(this.button16);
-            this.panel23.Controls.Add(this.button15);
-            this.panel23.Controls.Add(this.button13);
-            this.panel23.Controls.Add(this.label25);
-            this.panel23.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel23.Location = new System.Drawing.Point(0, 0);
-            this.panel23.Name = "panel23";
-            this.panel23.Size = new System.Drawing.Size(700, 506);
-            this.panel23.TabIndex = 11;
-            this.panel23.Visible = false;
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Arial Black", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.ForeColor = System.Drawing.Color.Green;
-            this.label25.Location = new System.Drawing.Point(208, 43);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(275, 38);
-            this.label25.TabIndex = 17;
-            this.label25.Text = "CAMBIAR PERFIL";
-            // 
-            // button13
-            // 
-            this.button13.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button13.Location = new System.Drawing.Point(58, 108);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(162, 44);
-            this.button13.TabIndex = 18;
-            this.button13.Text = "Cambiar nombre";
-            this.button13.UseVisualStyleBackColor = true;
-            this.button13.Click += new System.EventHandler(this.button13_Click);
-            // 
-            // button15
-            // 
-            this.button15.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button15.Location = new System.Drawing.Point(359, 236);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(162, 75);
-            this.button15.TabIndex = 19;
-            this.button15.Text = "Cambiar categorias de peliculas favoritas";
-            this.button15.UseVisualStyleBackColor = true;
-            this.button15.Click += new System.EventHandler(this.button15_Click);
-            // 
-            // button16
-            // 
-            this.button16.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button16.Location = new System.Drawing.Point(49, 240);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(162, 44);
-            this.button16.TabIndex = 20;
-            this.button16.Text = "Cambiar gustos musicales";
-            this.button16.UseVisualStyleBackColor = true;
-            this.button16.Click += new System.EventHandler(this.button16_Click);
-            // 
-            // button17
-            // 
-            this.button17.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button17.Location = new System.Drawing.Point(347, 108);
-            this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(162, 44);
-            this.button17.TabIndex = 21;
-            this.button17.Text = "Cambiar privacidad";
-            this.button17.UseVisualStyleBackColor = true;
-            this.button17.Click += new System.EventHandler(this.button17_Click);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(136, 174);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(110, 20);
-            this.textBox1.TabIndex = 22;
-            this.textBox1.Visible = false;
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(48, 179);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(80, 13);
-            this.label26.TabIndex = 23;
-            this.label26.Text = "Nuevo nombre:";
-            this.label26.Visible = false;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Privado",
-            "Público"});
-            this.comboBox1.Location = new System.Drawing.Point(449, 171);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(100, 21);
-            this.comboBox1.TabIndex = 24;
-            this.comboBox1.Visible = false;
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(344, 177);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(94, 13);
-            this.label27.TabIndex = 25;
-            this.label27.Text = "Nueva privacidad:";
-            this.label27.Visible = false;
-            // 
-            // checkedListBox1
-            // 
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Items.AddRange(new object[] {
-            "Pop",
-            "Latina",
-            "Hip Hop",
-            "Indie",
-            "Alternativa",
-            "Rock",
-            "Foll",
-            "Acústica",
-            "Cumbia",
-            "Chill",
-            "Reggae",
-            "Árabe",
-            "Desi",
-            "Infantil",
-            "Dance",
-            "Country",
-            "Romántica",
-            "Metal",
-            "Cristiana",
-            "Jazz",
-            "Soul",
-            "Punk",
-            "Blues",
-            "Clásica",
-            "K-Pop",
-            "Afro"});
-            this.checkedListBox1.Location = new System.Drawing.Point(61, 297);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(142, 139);
-            this.checkedListBox1.TabIndex = 26;
-            this.checkedListBox1.Visible = false;
-            // 
-            // checkedListBox2
-            // 
-            this.checkedListBox2.FormattingEnabled = true;
-            this.checkedListBox2.Items.AddRange(new object[] {
-            "Aventuras",
-            "Comedias",
-            "Dramáticas",
-            "Terror",
-            "Musicales",
-            "Ciencia Ficción",
-            "Guerra",
-            "Belicas",
-            "Culto",
-            "Clásicos",
-            "Mudas",
-            "Blanco y Negro",
-            "Acción",
-            "Oeste",
-            "Documentales",
-            "Anime",
-            "Independientes",
-            "Crimenes",
-            "Infantiles",
-            "Para Adultos",
-            "SuperHeroes",
-            "Gore",
-            "Cortos",
-            "Psicológicas",
-            "Suspenso",
-            "Romanticas"});
-            this.checkedListBox2.Location = new System.Drawing.Point(364, 319);
-            this.checkedListBox2.Name = "checkedListBox2";
-            this.checkedListBox2.Size = new System.Drawing.Size(142, 139);
-            this.checkedListBox2.TabIndex = 27;
-            this.checkedListBox2.Visible = false;
-            // 
-            // button18
-            // 
-            this.button18.Location = new System.Drawing.Point(622, 466);
-            this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(75, 23);
-            this.button18.TabIndex = 28;
-            this.button18.Text = "Cambiar";
-            this.button18.UseVisualStyleBackColor = true;
-            this.button18.Click += new System.EventHandler(this.button18_Click);
-            // 
-            // button19
-            // 
-            this.button19.Location = new System.Drawing.Point(541, 466);
-            this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(75, 23);
-            this.button19.TabIndex = 29;
-            this.button19.Text = "Atras";
-            this.button19.UseVisualStyleBackColor = true;
-            this.button19.Click += new System.EventHandler(this.button19_Click);
-            // 
-            // verPerfil
-            // 
-            this.verPerfil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.verPerfil.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.verPerfil.FlatAppearance.BorderSize = 0;
-            this.verPerfil.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
-            this.verPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.verPerfil.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.verPerfil.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.verPerfil.Location = new System.Drawing.Point(10, 177);
-            this.verPerfil.Name = "verPerfil";
-            this.verPerfil.Size = new System.Drawing.Size(136, 27);
-            this.verPerfil.TabIndex = 11;
-            this.verPerfil.Text = "Ver información";
-            this.verPerfil.UseVisualStyleBackColor = false;
-            this.verPerfil.Click += new System.EventHandler(this.verPerfil_Click_1);
-            // 
-            // panel24
-            // 
-            this.panel24.BackColor = System.Drawing.Color.Blue;
-            this.panel24.Location = new System.Drawing.Point(4, 177);
-            this.panel24.Name = "panel24";
-            this.panel24.Size = new System.Drawing.Size(10, 30);
-            this.panel24.TabIndex = 12;
-            // 
-            // panel25
-            // 
-            this.panel25.Controls.Add(this.mostrarCategorias);
-            this.panel25.Controls.Add(this.mostrarGustos);
-            this.panel25.Controls.Add(this.mostrarPrivacidad);
-            this.panel25.Controls.Add(this.mostrarNombre);
-            this.panel25.Controls.Add(this.label32);
-            this.panel25.Controls.Add(this.label31);
-            this.panel25.Controls.Add(this.label30);
-            this.panel25.Controls.Add(this.label29);
-            this.panel25.Controls.Add(this.button20);
-            this.panel25.Controls.Add(this.label28);
-            this.panel25.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel25.Location = new System.Drawing.Point(0, 0);
-            this.panel25.Name = "panel25";
-            this.panel25.Size = new System.Drawing.Size(700, 506);
-            this.panel25.TabIndex = 30;
-            this.panel25.Visible = false;
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Font = new System.Drawing.Font("Arial Black", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.ForeColor = System.Drawing.Color.Purple;
-            this.label28.Location = new System.Drawing.Point(126, 46);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(418, 38);
-            this.label28.TabIndex = 17;
-            this.label28.Text = "INFORMACIÓN DEL PERFIL";
-            // 
-            // button20
-            // 
-            this.button20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button20.Location = new System.Drawing.Point(563, 446);
-            this.button20.Name = "button20";
-            this.button20.Size = new System.Drawing.Size(125, 46);
-            this.button20.TabIndex = 18;
-            this.button20.Text = "Listo";
-            this.button20.UseVisualStyleBackColor = true;
-            this.button20.Click += new System.EventHandler(this.button20_Click);
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.ForeColor = System.Drawing.Color.Purple;
-            this.label29.Location = new System.Drawing.Point(44, 141);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(97, 24);
-            this.label29.TabIndex = 19;
-            this.label29.Text = "Nombre: ";
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.ForeColor = System.Drawing.Color.Purple;
-            this.label30.Location = new System.Drawing.Point(364, 144);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(119, 24);
-            this.label30.TabIndex = 20;
-            this.label30.Text = "Privacidad: ";
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label31.ForeColor = System.Drawing.Color.Purple;
-            this.label31.Location = new System.Drawing.Point(403, 207);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(179, 24);
-            this.label31.TabIndex = 21;
-            this.label31.Text = "Gustos musicales:";
-            // 
-            // label32
-            // 
-            this.label32.AutoSize = true;
-            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.ForeColor = System.Drawing.Color.Purple;
-            this.label32.Location = new System.Drawing.Point(39, 209);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(322, 24);
-            this.label32.TabIndex = 22;
-            this.label32.Text = "Categorias de peliculas favoritas: ";
-            // 
-            // mostrarNombre
-            // 
-            this.mostrarNombre.AutoSize = true;
-            this.mostrarNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mostrarNombre.ForeColor = System.Drawing.Color.DeepPink;
-            this.mostrarNombre.Location = new System.Drawing.Point(160, 141);
-            this.mostrarNombre.Name = "mostrarNombre";
-            this.mostrarNombre.Size = new System.Drawing.Size(97, 24);
-            this.mostrarNombre.TabIndex = 23;
-            this.mostrarNombre.Text = "Nombre: ";
-            // 
-            // mostrarPrivacidad
-            // 
-            this.mostrarPrivacidad.AutoSize = true;
-            this.mostrarPrivacidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mostrarPrivacidad.ForeColor = System.Drawing.Color.DeepPink;
-            this.mostrarPrivacidad.Location = new System.Drawing.Point(490, 144);
-            this.mostrarPrivacidad.Name = "mostrarPrivacidad";
-            this.mostrarPrivacidad.Size = new System.Drawing.Size(97, 24);
-            this.mostrarPrivacidad.TabIndex = 24;
-            this.mostrarPrivacidad.Text = "Nombre: ";
-            // 
-            // mostrarGustos
-            // 
-            this.mostrarGustos.Location = new System.Drawing.Point(84, 253);
-            this.mostrarGustos.Multiline = true;
-            this.mostrarGustos.Name = "mostrarGustos";
-            this.mostrarGustos.ReadOnly = true;
-            this.mostrarGustos.Size = new System.Drawing.Size(176, 186);
-            this.mostrarGustos.TabIndex = 25;
-            // 
-            // mostrarCategorias
-            // 
-            this.mostrarCategorias.Location = new System.Drawing.Point(411, 250);
-            this.mostrarCategorias.Multiline = true;
-            this.mostrarCategorias.Name = "mostrarCategorias";
-            this.mostrarCategorias.ReadOnly = true;
-            this.mostrarCategorias.Size = new System.Drawing.Size(176, 186);
-            this.mostrarCategorias.TabIndex = 26;
-            this.mostrarCategorias.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
-            // 
             // FormAplicacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2743,6 +2743,10 @@
             this.panelContenedorPincipal.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
+            this.panel23.ResumeLayout(false);
+            this.panel23.PerformLayout();
+            this.panel25.ResumeLayout(false);
+            this.panel25.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.e6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.e7)).EndInit();
@@ -2787,10 +2791,6 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panelSubMenuAjustes.ResumeLayout(false);
-            this.panel23.ResumeLayout(false);
-            this.panel23.PerformLayout();
-            this.panel25.ResumeLayout(false);
-            this.panel25.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -562,14 +562,14 @@ namespace Entrega_3.Paneles
             b3.Visible = false;
             b4.Visible = false;
 
-            /*
+            
             Image image1 = Image.FromFile(usuario.Profiles[0].PleasuresMusic[0] + h);
             pic12.Image = image1;
             Image image2 = Image.FromFile(usuario.Profiles[0].PleasuresMusic[1] + h);
             pic13.Image = image2;
             Image image3 = Image.FromFile(usuario.Profiles[0].PleasuresMusic[2] + h);
             pic14.Image = image3;
-            */
+            
  
         }
 
@@ -2239,7 +2239,7 @@ namespace Entrega_3.Paneles
             }
             else
             {
-
+                int error = 0;
                 if (textBox1.Text != "")
                 {
                     for (int a = 0; a < usuario.Profiles.Count; a++)
@@ -2263,94 +2263,133 @@ namespace Entrega_3.Paneles
                 }
                 if (checkedListBox1.CheckedItems.Count > 0)
                 {
-                    List<String> gustosMusica = new List<string>();
-
-                    for (int i = 0; i < gustosMusicales.Items.Count; i++)
+                    if (checkedListBox1.CheckedItems.Count >= 3)
                     {
-                        if (gustosMusicales.GetItemChecked(i) == true)
+                        List<string> nuevalista = new List<string>();
+                        // Eliminar todo de las listas
+                        
+                        for (int a = 0; a < usuario.Profiles.Count; a++)
                         {
-                            gustosMusica.Add(gustosMusicales.Items[i].ToString());
-
+                            if (usuario.Profiles[a].NameProfile == perfilCambiar.NameProfile)
+                            {
+                                usuario.Profiles[a].PleasuresMusic = nuevalista;
+                            }
                         }
+                        
+                        // Agregar a la lista
+                        
 
+                        for (int a = 0; a < usuario.Profiles.Count; a++)
+                        {
+                            if (usuario.Profiles[a].NameProfile == perfilCambiar.NameProfile)
+                            {
+                                for (int g = 0; g < checkedListBox1.Items.Count; g++)
+                                {
+                                    if (checkedListBox1.GetItemChecked(g) == true)
+                                    {
+                                        usuario.Profiles[a].PleasuresMusic.Add(checkedListBox1.Items[g].ToString());
 
+                                    }
+                                }
+
+                            }
+                        }
                     }
-
-                    for (int a = 0; a < usuario.Profiles.Count; a++)
+                    else
                     {
-                        if (usuario.Profiles[a].NameProfile == perfilCambiar.NameProfile)
-                        {
-                            usuario.Profiles[a].PleasuresMusic = gustosMusica;
-                        }
+                        MessageBox.Show("Debe seleccionar por lo menos 3 gustos musicales");
+                        error++;
                     }
+                
                 }
                 if (checkedListBox2.CheckedItems.Count > 0)
                 {
-                    List<String> gustosPelis = new List<string>();
-
-                    for (int i = 0; i < gustosPeliculas.Items.Count; i++)
+                    if (checkedListBox2.CheckedItems.Count >= 3)
                     {
-                        if (gustosPeliculas.GetItemChecked(i) == true)
+                        List<string> nuevalista2 = new List<string>();
+                        // Eliminar todo de las listas
+                        for (int a = 0; a < usuario.Profiles.Count; a++)
                         {
-                            gustosPelis.Add(gustosPeliculas.Items[i].ToString());
+                            if (usuario.Profiles[a].NameProfile == perfilCambiar.NameProfile)
+                            {
+                                usuario.Profiles[a].PleasuresMovies = nuevalista2;
 
+                            }
                         }
-
-
-                    }
-                    for (int a = 0; a < usuario.Profiles.Count; a++)
-                    {
-                        if (usuario.Profiles[a].NameProfile == perfilCambiar.NameProfile)
+                        // Agregar a la lista
+                        for (int a = 0; a < usuario.Profiles.Count; a++)
                         {
-                            usuario.Profiles[a].PleasuresMovies = gustosPelis;
+                            if (usuario.Profiles[a].NameProfile == perfilCambiar.NameProfile)
+                            {
+                                for (int g = 0; g < checkedListBox2.Items.Count; g++)
+                                {
+                                    if (checkedListBox2.GetItemChecked(g) == true)
+                                    {
+                                        usuario.Profiles[a].PleasuresMovies.Add(checkedListBox2.Items[g].ToString());
+
+                                    }
+                                }
+
+                            }
                         }
                     }
-
-                }
-                MessageBox.Show("Perfil cambiado");
-                //serializar
-                List<Clases.User> todosUsuarios = new List<Clases.User>();
-
-                List<Clases.User> deserializarUser = serializar.Deserialize<List<Clases.User>>(File.Open("data.bin", FileMode.Open));
-                if (deserializarUser.Count > 0)
-                {
-                    for (int c = 0; c < deserializarUser.Count; c++)
+                    else
                     {
-                        todosUsuarios.Add(deserializarUser[c]);
+                        MessageBox.Show("Debe ingresar por lo menos 3 categorias favoritas de peliculas");
+                        error++;
                     }
                 }
-                todosUsuarios.Add(usuario);
+                if (error == 0)
+                {
+                    MessageBox.Show("Perfil cambiado");
+                    //serializar
+                    List<Clases.User> todosUsuarios = new List<Clases.User>();
 
-                serializar.Serialize(todosUsuarios, File.Open("data.bin", FileMode.Create));
-                if (usuario.Profiles.Count == 1)
-                {
-                    label8.Text = usuario.Profiles[0].NameProfile;
+                    List<Clases.User> deserializarUser = serializar.Deserialize<List<Clases.User>>(File.Open("data.bin", FileMode.Open));
+                    if (deserializarUser.Count > 0)
+                    {
+                        for (int c = 0; c < deserializarUser.Count; c++)
+                        {
+                            todosUsuarios.Add(deserializarUser[c]);
+                        }
+                    }
+                    todosUsuarios.Add(usuario);
+
+                    serializar.Serialize(todosUsuarios, File.Open("data.bin", FileMode.Create));
+                    if (usuario.Profiles.Count == 1)
+                    {
+                        label8.Text = usuario.Profiles[0].NameProfile;
+                    }
+                    else if (usuario.Profiles.Count == 2)
+                    {
+                        label8.Text = usuario.Profiles[0].NameProfile;
+                        label9.Text = usuario.Profiles[1].NameProfile;
+                    }
+                    else if (usuario.Profiles.Count == 3)
+                    {
+                        label8.Text = usuario.Profiles[0].NameProfile;
+                        label9.Text = usuario.Profiles[1].NameProfile;
+                        label10.Text = usuario.Profiles[2].NameProfile;
+                    }
+                    else if (usuario.Profiles.Count == 4)
+                    {
+                        label8.Text = usuario.Profiles[0].NameProfile;
+                        label9.Text = usuario.Profiles[1].NameProfile;
+                        label10.Text = usuario.Profiles[2].NameProfile;
+                        label11.Text = usuario.Profiles[3].NameProfile;
+                    }
+                    panel23.Visible = false;
+                    panel6.Visible = false;
                 }
-                else if (usuario.Profiles.Count == 2)
+                else
                 {
-                    label8.Text = usuario.Profiles[0].NameProfile;
-                    label9.Text = usuario.Profiles[1].NameProfile;
+                    MessageBox.Show("Datos invalidos");
                 }
-                else if (usuario.Profiles.Count == 3)
-                {
-                    label8.Text = usuario.Profiles[0].NameProfile;
-                    label9.Text = usuario.Profiles[1].NameProfile;
-                    label10.Text = usuario.Profiles[2].NameProfile;
-                }
-                else if (usuario.Profiles.Count == 4)
-                {
-                    label8.Text = usuario.Profiles[0].NameProfile;
-                    label9.Text = usuario.Profiles[1].NameProfile;
-                    label10.Text = usuario.Profiles[2].NameProfile;
-                    label11.Text = usuario.Profiles[3].NameProfile;
-                }
+
+
                 
             }
-
-            
-            
-            panel23.Visible = false;
-            panel6.Visible = false;
+                
         }
 
         private void button13_Click(object sender, EventArgs e)

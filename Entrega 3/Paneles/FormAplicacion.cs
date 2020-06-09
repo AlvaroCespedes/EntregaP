@@ -2509,6 +2509,7 @@ namespace Entrega_3.Paneles
 
         private void button11_Click(object sender, EventArgs e)
         {
+            listBox3.Items.Clear();
             if (panel26.Visible == true)
             {
                 panel26.Visible = false;
@@ -2538,7 +2539,9 @@ namespace Entrega_3.Paneles
                         }
 
                     }
+
                 }
+                
                 
 
             }
@@ -2548,6 +2551,7 @@ namespace Entrega_3.Paneles
 
         private void button7_Click(object sender, EventArgs e)
         {
+            listBox3.Items.Clear();
             if (panel26.Visible == true)
             {
                 panel26.Visible = false;
@@ -2578,7 +2582,7 @@ namespace Entrega_3.Paneles
 
                     }
                 }
-
+                
 
             }
         }
@@ -2622,32 +2626,29 @@ namespace Entrega_3.Paneles
                 {
                     if (txtNombrePlaylist.Text != "" && comboPrivacidad.SelectedItem != null)
                     {
-                        if (comboPrivacidad.SelectedItem.ToString() == "Privado")
-                         
-                        //ALgo TIENE QUE IR AQUI xd
-                        
-
+                        if (usuario.Profiles[a].ProfileType == "Privado")
                         {
-                            if (comboPrivacidad.SelectedItem.ToString() == "Privado") { 
-                            privacidad = comboPrivacidad.SelectedItem.ToString();
-                            listaPlaylistCanciones.Privacidad = privacidad;
-                            usuario.Profiles[a].PlaylistCanciones.Add(listaPlaylistCanciones);
-                            MessageBox.Show("Playlist creada");
+                            if (comboPrivacidad.SelectedItem.ToString() == "Privado") 
+                            { 
+                                privacidad = comboPrivacidad.SelectedItem.ToString();
+                                listaPlaylistCanciones.Privacidad = privacidad;
+                                usuario.Profiles[a].PlaylistCanciones.Add(listaPlaylistCanciones);
+                                MessageBox.Show("Playlist creada");
                        
-                            txtNombrePlaylist.Text = "";
-                            List<Clases.User> todosUsuarios = new List<Clases.User>();
+                                txtNombrePlaylist.Text = "";
+                                List<Clases.User> todosUsuarios = new List<Clases.User>();
 
-                            List<Clases.User> deserializarUser = serializar.Deserialize<List<Clases.User>>(File.Open("data.bin", FileMode.Open));
-                            if (deserializarUser.Count > 0)
-                            {
-                                for (int c = 0; c < deserializarUser.Count; c++)
+                                List<Clases.User> deserializarUser = serializar.Deserialize<List<Clases.User>>(File.Open("data.bin", FileMode.Open));
+                                if (deserializarUser.Count > 0)
                                 {
-                                    todosUsuarios.Add(deserializarUser[c]);
+                                    for (int c = 0; c < deserializarUser.Count; c++)
+                                    {
+                                        todosUsuarios.Add(deserializarUser[c]);
+                                    }
                                 }
-                            }
-                            todosUsuarios.Add(usuario);
+                                todosUsuarios.Add(usuario);
 
-                            serializar.Serialize(todosUsuarios, File.Open("data.bin", FileMode.Create));
+                                serializar.Serialize(todosUsuarios, File.Open("data.bin", FileMode.Create));
                             }
                             else
                             {
@@ -2687,78 +2688,8 @@ namespace Entrega_3.Paneles
                     {
                         MessageBox.Show("Rellene todos los datos");
                     }
-                }
-
-
-
-
-                else
-
-                    {
-                    //Algo.
-                    privacidad = comboPrivacidad.SelectedItem.ToString();
-                     }
-                
-                
+                }                
             }
-          
-            /*
-            int error = 0;
-            string privacidad;
-            string nombre = txtNombrePlaylist.Text;
-            PlaylistSpotifai listaPlaylistCanciones = new PlaylistSpotifai();
-            listaPlaylistCanciones.Nombre = nombre;
-            List<SongClass> cancionesPlaylist = new List<SongClass>();
-            listaPlaylistCanciones.CancionesPlaylist = cancionesPlaylist;
-            
-            
-            for (int a = 0; a < usuario.Profiles.Count(); a ++) //Sirve para relacionar el usuairo con el perfil actual.
-            {
-                if (usuario.Profiles[a].NameProfile == perfilActual.NameProfile)
-                {
-                    usuario.Profiles[a].PlaylistCanciones.Add(listaPlaylistCanciones);
-                    if ( usuario.Profiles[a].ProfileType == "Privado")
-                    {
-                        if (comboPrivacidad.SelectedItem.ToString() == "Privado")
-                        {
-                            //ALgo TIENE QUE IR AQUI xd
-
-                            privacidad = comboPrivacidad.SelectedItem.ToString();
-                            listaPlaylistCanciones.Privacidad = privacidad;
-                            usuario.Profiles[a].PlaylistCanciones.Add(listaPlaylistCanciones);
-                            MessageBox.Show("Playlist Creada.");
-                            panel26.Visible = false;
-                        }
-                        else
-                        {
-                            MessageBox.Show("Su perfil es privado, solo puede tener listas privadas.");
-                            error ++;
-                        }
-                    }
-                    else
-                    {
-                        //Algo.
-                        privacidad = comboPrivacidad.SelectedItem.ToString();
-                    }
-                }
-
-            }
-            if ( error == 0)
-            {
-                List<Clases.User> todosUsuarios = new List<Clases.User>();
-
-                List<Clases.User> deserializarUser = serializar.Deserialize<List<Clases.User>>(File.Open("data.bin", FileMode.Open));
-                if (deserializarUser.Count > 0)
-                {
-                    for (int c = 0; c < deserializarUser.Count; c++)
-                    {
-                        todosUsuarios.Add(deserializarUser[c]);
-                    }
-                }
-                todosUsuarios.Add(usuario);
-
-                serializar.Serialize(todosUsuarios, File.Open("data.bin", FileMode.Create));
-            }*/
         }
             
         //CREAR PLAYLIST VIDEOS:.-----------------------------
@@ -2777,19 +2708,49 @@ namespace Entrega_3.Paneles
                 if (usuario.Profiles[a].NameProfile == perfilActual.NameProfile)
                 {
                     if (txtNombrePlaylist.Text != "" && comboPrivacidad.SelectedItem != null)
-
                     {
+                        if (usuario.Profiles[a].ProfileType == "Privado")
+                        {
+
+                            if (comboPrivacidad.SelectedItem.ToString() == "Privado")
+                            {
 
 
-                        if (comboPrivacidad.SelectedItem.ToString() == "Privado")
-                    {
-                        //ALgo TIENE QUE IR AQUI xd
-                       
                                 privacidad = comboPrivacidad.SelectedItem.ToString();
+                                listaPlaylistvideos.Privacidad = privacidad;
+                                usuario.Profiles[a].PlaylistVideos.Add(listaPlaylistvideos);
+                                MessageBox.Show("Playlist creada");
+
+                                txtNombrePlaylist.Text = "";
+                                List<Clases.User> todosUsuarios = new List<Clases.User>();
+
+                                List<Clases.User> deserializarUser = serializar.Deserialize<List<Clases.User>>(File.Open("data.bin", FileMode.Open));
+                                if (deserializarUser.Count > 0)
+                                {
+                                    for (int c = 0; c < deserializarUser.Count; c++)
+                                    {
+                                        todosUsuarios.Add(deserializarUser[c]);
+                                    }
+                                }
+                                todosUsuarios.Add(usuario);
+
+                                serializar.Serialize(todosUsuarios, File.Open("data.bin", FileMode.Create));
+                            }
+
+                            else
+
+                            {
+                                MessageBox.Show("Su perfil es privado, solo puede tener listas privadas.");
+                                error++;
+                            }
+                        }
+                        else
+                        {
+                            privacidad = comboPrivacidad.SelectedItem.ToString();
                             listaPlaylistvideos.Privacidad = privacidad;
                             usuario.Profiles[a].PlaylistVideos.Add(listaPlaylistvideos);
                             MessageBox.Show("Playlist creada");
-                        
+
                             txtNombrePlaylist.Text = "";
                             List<Clases.User> todosUsuarios = new List<Clases.User>();
 
@@ -2806,13 +2767,6 @@ namespace Entrega_3.Paneles
                             serializar.Serialize(todosUsuarios, File.Open("data.bin", FileMode.Create));
                         }
 
-                        else
-
-                        {
-                            MessageBox.Show("Su perfil es privado, solo puede tener listas privadas.");
-                            error++;
-                        }
-
                     }
                     else
                     {
@@ -2820,18 +2774,12 @@ namespace Entrega_3.Paneles
                        
                     }
                 }
-                else
-                {
-                    //Algo.
-                    privacidad = comboPrivacidad.SelectedItem.ToString();
-                }
             }
-           
         }
 
         private void listBox3_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            //Mostrar la informacion d ela playlist
         }
     }
 }

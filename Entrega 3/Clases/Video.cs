@@ -81,7 +81,7 @@ namespace Entrega_3.Clases
         public override string ToString()
         {
             Console.WriteLine("ACa puede ver el titulo del video, el director, el genero al que pertenece, año de publicacion, duracion, meoria, estudio de grabacion y su palabra clave. ");
-            return Title + ": " + Director.Name + ": " + Gender + ": " + PublicationYear + ": " + Duration + ": " + Memory + ": " + Study + ": " + Keyword;
+            return Title + " " + Director.Name + " " + Gender + " " + PublicationYear + " " + Duration + " " + Memory + " " + Study + " " + Keyword;
         }
 
     }

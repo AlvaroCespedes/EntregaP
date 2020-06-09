@@ -227,6 +227,8 @@
             this.b14 = new System.Windows.Forms.Button();
             this.b15 = new System.Windows.Forms.Button();
             this.b16 = new System.Windows.Forms.Button();
+            this.comboPrivacidad = new System.Windows.Forms.ComboBox();
+            this.label35 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnVolverNormalidad)).BeginInit();
@@ -678,6 +680,8 @@
             // panel26
             // 
             this.panel26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.panel26.Controls.Add(this.label35);
+            this.panel26.Controls.Add(this.comboPrivacidad);
             this.panel26.Controls.Add(this.button22);
             this.panel26.Controls.Add(this.button21);
             this.panel26.Controls.Add(this.txtNombrePlaylist);
@@ -766,10 +770,10 @@
             this.panel6.Controls.Add(this.NumLike);
             this.panel6.Controls.Add(this.manito);
             this.panel6.Controls.Add(this.Reproductor2);
-            this.panel6.Location = new System.Drawing.Point(267, 556);
+            this.panel6.Location = new System.Drawing.Point(267, 528);
             this.panel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(261, 67);
+            this.panel6.Size = new System.Drawing.Size(252, 95);
             this.panel6.TabIndex = 36;
             this.panel6.Visible = false;
             // 
@@ -2930,6 +2934,28 @@
             this.b16.Visible = false;
             this.b16.Click += new System.EventHandler(this.b16_Click);
             // 
+            // comboPrivacidad
+            // 
+            this.comboPrivacidad.FormattingEnabled = true;
+            this.comboPrivacidad.Items.AddRange(new object[] {
+            "Público",
+            "Privado"});
+            this.comboPrivacidad.Location = new System.Drawing.Point(173, 136);
+            this.comboPrivacidad.Name = "comboPrivacidad";
+            this.comboPrivacidad.Size = new System.Drawing.Size(169, 24);
+            this.comboPrivacidad.TabIndex = 30;
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label35.ForeColor = System.Drawing.Color.White;
+            this.label35.Location = new System.Drawing.Point(15, 141);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(91, 19);
+            this.label35.TabIndex = 31;
+            this.label35.Text = "Privacidad";
+            // 
             // FormAplicacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -3246,5 +3272,7 @@
         private System.Windows.Forms.TextBox txtNombrePlaylist;
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.ComboBox comboPrivacidad;
     }
 }

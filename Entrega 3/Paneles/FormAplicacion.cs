@@ -1235,29 +1235,17 @@ namespace Entrega_3.Paneles
         private void listCanciones_SelectedIndexChanged(object sender, EventArgs e)
         {
 
-
-
-            
-
-
-
-            /*
-            foreach (SongClass x in canciones)
+            string answer = listCanciones.SelectedItem.ToString();
+            string[] listaStr = answer.Split(' ');
+            foreach(SongClass x in canciones)
             {
-                int startIndex = x.Format.Length - 4;
-                int final = 4;
-                String substring = x.Format.Substring(startIndex, final);
-                if (substring == ".mp3")
+                if ( x.Title == listaStr[0])
                 {
-                    Reproductor.URL = canciones[listCanciones.SelectedIndex].Url;
-                }
-                else
-                {
-                    Reproductor.URL = videos[listCanciones.SelectedIndex].Url;
+                    Reproductor.URL = x.Url;
                 }
             }
-            */
-            
+
+
         }
 
         private void Adjuntar_Click(object sender, EventArgs e)

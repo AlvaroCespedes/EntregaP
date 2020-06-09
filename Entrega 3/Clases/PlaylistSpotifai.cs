@@ -5,38 +5,30 @@ namespace Entrega_3.Clases
 {
     public class PlaylistSpotifai
     {
-        private string typeFile;
-        public List<string> Playlist;
-        public List<string> PlaylistFav;
+        private List<SongClass> cancionesPlaylist;
+        private string privacidad;
 
         //Agregadas Alvaro
         private string nombre; //nombre de la playlist creada
 
         public string Nombre { get => nombre; set => nombre = value; }
+        public List<SongClass> CancionesPlaylist { get => cancionesPlaylist; set => cancionesPlaylist = value; }
+        public string Privacidad { get => privacidad; set => privacidad = value; }
 
-        public PlaylistSpotifai(string file, string nombre)
+        public PlaylistSpotifai(string nombre, List<SongClass> cancionesPlaylist, string privacidad)
         {
             this.nombre = nombre;
-            this.typeFile = file;
-            Playlist = new List<string>();
-            PlaylistFav = new List<string>();
+            this.CancionesPlaylist = cancionesPlaylist;
+            this.Privacidad = privacidad;
         }
 
-        public bool AddPlaylist()
+        public PlaylistSpotifai()
         {
-            return true;
         }
-        public bool AddPlaylistFav()
-        {
-            return true;
-        }
-        public bool AddQueu()
-        {
-            return true;
-        }
+
         public override string ToString()
         {
-            return nombre;
+            return Nombre+":" + Privacidad;
         }
     }
 }

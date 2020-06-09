@@ -6,35 +6,29 @@ namespace Entrega_3.Clases
 {
     public class PlaylistVideoEmptyClass
     {
-        private string typeFile;
-        private string namePlaylist;
-        private List<Video> playlist;
-        private List<Video> playlistFav;
 
-        public PlaylistVideoEmptyClass(string typeFile, List<Video> playlist, List<Video> playlistFav, string namePlaylist)
+        private string name;
+        private List<Video> videosPlaylist;
+        private string privacidad;
+
+        public PlaylistVideoEmptyClass(string name, List<Video> videosPlaylist, string privacidad)
         {
-            this.TypeFile = typeFile;
-            Playlist = playlist;
-            PlaylistFav = playlistFav;
-            this.NamePlaylist = namePlaylist;
+            this.Name = name;
+            this.VideosPlaylist = videosPlaylist;
+            this.Privacidad = privacidad;
+        }
+        public PlaylistVideoEmptyClass()
+        {
+
         }
 
-        public string TypeFile { get => typeFile; set => typeFile = value; }
-        public List<Video> Playlist { get => playlist; set => playlist = value; }
-        public List<Video> PlaylistFav { get => playlistFav; set => playlistFav = value; }
-        public string NamePlaylist { get => namePlaylist; set => namePlaylist = value; }
+        public string Name { get => name; set => name = value; }
+        public List<Video> VideosPlaylist { get => videosPlaylist; set => videosPlaylist = value; }
+        public string Privacidad { get => privacidad; set => privacidad = value; }
 
-        public bool AddPlaylist()
+        public override string ToString()
         {
-            return true;
-        }
-        public bool AddPlaylistFav()
-        {
-            return true;
-        }
-        public bool AddQueu()
-        {
-            return true;
+            return Name + ":" + Privacidad;
         }
     }
 }

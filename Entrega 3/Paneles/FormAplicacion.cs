@@ -75,6 +75,14 @@ namespace Entrega_3.Paneles
         //hasta aqui
         Clases.User usuario = new Clases.User();
         Clases.Serialization serializar = new Clases.Serialization();
+
+        //Playlist del perfil.
+        List<Video> playlistFavoritasVideos = new List<Video>();
+        List<SongClass> playlistFavoritasCanciones = new List<SongClass>();
+        List<PlaylistSpotifai> playlistCanciones = new List<PlaylistSpotifai>();
+        List<PlaylistVideoEmptyClass> playlistVideos = new List<PlaylistVideoEmptyClass>();
+
+
         string TipoCuenta;
         public FormAplicacion(Clases.User user)
         {
@@ -806,7 +814,7 @@ namespace Entrega_3.Paneles
 
                 }
                 List<Clases.User> todosUsuarios = new List<Clases.User>();
-                Clases.Profile perfil = new Clases.Profile(nomPerfil.Text, privacidadPerfil.SelectedItem.ToString(), gustosMusica, gustosPelis);
+                Clases.Profile perfil = new Clases.Profile(nomPerfil.Text, privacidadPerfil.SelectedItem.ToString(), gustosMusica, gustosPelis,playlistCanciones,playlistVideos,playlistFavoritasCanciones,playlistFavoritasVideos);
                 usuario.Profiles.Add(perfil);
 
                 List<Clases.User> deserializarUser = serializar.Deserialize<List<Clases.User>>(File.Open("data.bin", FileMode.Open));
@@ -1849,8 +1857,8 @@ namespace Entrega_3.Paneles
                     Album album123 = new Album(album12, "gender", "producer", singer, date);
 
                     //Preguntarle al pefil si quiere rellenar los datos de Singer y Album
-
-                    SongClass ob = new SongClass(gender, publicationYear, title, 123, 123, study, keyWord, composer, singer123, album123, ArchivoMP3, 123, 123, rutaArchivoMP3,0,0);
+                    double duration123 = Reproductor.Ctlcontrols.currentItem.duration;
+                    SongClass ob = new SongClass(gender, publicationYear, title, duration123, 123, study, keyWord, composer, singer123, album123, ArchivoMP3, 123, 123, rutaArchivoMP3,0,0);
                     //Deserializando
 
                     List<SongClass> songAux = new List<SongClass>();
@@ -1899,8 +1907,9 @@ namespace Entrega_3.Paneles
 
                     Actor Mactor123 = new Actor("name4", 22, actor, "gender4", "nationality4", "Ocupacion4", videos, premios, 22);
                     Director d123 = new Director(director, 22, "LastD", "gender", "nationality", "ocupation", videos, premios, 22);
+                    double duration123 = Reproductor.Ctlcontrols.currentItem.duration; //SOn segundos
 
-                    Video ob2 = new Video(gender, publicationYear, title, 123, 123, study, keyWord, description, Mactor123, d123, ArchivoMP3, 123, 123, rutaArchivoMP3,0,0);
+                    Video ob2 = new Video(gender, publicationYear, title, duration123, 123, study, keyWord, description, Mactor123, d123, ArchivoMP3, 123, 123, rutaArchivoMP3,0,0);
 
                     //videos123.Add(ob2);
                     List<Video> videoAux = new List<Video>();
@@ -2525,6 +2534,68 @@ namespace Entrega_3.Paneles
         private void label12_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void panel26_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+        //CREAR MUSICA PLAYLIST ----------------------------------------
+        private void button21_Click(object sender, EventArgs e) 
+        {
+            string nombre = txtNombrePlaylist.Text;
+            PlaylistSpotifai listaPlaylistCanciones = new PlaylistSpotifai();
+            listaPlaylistCanciones.Nombre = nombre;
+            List<SongClass> cancionesPlaylist = new List<SongClass>();
+            listaPlaylistCanciones.CancionesPlaylist = cancionesPlaylist;
+            for (int a = 0; a < usuario.Profiles.Count(); a ++) //Sirve para relacionar el usuairo con el perfil actual.
+            {
+                if (usuario.Profiles[a].NameProfile == perfilActual.NameProfile)
+                {
+                    usuario.Profiles[a].PlaylistCanciones.Add(listaPlaylistCanciones);
+                }
+            }
+            List<Clases.User> todosUsuarios = new List<Clases.User>();
+
+            List<Clases.User> deserializarUser = serializar.Deserialize<List<Clases.User>>(File.Open("data.bin", FileMode.Open));
+            if (deserializarUser.Count > 0)
+            {
+                for (int c = 0; c < deserializarUser.Count; c++)
+                {
+                    todosUsuarios.Add(deserializarUser[c]);
+                }
+            }
+            todosUsuarios.Add(usuario);
+
+            serializar.Serialize(todosUsuarios, File.Open("data.bin", FileMode.Create));
+        }
+
+        private void button22_Click(object sender, EventArgs e) //CREAR PLAYLIST VIDEO
+        {
+            string nombre = txtNombrePlaylist.Text;
+            PlaylistVideoEmptyClass listaPlaylistvideos = new PlaylistVideoEmptyClass();
+            listaPlaylistvideos.Name = nombre;
+            List<Video> videosPlaylist = new List<Video>();
+            listaPlaylistvideos.VideosPlaylist = videosPlaylist;
+            for (int a = 0; a < usuario.Profiles.Count(); a++) //Sirve para relacionar el usuairo con el perfil actual.
+            {
+                if (usuario.Profiles[a].NameProfile == perfilActual.NameProfile)
+                {
+                    usuario.Profiles[a].PlaylistVideos.Add(listaPlaylistvideos);
+                }
+            }
+            List<Clases.User> todosUsuarios = new List<Clases.User>();
+            List<Clases.User> deserializarUser = serializar.Deserialize<List<Clases.User>>(File.Open("data.bin", FileMode.Open));
+            if (deserializarUser.Count > 0)
+            {
+                for (int c = 0; c < deserializarUser.Count; c++)
+                {
+                    todosUsuarios.Add(deserializarUser[c]);
+                }
+            }
+            todosUsuarios.Add(usuario);
+
+            serializar.Serialize(todosUsuarios, File.Open("data.bin", FileMode.Create));
         }
     }
 }

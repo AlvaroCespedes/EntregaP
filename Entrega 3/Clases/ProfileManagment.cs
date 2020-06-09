@@ -374,10 +374,10 @@ namespace Entrega_3.Clases
 
             }
 
-            Profile per = new Profile(nombre, tipoperfil, gustosMusica, gustosPeliculas);
+            //Profile per = new Profile(nombre, tipoperfil, gustosMusica, gustosPeliculas);
 
             Console.WriteLine("Agregando perfil...");
-            profiles.Add(per);
+            //profiles.Add(per);
             Thread.Sleep(2000);
             Console.WriteLine("Perfil agregado");
             return true;

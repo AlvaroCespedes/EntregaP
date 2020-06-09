@@ -17,7 +17,7 @@ namespace Entrega_3.Clases
         private string gender;
         private string publicationYear;
         private string title;
-        private int duration;
+        private double duration;
         private int memory;
         private string study;
         private string keyword;
@@ -30,7 +30,7 @@ namespace Entrega_3.Clases
         private int likes;
 
         public Video(string gender, string publicationYear,
-                     string title, int duration, int memory, string study, string keyword,
+                     string title, double duration, int memory, string study, string keyword,
                      string description, Actor mainActor, Director director, string format, int evaluation, int resolution, string url, int nReproduction, int likes)
         {
             this.Gender = gender; // Listo
@@ -64,7 +64,7 @@ namespace Entrega_3.Clases
         public string Gender { get => gender; set => gender = value; }
         public string PublicationYear { get => publicationYear; set => publicationYear = value; }
         public string Title { get => title; set => title = value; }
-        public int Duration { get => duration; set => duration = value; }
+        public double Duration { get => duration; set => duration = value; }
         public int Memory { get => memory; set => memory = value; }
         public string Study { get => study; set => study = value; }
         public string Keyword { get => keyword; set => keyword = value; }

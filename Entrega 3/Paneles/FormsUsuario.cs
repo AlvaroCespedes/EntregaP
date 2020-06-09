@@ -16,6 +16,8 @@ namespace Entrega_3.Paneles
     {
         Clases.User usuario = new Clases.User();
         Clases.Serialization serializar = new Clases.Serialization();
+
+
         
         public FormsUsuario(Clases.User user)
         {
@@ -615,8 +617,8 @@ namespace Entrega_3.Paneles
 
                 }
                 List<Clases.User> todosUsuarios = new List<Clases.User>();
-                Clases.Profile perfil = new Clases.Profile(nomPerfil.Text,privacidadPerfil.SelectedItem.ToString(),gustosMusica,gustosPelis);
-                usuario.Profiles.Add(perfil);
+                //Clases.Profile perfil = new Clases.Profile(nomPerfil.Text,privacidadPerfil.SelectedItem.ToString(),gustosMusica,gustosPelis);
+                //usuario.Profiles.Add(perfil);
 
                 List<Clases.User> deserializarUser = serializar.Deserialize<List<Clases.User>>(File.Open("data.bin", FileMode.Open));
                 if (deserializarUser.Count > 0)

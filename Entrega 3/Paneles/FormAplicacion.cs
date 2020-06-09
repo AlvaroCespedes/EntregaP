@@ -1234,27 +1234,38 @@ namespace Entrega_3.Paneles
 
         private void listCanciones_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(listCanciones.SelectedItem.ToString() != "")
+            
+            try
+                
             {
-                string answer = listCanciones.SelectedItem.ToString();
-                string[] listaStr = answer.Split(' ');
-                foreach (SongClass x in canciones)
-                {
-                    if (x.Title == listaStr[0])
+                if (listCanciones.SelectedItem != null) 
+                { 
+                    string answer = listCanciones.SelectedItem.ToString();
+                    string[] listaStr = answer.Split(' ');
+                    foreach (SongClass x in canciones)
                     {
-                        Reproductor.URL = x.Url;
+                        if (x.Title == listaStr[0])
+                        {
+                            Reproductor.URL = x.Url;
+                        }
+                    }
+                    foreach(Video x in videos)
+                    {
+                        if (x.Title == listaStr[0])
+                        {
+                            Reproductor.URL = x.Url;
+                            //MATI AQUI TIENE SE TIENE QUE ABRIR UN PANEL
+                        }
                     }
                 }
-                foreach(Video x in videos)
+                else
                 {
-                    if (x.Title == listaStr[0])
-                    {
-                        Reproductor.URL = x.Url;
-                        //MATI AQUI TIENE SE TIENE QUE ABRIR UN PANEL
-                    }
+                    MessageBox.Show("Debe seleccionar un item ");
                 }
+
             }
-            else
+
+            catch(System.NullReferenceException)
             {
                 MessageBox.Show("Debe seleccionar un item.");
             }

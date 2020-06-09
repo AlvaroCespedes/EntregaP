@@ -4,6 +4,7 @@ using System.Threading;
 
 namespace Entrega_3.Clases
 {
+    [Serializable]
     public class PlaylistVideoEmptyClass
     {
 

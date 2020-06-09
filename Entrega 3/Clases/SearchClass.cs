@@ -6,6 +6,7 @@ namespace Entrega_3.Clases
 //probando denuevo en conjunto
 //sodsojdaofsojaa
 {
+    [Serializable]
     public class SearchClass
     {
         //Lo cambie a void (AS)

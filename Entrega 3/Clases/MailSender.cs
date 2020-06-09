@@ -5,6 +5,7 @@ using System.Threading;
 
 namespace Entrega_3.Clases
 {
+    [Serializable]
     public class MailSender
     {
         public void OnRegistered(object source, RegisterEventArgs e)

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Threading;
 namespace Entrega_3.Clases
 {
+    [Serializable]
     public class Server
     {
         private List<User> usersList = new List<User>();

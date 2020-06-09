@@ -2609,6 +2609,7 @@ namespace Entrega_3.Paneles
         //CREAR MUSICA PLAYLIST ----------------------------------------
         private void button21_Click(object sender, EventArgs e) 
         {
+
             int error = 0;
             string privacidad;
             string nombre = txtNombrePlaylist.Text;
@@ -2630,6 +2631,8 @@ namespace Entrega_3.Paneles
                             privacidad = comboPrivacidad.SelectedItem.ToString();
                             listaPlaylistCanciones.Privacidad = privacidad;
                             usuario.Profiles[a].PlaylistCanciones.Add(listaPlaylistCanciones);
+                            MessageBox.Show("Playlist Creada.");
+                            panel26.Visible = false;
                         }
                         else
                         {
@@ -2713,6 +2716,11 @@ namespace Entrega_3.Paneles
 
                 serializar.Serialize(todosUsuarios, File.Open("data.bin", FileMode.Create));
             }
+        }
+
+        private void listBox3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

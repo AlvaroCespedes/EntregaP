@@ -27,7 +27,6 @@ C:\Users\matistark\Desktop\EntregaP\Entrega 3\obj\Debug\Entrega_3.Paneles.FormAp
 C:\Users\anton\Desktop\EntregaP\Entrega 3\obj\Debug\Entrega_3.Paneles.FormAplicacion.resources
 C:\Users\alvar\Desktop\EntregaP\Entrega 3\obj\Debug\Entrega 3.csprojAssemblyReference.cache
 C:\Users\alvar\Desktop\EntregaP\Entrega 3\obj\Debug\Entrega_3.Paneles.FormAplicacion.resources
-C:\Users\alvar\Desktop\EntregaP\Entrega 3\obj\Debug\Entrega_3.Paneles.FormsUsuario.resources
 C:\Users\alvar\Desktop\EntregaP\Entrega 3\obj\Debug\Entrega_3.Paneles.guardarpaneles.resources
 C:\Users\alvar\Desktop\EntregaP\Entrega 3\obj\Debug\Entrega_3.Form1.resources
 C:\Users\alvar\Desktop\EntregaP\Entrega 3\obj\Debug\Entrega_3.Paneles.FormsRegistro.resources

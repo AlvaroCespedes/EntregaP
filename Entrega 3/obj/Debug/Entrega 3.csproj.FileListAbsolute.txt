@@ -15,7 +15,6 @@ C:\Users\matistark\Desktop\EntregaP\Entrega 3\bin\Debug\Entrega 3.exe.config
 C:\Users\matistark\Desktop\EntregaP\Entrega 3\bin\Debug\Entrega 3.exe
 C:\Users\matistark\Desktop\EntregaP\Entrega 3\bin\Debug\Entrega 3.pdb
 C:\Users\matistark\Desktop\EntregaP\Entrega 3\obj\Debug\Entrega 3.csprojAssemblyReference.cache
-C:\Users\matistark\Desktop\EntregaP\Entrega 3\obj\Debug\Entrega_3.Paneles.FormsUsuario.resources
 C:\Users\matistark\Desktop\EntregaP\Entrega 3\obj\Debug\Entrega_3.Paneles.guardarpaneles.resources
 C:\Users\matistark\Desktop\EntregaP\Entrega 3\obj\Debug\Entrega_3.Form1.resources
 C:\Users\matistark\Desktop\EntregaP\Entrega 3\obj\Debug\Entrega_3.Paneles.FormsRegistro.resources

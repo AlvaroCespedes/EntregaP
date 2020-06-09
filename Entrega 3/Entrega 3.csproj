@@ -75,12 +75,6 @@
     <Compile Include="Paneles\FormAplicacion.Designer.cs">
       <DependentUpon>FormAplicacion.cs</DependentUpon>
     </Compile>
-    <Compile Include="Paneles\FormsUsuario.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Paneles\FormsUsuario.Designer.cs">
-      <DependentUpon>FormsUsuario.cs</DependentUpon>
-    </Compile>
     <Compile Include="Paneles\guardarpaneles.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,9 +97,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Paneles\FormAplicacion.resx">
       <DependentUpon>FormAplicacion.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Paneles\FormsUsuario.resx">
-      <DependentUpon>FormsUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Paneles\guardarpaneles.resx">
       <DependentUpon>guardarpaneles.cs</DependentUpon>

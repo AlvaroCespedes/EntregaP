@@ -1700,6 +1700,9 @@ namespace Entrega_3.Paneles
                             e8.Visible = true;
                             e9.Visible = true;
                             e10.Visible = true;
+                            panel27.Visible = false;
+                            panel25.Visible = false;
+                            panel23.Visible = false;
                         }
                     }
                     foreach(Video x in videos)
@@ -2017,6 +2020,9 @@ namespace Entrega_3.Paneles
         private void pictureBox2_Click_1(object sender, EventArgs e)
         {
             panel6.Visible = true;
+            panel27.Visible = false;
+            panel25.Visible = false;
+            panel23.Visible = false;
         }
 
         private void NumLike_Click(object sender, EventArgs e)
@@ -2445,6 +2451,7 @@ namespace Entrega_3.Paneles
 
         private void verPerfil_Click_1(object sender, EventArgs e)
         {
+            panel27.Visible = false;
             mostrarGustos.Clear();
             mostrarCategorias.Clear();
             panel6.Visible = true; 
@@ -2506,6 +2513,36 @@ namespace Entrega_3.Paneles
             {
                 panel26.Visible = false;
             }
+            else
+            {
+                panel6.Visible = true;
+                panel23.Visible = true;
+                panel25.Visible = true;
+                panel27.Visible = true;
+                
+                for (int a = 0; a < usuario.Profiles.Count(); a++)
+                {
+
+                    if (usuario.Profiles[a].NameProfile == perfilActual.NameProfile) 
+                    {
+                        if (usuario.Profiles[a].PlaylistCanciones.Count()>0) 
+                        { 
+                             for (int b = 0; b < usuario.Profiles[a].PlaylistCanciones.Count();b++)
+                                 {
+                                      listBox3.Items.Add(usuario.Profiles[a].PlaylistCanciones[b].Nombre);
+                                 }
+                        }
+                        else
+                        {
+                            MessageBox.Show("La playlist no contiene canciones");
+                        }
+
+                    }
+                }
+                
+
+            }
+        
 
         }
 
@@ -2514,6 +2551,35 @@ namespace Entrega_3.Paneles
             if (panel26.Visible == true)
             {
                 panel26.Visible = false;
+            }
+            else
+            {
+                panel6.Visible = true;
+                panel23.Visible = true;
+                panel25.Visible = true;
+                panel27.Visible = true;
+
+                for (int a = 0; a < usuario.Profiles.Count(); a++)
+                {
+
+                    if (usuario.Profiles[a].NameProfile == perfilActual.NameProfile)
+                    {
+                        if (usuario.Profiles[a].PlaylistVideos.Count() > 0)
+                        {
+                            for (int b = 0; b < usuario.Profiles[a].PlaylistVideos.Count(); b++)
+                            {
+                                listBox3.Items.Add(usuario.Profiles[a].PlaylistVideos[b].Name);
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("La playlist no contiene canciones");
+                        }
+
+                    }
+                }
+
+
             }
         }
 

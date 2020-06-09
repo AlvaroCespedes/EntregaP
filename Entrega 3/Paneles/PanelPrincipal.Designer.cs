@@ -73,7 +73,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(514, 490);
+            this.button3.Location = new System.Drawing.Point(580, 485);
             this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(71, 20);
@@ -81,6 +81,7 @@
             this.button3.Text = " salir";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.button3.MouseEnter += new System.EventHandler(this.button3_MouseEnter);
             // 
             // label1
             // 

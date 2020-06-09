@@ -822,35 +822,29 @@ namespace Entrega_3.Paneles
         private void button2_Click_2(object sender, EventArgs e)
         {
             panelPrincipal1.Visible = true;
-            panelMenuIzquierda.Visible = true;
+            //panelMenuIzquierda.Visible = true;
         }
 
         private void button1_Click_3(object sender, EventArgs e)
         {
             panelPrincipal1.Visible = true;
-            panelMenuIzquierda.Visible = true;
+            //panelMenuIzquierda.Visible = true;
             panelReproducotorAbajo.Visible = true;
         }
 
         private void button3_Click_1(object sender, EventArgs e)
         {
             panelPrincipal1.Visible = true;
-            panelMenuIzquierda.Visible = true;
+            //panelMenuIzquierda.Visible = true;
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             panelPrincipal1.Visible = true;
-            panelMenuIzquierda.Visible = true;
+            //panelMenuIzquierda.Visible = true;
         }
 
-        private void btnPlaylistVideo_Click(object sender, EventArgs e)
-        {
-            if (panelSubMenuAjustes.Visible == true)
-            {
-                panelSubMenuAjustes.Visible = false;
-            }
-        }
+        
     }
 }
 

@@ -80,27 +80,6 @@
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.btnPlay = new System.Windows.Forms.PictureBox();
-            this.panelMenuIzquierda = new System.Windows.Forms.Panel();
-            this.panelSubMenuAjustes = new System.Windows.Forms.Panel();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.btnCambiarPerfil = new System.Windows.Forms.Button();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.btnOtro = new System.Windows.Forms.Button();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.btnCambiarContraseña = new System.Windows.Forms.Button();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.btnCambiarPlan = new System.Windows.Forms.Button();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.button8 = new System.Windows.Forms.Button();
-            this.label12 = new System.Windows.Forms.Label();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.SubMenuAjustes = new System.Windows.Forms.Button();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.btnPlaylistVideo = new System.Windows.Forms.Button();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.btnPlaylisMusica = new System.Windows.Forms.Button();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.btnInicio = new System.Windows.Forms.Button();
             this.Crear = new System.Windows.Forms.Button();
             this.gustosPeliculas = new System.Windows.Forms.CheckedListBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -156,8 +135,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnPlay)).BeginInit();
-            this.panelMenuIzquierda.SuspendLayout();
-            this.panelSubMenuAjustes.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -342,7 +319,6 @@
             // panel2
             // 
             this.panel2.Controls.Add(this.panelPrincipal1);
-            this.panel2.Controls.Add(this.panelMenuIzquierda);
             this.panel2.Controls.Add(this.Crear);
             this.panel2.Controls.Add(this.gustosPeliculas);
             this.panel2.Controls.Add(this.label7);
@@ -770,278 +746,6 @@
             this.btnPlay.TabIndex = 10;
             this.btnPlay.TabStop = false;
             // 
-            // panelMenuIzquierda
-            // 
-            this.panelMenuIzquierda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.panelMenuIzquierda.Controls.Add(this.panelSubMenuAjustes);
-            this.panelMenuIzquierda.Controls.Add(this.panel8);
-            this.panelMenuIzquierda.Controls.Add(this.button8);
-            this.panelMenuIzquierda.Controls.Add(this.label12);
-            this.panelMenuIzquierda.Controls.Add(this.panel6);
-            this.panelMenuIzquierda.Controls.Add(this.SubMenuAjustes);
-            this.panelMenuIzquierda.Controls.Add(this.panel7);
-            this.panelMenuIzquierda.Controls.Add(this.btnPlaylistVideo);
-            this.panelMenuIzquierda.Controls.Add(this.panel5);
-            this.panelMenuIzquierda.Controls.Add(this.btnPlaylisMusica);
-            this.panelMenuIzquierda.Controls.Add(this.panel4);
-            this.panelMenuIzquierda.Controls.Add(this.btnInicio);
-            this.panelMenuIzquierda.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panelMenuIzquierda.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panelMenuIzquierda.Location = new System.Drawing.Point(0, 3);
-            this.panelMenuIzquierda.Name = "panelMenuIzquierda";
-            this.panelMenuIzquierda.Size = new System.Drawing.Size(204, 529);
-            this.panelMenuIzquierda.TabIndex = 38;
-            this.panelMenuIzquierda.Visible = false;
-            // 
-            // panelSubMenuAjustes
-            // 
-            this.panelSubMenuAjustes.Controls.Add(this.panel12);
-            this.panelSubMenuAjustes.Controls.Add(this.btnCambiarPerfil);
-            this.panelSubMenuAjustes.Controls.Add(this.panel11);
-            this.panelSubMenuAjustes.Controls.Add(this.btnOtro);
-            this.panelSubMenuAjustes.Controls.Add(this.panel10);
-            this.panelSubMenuAjustes.Controls.Add(this.btnCambiarContraseña);
-            this.panelSubMenuAjustes.Controls.Add(this.panel9);
-            this.panelSubMenuAjustes.Controls.Add(this.btnCambiarPlan);
-            this.panelSubMenuAjustes.Location = new System.Drawing.Point(42, 355);
-            this.panelSubMenuAjustes.Name = "panelSubMenuAjustes";
-            this.panelSubMenuAjustes.Size = new System.Drawing.Size(149, 170);
-            this.panelSubMenuAjustes.TabIndex = 10;
-            this.panelSubMenuAjustes.Visible = false;
-            // 
-            // panel12
-            // 
-            this.panel12.BackColor = System.Drawing.Color.Blue;
-            this.panel12.Location = new System.Drawing.Point(4, 137);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(10, 30);
-            this.panel12.TabIndex = 10;
-            // 
-            // btnCambiarPerfil
-            // 
-            this.btnCambiarPerfil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.btnCambiarPerfil.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.btnCambiarPerfil.FlatAppearance.BorderSize = 0;
-            this.btnCambiarPerfil.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
-            this.btnCambiarPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCambiarPerfil.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnCambiarPerfil.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCambiarPerfil.Location = new System.Drawing.Point(10, 134);
-            this.btnCambiarPerfil.Name = "btnCambiarPerfil";
-            this.btnCambiarPerfil.Size = new System.Drawing.Size(136, 30);
-            this.btnCambiarPerfil.TabIndex = 9;
-            this.btnCambiarPerfil.Text = "Cambiar perfil";
-            this.btnCambiarPerfil.UseVisualStyleBackColor = false;
-            // 
-            // panel11
-            // 
-            this.panel11.BackColor = System.Drawing.Color.Blue;
-            this.panel11.Location = new System.Drawing.Point(4, 93);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(10, 30);
-            this.panel11.TabIndex = 8;
-            // 
-            // btnOtro
-            // 
-            this.btnOtro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.btnOtro.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.btnOtro.FlatAppearance.BorderSize = 0;
-            this.btnOtro.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
-            this.btnOtro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOtro.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnOtro.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnOtro.Location = new System.Drawing.Point(13, 93);
-            this.btnOtro.Name = "btnOtro";
-            this.btnOtro.Size = new System.Drawing.Size(136, 30);
-            this.btnOtro.TabIndex = 7;
-            this.btnOtro.Text = "Otro";
-            this.btnOtro.UseVisualStyleBackColor = false;
-            // 
-            // panel10
-            // 
-            this.panel10.BackColor = System.Drawing.Color.Blue;
-            this.panel10.Location = new System.Drawing.Point(4, 48);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(10, 30);
-            this.panel10.TabIndex = 6;
-            // 
-            // btnCambiarContraseña
-            // 
-            this.btnCambiarContraseña.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.btnCambiarContraseña.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.btnCambiarContraseña.FlatAppearance.BorderSize = 0;
-            this.btnCambiarContraseña.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
-            this.btnCambiarContraseña.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCambiarContraseña.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnCambiarContraseña.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCambiarContraseña.Location = new System.Drawing.Point(13, 48);
-            this.btnCambiarContraseña.Name = "btnCambiarContraseña";
-            this.btnCambiarContraseña.Size = new System.Drawing.Size(136, 30);
-            this.btnCambiarContraseña.TabIndex = 5;
-            this.btnCambiarContraseña.Text = "Cambiar Clave";
-            this.btnCambiarContraseña.UseVisualStyleBackColor = false;
-            // 
-            // panel9
-            // 
-            this.panel9.BackColor = System.Drawing.Color.Blue;
-            this.panel9.Location = new System.Drawing.Point(4, 3);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(10, 30);
-            this.panel9.TabIndex = 4;
-            // 
-            // btnCambiarPlan
-            // 
-            this.btnCambiarPlan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.btnCambiarPlan.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.btnCambiarPlan.FlatAppearance.BorderSize = 0;
-            this.btnCambiarPlan.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
-            this.btnCambiarPlan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCambiarPlan.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnCambiarPlan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCambiarPlan.Location = new System.Drawing.Point(13, 3);
-            this.btnCambiarPlan.Name = "btnCambiarPlan";
-            this.btnCambiarPlan.Size = new System.Drawing.Size(136, 30);
-            this.btnCambiarPlan.TabIndex = 3;
-            this.btnCambiarPlan.Text = "Cambiar Plan";
-            this.btnCambiarPlan.UseVisualStyleBackColor = false;
-            // 
-            // panel8
-            // 
-            this.panel8.BackColor = System.Drawing.Color.Blue;
-            this.panel8.Location = new System.Drawing.Point(0, 148);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(15, 40);
-            this.panel8.TabIndex = 12;
-            // 
-            // button8
-            // 
-            this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.button8.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.button8.FlatAppearance.BorderSize = 0;
-            this.button8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button8.Image = ((System.Drawing.Image)(resources.GetObject("button8.Image")));
-            this.button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button8.Location = new System.Drawing.Point(9, 148);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(182, 40);
-            this.button8.TabIndex = 11;
-            this.button8.Text = "Explorar";
-            this.button8.UseVisualStyleBackColor = false;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Arial Black", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.Green;
-            this.label12.Location = new System.Drawing.Point(5, 50);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(166, 38);
-            this.label12.TabIndex = 9;
-            this.label12.Text = "SPOTFLIX";
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.Blue;
-            this.panel6.Location = new System.Drawing.Point(0, 309);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(15, 40);
-            this.panel6.TabIndex = 8;
-            // 
-            // SubMenuAjustes
-            // 
-            this.SubMenuAjustes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.SubMenuAjustes.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.SubMenuAjustes.FlatAppearance.BorderSize = 0;
-            this.SubMenuAjustes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
-            this.SubMenuAjustes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SubMenuAjustes.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.SubMenuAjustes.Image = ((System.Drawing.Image)(resources.GetObject("SubMenuAjustes.Image")));
-            this.SubMenuAjustes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.SubMenuAjustes.Location = new System.Drawing.Point(9, 309);
-            this.SubMenuAjustes.Name = "SubMenuAjustes";
-            this.SubMenuAjustes.Size = new System.Drawing.Size(182, 40);
-            this.SubMenuAjustes.TabIndex = 7;
-            this.SubMenuAjustes.Text = "Ajustes";
-            this.SubMenuAjustes.UseVisualStyleBackColor = false;
-            // 
-            // panel7
-            // 
-            this.panel7.BackColor = System.Drawing.Color.Blue;
-            this.panel7.Location = new System.Drawing.Point(0, 258);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(15, 40);
-            this.panel7.TabIndex = 6;
-            // 
-            // btnPlaylistVideo
-            // 
-            this.btnPlaylistVideo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.btnPlaylistVideo.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.btnPlaylistVideo.FlatAppearance.BorderSize = 0;
-            this.btnPlaylistVideo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
-            this.btnPlaylistVideo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPlaylistVideo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnPlaylistVideo.Image = ((System.Drawing.Image)(resources.GetObject("btnPlaylistVideo.Image")));
-            this.btnPlaylistVideo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPlaylistVideo.Location = new System.Drawing.Point(9, 258);
-            this.btnPlaylistVideo.Name = "btnPlaylistVideo";
-            this.btnPlaylistVideo.Size = new System.Drawing.Size(182, 40);
-            this.btnPlaylistVideo.TabIndex = 5;
-            this.btnPlaylistVideo.Text = "Playlist video";
-            this.btnPlaylistVideo.UseVisualStyleBackColor = false;
-            this.btnPlaylistVideo.Click += new System.EventHandler(this.btnPlaylistVideo_Click);
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.Blue;
-            this.panel5.Location = new System.Drawing.Point(0, 203);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(15, 40);
-            this.panel5.TabIndex = 4;
-            // 
-            // btnPlaylisMusica
-            // 
-            this.btnPlaylisMusica.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.btnPlaylisMusica.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.btnPlaylisMusica.FlatAppearance.BorderSize = 0;
-            this.btnPlaylisMusica.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
-            this.btnPlaylisMusica.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPlaylisMusica.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnPlaylisMusica.Image = ((System.Drawing.Image)(resources.GetObject("btnPlaylisMusica.Image")));
-            this.btnPlaylisMusica.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPlaylisMusica.Location = new System.Drawing.Point(10, 203);
-            this.btnPlaylisMusica.Name = "btnPlaylisMusica";
-            this.btnPlaylisMusica.Size = new System.Drawing.Size(182, 40);
-            this.btnPlaylisMusica.TabIndex = 3;
-            this.btnPlaylisMusica.Text = "Playlist musica";
-            this.btnPlaylisMusica.UseVisualStyleBackColor = false;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.Blue;
-            this.panel4.Location = new System.Drawing.Point(3, 91);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(15, 40);
-            this.panel4.TabIndex = 2;
-            // 
-            // btnInicio
-            // 
-            this.btnInicio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.btnInicio.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.btnInicio.FlatAppearance.BorderSize = 0;
-            this.btnInicio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
-            this.btnInicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInicio.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnInicio.Image = ((System.Drawing.Image)(resources.GetObject("btnInicio.Image")));
-            this.btnInicio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInicio.Location = new System.Drawing.Point(12, 91);
-            this.btnInicio.Name = "btnInicio";
-            this.btnInicio.Size = new System.Drawing.Size(182, 40);
-            this.btnInicio.TabIndex = 0;
-            this.btnInicio.Text = "Inicio";
-            this.btnInicio.UseVisualStyleBackColor = false;
-            // 
             // Crear
             // 
             this.Crear.Location = new System.Drawing.Point(605, 324);
@@ -1399,9 +1103,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnPlay)).EndInit();
-            this.panelMenuIzquierda.ResumeLayout(false);
-            this.panelMenuIzquierda.PerformLayout();
-            this.panelSubMenuAjustes.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1443,27 +1144,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Panel panelMenuIzquierda;
-        private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Panel panelSubMenuAjustes;
-        private System.Windows.Forms.Panel panel12;
-        private System.Windows.Forms.Button btnCambiarPerfil;
-        private System.Windows.Forms.Panel panel11;
-        private System.Windows.Forms.Button btnOtro;
-        private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.Button btnCambiarContraseña;
-        private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.Button btnCambiarPlan;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Button SubMenuAjustes;
-        private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Button btnPlaylistVideo;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Button btnPlaylisMusica;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Button btnInicio;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;

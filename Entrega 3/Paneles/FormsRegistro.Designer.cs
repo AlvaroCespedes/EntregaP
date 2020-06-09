@@ -270,8 +270,8 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.radioButton5);
             this.panel1.Controls.Add(this.panel2);
+            this.panel1.Controls.Add(this.radioButton5);
             this.panel1.Controls.Add(this.radioButton1);
             this.panel1.Controls.Add(this.btnContinuar2);
             this.panel1.Controls.Add(this.label13);

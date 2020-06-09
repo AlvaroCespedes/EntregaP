@@ -16,6 +16,8 @@ namespace Entrega_3.Paneles
 
     public partial class FormAplicacion : Form
     {
+        Profile perfilCambiar = new Profile();
+        int eliminar = 0;
         //est es solo para probar busqueda
         static DateTime date = new DateTime();
         int numlikes;
@@ -577,10 +579,75 @@ namespace Entrega_3.Paneles
         {
             panelContenedorPincipal.Visible = false;
             panelCrearUsuario.Visible = true;
-            b1.Visible = false;
-            b2.Visible = false;
-            b3.Visible = false;
-            b4.Visible = false;
+            if (eliminar > 0)
+            {
+                if (usuario.Plan == "Basico")
+                {
+                    b1.Visible = true;
+                    b13.Visible = true;
+                    button1.Visible = true;
+                }
+                else if (usuario.Plan == "Premium")
+                {
+                    b1.Visible = true;
+                    b13.Visible = true;
+                    button1.Visible = true;
+                }
+
+                else if (usuario.Plan == "Familiar")
+                {
+                    TipoCuenta = "Familiar";
+                    if (usuario.Profiles.Count == 0)
+                    {
+                        b1.Visible = true;
+                        b13.Visible = true;
+                        button1.Visible = true;
+                    }
+                    else if (usuario.Profiles.Count == 1)
+                    {
+                        b1.Visible = true;
+                        b13.Visible = true;
+                        button1.Visible = true;
+                        b2.Visible = true;
+                        b14.Visible = true;
+                        button2.Visible = true;
+                    }
+                    else if (usuario.Profiles.Count == 2)
+                    {
+                        b1.Visible = true;
+                        b13.Visible = true;
+                        button1.Visible = true;
+                        b2.Visible = true;
+                        b14.Visible = true;
+                        button2.Visible = true;
+                        b3.Visible = true;
+                        b15.Visible = true;
+                        button3.Visible = true;
+                    }
+                    else if (usuario.Profiles.Count == 3)
+                    {
+                        b1.Visible = true;
+                        b13.Visible = true;
+                        button1.Visible = true;
+                        
+                        b2.Visible = true;
+                        b14.Visible = true;
+                        button2.Visible = true;
+                        
+                        b3.Visible = true;
+                        b15.Visible = true;
+                        button3.Visible = true;
+                        
+                        b4.Visible = true;
+                        b16.Visible = true;
+                        button4.Visible = true;
+                    }
+                    
+
+
+                }
+            }
+           
 
         }
 
@@ -588,30 +655,21 @@ namespace Entrega_3.Paneles
         {
             panelContenedorPincipal.Visible = false;
             panelCrearUsuario.Visible = true;
-            b1.Visible = false;
-            b2.Visible = false;
-            b3.Visible = false;
-            b4.Visible = false;
+            
         }
 
         private void crear3_Click(object sender, EventArgs e)
         {
             panelContenedorPincipal.Visible = false;
             panelCrearUsuario.Visible = true;
-            b1.Visible = false;
-            b2.Visible = false;
-            b3.Visible = false;
-            b4.Visible = false;
+            
         }
 
         private void crear4_Click(object sender, EventArgs e)
         {
             panelContenedorPincipal.Visible = false;
             panelCrearUsuario.Visible = true;
-            b1.Visible = false;
-            b2.Visible = false;
-            b3.Visible = false;
-            b4.Visible = false;
+            
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -676,6 +734,14 @@ namespace Entrega_3.Paneles
 
         private void btnCambiarPerfil_Click(object sender, EventArgs e)
         {
+            b1.Visible = false;
+            b2.Visible = false;
+            b3.Visible = false;
+            b4.Visible = false;
+            b13.Visible = false;
+            b14.Visible = false;
+            b15.Visible = false;
+            b16.Visible = false;
             panelContenedorPincipal.Visible = false;
             panelCrearUsuario.Visible = false;
             panel4.Visible = false;
@@ -1006,14 +1072,59 @@ namespace Entrega_3.Paneles
             panelSubMenuAjustes.Visible = false;
             panelCrearUsuario.Visible = false;
             b1.Visible = true;
-            if (TipoCuenta == "Familiar")
+            if (TipoCuenta == "Basico")
             {
-                b2.Visible = true;
-                b3.Visible = true;
-                b4.Visible = true;
+                b1.Visible = true;
+                b13.Visible = true;
+
             }
-            
-            
+            else if (TipoCuenta == "Premium")
+            {
+                b1.Visible = true;
+                b13.Visible = true;
+
+            }
+            else if (TipoCuenta == "Familiar")
+            {
+                if (usuario.Profiles.Count==1)
+                {
+                    b1.Visible = true;
+                    b13.Visible = true;
+                }
+                else if (usuario.Profiles.Count == 2)
+                {
+                    b1.Visible = true;
+                    b13.Visible = true;
+                    b2.Visible = true;
+                    b14.Visible = true;
+                }
+                else if (usuario.Profiles.Count == 3)
+                {
+                    b1.Visible = true;
+                    b13.Visible = true;
+                    b2.Visible = true;
+                    b14.Visible = true;
+                    b3.Visible = true;
+                    b15.Visible = true;
+
+                }
+                else if (usuario.Profiles.Count == 4)
+                {
+                    b1.Visible = true;
+                    b13.Visible = true;
+                    b2.Visible = true;
+                    b14.Visible = true;
+                    b3.Visible = true;
+                    b15.Visible = true;
+                    b4.Visible = true;
+                    b16.Visible = true;
+
+                }
+
+
+            }
+
+
         }
 
         private void panelSubMenuAjustes_Paint(object sender, PaintEventArgs e)
@@ -1028,41 +1139,65 @@ namespace Entrega_3.Paneles
 
         private void b1_Click(object sender, EventArgs e)
         {
+            for(int a=0; a<usuario.Profiles.Count;a++)
+            {
+                if (usuario.Profiles[a].NameProfile == label8.Text)
+                {
+                    perfilCambiar = usuario.Profiles[a];
+                }
+            }
+            
             panelCrearUsuario.Visible = true;
             panelContenedorPincipal.Visible = true;
-           // panel5.Visible = true;
+            panel6.Visible = true;
+            panel23.Visible = true;
         }
 
         private void b2_Click(object sender, EventArgs e)
         {
+            for (int a = 0; a < usuario.Profiles.Count; a++)
+            {
+                if (usuario.Profiles[a].NameProfile == label9.Text)
+                {
+                    perfilCambiar = usuario.Profiles[a];
+                }
+            }
             panelCrearUsuario.Visible = true;
             panelContenedorPincipal.Visible = true;
-         //   panel5.Visible = true;
+            panel6.Visible = true;
+            panel23.Visible = true;
         }
 
         private void b3_Click(object sender, EventArgs e)
         {
+            for (int a = 0; a < usuario.Profiles.Count; a++)
+            {
+                if (usuario.Profiles[a].NameProfile == label10.Text)
+                {
+                    perfilCambiar = usuario.Profiles[a];
+                }
+            }
             panelCrearUsuario.Visible = true;
             panelContenedorPincipal.Visible = true;
-           // panel5.Visible = true;
+            panel6.Visible = true;
+            panel23.Visible = true;
         }
 
         private void b4_Click(object sender, EventArgs e)
         {
+            for (int a = 0; a < usuario.Profiles.Count; a++)
+            {
+                if (usuario.Profiles[a].NameProfile == label1.Text)
+                {
+                    perfilCambiar = usuario.Profiles[a];
+                }
+            }
             panelCrearUsuario.Visible = true;
             panelContenedorPincipal.Visible = true;
-            //panel5.Visible = true;
+            panel6.Visible = true;
+            panel23.Visible = true;
         }
-        private void pic10_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel5_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
+       
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             try
@@ -1716,6 +1851,1065 @@ namespace Entrega_3.Paneles
         private void pictureBox3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void b13_Click(object sender, EventArgs e)
+        {
+            eliminar++;
+            for (int a = 0; a<usuario.Profiles.Count; a++)
+            {
+                if (usuario.Profiles[a].NameProfile == label8.Text)
+                {
+                    usuario.Profiles.RemoveAt(a);
+                }
+            }
+            MessageBox.Show("Perfil eliminado");
+            List<Clases.User> todosUsuarios = new List<Clases.User>();
+            List<Clases.User> deserializarUser = serializar.Deserialize<List<Clases.User>>(File.Open("data.bin", FileMode.Open));
+            if (deserializarUser.Count > 0)
+            {
+                for (int c = 0; c < deserializarUser.Count; c++)
+                {
+                    todosUsuarios.Add(deserializarUser[c]);
+                }
+            }
+            todosUsuarios.Add(usuario);
+
+            serializar.Serialize(todosUsuarios, File.Open("data.bin", FileMode.Create));
+            if (usuario.Plan == "Basico")
+            {
+                    pic5.Visible = true;
+                    pic6.Visible = false;
+                    pic7.Visible = false;
+                    pic8.Visible = false;
+
+                    pic1.Visible = false;
+                    pic4.Visible = false;
+                    pic3.Visible = false;
+                    pic2.Visible = false;
+
+                    crear1.Visible = true;
+                    crear2.Visible = false;
+                    crear3.Visible = false;
+                    crear4.Visible = false;
+
+                    label8.Visible = false;
+                    b1.Visible = false;
+                    b13.Visible = false;
+                    button1.Visible = false;
+            }
+            else if (usuario.Plan == "Premium")
+            {
+                pic5.Visible = true;
+                pic6.Visible = false;
+                pic7.Visible = false;
+                pic8.Visible = false;
+
+                pic1.Visible = false;
+                pic4.Visible = false;
+                pic3.Visible = false;
+                pic2.Visible = false;
+
+                crear1.Visible = true;
+                crear2.Visible = false;
+                crear3.Visible = false;
+                crear4.Visible = false;
+
+                label8.Visible = false;
+                b1.Visible = false;
+                b13.Visible = false;
+                button1.Visible = false;
+            }
+
+            else if (usuario.Plan == "Familiar")
+            {
+                TipoCuenta = "Familiar";
+                if (usuario.Profiles.Count == 0)
+                {
+                    pic5.Visible = true;
+                    pic1.Visible = false;
+                    pic4.Visible = false;
+                    pic7.Visible = true;
+                    pic3.Visible = false;
+                    pic6.Visible = true;
+                    pic2.Visible = false;
+                    pic8.Visible = true;
+                    crear1.Visible = true;
+                    crear2.Visible = true;
+                    crear3.Visible = true;
+                    crear4.Visible = true;
+                    label8.Visible = false;
+                    label9.Visible = false;
+                    label10.Visible = false;
+                    label11.Visible = false;
+
+                    b1.Visible = false;
+                    b13.Visible = false;
+                    button1.Visible = false;
+                    b2.Visible = false;
+                    b14.Visible = false;
+                    button2.Visible = false;
+                    b3.Visible = false;
+                    b15.Visible = false;
+                    button3.Visible = false;
+                    b4.Visible = false;
+                    b16.Visible = false;
+                    button4.Visible = false;
+                }
+                else if (usuario.Profiles.Count == 1)
+                {
+                    pic5.Visible = false;
+                    pic1.Visible = true;
+                    pic4.Visible = false;
+                    pic7.Visible = true;
+                    pic3.Visible = false;
+                    pic6.Visible = true;
+                    pic2.Visible = false;
+                    pic8.Visible = true;
+                    crear1.Visible = false;
+                    crear2.Visible = true;
+                    crear3.Visible = true;
+                    crear4.Visible = true;
+                    label8.Text = usuario.Profiles[0].NameProfile;
+                    button1.Visible = true;
+                    label8.Visible = true;
+                    label9.Visible = false;
+                    label10.Visible = false;
+                    label11.Visible = false;
+
+                    b1.Visible = true;
+                    b13.Visible = true;
+                
+                    b2.Visible = false;
+                    b14.Visible = false;
+                    button2.Visible = false;
+                    b3.Visible = false;
+                    b15.Visible = false;
+                    button3.Visible = false;
+                    b4.Visible = false;
+                    b16.Visible = false;
+                    button4.Visible = false;
+                }
+                else if (usuario.Profiles.Count == 2)
+                {
+                    pic5.Visible = false;
+                    pic1.Visible = true;
+                    pic4.Visible = false;
+                    pic7.Visible = true;
+                    pic3.Visible = false;
+                    pic6.Visible = false;
+                    pic2.Visible = true;
+                    pic8.Visible = true;
+                    crear1.Visible = false;
+                    crear2.Visible = false;
+                    crear3.Visible = true;
+                    crear4.Visible = true;
+                    label8.Text = usuario.Profiles[0].NameProfile;
+                    label8.Visible = true;
+                    label9.Text = usuario.Profiles[1].NameProfile;
+                    label9.Visible = true;
+                    button1.Visible = true;
+                    button2.Visible = true;
+
+                    label10.Visible = false;
+                    label11.Visible = false;
+
+                    b1.Visible = false;
+                    b13.Visible = false;
+                   
+                    b2.Visible = true;
+                    b14.Visible = true;
+                   
+                    b3.Visible = false;
+                    b15.Visible = false;
+                    button3.Visible = false;
+                    b4.Visible = false;
+                    b16.Visible = false;
+                    button4.Visible = false;
+                }
+                else if (usuario.Profiles.Count == 3)
+                {
+                    pic5.Visible = false;
+                    pic1.Visible = true;
+                    pic4.Visible = false;
+                    pic7.Visible = false;
+                    pic3.Visible = true;
+                    pic6.Visible = false;
+                    pic2.Visible = true;
+                    pic8.Visible = true;
+                    crear1.Visible = false;
+                    crear2.Visible = false;
+                    crear3.Visible = false;
+                    crear4.Visible = true;
+                    label8.Text = usuario.Profiles[0].NameProfile;
+                    label8.Visible = true;
+                    label9.Text = usuario.Profiles[1].NameProfile;
+                    label9.Visible = true;
+                    label10.Text = usuario.Profiles[2].NameProfile;
+                    label10.Visible = true;
+                    button1.Visible = true;
+                    button2.Visible = true;
+                    button3.Visible = true;
+
+                
+                    label11.Visible = false;
+
+                    b1.Visible =true;
+                    b13.Visible =true;
+                  
+                    b2.Visible = true;
+                    b14.Visible = true;
+                  
+                    b3.Visible = true;
+                    b15.Visible = true;
+                   
+                    b4.Visible = false;
+                    b16.Visible = false;
+                    button4.Visible = false;
+                }
+                else if (usuario.Profiles.Count == 4)
+                {
+                    pic5.Visible = false;
+                    pic1.Visible = true;
+                    pic4.Visible = true;
+                    pic7.Visible = false;
+                    pic3.Visible = true;
+                    pic6.Visible = false;
+                    pic2.Visible = true;
+                    pic8.Visible = false;
+                    crear1.Visible = false;
+                    crear2.Visible = false;
+                    crear3.Visible = false;
+                    crear4.Visible = false;
+                    label8.Text = usuario.Profiles[0].NameProfile;
+                    label8.Visible = true;
+                    label9.Text = usuario.Profiles[1].NameProfile;
+                    label9.Visible = true;
+                    label10.Text = usuario.Profiles[2].NameProfile;
+                    label10.Visible = true;
+                    label11.Text = usuario.Profiles[3].NameProfile;
+                    label11.Visible = true;
+                    button1.Visible = true;
+                    button2.Visible = true;
+                    button3.Visible = true;
+                    button4.Visible = true;
+
+                   
+                    b1.Visible = true;
+                    b13.Visible = true;
+                    
+                    b2.Visible = true;
+                    b14.Visible = true;
+                    
+                    b3.Visible = true;
+                    b15.Visible = true;
+                    
+                    b4.Visible = true;
+                    b16.Visible = true;
+                    
+                }
+
+
+            }
+        }
+
+        private void b14_Click(object sender, EventArgs e)
+        {
+            eliminar++;
+            for (int a = 0; a < usuario.Profiles.Count; a++)
+            {
+                if (usuario.Profiles[a].NameProfile == label9.Text)
+                {
+                    usuario.Profiles.RemoveAt(a);
+                }
+            }
+            MessageBox.Show("Perfil eliminado");
+            List<Clases.User> todosUsuarios = new List<Clases.User>();
+
+            List<Clases.User> deserializarUser = serializar.Deserialize<List<Clases.User>>(File.Open("data.bin", FileMode.Open));
+            if (deserializarUser.Count > 0)
+            {
+                for (int c = 0; c < deserializarUser.Count; c++)
+                {
+                    todosUsuarios.Add(deserializarUser[c]);
+                }
+            }
+            todosUsuarios.Add(usuario);
+
+            serializar.Serialize(todosUsuarios, File.Open("data.bin", FileMode.Create));
+            if (usuario.Plan == "Familiar")
+            {
+                TipoCuenta = "Familiar";
+                if (usuario.Profiles.Count == 0)
+                {
+                    pic5.Visible = true;
+                    pic1.Visible = false;
+                    pic4.Visible = false;
+                    pic7.Visible = true;
+                    pic3.Visible = false;
+                    pic6.Visible = true;
+                    pic2.Visible = false;
+                    pic8.Visible = true;
+                    crear1.Visible = true;
+                    crear2.Visible = true;
+                    crear3.Visible = true;
+                    crear4.Visible = true;
+                    label8.Visible = false;
+                    label9.Visible = false;
+                    label10.Visible = false;
+                    label11.Visible = false;
+
+                    b1.Visible = false;
+                    b13.Visible = false;
+                    button1.Visible = false;
+                    b2.Visible = false;
+                    b14.Visible = false;
+                    button2.Visible = false;
+                    b3.Visible = false;
+                    b15.Visible = false;
+                    button3.Visible = false;
+                    b4.Visible = false;
+                    b16.Visible = false;
+                    button4.Visible = false;
+                }
+                else if (usuario.Profiles.Count == 1)
+                {
+                    pic5.Visible = false;
+                    pic1.Visible = true;
+                    pic4.Visible = false;
+                    pic7.Visible = true;
+                    pic3.Visible = false;
+                    pic6.Visible = true;
+                    pic2.Visible = false;
+                    pic8.Visible = true;
+                    crear1.Visible = false;
+                    crear2.Visible = true;
+                    crear3.Visible = true;
+                    crear4.Visible = true;
+                    label8.Text = usuario.Profiles[0].NameProfile;
+                    button1.Visible = true;
+                    label8.Visible = true;
+                    label9.Visible = false;
+                    label10.Visible = false;
+                    label11.Visible = false;
+
+                    b1.Visible = true;
+                    b13.Visible = true;
+
+                    b2.Visible = false;
+                    b14.Visible = false;
+                    button2.Visible = false;
+                    b3.Visible = false;
+                    b15.Visible = false;
+                    button3.Visible = false;
+                    b4.Visible = false;
+                    b16.Visible = false;
+                    button4.Visible = false;
+                }
+                else if (usuario.Profiles.Count == 2)
+                {
+                    pic5.Visible = false;
+                    pic1.Visible = true;
+                    pic4.Visible = false;
+                    pic7.Visible = true;
+                    pic3.Visible = false;
+                    pic6.Visible = false;
+                    pic2.Visible = true;
+                    pic8.Visible = true;
+                    crear1.Visible = false;
+                    crear2.Visible = false;
+                    crear3.Visible = true;
+                    crear4.Visible = true;
+                    label8.Text = usuario.Profiles[0].NameProfile;
+                    label8.Visible = true;
+                    label9.Text = usuario.Profiles[1].NameProfile;
+                    label9.Visible = true;
+                    button1.Visible = true;
+                    button2.Visible = true;
+
+                    label10.Visible = false;
+                    label11.Visible = false;
+
+                    b1.Visible = false;
+                    b13.Visible = false;
+
+                    b2.Visible = true;
+                    b14.Visible = true;
+
+                    b3.Visible = false;
+                    b15.Visible = false;
+                    button3.Visible = false;
+                    b4.Visible = false;
+                    b16.Visible = false;
+                    button4.Visible = false;
+                }
+                else if (usuario.Profiles.Count == 3)
+                {
+                    pic5.Visible = false;
+                    pic1.Visible = true;
+                    pic4.Visible = false;
+                    pic7.Visible = false;
+                    pic3.Visible = true;
+                    pic6.Visible = false;
+                    pic2.Visible = true;
+                    pic8.Visible = true;
+                    crear1.Visible = false;
+                    crear2.Visible = false;
+                    crear3.Visible = false;
+                    crear4.Visible = true;
+                    label8.Text = usuario.Profiles[0].NameProfile;
+                    label8.Visible = true;
+                    label9.Text = usuario.Profiles[1].NameProfile;
+                    label9.Visible = true;
+                    label10.Text = usuario.Profiles[2].NameProfile;
+                    label10.Visible = true;
+                    button1.Visible = true;
+                    button2.Visible = true;
+                    button3.Visible = true;
+
+
+                    label11.Visible = false;
+
+                    b1.Visible = true;
+                    b13.Visible = true;
+
+                    b2.Visible = true;
+                    b14.Visible = true;
+
+                    b3.Visible = true;
+                    b15.Visible = true;
+
+                    b4.Visible = false;
+                    b16.Visible = false;
+                    button4.Visible = false;
+                }
+                else if (usuario.Profiles.Count == 4)
+                {
+                    pic5.Visible = false;
+                    pic1.Visible = true;
+                    pic4.Visible = true;
+                    pic7.Visible = false;
+                    pic3.Visible = true;
+                    pic6.Visible = false;
+                    pic2.Visible = true;
+                    pic8.Visible = false;
+                    crear1.Visible = false;
+                    crear2.Visible = false;
+                    crear3.Visible = false;
+                    crear4.Visible = false;
+                    label8.Text = usuario.Profiles[0].NameProfile;
+                    label8.Visible = true;
+                    label9.Text = usuario.Profiles[1].NameProfile;
+                    label9.Visible = true;
+                    label10.Text = usuario.Profiles[2].NameProfile;
+                    label10.Visible = true;
+                    label11.Text = usuario.Profiles[3].NameProfile;
+                    label11.Visible = true;
+                    button1.Visible = true;
+                    button2.Visible = true;
+                    button3.Visible = true;
+                    button4.Visible = true;
+
+
+                    b1.Visible = true;
+                    b13.Visible = true;
+
+                    b2.Visible = true;
+                    b14.Visible = true;
+
+                    b3.Visible = true;
+                    b15.Visible = true;
+
+                    b4.Visible = true;
+                    b16.Visible = true;
+
+                }
+
+
+            }
+        }
+
+        private void b15_Click(object sender, EventArgs e)
+        {
+            eliminar++;
+            for (int a = 0; a < usuario.Profiles.Count; a++)
+            {
+                if (usuario.Profiles[a].NameProfile == label10.Text)
+                {
+                    usuario.Profiles.RemoveAt(a);
+                }
+            }
+            MessageBox.Show("Perfil eliminado");
+            List<Clases.User> todosUsuarios = new List<Clases.User>();
+
+            List<Clases.User> deserializarUser = serializar.Deserialize<List<Clases.User>>(File.Open("data.bin", FileMode.Open));
+            if (deserializarUser.Count > 0)
+            {
+                for (int c = 0; c < deserializarUser.Count; c++)
+                {
+                    todosUsuarios.Add(deserializarUser[c]);
+                }
+            }
+            todosUsuarios.Add(usuario);
+
+            serializar.Serialize(todosUsuarios, File.Open("data.bin", FileMode.Create));
+            if (usuario.Plan == "Familiar")
+            {
+                TipoCuenta = "Familiar";
+                if (usuario.Profiles.Count == 0)
+                {
+                    pic5.Visible = true;
+                    pic1.Visible = false;
+                    pic4.Visible = false;
+                    pic7.Visible = true;
+                    pic3.Visible = false;
+                    pic6.Visible = true;
+                    pic2.Visible = false;
+                    pic8.Visible = true;
+                    crear1.Visible = true;
+                    crear2.Visible = true;
+                    crear3.Visible = true;
+                    crear4.Visible = true;
+                    label8.Visible = false;
+                    label9.Visible = false;
+                    label10.Visible = false;
+                    label11.Visible = false;
+
+                    b1.Visible = false;
+                    b13.Visible = false;
+                    button1.Visible = false;
+                    b2.Visible = false;
+                    b14.Visible = false;
+                    button2.Visible = false;
+                    b3.Visible = false;
+                    b15.Visible = false;
+                    button3.Visible = false;
+                    b4.Visible = false;
+                    b16.Visible = false;
+                    button4.Visible = false;
+                }
+                else if (usuario.Profiles.Count == 1)
+                {
+                    pic5.Visible = false;
+                    pic1.Visible = true;
+                    pic4.Visible = false;
+                    pic7.Visible = true;
+                    pic3.Visible = false;
+                    pic6.Visible = true;
+                    pic2.Visible = false;
+                    pic8.Visible = true;
+                    crear1.Visible = false;
+                    crear2.Visible = true;
+                    crear3.Visible = true;
+                    crear4.Visible = true;
+                    label8.Text = usuario.Profiles[0].NameProfile;
+                    button1.Visible = true;
+                    label8.Visible = true;
+                    label9.Visible = false;
+                    label10.Visible = false;
+                    label11.Visible = false;
+
+                    b1.Visible = true;
+                    b13.Visible = true;
+
+                    b2.Visible = false;
+                    b14.Visible = false;
+                    button2.Visible = false;
+                    b3.Visible = false;
+                    b15.Visible = false;
+                    button3.Visible = false;
+                    b4.Visible = false;
+                    b16.Visible = false;
+                    button4.Visible = false;
+                }
+                else if (usuario.Profiles.Count == 2)
+                {
+                    pic5.Visible = false;
+                    pic1.Visible = true;
+                    pic4.Visible = false;
+                    pic7.Visible = true;
+                    pic3.Visible = false;
+                    pic6.Visible = false;
+                    pic2.Visible = true;
+                    pic8.Visible = true;
+                    crear1.Visible = false;
+                    crear2.Visible = false;
+                    crear3.Visible = true;
+                    crear4.Visible = true;
+                    label8.Text = usuario.Profiles[0].NameProfile;
+                    label8.Visible = true;
+                    label9.Text = usuario.Profiles[1].NameProfile;
+                    label9.Visible = true;
+                    button1.Visible = true;
+                    button2.Visible = true;
+
+                    label10.Visible = false;
+                    label11.Visible = false;
+
+                    b1.Visible = false;
+                    b13.Visible = false;
+
+                    b2.Visible = true;
+                    b14.Visible = true;
+
+                    b3.Visible = false;
+                    b15.Visible = false;
+                    button3.Visible = false;
+                    b4.Visible = false;
+                    b16.Visible = false;
+                    button4.Visible = false;
+                }
+                else if (usuario.Profiles.Count == 3)
+                {
+                    pic5.Visible = false;
+                    pic1.Visible = true;
+                    pic4.Visible = false;
+                    pic7.Visible = false;
+                    pic3.Visible = true;
+                    pic6.Visible = false;
+                    pic2.Visible = true;
+                    pic8.Visible = true;
+                    crear1.Visible = false;
+                    crear2.Visible = false;
+                    crear3.Visible = false;
+                    crear4.Visible = true;
+                    label8.Text = usuario.Profiles[0].NameProfile;
+                    label8.Visible = true;
+                    label9.Text = usuario.Profiles[1].NameProfile;
+                    label9.Visible = true;
+                    label10.Text = usuario.Profiles[2].NameProfile;
+                    label10.Visible = true;
+                    button1.Visible = true;
+                    button2.Visible = true;
+                    button3.Visible = true;
+
+
+                    label11.Visible = false;
+
+                    b1.Visible = true;
+                    b13.Visible = true;
+
+                    b2.Visible = true;
+                    b14.Visible = true;
+
+                    b3.Visible = true;
+                    b15.Visible = true;
+
+                    b4.Visible = false;
+                    b16.Visible = false;
+                    button4.Visible = false;
+                }
+                else if (usuario.Profiles.Count == 4)
+                {
+                    pic5.Visible = false;
+                    pic1.Visible = true;
+                    pic4.Visible = true;
+                    pic7.Visible = false;
+                    pic3.Visible = true;
+                    pic6.Visible = false;
+                    pic2.Visible = true;
+                    pic8.Visible = false;
+                    crear1.Visible = false;
+                    crear2.Visible = false;
+                    crear3.Visible = false;
+                    crear4.Visible = false;
+                    label8.Text = usuario.Profiles[0].NameProfile;
+                    label8.Visible = true;
+                    label9.Text = usuario.Profiles[1].NameProfile;
+                    label9.Visible = true;
+                    label10.Text = usuario.Profiles[2].NameProfile;
+                    label10.Visible = true;
+                    label11.Text = usuario.Profiles[3].NameProfile;
+                    label11.Visible = true;
+                    button1.Visible = true;
+                    button2.Visible = true;
+                    button3.Visible = true;
+                    button4.Visible = true;
+
+
+                    b1.Visible = true;
+                    b13.Visible = true;
+
+                    b2.Visible = true;
+                    b14.Visible = true;
+
+                    b3.Visible = true;
+                    b15.Visible = true;
+
+                    b4.Visible = true;
+                    b16.Visible = true;
+
+                }
+
+
+            }
+        }
+
+        private void b16_Click(object sender, EventArgs e)
+        {
+            eliminar++;
+            for (int a = 0; a < usuario.Profiles.Count; a++)
+            {
+                if (usuario.Profiles[a].NameProfile == label11.Text)
+                {
+                    usuario.Profiles.RemoveAt(a);
+                }
+            }
+            MessageBox.Show("Perfil eliminado");
+            List<Clases.User> todosUsuarios = new List<Clases.User>();
+
+            List<Clases.User> deserializarUser = serializar.Deserialize<List<Clases.User>>(File.Open("data.bin", FileMode.Open));
+            if (deserializarUser.Count > 0)
+            {
+                for (int c = 0; c < deserializarUser.Count; c++)
+                {
+                    todosUsuarios.Add(deserializarUser[c]);
+                }
+            }
+            todosUsuarios.Add(usuario);
+
+            serializar.Serialize(todosUsuarios, File.Open("data.bin", FileMode.Create));
+            if (usuario.Plan == "Familiar")
+            {
+                TipoCuenta = "Familiar";
+                if (usuario.Profiles.Count == 0)
+                {
+                    pic5.Visible = true;
+                    pic1.Visible = false;
+                    pic4.Visible = false;
+                    pic7.Visible = true;
+                    pic3.Visible = false;
+                    pic6.Visible = true;
+                    pic2.Visible = false;
+                    pic8.Visible = true;
+                    crear1.Visible = true;
+                    crear2.Visible = true;
+                    crear3.Visible = true;
+                    crear4.Visible = true;
+                    label8.Visible = false;
+                    label9.Visible = false;
+                    label10.Visible = false;
+                    label11.Visible = false;
+
+                    b1.Visible = false;
+                    b13.Visible = false;
+                    button1.Visible = false;
+                    b2.Visible = false;
+                    b14.Visible = false;
+                    button2.Visible = false;
+                    b3.Visible = false;
+                    b15.Visible = false;
+                    button3.Visible = false;
+                    b4.Visible = false;
+                    b16.Visible = false;
+                    button4.Visible = false;
+                }
+                else if (usuario.Profiles.Count == 1)
+                {
+                    pic5.Visible = false;
+                    pic1.Visible = true;
+                    pic4.Visible = false;
+                    pic7.Visible = true;
+                    pic3.Visible = false;
+                    pic6.Visible = true;
+                    pic2.Visible = false;
+                    pic8.Visible = true;
+                    crear1.Visible = false;
+                    crear2.Visible = true;
+                    crear3.Visible = true;
+                    crear4.Visible = true;
+                    label8.Text = usuario.Profiles[0].NameProfile;
+                    button1.Visible = true;
+                    label8.Visible = true;
+                    label9.Visible = false;
+                    label10.Visible = false;
+                    label11.Visible = false;
+
+                    b1.Visible = true;
+                    b13.Visible = true;
+
+                    b2.Visible = false;
+                    b14.Visible = false;
+                    button2.Visible = false;
+                    b3.Visible = false;
+                    b15.Visible = false;
+                    button3.Visible = false;
+                    b4.Visible = false;
+                    b16.Visible = false;
+                    button4.Visible = false;
+                }
+                else if (usuario.Profiles.Count == 2)
+                {
+                    pic5.Visible = false;
+                    pic1.Visible = true;
+                    pic4.Visible = false;
+                    pic7.Visible = true;
+                    pic3.Visible = false;
+                    pic6.Visible = false;
+                    pic2.Visible = true;
+                    pic8.Visible = true;
+                    crear1.Visible = false;
+                    crear2.Visible = false;
+                    crear3.Visible = true;
+                    crear4.Visible = true;
+                    label8.Text = usuario.Profiles[0].NameProfile;
+                    label8.Visible = true;
+                    label9.Text = usuario.Profiles[1].NameProfile;
+                    label9.Visible = true;
+                    button1.Visible = true;
+                    button2.Visible = true;
+
+                    label10.Visible = false;
+                    label11.Visible = false;
+
+                    b1.Visible = false;
+                    b13.Visible = false;
+
+                    b2.Visible = true;
+                    b14.Visible = true;
+
+                    b3.Visible = false;
+                    b15.Visible = false;
+                    button3.Visible = false;
+                    b4.Visible = false;
+                    b16.Visible = false;
+                    button4.Visible = false;
+                }
+                else if (usuario.Profiles.Count == 3)
+                {
+                    pic5.Visible = false;
+                    pic1.Visible = true;
+                    pic4.Visible = false;
+                    pic7.Visible = false;
+                    pic3.Visible = true;
+                    pic6.Visible = false;
+                    pic2.Visible = true;
+                    pic8.Visible = true;
+                    crear1.Visible = false;
+                    crear2.Visible = false;
+                    crear3.Visible = false;
+                    crear4.Visible = true;
+                    label8.Text = usuario.Profiles[0].NameProfile;
+                    label8.Visible = true;
+                    label9.Text = usuario.Profiles[1].NameProfile;
+                    label9.Visible = true;
+                    label10.Text = usuario.Profiles[2].NameProfile;
+                    label10.Visible = true;
+                    button1.Visible = true;
+                    button2.Visible = true;
+                    button3.Visible = true;
+
+
+                    label11.Visible = false;
+
+                    b1.Visible = true;
+                    b13.Visible = true;
+
+                    b2.Visible = true;
+                    b14.Visible = true;
+
+                    b3.Visible = true;
+                    b15.Visible = true;
+
+                    b4.Visible = false;
+                    b16.Visible = false;
+                    button4.Visible = false;
+                }
+                else if (usuario.Profiles.Count == 4)
+                {
+                    pic5.Visible = false;
+                    pic1.Visible = true;
+                    pic4.Visible = true;
+                    pic7.Visible = false;
+                    pic3.Visible = true;
+                    pic6.Visible = false;
+                    pic2.Visible = true;
+                    pic8.Visible = false;
+                    crear1.Visible = false;
+                    crear2.Visible = false;
+                    crear3.Visible = false;
+                    crear4.Visible = false;
+                    label8.Text = usuario.Profiles[0].NameProfile;
+                    label8.Visible = true;
+                    label9.Text = usuario.Profiles[1].NameProfile;
+                    label9.Visible = true;
+                    label10.Text = usuario.Profiles[2].NameProfile;
+                    label10.Visible = true;
+                    label11.Text = usuario.Profiles[3].NameProfile;
+                    label11.Visible = true;
+                    button1.Visible = true;
+                    button2.Visible = true;
+                    button3.Visible = true;
+                    button4.Visible = true;
+
+
+                    b1.Visible = true;
+                    b13.Visible = true;
+
+                    b2.Visible = true;
+                    b14.Visible = true;
+
+                    b3.Visible = true;
+                    b15.Visible = true;
+
+                    b4.Visible = true;
+                    b16.Visible = true;
+
+                }
+
+
+            }
+        }
+
+        private void button19_Click(object sender, EventArgs e)
+        {
+            panel23.Visible = false;
+            panel6.Visible = false;
+        }
+
+        private void button18_Click(object sender, EventArgs e)
+        {
+            if (textBox1.Text == "" && comboBox1.SelectedItem == null && checkedListBox1.CheckedItems.Count == 0 && checkedListBox2.CheckedItems.Count == 0)
+            {
+                MessageBox.Show("Debe cambiar por lo menos un dato");
+            }
+            else
+            {
+
+                if (textBox1.Text != "")
+                {
+                    for (int a = 0; a < usuario.Profiles.Count; a++)
+                    {
+                        if (usuario.Profiles[a].NameProfile == perfilCambiar.NameProfile)
+                        {
+                            usuario.Profiles[a].NameProfile = textBox1.Text;
+                        }
+                    }
+
+                }
+                if (comboBox1.SelectedItem != null)
+                {
+                    for (int a = 0; a < usuario.Profiles.Count; a++)
+                    {
+                        if (usuario.Profiles[a].NameProfile == perfilCambiar.NameProfile)
+                        {
+                            usuario.Profiles[a].ProfileType = comboBox1.SelectedItem.ToString();
+                        }
+                    }
+                }
+                if (checkedListBox1.CheckedItems.Count > 0)
+                {
+                    List<String> gustosMusica = new List<string>();
+
+                    for (int i = 0; i < gustosMusicales.Items.Count; i++)
+                    {
+                        if (gustosMusicales.GetItemChecked(i) == true)
+                        {
+                            gustosMusica.Add(gustosMusicales.Items[i].ToString());
+
+                        }
+
+
+                    }
+
+                    for (int a = 0; a < usuario.Profiles.Count; a++)
+                    {
+                        if (usuario.Profiles[a].NameProfile == perfilCambiar.NameProfile)
+                        {
+                            usuario.Profiles[a].PleasuresMusic = gustosMusica;
+                        }
+                    }
+                }
+                if (checkedListBox2.CheckedItems.Count > 0)
+                {
+                    List<String> gustosPelis = new List<string>();
+
+                    for (int i = 0; i < gustosPeliculas.Items.Count; i++)
+                    {
+                        if (gustosPeliculas.GetItemChecked(i) == true)
+                        {
+                            gustosPelis.Add(gustosPeliculas.Items[i].ToString());
+
+                        }
+
+
+                    }
+                    for (int a = 0; a < usuario.Profiles.Count; a++)
+                    {
+                        if (usuario.Profiles[a].NameProfile == perfilCambiar.NameProfile)
+                        {
+                            usuario.Profiles[a].PleasuresMovies = gustosPelis;
+                        }
+                    }
+
+                }
+                MessageBox.Show("Perfil cambiado");
+                //serializar
+                List<Clases.User> todosUsuarios = new List<Clases.User>();
+
+                List<Clases.User> deserializarUser = serializar.Deserialize<List<Clases.User>>(File.Open("data.bin", FileMode.Open));
+                if (deserializarUser.Count > 0)
+                {
+                    for (int c = 0; c < deserializarUser.Count; c++)
+                    {
+                        todosUsuarios.Add(deserializarUser[c]);
+                    }
+                }
+                todosUsuarios.Add(usuario);
+
+                serializar.Serialize(todosUsuarios, File.Open("data.bin", FileMode.Create));
+                if (usuario.Profiles.Count == 1)
+                {
+                    label8.Text = usuario.Profiles[0].NameProfile;
+                }
+                else if (usuario.Profiles.Count == 2)
+                {
+                    label8.Text = usuario.Profiles[0].NameProfile;
+                    label9.Text = usuario.Profiles[1].NameProfile;
+                }
+                else if (usuario.Profiles.Count == 3)
+                {
+                    label8.Text = usuario.Profiles[0].NameProfile;
+                    label9.Text = usuario.Profiles[1].NameProfile;
+                    label10.Text = usuario.Profiles[2].NameProfile;
+                }
+                else if (usuario.Profiles.Count == 4)
+                {
+                    label8.Text = usuario.Profiles[0].NameProfile;
+                    label9.Text = usuario.Profiles[1].NameProfile;
+                    label10.Text = usuario.Profiles[2].NameProfile;
+                    label11.Text = usuario.Profiles[3].NameProfile;
+                }
+                
+            }
+
+            
+            
+            panel23.Visible = false;
+            panel6.Visible = false;
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            label26.Visible = true;
+            textBox1.Visible = true;
+        }
+
+        private void button17_Click(object sender, EventArgs e)
+        {
+            label27.Visible = true;
+            comboBox1.Visible = true;
+
+        }
+
+        private void button16_Click(object sender, EventArgs e)
+        {
+            checkedListBox1.Visible = true;
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            checkedListBox2.Visible = true;
         }
     }
 }

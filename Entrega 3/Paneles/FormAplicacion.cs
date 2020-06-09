@@ -993,14 +993,6 @@ namespace Entrega_3.Paneles
             {
                 canciones = serializar.Deserialize<List<SongClass>>(File.Open("Canciones.bin", FileMode.Open));
                 videos = serializar.Deserialize<List<Video>>(File.Open("Videos.bin", FileMode.Open));
-                foreach (SongClass x in canciones)
-                {
-                    listCanciones.Items.Add(x);
-                }
-                foreach (Video x in videos)
-                {
-                    listCanciones.Items.Add(x);
-                }
 
 
             }
@@ -1233,15 +1225,6 @@ namespace Entrega_3.Paneles
             listaAlbum.Add(album2);
             listaAlbum.Add(album3);
             listaAlbum.Add(album4);
-
-            foreach (SongClass x in canciones)
-            {
-                listCanciones.Items.Add(x);
-            }
-            foreach (Video x in videos)
-            {
-                listCanciones.Items.Add(x);
-            }
         }
 
         private void txtBusqueda_TextChanged(object sender, EventArgs e)
@@ -1251,6 +1234,7 @@ namespace Entrega_3.Paneles
 
         private void listCanciones_SelectedIndexChanged(object sender, EventArgs e)
         {
+            /*
             foreach (SongClass x in canciones)
             {
                 int startIndex = x.Format.Length - 4;
@@ -1265,6 +1249,7 @@ namespace Entrega_3.Paneles
                     Reproductor.URL = videos[listCanciones.SelectedIndex].Url;
                 }
             }
+            */
         }
 
         private void Adjuntar_Click(object sender, EventArgs e)
@@ -1338,6 +1323,9 @@ namespace Entrega_3.Paneles
 
         }
 
+
+
+
         private void Subir_Click(object sender, EventArgs e) //Btn Agregar
         {
             //if (txt=="");malo
@@ -1345,7 +1333,8 @@ namespace Entrega_3.Paneles
             //else{
             panel5.Visible = false;
             btnAgregarInfo.Visible = false;
-
+            List<SongClass> songAux123 = new List<SongClass>();
+            List<Video> videoAux123 = new List<Video>();
 
 
 
@@ -1384,6 +1373,7 @@ namespace Entrega_3.Paneles
                     //Deserializando
 
                     List<SongClass> songAux = new List<SongClass>();
+                    
                     try
                     {
                         songAux = serializar.Deserialize<List<SongClass>>(File.Open("Canciones.bin", FileMode.Open));
@@ -1394,9 +1384,10 @@ namespace Entrega_3.Paneles
                     }
                     foreach(SongClass x in songAux)
                     {
-                        canciones123.Add(x);
+                        songAux123.Add(x);
                     }
-                    canciones123.Add(ob);
+                    songAux123.Add(ob);
+                    serializar.Serialize(songAux123, File.Open("Canciones.bin", FileMode.Create));
                 }
 
 
@@ -1430,7 +1421,7 @@ namespace Entrega_3.Paneles
 
                     Video ob2 = new Video(gender, publicationYear, title, 123, 123, study, keyWord, description, Mactor123, d123, ArchivoMP3, 123, 123, rutaArchivoMP3,0,0);
 
-                    videos123.Add(ob2);
+                    //videos123.Add(ob2);
                     List<Video> videoAux = new List<Video>();
                     try
                     {
@@ -1442,8 +1433,10 @@ namespace Entrega_3.Paneles
                     }
                     foreach(Video x in videoAux)
                     {
-                        videos123.Add(x);
+                        videoAux123.Add(x);
                     }
+                    videoAux123.Add(ob2);
+                    serializar.Serialize(videoAux123, File.Open("Videos.bin", FileMode.Create));
                 }
             }
             catch
@@ -1452,9 +1445,10 @@ namespace Entrega_3.Paneles
             }
 
             MessageBox.Show("Su ha archivo ha sido guardada.");
-            serializar.Serialize(videos123, File.Open("Videos.bin", FileMode.Create));
-            serializar.Serialize(canciones123, File.Open("Canciones.bin", FileMode.Create));
+            
+            
             //Limpiando los txt.
+
             txtTitle.Clear();
             txtSinger.Clear();
             txtComposer.Clear();
@@ -1471,15 +1465,17 @@ namespace Entrega_3.Paneles
 
         private void button6_Click(object sender, EventArgs e)
         {
+            List<Video> videoAuxayuda = new List<Video>();
+            List<SongClass> songAuxayuda = new List<SongClass>();
             try
             {
-                canciones123 = serializar.Deserialize<List<SongClass>>(File.Open("Canciones.bin", FileMode.Open));
-                videos123 = serializar.Deserialize<List<Video>>(File.Open("Videos.bin", FileMode.Open));
-                foreach (SongClass x in canciones123)
+                songAuxayuda = serializar.Deserialize<List<SongClass>>(File.Open("Canciones.bin", FileMode.Open));
+                videoAuxayuda = serializar.Deserialize<List<Video>>(File.Open("Videos.bin", FileMode.Open));
+                foreach (SongClass x in songAuxayuda)
                 {
                     listBox2.Items.Add(x);
                 }
-                foreach(Video x in videos123)
+                foreach(Video x in videoAuxayuda)
                 {
                     listBox2.Items.Add(x);
                 }

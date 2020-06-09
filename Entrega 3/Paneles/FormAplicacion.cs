@@ -1234,6 +1234,13 @@ namespace Entrega_3.Paneles
 
         private void listCanciones_SelectedIndexChanged(object sender, EventArgs e)
         {
+
+
+
+            
+
+
+
             /*
             foreach (SongClass x in canciones)
             {
@@ -1250,6 +1257,7 @@ namespace Entrega_3.Paneles
                 }
             }
             */
+            
         }
 
         private void Adjuntar_Click(object sender, EventArgs e)

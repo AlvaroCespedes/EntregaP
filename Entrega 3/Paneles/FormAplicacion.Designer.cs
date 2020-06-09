@@ -180,6 +180,16 @@
             this.e7 = new System.Windows.Forms.PictureBox();
             this.e6 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.button7 = new System.Windows.Forms.Button();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.button8 = new System.Windows.Forms.Button();
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.panel17 = new System.Windows.Forms.Panel();
+            this.button10 = new System.Windows.Forms.Button();
+            this.panel20 = new System.Windows.Forms.Panel();
+            this.button11 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnVolverNormalidad)).BeginInit();
@@ -234,6 +244,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.e7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.e6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.panel7.SuspendLayout();
+            this.panel14.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -565,10 +577,13 @@
             this.panelContenedorPincipal.AutoSize = true;
             this.panelContenedorPincipal.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.panelContenedorPincipal.Controls.Add(this.panel6);
+            this.panelContenedorPincipal.Controls.Add(this.panel4);
+            this.panelContenedorPincipal.Controls.Add(this.panel3);
+            this.panelContenedorPincipal.Controls.Add(this.panel7);
+            this.panelContenedorPincipal.Controls.Add(this.panel14);
             this.panelContenedorPincipal.Controls.Add(this.SubirArchivo);
             this.panelContenedorPincipal.Controls.Add(this.button5);
             this.panelContenedorPincipal.Controls.Add(this.listCanciones);
-            this.panelContenedorPincipal.Controls.Add(this.panel4);
             this.panelContenedorPincipal.Controls.Add(this.subpanel3);
             this.panelContenedorPincipal.Controls.Add(this.subpanel2);
             this.panelContenedorPincipal.Controls.Add(this.subpanel1);
@@ -582,7 +597,6 @@
             this.panelContenedorPincipal.Controls.Add(this.pic12);
             this.panelContenedorPincipal.Controls.Add(this.pictureBox1);
             this.panelContenedorPincipal.Controls.Add(this.txtBusqueda);
-            this.panelContenedorPincipal.Controls.Add(this.panel3);
             this.panelContenedorPincipal.Controls.Add(this.panel2);
             this.panelContenedorPincipal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContenedorPincipal.Location = new System.Drawing.Point(0, 0);
@@ -609,9 +623,10 @@
             this.panel6.Controls.Add(this.NumLike);
             this.panel6.Controls.Add(this.manito);
             this.panel6.Controls.Add(this.Reproductor2);
-            this.panel6.Location = new System.Drawing.Point(200, 3);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel6.Location = new System.Drawing.Point(200, 0);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(697, 503);
+            this.panel6.Size = new System.Drawing.Size(700, 506);
             this.panel6.TabIndex = 36;
             this.panel6.Visible = false;
             // 
@@ -679,9 +694,9 @@
             this.SubirArchivo.Controls.Add(this.btnAgregarInfo);
             this.SubirArchivo.Controls.Add(this.Adjuntar);
             this.SubirArchivo.Controls.Add(this.listBox1);
-            this.SubirArchivo.Location = new System.Drawing.Point(201, 81);
+            this.SubirArchivo.Location = new System.Drawing.Point(206, 16);
             this.SubirArchivo.Name = "SubirArchivo";
-            this.SubirArchivo.Size = new System.Drawing.Size(405, 328);
+            this.SubirArchivo.Size = new System.Drawing.Size(405, 309);
             this.SubirArchivo.TabIndex = 42;
             this.SubirArchivo.Visible = false;
             // 
@@ -704,9 +719,10 @@
             this.panel5.Controls.Add(this.txtAlbum);
             this.panel5.Controls.Add(this.txtGender);
             this.panel5.Controls.Add(this.txtTitle);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel5.Location = new System.Drawing.Point(0, 0);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(405, 325);
+            this.panel5.Size = new System.Drawing.Size(405, 309);
             this.panel5.TabIndex = 11;
             this.panel5.Visible = false;
             this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint_1);
@@ -973,16 +989,16 @@
             this.panel4.Controls.Add(this.radioButton5);
             this.panel4.Controls.Add(this.radioButton1);
             this.panel4.Controls.Add(this.radioButton4);
-            this.panel4.Controls.Add(this.label15);
             this.panel4.Controls.Add(this.l6);
             this.panel4.Controls.Add(this.l5);
             this.panel4.Controls.Add(this.l4);
             this.panel4.Controls.Add(this.l1);
             this.panel4.Controls.Add(this.l2);
             this.panel4.Controls.Add(this.l3);
-            this.panel4.Location = new System.Drawing.Point(200, 197);
+            this.panel4.Controls.Add(this.label15);
+            this.panel4.Location = new System.Drawing.Point(202, 313);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(372, 303);
+            this.panel4.Size = new System.Drawing.Size(406, 271);
             this.panel4.TabIndex = 11;
             this.panel4.Visible = false;
             // 
@@ -2102,6 +2118,130 @@
             this.pictureBox3.TabStop = false;
             this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
+            // panel7
+            // 
+            this.panel7.Controls.Add(this.panel13);
+            this.panel7.Controls.Add(this.button8);
+            this.panel7.Controls.Add(this.panel8);
+            this.panel7.Controls.Add(this.button7);
+            this.panel7.Location = new System.Drawing.Point(200, 271);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(147, 66);
+            this.panel7.TabIndex = 36;
+            this.panel7.Visible = false;
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.Blue;
+            this.panel8.Location = new System.Drawing.Point(2, 1);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(10, 30);
+            this.panel8.TabIndex = 6;
+            // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.button7.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.button7.FlatAppearance.BorderSize = 0;
+            this.button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button7.Location = new System.Drawing.Point(11, 1);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(136, 30);
+            this.button7.TabIndex = 5;
+            this.button7.Text = "Mis playlist video";
+            this.button7.UseVisualStyleBackColor = false;
+            // 
+            // panel13
+            // 
+            this.panel13.BackColor = System.Drawing.Color.Blue;
+            this.panel13.Location = new System.Drawing.Point(2, 36);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(10, 30);
+            this.panel13.TabIndex = 8;
+            // 
+            // button8
+            // 
+            this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.button8.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.button8.FlatAppearance.BorderSize = 0;
+            this.button8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
+            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button8.Location = new System.Drawing.Point(11, 36);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(136, 30);
+            this.button8.TabIndex = 7;
+            this.button8.Text = "Crear playlist video";
+            this.button8.UseVisualStyleBackColor = false;
+            // 
+            // panel14
+            // 
+            this.panel14.Controls.Add(this.panel17);
+            this.panel14.Controls.Add(this.button10);
+            this.panel14.Controls.Add(this.panel20);
+            this.panel14.Controls.Add(this.button11);
+            this.panel14.Location = new System.Drawing.Point(202, 199);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(147, 63);
+            this.panel14.TabIndex = 37;
+            this.panel14.Visible = false;
+            // 
+            // panel17
+            // 
+            this.panel17.BackColor = System.Drawing.Color.Blue;
+            this.panel17.Location = new System.Drawing.Point(2, 36);
+            this.panel17.Name = "panel17";
+            this.panel17.Size = new System.Drawing.Size(10, 30);
+            this.panel17.TabIndex = 8;
+            // 
+            // button10
+            // 
+            this.button10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.button10.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.button10.FlatAppearance.BorderSize = 0;
+            this.button10.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
+            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button10.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button10.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button10.Location = new System.Drawing.Point(11, 36);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(136, 30);
+            this.button10.TabIndex = 7;
+            this.button10.Text = "Crear playlist video";
+            this.button10.UseVisualStyleBackColor = false;
+            // 
+            // panel20
+            // 
+            this.panel20.BackColor = System.Drawing.Color.Blue;
+            this.panel20.Location = new System.Drawing.Point(2, 1);
+            this.panel20.Name = "panel20";
+            this.panel20.Size = new System.Drawing.Size(10, 30);
+            this.panel20.TabIndex = 6;
+            // 
+            // button11
+            // 
+            this.button11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.button11.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.button11.FlatAppearance.BorderSize = 0;
+            this.button11.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
+            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button11.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button11.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button11.Location = new System.Drawing.Point(11, 1);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(136, 30);
+            this.button11.TabIndex = 5;
+            this.button11.Text = "Mis playlist musica";
+            this.button11.UseVisualStyleBackColor = false;
+            // 
             // FormAplicacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2200,6 +2340,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.e7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.e6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.panel7.ResumeLayout(false);
+            this.panel14.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2358,5 +2500,15 @@
         private System.Windows.Forms.PictureBox e1;
         private System.Windows.Forms.PictureBox e4;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Panel panel14;
+        private System.Windows.Forms.Panel panel17;
+        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Panel panel20;
+        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Panel panel13;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Button button7;
     }
 }

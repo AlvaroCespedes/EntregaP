@@ -329,6 +329,14 @@ namespace Entrega_3.Paneles
             {
                 SubirArchivo.Visible = false;
             }
+            if (panel14.Visible == true)
+            {
+                panel14.Visible = false;
+            }
+            if (panel7.Visible == true)
+            {
+                panel7.Visible = false;
+            }
 
         }
 
@@ -352,11 +360,26 @@ namespace Entrega_3.Paneles
             {
                 SubirArchivo.Visible = false;
             }
-
+            if (panel14.Visible == true)
+            {
+                panel14.Visible = false;
+            }
+            if (panel7.Visible == true)
+            {
+                panel7.Visible = false;
+            }
+            else
+            {
+                panel7.Visible = true;
+            }
         }
 
         private void btnPlaylisMusica_Click(object sender, EventArgs e)
         {
+            if (panel7.Visible == true)
+            {
+                panel7.Visible = false;
+            }
             if (panelSubMenuAjustes.Visible == true)
             {
                 panelSubMenuAjustes.Visible = false;
@@ -373,6 +396,14 @@ namespace Entrega_3.Paneles
             if (panel6.Visible == true)
             {
                 panel6.Visible = false;
+            }
+            if (panel14.Visible == true)
+            {
+                panel14.Visible = false;
+            }
+            else
+            {
+                panel14.Visible = true;
             }
         }
 
@@ -398,6 +429,14 @@ namespace Entrega_3.Paneles
             {
                 SubirArchivo.Visible = true;
             }
+            if (panel14.Visible == true)
+            {
+                panel14.Visible = false;
+            }
+            if (panel7.Visible == true)
+            {
+                panel7.Visible = false;
+            }
         }
 
         private void btnInicio_Click(object sender, EventArgs e)
@@ -417,6 +456,14 @@ namespace Entrega_3.Paneles
             if (SubirArchivo.Visible == true)
             {
                 SubirArchivo.Visible = false;
+            }
+            if (panel14.Visible == true)
+            {
+                panel14.Visible = false;
+            }
+            if (panel7.Visible == true)
+            {
+                panel7.Visible = false;
             }
         }
 

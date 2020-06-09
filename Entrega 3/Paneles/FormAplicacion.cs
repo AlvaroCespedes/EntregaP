@@ -320,6 +320,10 @@ namespace Entrega_3.Paneles
             {
                 panel6.Visible = false;
             }
+            if (panel26.Visible == true)
+            {
+                panel26.Visible = false;
+            }
             if (panelSubMenuAjustes.Visible==true)
             {
                 panelSubMenuAjustes.Visible = false;
@@ -348,7 +352,10 @@ namespace Entrega_3.Paneles
             {
                 panel6.Visible = false;
             }
-            
+            if (panel26.Visible == true)
+            {
+                panel26.Visible = false;
+            }
 
             if (panelSubMenuAjustes.Visible == true)
             {
@@ -378,6 +385,10 @@ namespace Entrega_3.Paneles
 
         private void btnPlaylisMusica_Click(object sender, EventArgs e)
         {
+            if (panel26.Visible == true)
+            {
+                panel26.Visible = false;
+            }
             if (panel7.Visible == true)
             {
                 panel7.Visible = false;
@@ -439,6 +450,10 @@ namespace Entrega_3.Paneles
             {
                 panel7.Visible = false;
             }
+            if (panel26.Visible == true)
+            {
+                panel26.Visible = false;
+            }
         }
 
         private void btnInicio_Click(object sender, EventArgs e)
@@ -466,6 +481,10 @@ namespace Entrega_3.Paneles
             if (panel7.Visible == true)
             {
                 panel7.Visible = false;
+            }
+            if (panel26.Visible == true)
+            {
+                panel26.Visible = false;
             }
         }
 
@@ -2455,6 +2474,57 @@ namespace Entrega_3.Paneles
             panel6.Visible = false;
             panel23.Visible = false;
             panel25.Visible = false;
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            if (panel26.Visible == true)
+            {
+                panel26.Visible = false;
+            }
+            else
+            {
+                panel26.Visible = true;
+                button22.Visible = false;
+                button21.Visible = true;
+
+            }
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            if (panel26.Visible == true)
+            {
+                panel26.Visible = false;
+            }
+
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            if (panel26.Visible == true)
+            {
+                panel26.Visible = false;
+            }
+        }
+
+        private void button8_Click_1(object sender, EventArgs e)
+        {
+            if (panel26.Visible == true)
+            {
+                panel26.Visible = false;
+            }
+            else
+            {
+                panel26.Visible = true;
+                button21.Visible = false;
+                button22.Visible = true;
+            }
+        }
+
+        private void label12_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

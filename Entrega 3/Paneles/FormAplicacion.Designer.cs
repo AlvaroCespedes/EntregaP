@@ -221,6 +221,12 @@
             this.b14 = new System.Windows.Forms.Button();
             this.b15 = new System.Windows.Forms.Button();
             this.b16 = new System.Windows.Forms.Button();
+            this.panel26 = new System.Windows.Forms.Panel();
+            this.label33 = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.button21 = new System.Windows.Forms.Button();
+            this.button22 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnVolverNormalidad)).BeginInit();
@@ -279,6 +285,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panelSubMenuAjustes.SuspendLayout();
+            this.panel26.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -609,6 +616,7 @@
             // 
             this.panelContenedorPincipal.AutoSize = true;
             this.panelContenedorPincipal.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.panelContenedorPincipal.Controls.Add(this.panel26);
             this.panelContenedorPincipal.Controls.Add(this.panel6);
             this.panelContenedorPincipal.Controls.Add(this.panel4);
             this.panelContenedorPincipal.Controls.Add(this.panel3);
@@ -1492,6 +1500,7 @@
             this.button8.TabIndex = 7;
             this.button8.Text = "Crear playlist video";
             this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click_1);
             // 
             // panel8
             // 
@@ -1517,6 +1526,7 @@
             this.button7.TabIndex = 5;
             this.button7.Text = "Mis playlist video";
             this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // panel14
             // 
@@ -1554,6 +1564,7 @@
             this.button10.TabIndex = 7;
             this.button10.Text = "Crear playlist video";
             this.button10.UseVisualStyleBackColor = false;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // panel20
             // 
@@ -1579,6 +1590,7 @@
             this.button11.TabIndex = 5;
             this.button11.Text = "Mis playlist musica";
             this.button11.UseVisualStyleBackColor = false;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
             // SubirArchivo
             // 
@@ -1792,6 +1804,7 @@
             this.txtTitle.Name = "txtTitle";
             this.txtTitle.Size = new System.Drawing.Size(128, 20);
             this.txtTitle.TabIndex = 19;
+            this.txtTitle.Tag = "";
             // 
             // button6
             // 
@@ -2364,6 +2377,7 @@
             this.label12.Size = new System.Drawing.Size(166, 38);
             this.label12.TabIndex = 16;
             this.label12.Text = "SPOTFLIX";
+            this.label12.Click += new System.EventHandler(this.label12_Click);
             // 
             // SubMenuAjustes
             // 
@@ -2683,6 +2697,72 @@
             this.b16.Visible = false;
             this.b16.Click += new System.EventHandler(this.b16_Click);
             // 
+            // panel26
+            // 
+            this.panel26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.panel26.Controls.Add(this.button22);
+            this.panel26.Controls.Add(this.button21);
+            this.panel26.Controls.Add(this.textBox2);
+            this.panel26.Controls.Add(this.label34);
+            this.panel26.Controls.Add(this.label33);
+            this.panel26.Location = new System.Drawing.Point(380, 165);
+            this.panel26.Name = "panel26";
+            this.panel26.Size = new System.Drawing.Size(286, 188);
+            this.panel26.TabIndex = 43;
+            this.panel26.Visible = false;
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label33.ForeColor = System.Drawing.Color.Green;
+            this.label33.Location = new System.Drawing.Point(70, 18);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(134, 22);
+            this.label33.TabIndex = 17;
+            this.label33.Text = "Crear Playlist";
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label34.ForeColor = System.Drawing.Color.White;
+            this.label34.Location = new System.Drawing.Point(7, 86);
+            this.label34.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(108, 16);
+            this.label34.TabIndex = 26;
+            this.label34.Text = "Nombre Playlist";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(130, 82);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(128, 20);
+            this.textBox2.TabIndex = 27;
+            this.textBox2.Tag = "";
+            // 
+            // button21
+            // 
+            this.button21.Location = new System.Drawing.Point(196, 134);
+            this.button21.Name = "button21";
+            this.button21.Size = new System.Drawing.Size(75, 23);
+            this.button21.TabIndex = 28;
+            this.button21.Text = "Crear M";
+            this.button21.UseVisualStyleBackColor = true;
+            this.button21.Visible = false;
+            // 
+            // button22
+            // 
+            this.button22.Location = new System.Drawing.Point(196, 159);
+            this.button22.Name = "button22";
+            this.button22.Size = new System.Drawing.Size(75, 23);
+            this.button22.TabIndex = 29;
+            this.button22.Text = "Crear V";
+            this.button22.UseVisualStyleBackColor = true;
+            this.button22.Visible = false;
+            // 
             // FormAplicacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2791,6 +2871,8 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panelSubMenuAjustes.ResumeLayout(false);
+            this.panel26.ResumeLayout(false);
+            this.panel26.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2990,5 +3072,11 @@
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.Button button20;
+        private System.Windows.Forms.Panel panel26;
+        private System.Windows.Forms.Button button22;
+        private System.Windows.Forms.Button button21;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.Label label33;
     }
 }

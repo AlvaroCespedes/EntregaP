@@ -208,6 +208,19 @@
             this.checkedListBox2 = new System.Windows.Forms.CheckedListBox();
             this.button18 = new System.Windows.Forms.Button();
             this.button19 = new System.Windows.Forms.Button();
+            this.verPerfil = new System.Windows.Forms.Button();
+            this.panel24 = new System.Windows.Forms.Panel();
+            this.panel25 = new System.Windows.Forms.Panel();
+            this.label28 = new System.Windows.Forms.Label();
+            this.button20 = new System.Windows.Forms.Button();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
+            this.mostrarNombre = new System.Windows.Forms.Label();
+            this.mostrarPrivacidad = new System.Windows.Forms.Label();
+            this.mostrarGustos = new System.Windows.Forms.TextBox();
+            this.mostrarCategorias = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnVolverNormalidad)).BeginInit();
@@ -265,6 +278,7 @@
             this.panel2.SuspendLayout();
             this.panelSubMenuAjustes.SuspendLayout();
             this.panel23.SuspendLayout();
+            this.panel25.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -1842,6 +1856,8 @@
             // 
             // panelSubMenuAjustes
             // 
+            this.panelSubMenuAjustes.Controls.Add(this.panel24);
+            this.panelSubMenuAjustes.Controls.Add(this.verPerfil);
             this.panelSubMenuAjustes.Controls.Add(this.panel12);
             this.panelSubMenuAjustes.Controls.Add(this.btnCambiarPerfil);
             this.panelSubMenuAjustes.Controls.Add(this.panel11);
@@ -2308,6 +2324,7 @@
             // 
             // panel23
             // 
+            this.panel23.Controls.Add(this.panel25);
             this.panel23.Controls.Add(this.button19);
             this.panel23.Controls.Add(this.button18);
             this.panel23.Controls.Add(this.checkedListBox2);
@@ -2515,6 +2532,157 @@
             this.button19.UseVisualStyleBackColor = true;
             this.button19.Click += new System.EventHandler(this.button19_Click);
             // 
+            // verPerfil
+            // 
+            this.verPerfil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.verPerfil.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.verPerfil.FlatAppearance.BorderSize = 0;
+            this.verPerfil.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
+            this.verPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.verPerfil.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.verPerfil.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.verPerfil.Location = new System.Drawing.Point(10, 177);
+            this.verPerfil.Name = "verPerfil";
+            this.verPerfil.Size = new System.Drawing.Size(136, 27);
+            this.verPerfil.TabIndex = 11;
+            this.verPerfil.Text = "Ver información";
+            this.verPerfil.UseVisualStyleBackColor = false;
+            this.verPerfil.Click += new System.EventHandler(this.verPerfil_Click_1);
+            // 
+            // panel24
+            // 
+            this.panel24.BackColor = System.Drawing.Color.Blue;
+            this.panel24.Location = new System.Drawing.Point(4, 177);
+            this.panel24.Name = "panel24";
+            this.panel24.Size = new System.Drawing.Size(10, 30);
+            this.panel24.TabIndex = 12;
+            // 
+            // panel25
+            // 
+            this.panel25.Controls.Add(this.mostrarCategorias);
+            this.panel25.Controls.Add(this.mostrarGustos);
+            this.panel25.Controls.Add(this.mostrarPrivacidad);
+            this.panel25.Controls.Add(this.mostrarNombre);
+            this.panel25.Controls.Add(this.label32);
+            this.panel25.Controls.Add(this.label31);
+            this.panel25.Controls.Add(this.label30);
+            this.panel25.Controls.Add(this.label29);
+            this.panel25.Controls.Add(this.button20);
+            this.panel25.Controls.Add(this.label28);
+            this.panel25.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel25.Location = new System.Drawing.Point(0, 0);
+            this.panel25.Name = "panel25";
+            this.panel25.Size = new System.Drawing.Size(700, 506);
+            this.panel25.TabIndex = 30;
+            this.panel25.Visible = false;
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Font = new System.Drawing.Font("Arial Black", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label28.ForeColor = System.Drawing.Color.Purple;
+            this.label28.Location = new System.Drawing.Point(126, 46);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(418, 38);
+            this.label28.TabIndex = 17;
+            this.label28.Text = "INFORMACIÓN DEL PERFIL";
+            // 
+            // button20
+            // 
+            this.button20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button20.Location = new System.Drawing.Point(563, 446);
+            this.button20.Name = "button20";
+            this.button20.Size = new System.Drawing.Size(125, 46);
+            this.button20.TabIndex = 18;
+            this.button20.Text = "Listo";
+            this.button20.UseVisualStyleBackColor = true;
+            this.button20.Click += new System.EventHandler(this.button20_Click);
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label29.ForeColor = System.Drawing.Color.Purple;
+            this.label29.Location = new System.Drawing.Point(44, 141);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(97, 24);
+            this.label29.TabIndex = 19;
+            this.label29.Text = "Nombre: ";
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.ForeColor = System.Drawing.Color.Purple;
+            this.label30.Location = new System.Drawing.Point(364, 144);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(119, 24);
+            this.label30.TabIndex = 20;
+            this.label30.Text = "Privacidad: ";
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label31.ForeColor = System.Drawing.Color.Purple;
+            this.label31.Location = new System.Drawing.Point(403, 207);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(179, 24);
+            this.label31.TabIndex = 21;
+            this.label31.Text = "Gustos musicales:";
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label32.ForeColor = System.Drawing.Color.Purple;
+            this.label32.Location = new System.Drawing.Point(39, 209);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(322, 24);
+            this.label32.TabIndex = 22;
+            this.label32.Text = "Categorias de peliculas favoritas: ";
+            // 
+            // mostrarNombre
+            // 
+            this.mostrarNombre.AutoSize = true;
+            this.mostrarNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mostrarNombre.ForeColor = System.Drawing.Color.DeepPink;
+            this.mostrarNombre.Location = new System.Drawing.Point(160, 141);
+            this.mostrarNombre.Name = "mostrarNombre";
+            this.mostrarNombre.Size = new System.Drawing.Size(97, 24);
+            this.mostrarNombre.TabIndex = 23;
+            this.mostrarNombre.Text = "Nombre: ";
+            // 
+            // mostrarPrivacidad
+            // 
+            this.mostrarPrivacidad.AutoSize = true;
+            this.mostrarPrivacidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mostrarPrivacidad.ForeColor = System.Drawing.Color.DeepPink;
+            this.mostrarPrivacidad.Location = new System.Drawing.Point(490, 144);
+            this.mostrarPrivacidad.Name = "mostrarPrivacidad";
+            this.mostrarPrivacidad.Size = new System.Drawing.Size(97, 24);
+            this.mostrarPrivacidad.TabIndex = 24;
+            this.mostrarPrivacidad.Text = "Nombre: ";
+            // 
+            // mostrarGustos
+            // 
+            this.mostrarGustos.Location = new System.Drawing.Point(84, 253);
+            this.mostrarGustos.Multiline = true;
+            this.mostrarGustos.Name = "mostrarGustos";
+            this.mostrarGustos.ReadOnly = true;
+            this.mostrarGustos.Size = new System.Drawing.Size(176, 186);
+            this.mostrarGustos.TabIndex = 25;
+            // 
+            // mostrarCategorias
+            // 
+            this.mostrarCategorias.Location = new System.Drawing.Point(411, 250);
+            this.mostrarCategorias.Multiline = true;
+            this.mostrarCategorias.Name = "mostrarCategorias";
+            this.mostrarCategorias.ReadOnly = true;
+            this.mostrarCategorias.Size = new System.Drawing.Size(176, 186);
+            this.mostrarCategorias.TabIndex = 26;
+            this.mostrarCategorias.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            // 
             // FormAplicacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2621,6 +2789,8 @@
             this.panelSubMenuAjustes.ResumeLayout(false);
             this.panel23.ResumeLayout(false);
             this.panel23.PerformLayout();
+            this.panel25.ResumeLayout(false);
+            this.panel25.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2807,5 +2977,18 @@
         private System.Windows.Forms.CheckedListBox checkedListBox2;
         private System.Windows.Forms.Button button19;
         private System.Windows.Forms.Button button18;
+        private System.Windows.Forms.Button verPerfil;
+        private System.Windows.Forms.Panel panel24;
+        private System.Windows.Forms.Panel panel25;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.TextBox mostrarCategorias;
+        private System.Windows.Forms.TextBox mostrarGustos;
+        private System.Windows.Forms.Label mostrarPrivacidad;
+        private System.Windows.Forms.Label mostrarNombre;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Button button20;
     }
 }

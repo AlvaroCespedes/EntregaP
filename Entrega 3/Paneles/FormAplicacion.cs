@@ -16,7 +16,8 @@ namespace Entrega_3.Paneles
 
     public partial class FormAplicacion : Form
     {
-        Profile perfilCambiar; 
+        Profile perfilCambiar;
+        Profile perfilActual;
         //est es solo para probar busqueda
         static DateTime date = new DateTime();
         int numlikes;
@@ -543,6 +544,14 @@ namespace Entrega_3.Paneles
 
         private void button1_Click(object sender, EventArgs e)
         {
+            for (int a = 0; a<usuario.Profiles.Count;a++)
+            {
+                if (usuario.Profiles[a].NameProfile == label8.Text)
+                {
+                    perfilActual = usuario.Profiles[a];
+                }
+            }
+            
             panelCrearUsuario.Visible = true;
             panelContenedorPincipal.Visible = true;
             //panel5.Visible = false;
@@ -553,25 +562,15 @@ namespace Entrega_3.Paneles
             b3.Visible = false;
             b4.Visible = false;
 
-
+            /*
             Image image1 = Image.FromFile(usuario.Profiles[0].PleasuresMusic[0] + h);
             pic12.Image = image1;
             Image image2 = Image.FromFile(usuario.Profiles[0].PleasuresMusic[1] + h);
             pic13.Image = image2;
             Image image3 = Image.FromFile(usuario.Profiles[0].PleasuresMusic[2] + h);
             pic14.Image = image3;
-
-            
-
-
-
-
-
-
-
-
-
-
+            */
+ 
         }
 
         private void crear1_Click(object sender, EventArgs e)
@@ -637,6 +636,13 @@ namespace Entrega_3.Paneles
 
         private void button2_Click(object sender, EventArgs e)
         {
+            for (int a = 0; a < usuario.Profiles.Count; a++)
+            {
+                if (usuario.Profiles[a].NameProfile == label9.Text)
+                {
+                    perfilActual = usuario.Profiles[a];
+                }
+            }
             panelCrearUsuario.Visible = true;
             panelContenedorPincipal.Visible = true;
            // panel5.Visible = false;
@@ -657,6 +663,13 @@ namespace Entrega_3.Paneles
 
         private void button3_Click(object sender, EventArgs e)
         {
+            for (int a = 0; a < usuario.Profiles.Count; a++)
+            {
+                if (usuario.Profiles[a].NameProfile == label10.Text)
+                {
+                    perfilActual = usuario.Profiles[a];
+                }
+            }
             panelCrearUsuario.Visible = true;
             panelContenedorPincipal.Visible = true;
             string h = ".jpg";
@@ -677,6 +690,13 @@ namespace Entrega_3.Paneles
 
         private void button4_Click(object sender, EventArgs e)
         {
+            for (int a = 0; a < usuario.Profiles.Count; a++)
+            {
+                if (usuario.Profiles[a].NameProfile == label11.Text)
+                {
+                    perfilActual = usuario.Profiles[a];
+                }
+            }
             panelCrearUsuario.Visible = true;
             panelContenedorPincipal.Visible = true;
             string h = ".jpg";
@@ -2354,6 +2374,48 @@ namespace Entrega_3.Paneles
         private void button15_Click(object sender, EventArgs e)
         {
             checkedListBox2.Visible = true;
+        }
+
+        private void verPerfil_Click_1(object sender, EventArgs e)
+        {
+            mostrarGustos.Clear();
+            mostrarCategorias.Clear();
+            panel6.Visible = true; 
+            panel23.Visible = true;
+            panel25.Visible = true;
+            mostrarNombre.Text = perfilActual.NameProfile;
+            mostrarPrivacidad.Text = perfilActual.ProfileType;
+            string Sumastring = "";
+            int contador = 1;
+            for (int a=0; a<perfilActual.PleasuresMusic.Count;a++)
+            {
+                Sumastring+= contador+") "+perfilActual.PleasuresMusic[a]+ Environment.NewLine;
+                contador++;
+            }
+            mostrarGustos.Text = Sumastring;
+
+            string Sumastring2 = "";
+            int contador2 = 1;
+            for (int a = 0; a < perfilActual.PleasuresMovies.Count; a++)
+            {
+                Sumastring2 += contador2 + ") " + perfilActual.PleasuresMovies[a] + Environment.NewLine;
+                contador2++;
+            }
+            mostrarCategorias.Text = Sumastring2;
+
+
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button20_Click(object sender, EventArgs e)
+        {
+            panel6.Visible = false;
+            panel23.Visible = false;
+            panel25.Visible = false;
         }
     }
 }

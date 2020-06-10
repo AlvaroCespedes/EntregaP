@@ -232,8 +232,8 @@
             this.b16 = new System.Windows.Forms.Button();
             this.listBox4 = new System.Windows.Forms.ListBox();
             this.label37 = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.listBox2 = new System.Windows.Forms.ListBox();
-            this.button6 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnVolverNormalidad)).BeginInit();
@@ -294,6 +294,7 @@
             this.panel2.SuspendLayout();
             this.panelSubMenuAjustes.SuspendLayout();
             this.panel26.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -647,15 +648,16 @@
             this.panelContenedorPincipal.Controls.Add(this.txtBusqueda);
             this.panelContenedorPincipal.Controls.Add(this.panel2);
             this.panelContenedorPincipal.Controls.Add(this.panel26);
-            this.panelContenedorPincipal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContenedorPincipal.Location = new System.Drawing.Point(0, 0);
             this.panelContenedorPincipal.Name = "panelContenedorPincipal";
-            this.panelContenedorPincipal.Size = new System.Drawing.Size(900, 583);
+            this.panelContenedorPincipal.Size = new System.Drawing.Size(900, 587);
             this.panelContenedorPincipal.TabIndex = 31;
             this.panelContenedorPincipal.Paint += new System.Windows.Forms.PaintEventHandler(this.panelContenedorPincipal_Paint);
             // 
             // panel6
             // 
+            this.panel6.Controls.Add(this.listBox2);
+            this.panel6.Controls.Add(this.pictureBox4);
             this.panel6.Controls.Add(this.panel23);
             this.panel6.Controls.Add(this.pictureBox3);
             this.panel6.Controls.Add(this.e6);
@@ -673,9 +675,10 @@
             this.panel6.Controls.Add(this.NumLike);
             this.panel6.Controls.Add(this.manito);
             this.panel6.Controls.Add(this.Reproductor2);
-            this.panel6.Location = new System.Drawing.Point(200, 438);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel6.Location = new System.Drawing.Point(200, 0);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(451, 68);
+            this.panel6.Size = new System.Drawing.Size(700, 510);
             this.panel6.TabIndex = 36;
             this.panel6.Visible = false;
             // 
@@ -695,9 +698,10 @@
             this.panel23.Controls.Add(this.button15);
             this.panel23.Controls.Add(this.button13);
             this.panel23.Controls.Add(this.label25);
-            this.panel23.Location = new System.Drawing.Point(0, 406);
+            this.panel23.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel23.Location = new System.Drawing.Point(0, 0);
             this.panel23.Name = "panel23";
-            this.panel23.Size = new System.Drawing.Size(411, 100);
+            this.panel23.Size = new System.Drawing.Size(700, 510);
             this.panel23.TabIndex = 11;
             this.panel23.Visible = false;
             // 
@@ -714,9 +718,10 @@
             this.panel25.Controls.Add(this.label29);
             this.panel25.Controls.Add(this.button20);
             this.panel25.Controls.Add(this.label28);
-            this.panel25.Location = new System.Drawing.Point(0, 431);
+            this.panel25.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel25.Location = new System.Drawing.Point(0, 0);
             this.panel25.Name = "panel25";
-            this.panel25.Size = new System.Drawing.Size(367, 75);
+            this.panel25.Size = new System.Drawing.Size(700, 510);
             this.panel25.TabIndex = 30;
             this.panel25.Visible = false;
             // 
@@ -727,9 +732,10 @@
             this.panel27.Controls.Add(this.listBox4);
             this.panel27.Controls.Add(this.label36);
             this.panel27.Controls.Add(this.listBox3);
-            this.panel27.Location = new System.Drawing.Point(0, 377);
+            this.panel27.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel27.Location = new System.Drawing.Point(0, 0);
             this.panel27.Name = "panel27";
-            this.panel27.Size = new System.Drawing.Size(382, 129);
+            this.panel27.Size = new System.Drawing.Size(700, 510);
             this.panel27.TabIndex = 27;
             this.panel27.Visible = false;
             // 
@@ -1408,7 +1414,7 @@
             this.panel3.Controls.Add(this.pictureBox9);
             this.panel3.Controls.Add(this.btnPlay);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(200, 506);
+            this.panel3.Location = new System.Drawing.Point(200, 510);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(700, 77);
             this.panel3.TabIndex = 1;
@@ -1638,8 +1644,6 @@
             // 
             this.SubirArchivo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.SubirArchivo.Controls.Add(this.panel5);
-            this.SubirArchivo.Controls.Add(this.button6);
-            this.SubirArchivo.Controls.Add(this.listBox2);
             this.SubirArchivo.Controls.Add(this.Reproductor);
             this.SubirArchivo.Controls.Add(this.btnAgregarInfo);
             this.SubirArchivo.Controls.Add(this.Adjuntar);
@@ -1669,9 +1673,10 @@
             this.panel5.Controls.Add(this.txtAlbum);
             this.panel5.Controls.Add(this.txtGender);
             this.panel5.Controls.Add(this.txtTitle);
-            this.panel5.Location = new System.Drawing.Point(0, 83);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel5.Location = new System.Drawing.Point(0, 0);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(269, 226);
+            this.panel5.Size = new System.Drawing.Size(405, 309);
             this.panel5.TabIndex = 11;
             this.panel5.Visible = false;
             this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint_1);
@@ -2108,7 +2113,7 @@
             // 
             this.pic11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.pic11.Image = ((System.Drawing.Image)(resources.GetObject("pic11.Image")));
-            this.pic11.Location = new System.Drawing.Point(609, 113);
+            this.pic11.Location = new System.Drawing.Point(609, 117);
             this.pic11.Name = "pic11";
             this.pic11.Size = new System.Drawing.Size(158, 117);
             this.pic11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -2119,7 +2124,7 @@
             // 
             this.pic10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.pic10.Image = ((System.Drawing.Image)(resources.GetObject("pic10.Image")));
-            this.pic10.Location = new System.Drawing.Point(415, 113);
+            this.pic10.Location = new System.Drawing.Point(415, 117);
             this.pic10.Name = "pic10";
             this.pic10.Size = new System.Drawing.Size(158, 117);
             this.pic10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -2130,7 +2135,7 @@
             // 
             this.pic9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.pic9.Image = ((System.Drawing.Image)(resources.GetObject("pic9.Image")));
-            this.pic9.Location = new System.Drawing.Point(207, 113);
+            this.pic9.Location = new System.Drawing.Point(207, 117);
             this.pic9.Name = "pic9";
             this.pic9.Size = new System.Drawing.Size(158, 117);
             this.pic9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -2164,7 +2169,7 @@
             // 
             this.pic13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.pic13.Image = ((System.Drawing.Image)(resources.GetObject("pic13.Image")));
-            this.pic13.Location = new System.Drawing.Point(415, 295);
+            this.pic13.Location = new System.Drawing.Point(415, 299);
             this.pic13.Name = "pic13";
             this.pic13.Size = new System.Drawing.Size(158, 117);
             this.pic13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -2176,7 +2181,7 @@
             // 
             this.pic12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.pic12.Image = ((System.Drawing.Image)(resources.GetObject("pic12.Image")));
-            this.pic12.Location = new System.Drawing.Point(216, 295);
+            this.pic12.Location = new System.Drawing.Point(216, 299);
             this.pic12.Name = "pic12";
             this.pic12.Size = new System.Drawing.Size(158, 117);
             this.pic12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -2220,7 +2225,7 @@
             this.panel2.ForeColor = System.Drawing.SystemColors.ControlText;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(200, 583);
+            this.panel2.Size = new System.Drawing.Size(200, 587);
             this.panel2.TabIndex = 0;
             // 
             // panelSubMenuAjustes
@@ -2834,26 +2839,30 @@
             this.label37.TabIndex = 3;
             this.label37.Text = "Playlist";
             // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(477, 311);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(55, 51);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 44;
+            this.pictureBox4.TabStop = false;
+            this.pictureBox4.MouseLeave += new System.EventHandler(this.pictureBox4_MouseLeave);
+            this.pictureBox4.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox4_MouseMove);
+            // 
             // listBox2
             // 
             this.listBox2.FormattingEnabled = true;
-            this.listBox2.Location = new System.Drawing.Point(299, 65);
-            this.listBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.listBox2.Location = new System.Drawing.Point(512, 187);
             this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(82, 147);
-            this.listBox2.TabIndex = 12;
-            this.listBox2.SelectedIndexChanged += new System.EventHandler(this.listBox2_SelectedIndexChanged);
-            // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(306, 276);
-            this.button6.Margin = new System.Windows.Forms.Padding(2);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(70, 22);
-            this.button6.TabIndex = 13;
-            this.button6.Text = "button6";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.listBox2.Size = new System.Drawing.Size(171, 147);
+            this.listBox2.TabIndex = 46;
+            this.listBox2.Visible = false;
+            this.listBox2.SelectedIndexChanged += new System.EventHandler(this.listBox2_SelectedIndexChanged_1);
+            this.listBox2.MouseLeave += new System.EventHandler(this.listBox2_MouseLeave);
+            this.listBox2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.listBox2_MouseMove);
+            this.listBox2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.listBox2_MouseUp);
             // 
             // FormAplicacion
             // 
@@ -2967,6 +2976,7 @@
             this.panelSubMenuAjustes.ResumeLayout(false);
             this.panel26.ResumeLayout(false);
             this.panel26.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -3177,7 +3187,7 @@
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.ListBox listBox4;
         private System.Windows.Forms.Label label37;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.ListBox listBox2;
     }
 }

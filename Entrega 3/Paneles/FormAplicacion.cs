@@ -1957,7 +1957,7 @@ namespace Entrega_3.Paneles
 
         }
 
-        private void button6_Click(object sender, EventArgs e)
+       /* private void button6_Click(object sender, EventArgs e)
         {
             List<Video> videoAuxayuda = new List<Video>();
             List<SongClass> songAuxayuda = new List<SongClass>();
@@ -1981,7 +1981,7 @@ namespace Entrega_3.Paneles
 
             }
         }
-
+       */
         private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
 
@@ -2859,6 +2859,40 @@ namespace Entrega_3.Paneles
                     listBox4.Items.Add("NO HAY VIDEOS");
                 }
             }
+        }
+
+        private void pictureBox4_MouseMove(object sender, MouseEventArgs e)
+        {
+            listBox2.Visible =true;
+        }
+
+        private void label38_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void pictureBox4_MouseLeave(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void listBox2_SelectedIndexChanged_1(object sender, EventArgs e)
+        {//este el panel
+        }
+
+        private void listBox2_MouseMove(object sender, MouseEventArgs e)
+        {
+            listBox2.Visible = true;
+        }
+
+        private void listBox2_MouseUp(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void listBox2_MouseLeave(object sender, EventArgs e)
+        {
+            listBox2.Visible = false;
         }
     }
 }

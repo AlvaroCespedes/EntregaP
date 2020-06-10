@@ -653,6 +653,7 @@
             // 
             this.panelContenedorPincipal.AutoSize = true;
             this.panelContenedorPincipal.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.panelContenedorPincipal.Controls.Add(this.panel26);
             this.panelContenedorPincipal.Controls.Add(this.panel6);
             this.panelContenedorPincipal.Controls.Add(this.panel4);
             this.panelContenedorPincipal.Controls.Add(this.panel3);
@@ -675,18 +676,15 @@
             this.panelContenedorPincipal.Controls.Add(this.pictureBox1);
             this.panelContenedorPincipal.Controls.Add(this.txtBusqueda);
             this.panelContenedorPincipal.Controls.Add(this.panel2);
-            this.panelContenedorPincipal.Controls.Add(this.panel26);
             this.panelContenedorPincipal.Location = new System.Drawing.Point(0, 0);
             this.panelContenedorPincipal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelContenedorPincipal.Name = "panelContenedorPincipal";
-            this.panelContenedorPincipal.Size = new System.Drawing.Size(1200, 723);
+            this.panelContenedorPincipal.Size = new System.Drawing.Size(1204, 723);
             this.panelContenedorPincipal.TabIndex = 31;
             this.panelContenedorPincipal.Paint += new System.Windows.Forms.PaintEventHandler(this.panelContenedorPincipal_Paint);
             // 
             // panel6
             // 
-            this.panel6.Controls.Add(this.listBox2);
-            this.panel6.Controls.Add(this.pictureBox4);
             this.panel6.Controls.Add(this.panel23);
             this.panel6.Controls.Add(this.pictureBox3);
             this.panel6.Controls.Add(this.e6);
@@ -704,11 +702,13 @@
             this.panel6.Controls.Add(this.NumLike);
             this.panel6.Controls.Add(this.manito);
             this.panel6.Controls.Add(this.Reproductor2);
+            this.panel6.Controls.Add(this.pictureBox4);
+            this.panel6.Controls.Add(this.listBox2);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel6.Location = new System.Drawing.Point(267, 0);
             this.panel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(933, 628);
+            this.panel6.Size = new System.Drawing.Size(937, 628);
             this.panel6.TabIndex = 36;
             this.panel6.Visible = false;
             // 
@@ -761,7 +761,7 @@
             this.panel23.Location = new System.Drawing.Point(0, 0);
             this.panel23.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel23.Name = "panel23";
-            this.panel23.Size = new System.Drawing.Size(933, 628);
+            this.panel23.Size = new System.Drawing.Size(937, 628);
             this.panel23.TabIndex = 11;
             this.panel23.Visible = false;
             // 
@@ -782,7 +782,7 @@
             this.panel25.Location = new System.Drawing.Point(0, 0);
             this.panel25.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel25.Name = "panel25";
-            this.panel25.Size = new System.Drawing.Size(933, 628);
+            this.panel25.Size = new System.Drawing.Size(937, 628);
             this.panel25.TabIndex = 30;
             this.panel25.Visible = false;
             // 
@@ -797,7 +797,7 @@
             this.panel27.Location = new System.Drawing.Point(0, 0);
             this.panel27.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel27.Name = "panel27";
-            this.panel27.Size = new System.Drawing.Size(933, 628);
+            this.panel27.Size = new System.Drawing.Size(937, 628);
             this.panel27.TabIndex = 27;
             this.panel27.Visible = false;
             // 
@@ -1556,7 +1556,7 @@
             this.panel3.Location = new System.Drawing.Point(267, 628);
             this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(933, 95);
+            this.panel3.Size = new System.Drawing.Size(937, 95);
             this.panel3.TabIndex = 1;
             // 
             // pictureBox2
@@ -2286,7 +2286,7 @@
             // 
             this.pic11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.pic11.Image = ((System.Drawing.Image)(resources.GetObject("pic11.Image")));
-            this.pic11.Location = new System.Drawing.Point(812, 145);
+            this.pic11.Location = new System.Drawing.Point(816, 145);
             this.pic11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pic11.Name = "pic11";
             this.pic11.Size = new System.Drawing.Size(211, 144);
@@ -2298,7 +2298,7 @@
             // 
             this.pic10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.pic10.Image = ((System.Drawing.Image)(resources.GetObject("pic10.Image")));
-            this.pic10.Location = new System.Drawing.Point(553, 145);
+            this.pic10.Location = new System.Drawing.Point(557, 145);
             this.pic10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pic10.Name = "pic10";
             this.pic10.Size = new System.Drawing.Size(211, 144);
@@ -2310,7 +2310,7 @@
             // 
             this.pic9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.pic9.Image = ((System.Drawing.Image)(resources.GetObject("pic9.Image")));
-            this.pic9.Location = new System.Drawing.Point(276, 145);
+            this.pic9.Location = new System.Drawing.Point(280, 145);
             this.pic9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pic9.Name = "pic9";
             this.pic9.Size = new System.Drawing.Size(211, 144);
@@ -2347,7 +2347,7 @@
             // 
             this.pic13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.pic13.Image = ((System.Drawing.Image)(resources.GetObject("pic13.Image")));
-            this.pic13.Location = new System.Drawing.Point(553, 369);
+            this.pic13.Location = new System.Drawing.Point(557, 369);
             this.pic13.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pic13.Name = "pic13";
             this.pic13.Size = new System.Drawing.Size(211, 144);
@@ -2360,7 +2360,7 @@
             // 
             this.pic12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.pic12.Image = ((System.Drawing.Image)(resources.GetObject("pic12.Image")));
-            this.pic12.Location = new System.Drawing.Point(288, 369);
+            this.pic12.Location = new System.Drawing.Point(292, 369);
             this.pic12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pic12.Name = "pic12";
             this.pic12.Size = new System.Drawing.Size(211, 144);

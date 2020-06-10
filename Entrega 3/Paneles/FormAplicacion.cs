@@ -18,7 +18,7 @@ namespace Entrega_3.Paneles
     {
         Profile perfilCambiar;
         Profile perfilActual;
-        string algo;
+        string algo; // para ver si era usica o video.
         //est es solo para probar busqueda
         static DateTime date = new DateTime();
         int numlikes;
@@ -471,6 +471,10 @@ namespace Entrega_3.Paneles
 
         private void btnInicio_Click(object sender, EventArgs e)
         {
+            if(panel27.Visible == true)
+            {
+                panel27.Visible = false;
+            }
             if (panel6.Visible == true)
             {
                 panel6.Visible = false;
@@ -2829,7 +2833,7 @@ namespace Entrega_3.Paneles
             }
             else if(algo == "video")
             {
-                int error = 0;
+                int error = 1;
                 if (listBox3.SelectedItem != null)
                 {
                     for (int a = 0; a < usuario.Profiles.Count(); a++)
@@ -2838,6 +2842,7 @@ namespace Entrega_3.Paneles
                         {
                             for (int b = 0; b < usuario.Profiles[a].PlaylistVideos.Count(); b++)
                             {
+                                error--;
                                 if (listBox3.SelectedItem.ToString() == usuario.Profiles[a].PlaylistVideos[b].Name && usuario.Profiles[a].PlaylistVideos[b].VideosPlaylist.Count() > 0)
                                 {
 
@@ -2854,9 +2859,6 @@ namespace Entrega_3.Paneles
 
                         }
                     }
-
-
-
                 }
                 if (error > 0)
                 {
@@ -3030,7 +3032,57 @@ namespace Entrega_3.Paneles
 
         private void listBox4_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //DEBERIA SONAR SI APRETAR EN EL LISTBOX 4.
+
+            if (algo == "musica")
+            {
+                for (int a = 0; a < usuario.Profiles.Count(); a++)
+                {
+                    if (usuario.Profiles[a].NameProfile == perfilActual.NameProfile)
+                    {
+                        for (int b = 0; b < usuario.Profiles[a].PlaylistCanciones.Count(); b++)
+                        {
+                            if (usuario.Profiles[a].PlaylistCanciones[b].Nombre == listBox3.SelectedItem.ToString())
+                            {
+                                for (int c = 0; c < usuario.Profiles[a].PlaylistCanciones[b].CancionesPlaylist.Count(); c++)
+                                {
+                                    string nombre = listBox4.SelectedItem.ToString();
+                                    string[] listaStr = nombre.Split(' '); //BUSCAOS EL NOMBER QUE ES UNNICO
+
+                                    if (usuario.Profiles[a].PlaylistCanciones[b].CancionesPlaylist[c].Title == listaStr[0])
+                                    {
+                                        Reproductor2.URL = usuario.Profiles[a].PlaylistCanciones[b].CancionesPlaylist[c].Url;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            else if (algo == "video")
+            {
+                for (int a = 0; a < usuario.Profiles.Count(); a++)
+                {
+                    if (usuario.Profiles[a].NameProfile == perfilActual.NameProfile)
+                    {
+                        for (int b = 0; b < usuario.Profiles[a].PlaylistVideos.Count(); b++)
+                        {
+                            if (usuario.Profiles[a].PlaylistVideos[b].Name == listBox3.SelectedItem.ToString())
+                            {
+                                for(int c = 0; c < usuario.Profiles[a].PlaylistVideos[b].VideosPlaylist.Count(); c++)
+                                {
+                                    string nombre = listBox4.SelectedItem.ToString();
+                                    string[] listaStr = nombre.Split(' '); //BUSCAOS EL NOMBER QUE ES UNNICO
+
+                                    if (usuario.Profiles[a].PlaylistVideos[b].VideosPlaylist[c].Title == listaStr[0])
+                                    {
+                                        Reproductor2.URL = usuario.Profiles[a].PlaylistVideos[b].VideosPlaylist[c].Url;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }

@@ -25,7 +25,11 @@ namespace Entrega_3.Paneles
         int numreproducciones;
         int nota;
         int notaActual;
-       
+        string reproduciendo;
+        SongClass cancionSonando; //PARA AGREGAR CANCOINES PLAYLISt
+        Video videoSonando;
+
+
         static List<string> premios = new List<string>();
 
         static List<string> discograpich = new List<string>();
@@ -1685,6 +1689,8 @@ namespace Entrega_3.Paneles
                     {
                         if (x.Title == listaStr[0])
                         {
+                            cancionSonando = x;
+                            reproduciendo = "musica";
                             Reproductor2.URL = x.Url;
                             txtBarraMusica.Text = x.Title + " autor;" + x.Singer.Name;
                             btnPausa.Visible = true;
@@ -1710,6 +1716,8 @@ namespace Entrega_3.Paneles
                     {
                         if (x.Title == listaStr[0])
                         {
+                            videoSonando = x;
+                            reproduciendo = "video";//Esto sirve para agregar en las playlists.
                             Reproductor2.URL = x.Url;
                             panel6.Visible = true;
                             txtBarraMusica.Text = x.Title + " Director;" + x.Director.Name;
@@ -2787,7 +2795,7 @@ namespace Entrega_3.Paneles
             //Mostrar la informacion d ela playlist
             if (algo == "musica")
             {
-                int error = 0;
+                int error = 1;
                 if (listBox3.SelectedItem != null)
                 {
                     for (int a = 0; a < usuario.Profiles.Count(); a++)
@@ -2796,13 +2804,13 @@ namespace Entrega_3.Paneles
                         {
                             for (int b = 0; b < usuario.Profiles[a].PlaylistCanciones.Count(); b++)
                             {
+                                error--;
                                 if (listBox3.SelectedItem.ToString() == usuario.Profiles[a].PlaylistCanciones[b].Nombre && usuario.Profiles[a].PlaylistCanciones[b].CancionesPlaylist.Count() > 0)
                                 {
 
                                     for (int c = 0; c < usuario.Profiles[a].PlaylistCanciones[b].CancionesPlaylist.Count(); c++)
                                     {
                                         listBox4.Items.Add(usuario.Profiles[a].PlaylistCanciones[b].CancionesPlaylist[c]);
-                                        listBox4.Items.Add("jsldsa");
                                     }
                                 }
                                 else
@@ -2813,9 +2821,6 @@ namespace Entrega_3.Paneles
 
                         }
                     }
-
-
-
                 }
                 if (error > 0)
                 {
@@ -2839,7 +2844,6 @@ namespace Entrega_3.Paneles
                                     for (int c = 0; c < usuario.Profiles[a].PlaylistVideos[b].VideosPlaylist.Count(); c++)
                                     {
                                         listBox4.Items.Add(usuario.Profiles[a].PlaylistVideos[b].VideosPlaylist[c]);
-                                        listBox4.Items.Add("jsldsa");
                                     }
                                 }
                                 else
@@ -2864,6 +2868,72 @@ namespace Entrega_3.Paneles
         private void pictureBox4_MouseMove(object sender, MouseEventArgs e)
         {
             listBox2.Visible =true;
+            if (reproduciendo == "musica")
+            {
+                listBox2.Items.Clear();
+
+                if (panel26.Visible == true)
+                {
+                    panel26.Visible = false;
+                }
+                else
+                {
+
+                    for (int a = 0; a < usuario.Profiles.Count(); a++)
+                    {
+
+                        if (usuario.Profiles[a].NameProfile == perfilActual.NameProfile)
+                        {
+                            if (usuario.Profiles[a].PlaylistCanciones.Count() > 0)
+                            {
+                                for (int b = 0; b < usuario.Profiles[a].PlaylistCanciones.Count(); b++)
+                                {
+                                    listBox2.Items.Add(usuario.Profiles[a].PlaylistCanciones[b].Nombre);
+                                }
+                            }
+                            else
+                            {
+                                MessageBox.Show("La playlist no contiene canciones");
+                            }
+
+                        }
+
+                    }
+
+                }
+            }
+            else if (reproduciendo == "video")
+            {
+
+                listBox2.Items.Clear();
+                if (panel26.Visible == true)
+                {
+                    panel26.Visible = false;
+                }
+                else
+                {
+
+                    for (int a = 0; a < usuario.Profiles.Count(); a++)
+                    {
+
+                        if (usuario.Profiles[a].NameProfile == perfilActual.NameProfile)
+                        {
+                            if (usuario.Profiles[a].PlaylistVideos.Count() > 0)
+                            {
+                                for (int b = 0; b < usuario.Profiles[a].PlaylistVideos.Count(); b++)
+                                {
+                                    listBox2.Items.Add(usuario.Profiles[a].PlaylistVideos[b].Name);
+                                }
+                            }
+                            else
+                            {
+                                MessageBox.Show("La playlist no contiene canciones");
+                            }
+
+                        }
+                    }
+                }
+            }
         }
 
         private void label38_Click(object sender, EventArgs e)
@@ -2876,10 +2946,68 @@ namespace Entrega_3.Paneles
             
         }
 
-        private void listBox2_SelectedIndexChanged_1(object sender, EventArgs e)
+        private void listBox2_SelectedIndexChanged_1(object sender, EventArgs e) // AQUI SE SELECCIONA PARA AGREGAR LA CANCIONES A LA PLYALIST
         {//este el panel
-        }
+            if ( reproduciendo == "musica")
+            {
+                for (int a = 0; a < usuario.Profiles.Count(); a++)
+                {
+                    if (usuario.Profiles[a].NameProfile == perfilActual.NameProfile)
+                    {
+                        for (int b = 0; b < usuario.Profiles[a].PlaylistCanciones.Count(); b++)
+                        {
+                            if (usuario.Profiles[a].PlaylistCanciones[b].Nombre == listBox2.SelectedItem.ToString())
+                            {
+                                usuario.Profiles[a].PlaylistCanciones[b].CancionesPlaylist.Add(cancionSonando);
+                                List<Clases.User> todosUsuarios = new List<Clases.User>();
+                                List<Clases.User> deserializarUser = serializar.Deserialize<List<Clases.User>>(File.Open("data.bin", FileMode.Open));
+                                if (deserializarUser.Count > 0)
+                                {
+                                    for (int c = 0; c < deserializarUser.Count; c++)
+                                    {
+                                        todosUsuarios.Add(deserializarUser[c]);
+                                    }
+                                }
+                                todosUsuarios.Add(usuario);
 
+                                serializar.Serialize(todosUsuarios, File.Open("data.bin", FileMode.Create));
+                                MessageBox.Show("Cancion Guardada");
+                            }
+                        }
+                    }
+                }
+            }
+            else if ( reproduciendo == "video")
+            {
+                for (int a = 0; a < usuario.Profiles.Count(); a++)
+                {
+                    if (usuario.Profiles[a].NameProfile == perfilActual.NameProfile)
+                    {
+                        for (int b = 0; b < usuario.Profiles[a].PlaylistVideos.Count(); b++)
+                        {
+                            if (usuario.Profiles[a].PlaylistVideos[b].Name == listBox2.SelectedItem.ToString())
+                            {
+                                usuario.Profiles[a].PlaylistVideos[b].VideosPlaylist.Add(videoSonando);
+                                List<Clases.User> todosUsuarios = new List<Clases.User>();
+                                List<Clases.User> deserializarUser = serializar.Deserialize<List<Clases.User>>(File.Open("data.bin", FileMode.Open));
+                                if (deserializarUser.Count > 0)
+                                {
+                                    for (int c = 0; c < deserializarUser.Count; c++)
+                                    {
+                                        todosUsuarios.Add(deserializarUser[c]);
+                                    }
+                                }
+                                todosUsuarios.Add(usuario);
+
+                                serializar.Serialize(todosUsuarios, File.Open("data.bin", FileMode.Create));
+                                MessageBox.Show("Video Guardada");
+                                //Serilizar
+                            }
+                        }
+                    }
+                }
+            }
+        }
         private void listBox2_MouseMove(object sender, MouseEventArgs e)
         {
             listBox2.Visible = true;
@@ -2893,6 +3021,16 @@ namespace Entrega_3.Paneles
         private void listBox2_MouseLeave(object sender, EventArgs e)
         {
             listBox2.Visible = false;
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e) //BOTON PARA AGREGAR MUSICA
+        {
+
+        }
+
+        private void listBox4_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //DEBERIA SONAR SI APRETAR EN EL LISTBOX 4.
         }
     }
 }
